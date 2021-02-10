@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Description -->
+    <meta name="description" content="Gifteros is the best online shop in Zimbabwe for buying gifts for any occasion.">
+    <!-- Developer -->
+    <meta name="developer" content="Tinashe. M. Chaterera">
+    <title>Gifteros | Our Gifts To You</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="dist/images/app/gifteros.png" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="dist/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Bootstrap-Icons -->
+    <link rel="stylesheet" href="dist/plugins/bootstrap-icons-1.2.2/font/bootstrap-icons.css">
+    <!-- Material-Design Icons -->
+    <link rel="stylesheet" href="dist/plugins/material-design-icons/iconfont/material-icons.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="dist/plugins/Ionicons/css/ionicons.min.css">
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="dist/plugins/font-awesome/css/font-awesome.min.css">
+    <!-- Owl-Carousel -->
+    <link rel="stylesheet" href="dist/plugins/OwlCarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="dist/plugins/OwlCarousel/dist/assets/owl.theme.default.min.css">
+    <!-- AnimatesCSS -->
+    <link rel="stylesheet" href="dist/plugins/animate.css/animate.min.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- iziToast -->
+    <link rel="stylesheet" href="dist/plugins/iziToast/css/iziToast.min.css">
+    <!-- SweetAlert -->
+    <link rel="stylesheet" href="dist/plugins/sweetalert2/package/dist/sweetalert2.min.css">
+    <!-- Gifteros -->
+    <link rel="stylesheet" href="dist/css/gifteros.min.css">
+</head>
+
+<body>
+    <!-- Page Content -->
+    <div class="page-content">
+        <!-- Main Navbar -->
+        <header class="header fixed-md-top box-shadow-sm d-sm-none d-md-block">
+            <div class="container">
+                <!-- Main Navbar -->
+                <nav class="nav navbar-expand-md main-nav">
+                    <span role="button" class="material-icons menu-btn d-sm-inline-block d-md-none" title="Toggle Sidebar">menu</span>
+                    <!-- Navbrand -->
+                    <a href="/" class="navbar-brand font-700">
+                        <img src="dist/images/app/gifteros.png" height="35" class="targets-logo" width="35" alt="">
+                        <span class="mobile-brand brandname">Gifteros</span>
+                    </a>
+                    <!-- /.Navbrand -->
+
+                    <!-- Left Navbar Links -->
+                    <ul class="navbar-nav mr-auto d-none d-md-flex">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-sm font-600 mega-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Occasions</a>
+                            <div class="dropdown-menu mega-menu box-shadow-sm rounded-2">
+                                <div class="container-fluid">
+                                    <div class="categories-grid">
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="anniversary-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/anniversary_gifts" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">anniversary</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/anniversary_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="birthday-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/birthday_gifts" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">Birthday</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/birthday_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="christmas-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/christmas_gifts" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">christmas</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/christmas_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="congrats-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/congrats_gifts" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">congrats</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/congrats_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="easter-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/easter_gifts" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">easter</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/easter_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="farewell-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/farewell_gifts" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">farewell</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/farewell_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="fathersday-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/for_him" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">father's day</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/for_him" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="getwell-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/getwell_gifts" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">get well</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/getwell_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="graduation-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/graduation_gifts" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">graduation</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/graduation_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="just-because-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/because_gifts" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">just because</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/because_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="mothersday-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/for_her" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">mother's day</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/for_her" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="newbaby-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/baby_gifts" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">new baby</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/baby_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="newhome-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/home_gifts" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">new home</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/home_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="newyear-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/newyear_gifts" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">new year</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/newyear_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="retirement-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/retirement_gifts" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">retirement</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/retirement_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="sympathy-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/sympathy_gifts" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">sympathy</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/sympathy_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="thanks-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/thanks_gifts" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">thank you</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/thanks_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="valentines-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/valentines_gifts" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">Valentine's</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/valentines_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="wedding-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/wedding_gifts" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">wedding</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/wedding_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="workplace-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/workplace_gifts" class="d-flex align-items-center">
+                                                    <h5 class="display-5 my-0 py-0 font-600 text-capitalize">workplace</h5>
+                                                    <span class="fa fa-caret-right go-there display-5 ml-2"></span>
+                                                </a>
+                                                <a href="/category/workplace_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item d-none d-lg-inline">
+                            <a class="nav-link text-sm font-600" href="/category/trending_gifts">Trending</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-sm font-600" href="/category/hot_deals">Hot Deals</a>
+                        </li>
+                    </ul>
+                    <!-- /.Left Navbar Links -->
+
+                    <!-- Right Navbar Links -->
+                    <ul class="ml-auto justify-content-sm-around d-flex align-items-center m-0 p-0">
+                        <!-- App Currencies -->
+                        <li class="nav-item d-none d-md-flex" data-toggle="tooltip" title="Select currency">
+                            <div class="usd-price d-none nav-link font-600 navbar-text">
+                                <div class="dropdown dropdown-toggle d-cursor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="dist/images/currencies/usd.png" height="15" width="22" alt="">
+                                    <span class="usd-total text-color-switch">$0.00</span>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right app-dropdown box-shadow-sm rounded-2 currency-dropdown-menu">
+                                    <div class="dropdown-item d-flex align-items-center py-2 cursor" onclick="usDollar()">
+                                        <img src="dist/images/currencies/usd.png" height="15" width="22" alt="">
+                                        <span class="font-600 ml-1">USD</span>
+                                    </div>
+                                    <div class="dropdown-item d-flex align-items-center py-2 cursor" onclick="zaRand()">
+                                        <img src="dist/images/currencies/zar.jpg" height="15" width="22" alt="">
+                                        <span class="font-600 ml-1">ZAR</span>
+                                    </div>
+                                    <div class="dropdown-item d-flex align-items-center py-2 cursor" onclick="zwBond()">
+                                        <img src="dist/images/currencies/zwl.png" height="15" width="22" alt="">
+                                        <span class="font-600 ml-1">ZWL</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="zar-price d-none nav-link font-600 navbar-text">
+                                <div class="dropdown dropdown-toggle d-cursor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="dist/images/currencies/zar.jpg" height="15" width="22" alt="">
+                                    <span class="zar-total text-color-switch">R0.00</span>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right app-dropdown box-shadow-sm rounded-2 currency-dropdown-menu">
+                                    <div class="dropdown-item d-flex align-items-center py-2 cursor" onclick="usDollar()">
+                                        <img src="dist/images/currencies/usd.png" height="15" width="22" alt="">
+                                        <span class="font-600 ml-1">USD</span>
+                                    </div>
+                                    <div class="dropdown-item d-flex align-items-center py-2 cursor" onclick="zaRand()">
+                                        <img src="dist/images/currencies/zar.jpg" height="15" width="22" alt="">
+                                        <span class="font-600 ml-1">ZAR</span>
+                                    </div>
+                                    <div class="dropdown-item d-flex align-items-center py-2 cursor" onclick="zwBond()">
+                                        <img src="dist/images/currencies/zwl.png" height="15" width="22" alt="">
+                                        <span class="font-600 ml-1">ZWL</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="zwl-price d-none nav-link font-600 navbar-text">
+                                <div class="dropdown dropdown-toggle d-cursor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="dist/images/currencies/zwl.png" height="15" width="22" alt="">
+                                    <span class="zwl-total text-color-switch">$0.00</span>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-right app-dropdown box-shadow-sm rounded-2 currency-dropdown-menu">
+                                    <div class="dropdown-item d-flex align-items-center py-2 cursor" onclick="usDollar()">
+                                        <img src="dist/images/currencies/usd.png" height="15" width="22" alt="">
+                                        <span class="font-600 ml-1">USD</span>
+                                    </div>
+                                    <div class="dropdown-item d-flex align-items-center py-2 cursor" onclick="zaRand()">
+                                        <img src="dist/images/currencies/zar.jpg" height="15" width="22" alt="">
+                                        <span class="font-600 ml-1">ZAR</span>
+                                    </div>
+                                    <div class="dropdown-item d-flex align-items-center py-2 cursor" onclick="zwBond()">
+                                        <img src="dist/images/currencies/zwl.png" height="15" width="22" alt="">
+                                        <span class="font-600 ml-1">ZWL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- /.App Currencies -->
+
+                        <!-- Shopping Cart -->
+                        <li class="nav-item dropdown ml-3">
+                            <a href="#" class="nav-link icon-link" id="shopping-cart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bi bi-cart4 icon-md pull-up"></i>
+                                <span class="badge nav-badge gift-count"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right app-menu rounded-2 box-shadow-sm cart-menu mt-0 py-0">
+                                <div class="shopping-bag rounded-2">
+                                    <!-- Shopping Cart details will be shown here -->
+                                </div>
+                                <!-- Cart Details -->
+                                <li class="list-group-item w-100 lh-100 font-600 text-sm rounded-bottom-2" id="cart-action-btns">
+                                    <!-- Cart Subtotal -->
+                                    <div class="usd-price">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Subtotal Amount:</span>
+                                            <span class="usd-subtotal">US$0.00</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zar-price d-none">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Subtotal Amount:</span>
+                                            <span class="zar-subtotal">R0.00</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zwl-price d-none">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Subtotal Amount:</span>
+                                            <span class="zwl-subtotal">ZW$0.00</span>
+                                        </h6>
+                                    </div>
+                                    <!-- /.Cart Subtotal -->
+
+                                    <!-- Delivery charges -->
+                                    <div class="usd-price">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Delivery Costs:</span>
+                                            <span class="usd-delivery-cost">US${{ session()->get('shipping_costs')['usd_delivery_cost'] ?? 0 }}</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zar-price d-none">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Delivery Costs:</span>
+                                            <span class="zar-delivery-cost">R{{ session()->get('shipping_costs')['zar_delivery_cost'] ?? 0 }}</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zwl-price d-none">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Delivery Costs:</span>
+                                            <span class="zwl-delivery-cost">ZW${{ session()->get('shipping_costs')['zwl_delivery_cost'] ?? 0 }}</span>
+                                        </h6>
+                                    </div>
+                                    <!-- /.Delivery Charges -->
+                                    <!-- /.Delivery Charges -->
+
+                                    <!-- Taxes & Discounts -->
+                                    <div class="usd-price">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Discount:</span>
+                                            <span class="usd-discount">US${{ session()->get('coupon')['usd_value'] }}</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zar-price d-none">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Discount:</span>
+                                            <span class="zar-discount">R{{ session()->get('coupon')['zar_value'] }}</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zwl-price d-none">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Discount:</span>
+                                            <span class="zwl-discount">ZW${{ session()->get('coupon')['zwl_value'] }}</span>
+                                        </h6>
+                                    </div>
+                                    <hr class="my-1">
+                                    <!-- /.Taxes & Discounts -->
+
+                                    <!-- Cart Total -->
+                                    <div class="usd-price">
+                                        <h6 class="font-600 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Cart Total:</span>
+                                            <span class="usd-total">US$0.00</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zar-price d-none">
+                                        <h6 class="font-600 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Cart Total:</span>
+                                            <span class="zar-total">R0.00</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zwl-price d-none">
+                                        <h6 class="font-600 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Cart Total:</span>
+                                            <span class="zwl-total">ZW$0.00</span>
+                                        </h6>
+                                    </div>
+                                    <!-- /.Cart Total -->
+
+                                    <!-- Hidden Inputs -->
+                                    <input type="hidden" name="cart-usd-subtotal" id="cart-usd-subtotal">
+                                    <input type="hidden" name="cart-zar-subtotal" id="cart-zar-subtotal">
+                                    <input type="hidden" name="cart-zwl-subtotal" id="cart-zwl-subtotal">
+                                    <input type="hidden" name="cart-usd-total" id="cart-usd-total">
+                                    <input type="hidden" name="cart-zar-total" id="cart-zar-total">
+                                    <input type="hidden" name="cart-zwl-total" id="cart-zwl-total">
+                                    <!-- /.Hidden Inputs -->
+
+                                    <!-- Action Buttons -->
+                                    <div class="cart-action-btns">
+                                        <div class="d-flex align-items-center justify-content-center mt-2">
+                                            <button class="btn btn-warning btn-sm btn-block font-600 d-flex align-items-center justify-content-center clear-cart mr-1">
+                                                <i class="material-icons mr-1">delete_sweep</i>
+                                                Clear Cart
+                                            </button>
+                                            <a role="button" href="/login" class="btn btn-primary btn-sm btn-block font-600 d-flex align-items-center justify-content-center checkout-btn m-0">
+                                                <i class="material-icons mr-1">directions_run</i> Checkout
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- /.Action Buttons -->
+                                </li>
+                                <!-- /.Cart Details -->
+                            </ul>
+                        </li>
+                        <!-- /.Shopping Cart -->
+
+                        <!-- Visitor -->
+                        <li class="nav-item dropdown ml-3">
+                            <a role="button" class="btn btn-danger btn-sm rounded-pill d-flex align-items-center font-600 dropdown-toggle text-white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons mr-2">person_outline</i>
+                                <span class="text-white">Sign in</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right user-menu app-menu box-shadow-sm rounded-2 px-3" id="visitor-menu">
+                                <div class="d-flex justify-content-center align-items-center text-skyblue font-600">
+                                    <img src="dist/images/greeting-icons/sunrise.svg" alt="" class="greeting-icon">
+                                    <h6 class="user-greeting my-0 font-600">Good morning!</h6>
+                                </div>
+                                <p class="text-faded text-sm text-center font-600">
+                                    Sign in for a personalized shopping experience.
+                                </p>
+                                <form method="POST" action="">
+                                    <div class="form-group mb-1 pb-1">
+                                        <label for="email" class="mb-0 font-600 text-sm">Email</label>
+                                        <input type="email" name="email" id="email" class="form-control form-control-sm is-invalid" value="" required autocomplete="email">
+                                        <small class="invalid-feedback font-600" id="nameError"></small>
+                                    </div>
+
+                                    <div class="form-group mb-1 pb-1">
+                                        <label for="password" class="mb-0 font-600 text-sm">Password</label>
+                                        <input type="password" name="password" id="password" class="form-control form-control-sm is-invalid" value="" required autocomplete="password">
+                                        <small class="invalid-feedback font-600" id="nameError"></small>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <div class="custom-control custom-checkbox d-flex align-items-center">
+                                            <input type="checkbox" class="custom-control-input" name="remember" id="remember">
+                                            <label class="custom-control-label" for="remember">
+                                                <small>Remember me</small>
+                                            </label>
+                                        </div>
+                                        <a href="" class="text-sm font-600">Forgot password?</a>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-sm btn-primary rounded-pill lead font-600 btn-block">
+                                        <span class="text-white">Sign in</span>
+                                    </button>
+                                </form>
+
+                                <div class="flex-column justify-content-center">
+                                    <div class="division-block">
+                                        <hr class="divider d-flex justify-content-center">
+                                        <strong class="divider-title text-uppercase text-muted">or</strong>
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center mt-0">
+                                        <a role="button" href="" class="btn btn-outline-primary btn-sm social-login-btn" title="Sign-in with Facebook">
+                                            <i class="fa fa-facebook text-primary-inverse"></i>
+                                        </a>
+                                        <a role="button" href="" class="btn btn-outline-primary btn-sm mx-3 social-login-btn" title="Sign-in with Google">
+                                            <i class="fa fa-google text-primary-inverse"></i>
+                                        </a>
+                                        <a role="button" href="" class="btn btn-outline-primary btn-sm social-login-btn mr-3" title="Sign-in with Twitter">
+                                            <i class="fa fa-twitter text-primary-inverse"></i>
+                                        </a>
+                                        <a role="button" href="" class="btn btn-outline-primary btn-sm social-login-btn" title="Sign-in with Instagram">
+                                            <i class="fa fa-instagram text-primary-inverse"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <hr class="mb-0 pb-0">
+                                <div class="d-flex align-items-center w-100 mb-2">
+                                    Don't have an account? <a href="/register" class="ml-1 d-flex align-items-center">Sign-Up <i class="fa fa-caret-right ml-1"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- /.Visitor -->
+
+                        <li class="nav-item d-md-flex ml-3" id="app-settings" data-toggle="tooltip" title="See more settings">
+                            <a class="toggle-settings nav-link icon-link material-icons">tune</a>
+                        </li>
+                    </ul>
+                    <!-- /.Right Navbar Links -->
+                </nav>
+                <!-- Main Navbar -->
+
+                <!-- Search Form -->
+                <form method="get" action="/search" id="search-form" class="bg-whitesmoke">
+                    <div class="form-group icon-form-group" id="search-bar">
+                        <i class="material-icons icon text-faded">search</i>
+                        <input type="search" name="search" id="search" class="form-control" placeholder="Search...">
+                        <ul class="list-group bg-whitesmoke search-list rounded-bottom-2 d-none">
+                            <!-- Search results loading -->
+                            <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div class="d-flex w-100">
+                                        <!-- Product Item -->
+                                        <div class="media align-items-center">
+                                            <div class="cart-item-img-placeholder rounded-2 align-self-center mr-2"></div>
+
+                                            <!-- Product Item Details -->
+                                            <div class="media-body cart-details-placeholder">
+                                                <div class="content-placeholder cart-item-name-placeholder"></div>
+                                                <div class="content-placeholder cart-category-placeholder"></div>
+                                                <div class="cart-rating-placeholder content-placeholder"></div>
+                                                <div class="content-placeholder cart-stock-placeholder"></div>
+                                            </div>
+                                            <!-- Product Item Details -->
+                                        </div>
+                                        <!-- /.Product Item -->
+                                    </div>
+                                    <div class="d-block text-center">
+                                        <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                        <button class="btn btn-cart-placeholder pt-1"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- /.Search Results Loading -->
+                            <!-- Search results will be shown here -->
+                        </ul>
+                    </div>
+                </form>
+                <!-- /.Search Form -->
+            </div>
+        </header>
+        <!-- /.Main Navbar -->
+    </div>
+    <!-- /.Page Content -->
+
+    <!-- Sticky Bottom Footer -->
+    <footer class="footer"></footer>
+    <!-- /.Sticky Bottom Footer -->
+
+    <!-- JQuery -->
+    <script src="dist/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="dist/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- OwlCarousel -->
+    <script src="dist/plugins/OwlCarousel/dist/owl.carousel.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- iziToast -->
+    <script src="dist/plugins/iziToast/js/iziToast.min.js"></script>
+    <!-- Sweet Alert -->
+    <script src="dist/plugins/sweetalert2/package/dist/sweetalert2.min.js"></script>
+    <!-- Gifteros -->
+    <script src="dist/js/gifteros.min.js"></script>
+</body>
+
+</html>
