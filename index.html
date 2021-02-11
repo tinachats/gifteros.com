@@ -35,85 +35,12 @@
     <!-- Gifteros -->
     <link rel="stylesheet" href="dist/css/gifteros.min.css">
     <style>
-        img.gifteros-logo {
-            border-radius: .5rem;
-        }
-        
-        .app-showcase,
-        .main-carousel.owl-theme .item,
-        .main-carousel.owl-theme img {
-            height: 250px;
-        }
-        
-        .main-carousel.owl-theme .owl-nav.disabled+.owl-dots {
-            margin-top: -25px;
-        }
-        
-        .item .related-gift {
-            height: 225px;
-        }
-        
-        .item .related-gift img {
-            background-color: var(--cloud-grey);
-            height: 150px;
-            width: 100%;
-        }
-        
         .fixed-md-top {
             position: fixed;
             top: 0;
             right: 0;
             left: 0;
         }
-        
-        .bg-salmon {
-            background-color: rgb(242, 250, 251);
-        }
-        
-        .grid-block {
-            position: relative;
-            height: 102px;
-            width: 100%
-        }
-        
-        .grid-block .block-title {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            bottom: 5px;
-            font-weight: bolder;
-        }
-        
-        .rounded-start,
-        .btn-cart-placeholder.rounded-start {
-            border-top-left-radius: 20px !important;
-            border-bottom-left-radius: 20px !important;
-        }
-        
-        .rounded-start,
-        .add-to-card-btn,
-        .compare-btn,
-        .btn-cart-placeholder.rounded-start,
-        .compare-btn-placeholder.rounded-end {
-            width: 50%
-        }
-        
-        .rounded-end,
-        .compare-btn-placeholder.rounded-end {
-            border-top-right-radius: 20px !important;
-            border-bottom-right-radius: 20px !important;
-        }
-        
-        .border-switch {
-            border-color: var(--app-color);
-        }
-        
-        .btn.border-switch * {
-            color: var(--app-color);
-        }
-        
-        @media(min-width: 768px) {}
     </style>
 </head>
 
@@ -522,11 +449,237 @@
                         <li class="nav-item dropdown ms-3">
                             <a href="#" class="nav-link icon-link" id="shopping-cart" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="bi bi-cart4 icon-md pull-up"></i>
-                                <span class="badge nav-badge gift-count"></span>
+                                <span class="badge nav-badge gift-count">4</span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end app-menu rounded-2 box-shadow-sm cart-menu mt-0 p-0">
                                 <div class="shopping-bag rounded-2">
-                                    <!-- Shopping Cart details will be shown here -->
+                                    <div class="list-group-item box-shadow-sm rounded-top-2 lh-100 px-1 py-2 fixed-top">
+                                        <h6 class="lead font-600 ml-2 my-0">4 cart items</h6>
+                                    </div>
+                                    <!-- Cart Item -->
+                                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="d-flex w-100">
+                                                <!-- Product Item -->
+                                                <div class="d-flex align-items-center">
+                                                    <div class="cart-menu-img-wrapper">
+                                                        <div class="d-sm-flex d-xl-none flex-column justify-content-center text-center cart-actions-sm">
+                                                            <i role="button" class="fa fa-chevron-circle-up text-success-warning subtract-product"></i>
+                                                            <span class="font-600 text-success-warning item-count">0</span>
+                                                            <i role="button" class="fa fa-chevron-circle-down text-success-warning increase-qty"></i>
+                                                        </div>
+                                                        <a href="">
+                                                            <img src="dist/images/gifts/15f45885de939d.jpg" height="55" width="55" alt="" class="rounded-2 align-self-center menu-item-img me-2">
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Product Item Details -->
+                                                    <div class="cart-item-details" id="cart-item-details">
+                                                        <p class="text-sm font-600 text-capitalize my-0 py-0">
+                                                            Awesome gift
+                                                        </p>
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&star;</li>
+                                                            <span class="text-sm text-faded font-600">(35)</span>
+                                                        </ul>
+                                                        <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
+                                                            <span class="pr-2">2 in cart</span>
+                                                        </p>
+                                                    </div>
+                                                    <!-- Product Item Details -->
+                                                    <!-- Cart Actions -->
+                                                    <div class="hidden-product-actions w-100">
+                                                        <div class="d-flex align-items-center justify-content-center m-0 p-0 cursor">
+                                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Subtract quantity">remove_circle</span>
+                                                            <span role="button" class="product-actions text-faded mx-4">2</span>
+                                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Add more items">add_circle</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.Cart Actions -->
+                                                </div>
+                                                <!-- /.Product Item -->
+                                            </div>
+                                            <div class="d-block text-center">
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
+                                                <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- /.Cart Item -->
+                                    <!-- Cart Item -->
+                                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="d-flex w-100">
+                                                <!-- Product Item -->
+                                                <div class="d-flex align-items-center">
+                                                    <div class="cart-menu-img-wrapper">
+                                                        <div class="d-sm-flex d-xl-none flex-column justify-content-center text-center cart-actions-sm">
+                                                            <i role="button" class="fa fa-chevron-circle-up text-success-warning subtract-product"></i>
+                                                            <span class="font-600 text-success-warning item-count">0</span>
+                                                            <i role="button" class="fa fa-chevron-circle-down text-success-warning increase-qty"></i>
+                                                        </div>
+                                                        <a href="">
+                                                            <img src="dist/images/gifts/15f45885de939d.jpg" height="55" width="55" alt="" class="rounded-2 align-self-center menu-item-img me-2">
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Product Item Details -->
+                                                    <div class="cart-item-details" id="cart-item-details">
+                                                        <p class="text-sm font-600 text-capitalize my-0 py-0">
+                                                            Awesome gift
+                                                        </p>
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&star;</li>
+                                                            <span class="text-sm text-faded font-600">(35)</span>
+                                                        </ul>
+                                                        <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
+                                                            <span class="pr-2">2 in cart</span>
+                                                        </p>
+                                                    </div>
+                                                    <!-- Product Item Details -->
+                                                    <!-- Cart Actions -->
+                                                    <div class="hidden-product-actions w-100">
+                                                        <div class="d-flex align-items-center justify-content-center m-0 p-0 cursor">
+                                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Subtract quantity">remove_circle</span>
+                                                            <span role="button" class="product-actions text-faded mx-4">2</span>
+                                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Add more items">add_circle</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.Cart Actions -->
+                                                </div>
+                                                <!-- /.Product Item -->
+                                            </div>
+                                            <div class="d-block text-center">
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
+                                                <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- /.Cart Item -->
+                                    <!-- Cart Item -->
+                                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="d-flex w-100">
+                                                <!-- Product Item -->
+                                                <div class="d-flex align-items-center">
+                                                    <div class="cart-menu-img-wrapper">
+                                                        <div class="d-sm-flex d-xl-none flex-column justify-content-center text-center cart-actions-sm">
+                                                            <i role="button" class="fa fa-chevron-circle-up text-success-warning subtract-product"></i>
+                                                            <span class="font-600 text-success-warning item-count">0</span>
+                                                            <i role="button" class="fa fa-chevron-circle-down text-success-warning increase-qty"></i>
+                                                        </div>
+                                                        <a href="">
+                                                            <img src="dist/images/gifts/15f45885de939d.jpg" height="55" width="55" alt="" class="rounded-2 align-self-center menu-item-img me-2">
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Product Item Details -->
+                                                    <div class="cart-item-details" id="cart-item-details">
+                                                        <p class="text-sm font-600 text-capitalize my-0 py-0">
+                                                            Awesome gift
+                                                        </p>
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&star;</li>
+                                                            <span class="text-sm text-faded font-600">(35)</span>
+                                                        </ul>
+                                                        <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
+                                                            <span class="pr-2">2 in cart</span>
+                                                        </p>
+                                                    </div>
+                                                    <!-- Product Item Details -->
+                                                    <!-- Cart Actions -->
+                                                    <div class="hidden-product-actions w-100">
+                                                        <div class="d-flex align-items-center justify-content-center m-0 p-0 cursor">
+                                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Subtract quantity">remove_circle</span>
+                                                            <span role="button" class="product-actions text-faded mx-4">2</span>
+                                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Add more items">add_circle</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.Cart Actions -->
+                                                </div>
+                                                <!-- /.Product Item -->
+                                            </div>
+                                            <div class="d-block text-center">
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
+                                                <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- /.Cart Item -->
+                                    <!-- Cart Item -->
+                                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="d-flex w-100">
+                                                <!-- Product Item -->
+                                                <div class="d-flex align-items-center">
+                                                    <div class="cart-menu-img-wrapper">
+                                                        <div class="d-sm-flex d-xl-none flex-column justify-content-center text-center cart-actions-sm">
+                                                            <i role="button" class="fa fa-chevron-circle-up text-success-warning subtract-product"></i>
+                                                            <span class="font-600 text-success-warning item-count">0</span>
+                                                            <i role="button" class="fa fa-chevron-circle-down text-success-warning increase-qty"></i>
+                                                        </div>
+                                                        <a href="">
+                                                            <img src="dist/images/gifts/15f45885de939d.jpg" height="55" width="55" alt="" class="rounded-2 align-self-center menu-item-img me-2">
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Product Item Details -->
+                                                    <div class="cart-item-details" id="cart-item-details">
+                                                        <p class="text-sm font-600 text-capitalize my-0 py-0">
+                                                            Awesome gift
+                                                        </p>
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&star;</li>
+                                                            <span class="text-sm text-faded font-600">(35)</span>
+                                                        </ul>
+                                                        <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
+                                                            <span class="pr-2">2 in cart</span>
+                                                        </p>
+                                                    </div>
+                                                    <!-- Product Item Details -->
+                                                    <!-- Cart Actions -->
+                                                    <div class="hidden-product-actions w-100">
+                                                        <div class="d-flex align-items-center justify-content-center m-0 p-0 cursor">
+                                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Subtract quantity">remove_circle</span>
+                                                            <span role="button" class="product-actions text-faded mx-4">2</span>
+                                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Add more items">add_circle</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.Cart Actions -->
+                                                </div>
+                                                <!-- /.Product Item -->
+                                            </div>
+                                            <div class="d-block text-center">
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
+                                                <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- /.Cart Item -->
                                 </div>
                                 <!-- Cart Details -->
                                 <li class="list-group-item w-100 lh-100 font-600 text-sm rounded-bottom-2" id="cart-action-btns">
@@ -555,19 +708,19 @@
                                     <div class="usd-price">
                                         <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
                                             <span class="text-capitalize">Delivery Costs:</span>
-                                            <span class="usd-delivery-cost">US${{ session()->get('shipping_costs')['usd_delivery_cost'] ?? 0 }}</span>
+                                            <span class="usd-delivery-cost">US$3.39</span>
                                         </h6>
                                     </div>
                                     <div class="zar-price d-none">
                                         <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
                                             <span class="text-capitalize">Delivery Costs:</span>
-                                            <span class="zar-delivery-cost">R{{ session()->get('shipping_costs')['zar_delivery_cost'] ?? 0 }}</span>
+                                            <span class="zar-delivery-cost">R283.48</span>
                                         </h6>
                                     </div>
                                     <div class="zwl-price d-none">
                                         <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
                                             <span class="text-capitalize">Delivery Costs:</span>
-                                            <span class="zwl-delivery-cost">ZW${{ session()->get('shipping_costs')['zwl_delivery_cost'] ?? 0 }}</span>
+                                            <span class="zwl-delivery-cost">ZW$384.48</span>
                                         </h6>
                                     </div>
                                     <!-- /.Delivery Charges -->
@@ -577,19 +730,19 @@
                                     <div class="usd-price">
                                         <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
                                             <span class="text-capitalize">Discount:</span>
-                                            <span class="usd-discount">US${{ session()->get('coupon')['usd_value'] }}</span>
+                                            <span class="usd-discount">US$3.48</span>
                                         </h6>
                                     </div>
                                     <div class="zar-price d-none">
                                         <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
                                             <span class="text-capitalize">Discount:</span>
-                                            <span class="zar-discount">R{{ session()->get('coupon')['zar_value'] }}</span>
+                                            <span class="zar-discount">R49.39</span>
                                         </h6>
                                     </div>
                                     <div class="zwl-price d-none">
                                         <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
                                             <span class="text-capitalize">Discount:</span>
-                                            <span class="zwl-discount">ZW${{ session()->get('coupon')['zwl_value'] }}</span>
+                                            <span class="zwl-discount">ZW$393.39</span>
                                         </h6>
                                     </div>
                                     <hr class="my-1">
@@ -633,7 +786,8 @@
                                                 Clear Cart
                                             </button>
                                             <a role="button" href="/login" class="btn btn-primary btn-sm btn-block font-600 d-flex align-items-center justify-content-center checkout-btn m-0">
-                                                <i class="material-icons me-1">directions_run</i> Checkout
+                                                Go to Cart
+                                                <i class="material-icons ms-1">arrow_forward</i>
                                             </a>
                                         </div>
                                     </div>
@@ -811,19 +965,19 @@
                         <div class="owl-carousel owl-theme main-carousel">
                             <div class="item rounded-2">
                                 <a href="#" class="stretched-link"></a>
-                                <img src="dist/images/banners/H3113b4df99eb45a5be20bb5a0dbbdab1n.png_.webp" class="img-responsive rounded-2">
+                                <img src="dist/images/banners/H3113b4df99eb45a5be20bb5a0dbbdab1n.png_.webp" class="img-responsive rounded-md-2">
                             </div>
                             <div class="item rounded-2">
                                 <a href="#" class="stretched-link"></a>
-                                <img src="dist/images/banners/H3db5a79fca424c0c9e0b3683d6b8c173O.png_.webp" class="img-responsive rounded-2">
+                                <img src="dist/images/banners/H3db5a79fca424c0c9e0b3683d6b8c173O.png_.webp" class="img-responsive rounded-md-2">
                             </div>
                             <div class="item rounded-2">
                                 <a href="#" class="stretched-link"></a>
-                                <img src="dist/images/banners/H490c7d140d0a49fd9b7362cfe2095b22d.png_.webp" class="img-responsive rounded-2">
+                                <img src="dist/images/banners/H490c7d140d0a49fd9b7362cfe2095b22d.png_.webp" class="img-responsive rounded-md-2">
                             </div>
                             <div class="item rounded-2">
                                 <a href="#" class="stretched-link"></a>
-                                <img src="dist/images/banners/Hb431c4e82e1b41c0a83aed68f84490a8E.png_.webp" class="img-responsive rounded-2">
+                                <img src="dist/images/banners/Hb431c4e82e1b41c0a83aed68f84490a8E.png_.webp" class="img-responsive rounded-md-2">
                             </div>
                         </div>
                     </div>
@@ -845,10 +999,10 @@
                                             </div>
                                             <div class="row align-items-center gx-2">
                                                 <div class="col-6">
-                                                    <a href="#" role="button" class="btn bg-switch text-white btn-sm btn-block rounded-pill px-2">Join</a>
+                                                    <a href="/register" role="button" class="btn bg-switch text-white btn-sm btn-block rounded-pill px-2">Join</a>
                                                 </div>
                                                 <div class="col-6">
-                                                    <a href="#" role="button" class="btn btn-default btn-sm btn-block rounded-pill ms-2 px-2">Sign in</a>
+                                                    <a href="#" role="button" class="btn btn-default btn-sm btn-block rounded-pill px-2" onclick="showLoginForm()">Sign in</a>
                                                 </div>
                                             </div>
                                             <div class="d-grid grid-2 grid-p-1 mt-2">
@@ -913,7 +1067,7 @@
                             <div class="item w-100">
                                 <a href="#" class="stretched-link">
                                     <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                        <img data-src="dist/images/gifts/15f458254a0dac.1.6.jpg" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
+                                        <img data-src="dist/images/gifts/15f458254a0dac.1.6.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
                                         <div class="gift-content mx-1">
                                             <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
                                             <div class="d-inline-block w-100 lh-100">
@@ -952,7 +1106,7 @@
                             <div class="item w-100">
                                 <a href="#" class="stretched-link">
                                     <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                        <img data-src="dist/images/gifts/15f458254a0dac.1.jpg" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
+                                        <img data-src="dist/images/gifts/15f458254a0dac.1.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
                                         <div class="gift-content mx-1">
                                             <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
                                             <div class="d-inline-block w-100 lh-100">
@@ -991,7 +1145,7 @@
                             <div class="item w-100">
                                 <a href="#" class="stretched-link">
                                     <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                        <img data-src="dist/images/gifts/15f458254a0dac.2.webp" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
+                                        <img data-src="dist/images/gifts/15f458254a0dac.2.webp" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
                                         <div class="gift-content mx-1">
                                             <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
                                             <div class="d-inline-block w-100 lh-100">
@@ -1030,7 +1184,7 @@
                             <div class="item w-100">
                                 <a href="#" class="stretched-link">
                                     <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                        <img data-src="dist/images/gifts/15f458254a0dac.jpg" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
+                                        <img data-src="dist/images/gifts/15f458254a0dac.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
                                         <div class="gift-content mx-1">
                                             <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
                                             <div class="d-inline-block w-100 lh-100">
@@ -1069,7 +1223,7 @@
                             <div class="item w-100">
                                 <a href="#" class="stretched-link">
                                     <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                        <img data-src="dist/images/gifts/15f45885de939d.jpg" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
+                                        <img data-src="dist/images/gifts/15f45885de939d.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
                                         <div class="gift-content mx-1">
                                             <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
                                             <div class="d-inline-block w-100 lh-100">
@@ -1108,7 +1262,7 @@
                             <div class="item w-100">
                                 <a href="#" class="stretched-link">
                                     <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                        <img data-src="dist/images/gifts/15f4598bf99479.2.jpg" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
+                                        <img data-src="dist/images/gifts/15f4598bf99479.2.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
                                         <div class="gift-content mx-1">
                                             <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
                                             <div class="d-inline-block w-100 lh-100">
@@ -1147,7 +1301,7 @@
                             <div class="item w-100">
                                 <a href="#" class="stretched-link">
                                     <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                        <img data-src="dist/images/gifts/15f4605c1791a6.jpg" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
+                                        <img data-src="dist/images/gifts/15f4605c1791a6.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
                                         <div class="gift-content mx-1">
                                             <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
                                             <div class="d-inline-block w-100 lh-100">
@@ -1186,7 +1340,7 @@
                             <div class="item w-100">
                                 <a href="#" class="stretched-link">
                                     <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                        <img data-src="dist/images/gifts/15f460b1352a38.jpg" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
+                                        <img data-src="dist/images/gifts/15f460b1352a38.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
                                         <div class="gift-content mx-1">
                                             <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
                                             <div class="d-inline-block w-100 lh-100">
@@ -1225,142 +1379,6 @@
                     </div>
                 </div>
                 <!-- /.Gift Categories -->
-
-                <!-- Gift Items -->
-                <div class="d-block my-2 w-100">
-                    <!-- Gift Title -->
-                    <div class="d-flex justify-content-between align-items-center title">
-                        <h6 class="font-600 text-app-color text-capitalize">Customizable Gifts</h6>
-                        <div class="d-flex justify-content-around align-items-center">
-                            <i role="button" class="bi bi-list-ul view-option list-icon d-none d-md-block" data-view="list-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="List view"></i>
-                            <i role="button" class="bi bi-grid view-option grid-icon active d-none d-md-inline-block mx-3" data-view="grid-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Grid View"></i>
-                            <a role="button" href="/category/25/customizable" class="btn btn-sm bg-switch" id="all-customizable">
-                                <span class="text-white">View all</span>
-                                <i class="ion ion-chevron-right text-white ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- /.Gift Title -->
-                    <!-- Gifts -->
-                    <div class="d-grid grid-view grid-p-1 mt-3 products-shelf" id="test-gifts">
-                        <!-- Product Card -->
-                        <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
-                            <!-- Cart Actions -->
-                            <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
-                                <div class="d-flex align-items-center px-2">
-                                    <div class="d-flex align-items-center justify-content-around m-0 p-0">
-                                        <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Decrease quantity">remove_circle</span>
-                                        <span role="button" class="product-actions item-quantity text-faded" id="item-count">0</span>
-                                        <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Increase quantity">add_circle</span>
-                                    </div>
-                                    <div class="ms-auto d-flex align-items-center">
-                                        <a href="#" class="nav-link icon-link toggle-customization" id="customize" title="Customize gift" data-id="">
-                                            <i class="material-icons">palette</i>
-                                        </a>
-                                        <a href="#" class="nav-link icon-link text-danger remove-item ms-2" title="Remove Item" data-id="">
-                                            <i class="material-icons notifications">delete</i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.Cart Actions -->
-                            <div class="product-img-wrapper">
-                                <div class="badge bg-danger rounded-end customize-ribbon d-flex align-items-center">
-                                    <i class="material-icons text-white me-1" id="sale-icon">alarm_on</i>
-                                    <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
-                                </div>
-                                <a href="#" title="View product">
-                                    <img data-src="dist/images/gifts/15f4607d0b3c65.jpg" alt="" loading="lazy" class="card-img-top img-responsive lazy">
-                                </a>
-                                <div class="overlay d-flex justify-content-around py-1">
-                                    <div class="d-flex flex-column text-center" title="38 In Stock">
-                                        <i class="fa fa-home text-light"></i>
-                                        <span class="text-light text-sm">38</span>
-                                    </div>
-                                    <div class="d-flex flex-column text-center" title="27k Total Views">
-                                        <i class="fa fa-eye text-light"></i>
-                                        <span class="text-light text-sm">27k</span>
-                                    </div>
-                                    <div class="d-flex flex-column text-center" title="Wishlisted by 2734 customer(s)">
-                                        <i role="button" class="fa fa-heart text-light overlay-icon text-warning wishlist-icon" data-id="" data-user="" data-action="unwish" title="This gift is in your Wishlist"></i>
-                                        <span class="text-light text-sm">2734</span>
-                                    </div>
-                                    <div class="d-flex flex-column text-center" title="456 gift(s) sold">
-                                        <i role="button" class="fa fa-truck text-light overlay-icon text-warning" data-action="unwish"></i>
-                                        <span class="text-light text-sm">235</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <div class="card-body my-0 py-0">
-                                    <div class="lh-100 mb-0 pb-0">
-                                        <a href="#">
-                                            <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
-                                                Customizable board
-                                            </p>
-                                            <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
-                                                Customizable board
-                                            </p>
-                                        </a>
-                                        <a href="#" class="text-sm font-500 text-capitalize my-0 py-0">
-                                            Customizables
-                                        </a>
-                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-muted">&star;</li>
-                                            <span class="text-sm text-faded font-600">(35)</span>
-                                        </ul>
-                                    </div>
-                                    <div class="price-tag">
-                                        <div class="usd-price">
-                                            <div class="d-flex align-items-center justify-content-between">
-                                                <span class="font-600">$<span class="product-price">36.38</span></span>
-                                                <div class="d-flex align-items-center before-prices">
-                                                    <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="zar-price d-none">
-                                            <div class="d-flex align-items-center justify-content-between">
-                                                <span class="font-600">R<span class="product-price">273.38</span></span>
-                                                <div class="d-flex align-items-center before-prices">
-                                                    <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="zwl-price d-none">
-                                            <div class="d-flex align-items-center justify-content-between">
-                                                <span class="font-600">$<span class="product-price">2737.33</span></span>
-                                                <div class="d-flex align-items-center before-prices">
-                                                    <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center text-sm">
-                                        <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
-                                        <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
-                                    </div>
-                                    <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
-                                        <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
-                                            <i class="material-icons text-white me-1 d-sm-none d-md-inline-block">add_shopping_cart</i>
-                                            Buy <span class="text-white text-white ms-1">gift</span>
-                                        </button>
-                                        <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
-                                            <i class="material-icons text-app-color me-1 d-sm-none d-md-inline-block">compare_arrows</i>
-                                            Compare
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /.Product Card -->
-                    </div>
-                </div>
-                <!-- Gift Items -->
 
                 <!-- Gift Items -->
                 <div class="d-block my-2 w-100">
@@ -1533,6 +1551,602 @@
                     <!-- /.Gifts -->
                 </div>
                 <!-- /.Gift Items -->
+
+                <!-- Gift Items -->
+                <div class="d-block my-2 w-100">
+                    <!-- Gift Title -->
+                    <div class="d-flex justify-content-between align-items-center title">
+                        <h6 class="font-600 text-app-color text-capitalize">Customizable Gifts</h6>
+                        <div class="d-flex justify-content-around align-items-center">
+                            <i role="button" class="bi bi-list-ul view-option list-icon d-none d-md-block" data-view="list-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="List view"></i>
+                            <i role="button" class="bi bi-grid view-option grid-icon active d-none d-md-inline-block mx-3" data-view="grid-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Grid View"></i>
+                            <a role="button" href="/category/25/customizable" class="btn btn-sm bg-switch" id="all-customizable">
+                                <span class="text-white">View all</span>
+                                <i class="ion ion-chevron-right text-white ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /.Gift Title -->
+                    <!-- Gifts -->
+                    <div class="d-grid grid-view grid-p-1 mt-3 products-shelf" id="test-gifts">
+                        <!-- Product Card -->
+                        <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                            <!-- Cart Actions -->
+                            <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
+                                <div class="d-flex align-items-center px-2">
+                                    <div class="d-flex align-items-center justify-content-around m-0 p-0">
+                                        <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Decrease quantity">remove_circle</span>
+                                        <span role="button" class="product-actions item-quantity text-faded" id="item-count">0</span>
+                                        <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Increase quantity">add_circle</span>
+                                    </div>
+                                    <div class="ms-auto d-flex align-items-center">
+                                        <a href="#" class="nav-link icon-link toggle-customization" id="customize" title="Customize gift" data-id="">
+                                            <i class="material-icons">palette</i>
+                                        </a>
+                                        <a href="#" class="nav-link icon-link text-danger remove-item ms-2" title="Remove Item" data-id="">
+                                            <i class="material-icons notifications">delete</i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.Cart Actions -->
+                            <div class="product-img-wrapper">
+                                <div class="badge bg-danger rounded-end customize-ribbon d-flex align-items-center">
+                                    <i class="material-icons text-white me-1" id="sale-icon">alarm_on</i>
+                                    <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
+                                </div>
+                                <a href="#" title="View product">
+                                    <img data-src="dist/images/gifts/15f4607d0b3c65.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
+                                </a>
+                                <div class="overlay d-flex justify-content-around py-1">
+                                    <div class="d-flex flex-column text-center" title="38 In Stock">
+                                        <i class="fa fa-home text-light"></i>
+                                        <span class="text-light text-sm">38</span>
+                                    </div>
+                                    <div class="d-flex flex-column text-center" title="27k Total Views">
+                                        <i class="fa fa-eye text-light"></i>
+                                        <span class="text-light text-sm">27k</span>
+                                    </div>
+                                    <div class="d-flex flex-column text-center" title="Wishlisted by 2734 customer(s)">
+                                        <i role="button" class="fa fa-heart text-light overlay-icon text-warning wishlist-icon" data-id="" data-user="" data-action="unwish" title="This gift is in your Wishlist"></i>
+                                        <span class="text-light text-sm">2734</span>
+                                    </div>
+                                    <div class="d-flex flex-column text-center" title="456 gift(s) sold">
+                                        <i role="button" class="fa fa-truck text-light overlay-icon text-warning" data-action="unwish"></i>
+                                        <span class="text-light text-sm">235</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body my-0 py-0">
+                                    <div class="lh-100 mb-0 pb-0">
+                                        <a href="#">
+                                            <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                Customizable board
+                                            </p>
+                                            <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                Customizable board
+                                            </p>
+                                        </a>
+                                        <a href="#" class="text-sm font-500 text-capitalize my-0 py-0">
+                                            Customizables
+                                        </a>
+                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-muted">&star;</li>
+                                            <span class="text-sm text-faded font-600">(35)</span>
+                                        </ul>
+                                    </div>
+                                    <div class="price-tag">
+                                        <div class="usd-price">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="font-600">$<span class="product-price">36.38</span></span>
+                                                <div class="d-flex align-items-center before-prices">
+                                                    <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="zar-price d-none">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="font-600">R<span class="product-price">273.38</span></span>
+                                                <div class="d-flex align-items-center before-prices">
+                                                    <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="zwl-price d-none">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="font-600">$<span class="product-price">2737.33</span></span>
+                                                <div class="d-flex align-items-center before-prices">
+                                                    <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center text-sm">
+                                        <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
+                                        <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
+                                    </div>
+                                    <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
+                                        <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
+                                            <i class="material-icons text-white me-1 d-sm-none d-md-inline-block">add_shopping_cart</i>
+                                            Buy <span class="text-white text-white ms-1">gift</span>
+                                        </button>
+                                        <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
+                                            <i class="material-icons text-app-color me-1 d-sm-none d-md-inline-block">compare_arrows</i>
+                                            Compare
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.Product Card -->
+                        <!-- Product Card -->
+                        <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                            <!-- Cart Actions -->
+                            <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
+                                <div class="d-flex align-items-center px-2">
+                                    <div class="d-flex align-items-center justify-content-around m-0 p-0">
+                                        <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Decrease quantity">remove_circle</span>
+                                        <span role="button" class="product-actions item-quantity text-faded" id="item-count">0</span>
+                                        <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Increase quantity">add_circle</span>
+                                    </div>
+                                    <div class="ms-auto d-flex align-items-center">
+                                        <a href="#" class="nav-link icon-link toggle-customization" id="customize" title="Customize gift" data-id="">
+                                            <i class="material-icons">palette</i>
+                                        </a>
+                                        <a href="#" class="nav-link icon-link text-danger remove-item ms-2" title="Remove Item" data-id="">
+                                            <i class="material-icons notifications">delete</i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.Cart Actions -->
+                            <div class="product-img-wrapper">
+                                <div class="badge bg-danger rounded-end customize-ribbon d-flex align-items-center">
+                                    <i class="material-icons text-white me-1" id="sale-icon">alarm_on</i>
+                                    <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
+                                </div>
+                                <a href="#" title="View product">
+                                    <img data-src="dist/images/gifts/15f458474b905f.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
+                                </a>
+                                <div class="overlay d-flex justify-content-around py-1">
+                                    <div class="d-flex flex-column text-center" title="38 In Stock">
+                                        <i class="fa fa-home text-light"></i>
+                                        <span class="text-light text-sm">38</span>
+                                    </div>
+                                    <div class="d-flex flex-column text-center" title="27k Total Views">
+                                        <i class="fa fa-eye text-light"></i>
+                                        <span class="text-light text-sm">27k</span>
+                                    </div>
+                                    <div class="d-flex flex-column text-center" title="Wishlisted by 2734 customer(s)">
+                                        <i role="button" class="fa fa-heart text-light overlay-icon text-warning wishlist-icon" data-id="" data-user="" data-action="unwish" title="This gift is in your Wishlist"></i>
+                                        <span class="text-light text-sm">2734</span>
+                                    </div>
+                                    <div class="d-flex flex-column text-center" title="456 gift(s) sold">
+                                        <i role="button" class="fa fa-truck text-light overlay-icon text-warning" data-action="unwish"></i>
+                                        <span class="text-light text-sm">235</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body my-0 py-0">
+                                    <div class="lh-100 mb-0 pb-0">
+                                        <a href="#">
+                                            <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                Customizable board
+                                            </p>
+                                            <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                Customizable board
+                                            </p>
+                                        </a>
+                                        <a href="#" class="text-sm font-500 text-capitalize my-0 py-0">
+                                            Customizables
+                                        </a>
+                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-muted">&star;</li>
+                                            <span class="text-sm text-faded font-600">(35)</span>
+                                        </ul>
+                                    </div>
+                                    <div class="price-tag">
+                                        <div class="usd-price">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="font-600">$<span class="product-price">36.38</span></span>
+                                                <div class="d-flex align-items-center before-prices">
+                                                    <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="zar-price d-none">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="font-600">R<span class="product-price">273.38</span></span>
+                                                <div class="d-flex align-items-center before-prices">
+                                                    <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="zwl-price d-none">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="font-600">$<span class="product-price">2737.33</span></span>
+                                                <div class="d-flex align-items-center before-prices">
+                                                    <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center text-sm">
+                                        <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
+                                        <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
+                                    </div>
+                                    <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
+                                        <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
+                                            <i class="material-icons text-white me-1 d-sm-none d-md-inline-block">add_shopping_cart</i>
+                                            Buy <span class="text-white text-white ms-1">gift</span>
+                                        </button>
+                                        <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
+                                            <i class="material-icons text-app-color me-1 d-sm-none d-md-inline-block">compare_arrows</i>
+                                            Compare
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.Product Card -->
+                        <!-- Product Card -->
+                        <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                            <!-- Cart Actions -->
+                            <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
+                                <div class="d-flex align-items-center px-2">
+                                    <div class="d-flex align-items-center justify-content-around m-0 p-0">
+                                        <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Decrease quantity">remove_circle</span>
+                                        <span role="button" class="product-actions item-quantity text-faded" id="item-count">0</span>
+                                        <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Increase quantity">add_circle</span>
+                                    </div>
+                                    <div class="ms-auto d-flex align-items-center">
+                                        <a href="#" class="nav-link icon-link toggle-customization" id="customize" title="Customize gift" data-id="">
+                                            <i class="material-icons">palette</i>
+                                        </a>
+                                        <a href="#" class="nav-link icon-link text-danger remove-item ms-2" title="Remove Item" data-id="">
+                                            <i class="material-icons notifications">delete</i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.Cart Actions -->
+                            <div class="product-img-wrapper">
+                                <div class="badge bg-danger rounded-end customize-ribbon d-flex align-items-center">
+                                    <i class="material-icons text-white me-1" id="sale-icon">alarm_on</i>
+                                    <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
+                                </div>
+                                <a href="#" title="View product">
+                                    <img data-src="dist/images/gifts/15f458254a0dac.2.webp" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
+                                </a>
+                                <div class="overlay d-flex justify-content-around py-1">
+                                    <div class="d-flex flex-column text-center" title="38 In Stock">
+                                        <i class="fa fa-home text-light"></i>
+                                        <span class="text-light text-sm">38</span>
+                                    </div>
+                                    <div class="d-flex flex-column text-center" title="27k Total Views">
+                                        <i class="fa fa-eye text-light"></i>
+                                        <span class="text-light text-sm">27k</span>
+                                    </div>
+                                    <div class="d-flex flex-column text-center" title="Wishlisted by 2734 customer(s)">
+                                        <i role="button" class="fa fa-heart text-light overlay-icon text-warning wishlist-icon" data-id="" data-user="" data-action="unwish" title="This gift is in your Wishlist"></i>
+                                        <span class="text-light text-sm">2734</span>
+                                    </div>
+                                    <div class="d-flex flex-column text-center" title="456 gift(s) sold">
+                                        <i role="button" class="fa fa-truck text-light overlay-icon text-warning" data-action="unwish"></i>
+                                        <span class="text-light text-sm">235</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body my-0 py-0">
+                                    <div class="lh-100 mb-0 pb-0">
+                                        <a href="#">
+                                            <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                Customizable board
+                                            </p>
+                                            <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                Customizable board
+                                            </p>
+                                        </a>
+                                        <a href="#" class="text-sm font-500 text-capitalize my-0 py-0">
+                                            Customizables
+                                        </a>
+                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-muted">&star;</li>
+                                            <span class="text-sm text-faded font-600">(35)</span>
+                                        </ul>
+                                    </div>
+                                    <div class="price-tag">
+                                        <div class="usd-price">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="font-600">$<span class="product-price">36.38</span></span>
+                                                <div class="d-flex align-items-center before-prices">
+                                                    <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="zar-price d-none">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="font-600">R<span class="product-price">273.38</span></span>
+                                                <div class="d-flex align-items-center before-prices">
+                                                    <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="zwl-price d-none">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="font-600">$<span class="product-price">2737.33</span></span>
+                                                <div class="d-flex align-items-center before-prices">
+                                                    <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center text-sm">
+                                        <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
+                                        <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
+                                    </div>
+                                    <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
+                                        <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
+                                            <i class="material-icons text-white me-1 d-sm-none d-md-inline-block">add_shopping_cart</i>
+                                            Buy <span class="text-white text-white ms-1">gift</span>
+                                        </button>
+                                        <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
+                                            <i class="material-icons text-app-color me-1 d-sm-none d-md-inline-block">compare_arrows</i>
+                                            Compare
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.Product Card -->
+                        <!-- Product Card -->
+                        <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                            <!-- Cart Actions -->
+                            <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
+                                <div class="d-flex align-items-center px-2">
+                                    <div class="d-flex align-items-center justify-content-around m-0 p-0">
+                                        <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Decrease quantity">remove_circle</span>
+                                        <span role="button" class="product-actions item-quantity text-faded" id="item-count">0</span>
+                                        <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Increase quantity">add_circle</span>
+                                    </div>
+                                    <div class="ms-auto d-flex align-items-center">
+                                        <a href="#" class="nav-link icon-link toggle-customization" id="customize" title="Customize gift" data-id="">
+                                            <i class="material-icons">palette</i>
+                                        </a>
+                                        <a href="#" class="nav-link icon-link text-danger remove-item ms-2" title="Remove Item" data-id="">
+                                            <i class="material-icons notifications">delete</i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.Cart Actions -->
+                            <div class="product-img-wrapper">
+                                <div class="badge bg-danger rounded-end customize-ribbon d-flex align-items-center">
+                                    <i class="material-icons text-white me-1" id="sale-icon">alarm_on</i>
+                                    <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
+                                </div>
+                                <a href="#" title="View product">
+                                    <img data-src="dist/images/gifts/15f458254a0dac.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
+                                </a>
+                                <div class="overlay d-flex justify-content-around py-1">
+                                    <div class="d-flex flex-column text-center" title="38 In Stock">
+                                        <i class="fa fa-home text-light"></i>
+                                        <span class="text-light text-sm">38</span>
+                                    </div>
+                                    <div class="d-flex flex-column text-center" title="27k Total Views">
+                                        <i class="fa fa-eye text-light"></i>
+                                        <span class="text-light text-sm">27k</span>
+                                    </div>
+                                    <div class="d-flex flex-column text-center" title="Wishlisted by 2734 customer(s)">
+                                        <i role="button" class="fa fa-heart text-light overlay-icon text-warning wishlist-icon" data-id="" data-user="" data-action="unwish" title="This gift is in your Wishlist"></i>
+                                        <span class="text-light text-sm">2734</span>
+                                    </div>
+                                    <div class="d-flex flex-column text-center" title="456 gift(s) sold">
+                                        <i role="button" class="fa fa-truck text-light overlay-icon text-warning" data-action="unwish"></i>
+                                        <span class="text-light text-sm">235</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body my-0 py-0">
+                                    <div class="lh-100 mb-0 pb-0">
+                                        <a href="#">
+                                            <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                Customizable board
+                                            </p>
+                                            <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                Customizable board
+                                            </p>
+                                        </a>
+                                        <a href="#" class="text-sm font-500 text-capitalize my-0 py-0">
+                                            Customizables
+                                        </a>
+                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-muted">&star;</li>
+                                            <span class="text-sm text-faded font-600">(35)</span>
+                                        </ul>
+                                    </div>
+                                    <div class="price-tag">
+                                        <div class="usd-price">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="font-600">$<span class="product-price">36.38</span></span>
+                                                <div class="d-flex align-items-center before-prices">
+                                                    <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="zar-price d-none">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="font-600">R<span class="product-price">273.38</span></span>
+                                                <div class="d-flex align-items-center before-prices">
+                                                    <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="zwl-price d-none">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="font-600">$<span class="product-price">2737.33</span></span>
+                                                <div class="d-flex align-items-center before-prices">
+                                                    <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center text-sm">
+                                        <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
+                                        <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
+                                    </div>
+                                    <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
+                                        <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
+                                            <i class="material-icons text-white me-1 d-sm-none d-md-inline-block">add_shopping_cart</i>
+                                            Buy <span class="text-white text-white ms-1">gift</span>
+                                        </button>
+                                        <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
+                                            <i class="material-icons text-app-color me-1 d-sm-none d-md-inline-block">compare_arrows</i>
+                                            Compare
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.Product Card -->
+                        <!-- Product Card -->
+                        <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                            <!-- Cart Actions -->
+                            <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
+                                <div class="d-flex align-items-center px-2">
+                                    <div class="d-flex align-items-center justify-content-around m-0 p-0">
+                                        <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Decrease quantity">remove_circle</span>
+                                        <span role="button" class="product-actions item-quantity text-faded" id="item-count">0</span>
+                                        <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Increase quantity">add_circle</span>
+                                    </div>
+                                    <div class="ms-auto d-flex align-items-center">
+                                        <a href="#" class="nav-link icon-link toggle-customization" id="customize" title="Customize gift" data-id="">
+                                            <i class="material-icons">palette</i>
+                                        </a>
+                                        <a href="#" class="nav-link icon-link text-danger remove-item ms-2" title="Remove Item" data-id="">
+                                            <i class="material-icons notifications">delete</i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.Cart Actions -->
+                            <div class="product-img-wrapper">
+                                <div class="badge bg-danger rounded-end customize-ribbon d-flex align-items-center">
+                                    <i class="material-icons text-white me-1" id="sale-icon">alarm_on</i>
+                                    <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
+                                </div>
+                                <a href="#" title="View product">
+                                    <img data-src="dist/images/gifts/15f460ba6e5666.2.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
+                                </a>
+                                <div class="overlay d-flex justify-content-around py-1">
+                                    <div class="d-flex flex-column text-center" title="38 In Stock">
+                                        <i class="fa fa-home text-light"></i>
+                                        <span class="text-light text-sm">38</span>
+                                    </div>
+                                    <div class="d-flex flex-column text-center" title="27k Total Views">
+                                        <i class="fa fa-eye text-light"></i>
+                                        <span class="text-light text-sm">27k</span>
+                                    </div>
+                                    <div class="d-flex flex-column text-center" title="Wishlisted by 2734 customer(s)">
+                                        <i role="button" class="fa fa-heart text-light overlay-icon text-warning wishlist-icon" data-id="" data-user="" data-action="unwish" title="This gift is in your Wishlist"></i>
+                                        <span class="text-light text-sm">2734</span>
+                                    </div>
+                                    <div class="d-flex flex-column text-center" title="456 gift(s) sold">
+                                        <i role="button" class="fa fa-truck text-light overlay-icon text-warning" data-action="unwish"></i>
+                                        <span class="text-light text-sm">235</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body my-0 py-0">
+                                    <div class="lh-100 mb-0 pb-0">
+                                        <a href="#">
+                                            <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                Customizable board
+                                            </p>
+                                            <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                Customizable board
+                                            </p>
+                                        </a>
+                                        <a href="#" class="text-sm font-500 text-capitalize my-0 py-0">
+                                            Customizables
+                                        </a>
+                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-muted">&star;</li>
+                                            <span class="text-sm text-faded font-600">(35)</span>
+                                        </ul>
+                                    </div>
+                                    <div class="price-tag">
+                                        <div class="usd-price">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="font-600">$<span class="product-price">36.38</span></span>
+                                                <div class="d-flex align-items-center before-prices">
+                                                    <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="zar-price d-none">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="font-600">R<span class="product-price">273.38</span></span>
+                                                <div class="d-flex align-items-center before-prices">
+                                                    <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="zwl-price d-none">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="font-600">$<span class="product-price">2737.33</span></span>
+                                                <div class="d-flex align-items-center before-prices">
+                                                    <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center text-sm">
+                                        <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
+                                        <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
+                                    </div>
+                                    <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
+                                        <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
+                                            <i class="material-icons text-white me-1 d-sm-none d-md-inline-block">add_shopping_cart</i>
+                                            Buy <span class="text-white text-white ms-1">gift</span>
+                                        </button>
+                                        <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
+                                            <i class="material-icons text-app-color me-1 d-sm-none d-md-inline-block">compare_arrows</i>
+                                            Compare
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.Product Card -->
+                    </div>
+                </div>
+                <!-- Gift Items -->
             </div>
         </div>
     </div>

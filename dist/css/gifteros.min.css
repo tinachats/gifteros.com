@@ -2511,6 +2511,10 @@ i[role="button"],
     background-color: var(--dark-green) !important;
 }
 
+.bg-salmon {
+    background-color: rgb(242, 250, 251);
+}
+
 .bg-transparent-black {
     background-color: var(--light-black) !important;
 }
@@ -2919,6 +2923,81 @@ i[role="button"],
 
 /* /.Owl Carousel */
 
+.grid-block {
+    position: relative;
+    height: 102px;
+    width: 100%
+}
+
+.grid-block .block-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    bottom: 5px;
+    font-weight: bolder;
+}
+
+.rounded-start,
+.btn-cart-placeholder.rounded-start {
+    border-top-left-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+}
+
+.rounded-start,
+.add-to-card-btn,
+.compare-btn,
+.btn-cart-placeholder.rounded-start,
+.compare-btn-placeholder.rounded-end {
+    width: 50%
+}
+
+.rounded-end,
+.compare-btn-placeholder.rounded-end {
+    border-top-right-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+}
+
+.border-switch {
+    border-color: var(--app-color);
+}
+
+.btn.border-switch * {
+    color: var(--app-color);
+}
+
+.material-icons {
+    display: none;
+}
+
+.app-showcase,
+.main-carousel.owl-theme .item,
+.main-carousel.owl-theme img {
+    height: 250px;
+}
+
+.main-carousel.owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: -25px;
+}
+
+.item .related-gift {
+    height: 225px;
+}
+
+.item .related-gift img {
+    background-color: var(--cloud-grey);
+    height: 150px;
+    width: 100%;
+}
+
+.badge {
+    padding: .20em .40em;
+}
+
+.shopping-bag>li:first-of-type {
+    margin-top: 2.4rem !important
+}
+
 
 /*** /.Utility Classes ***/
 
@@ -2937,6 +3016,9 @@ i[role="button"],
 /* Medium devices (tablets, 768px and up) */
 
 @media(min-width: 768px) {
+    .rounded-md-2 {
+        border-radius: .5rem !important;
+    }
     .product-img-wrapper {
         height: 200px
     }
@@ -3182,7 +3264,7 @@ i[role="button"],
         left: 50%;
     }
     .grid-view>.product-card>.product-img-wrapper>.overlay {
-        top: 47.5%;
+        top: 46.5%;
     }
     .targets-terms {
         margin-top: 5rem
