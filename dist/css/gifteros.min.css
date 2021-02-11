@@ -7,7 +7,7 @@
 }
 
 
-/*** Default Styling .bg-meshgrid ***/
+/*** Default Styling .carousel-autoplay ***/
 
 :root {
     --search-border-color: #ced4da;
@@ -33,7 +33,7 @@
     --cream: rgb(255, 218, 137);
     --light-red: rgba(114, 6, 6, 0.698);
     --icon-bg: rgba(47, 85, 107, 0.459);
-    --border-color: #dee2e6;
+    --border-color: #727070;
     --text-shadow: 1px 1px 1px #000;
     --dark-green: #689f38;
     --ink-blue: #1976d2;
@@ -155,6 +155,7 @@
 html,
 body {
     position: relative;
+    height: 100%;
 }
 
 body {
@@ -164,8 +165,9 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.page-content {
+.content-wrapper {
     flex: 1 0 auto;
+    min-height: 100%
 }
 
 ::-webkit-scrollbar {
@@ -184,6 +186,31 @@ body {
     height: 10px !important
 }
 
+.shopping-bag .product-actions {
+    font-size: 2.5rem
+}
+
+.grid-view .product-actions {
+    font-size: 2rem;
+}
+
+.list-view .product-actions.item-quantity {
+    margin-left: 1.5rem !important;
+    margin-right: 1.5rem !important;
+}
+
+.grid-view .product-actions.item-quantity {
+    margin-left: .5rem !important;
+    margin-right: .5rem !important;
+}
+
+.product-img-wrapper .img-responsive,
+.product-img-wrapper .card-img-top {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
 li {
     list-style: none;
 }
@@ -192,6 +219,30 @@ a,
 a:hover,
 .stretched-link {
     text-decoration: none;
+}
+
+
+/* Star Rating */
+
+.gift-star-rating {
+    display: flex;
+    align-items: center;
+}
+
+.gift-star-rating>li:first-child {
+    margin-left: 0
+}
+
+.gift-star-rating>li:not(:first-child) {
+    margin-left: -10px
+}
+
+
+/* /.Star Rating */
+
+.dropdown-menu,
+.mega-menu {
+    z-index: 3050 !important
 }
 
 
@@ -251,59 +302,6 @@ header.header,
 /* /.Navs */
 
 
-/* Color Gradient Preloader */
-
-.line {
-    height: 5px;
-    width: 100%;
-    background: #6a89cc;
-    z-index: 11000;
-    position: absolute;
-    top: 0;
-}
-
-.line .inner {
-    width: 100%;
-    height: inherit;
-    background: linear-gradient(40deg, #2096ff, #05ffa3, #e55039) !important;
-    animation: slide 2s ease-in-out infinite;
-}
-
-@keyframes slide {
-    0% {
-        transform-origin: left;
-        transform: scalex(0.3);
-    }
-    25% {
-        transform-origin: left;
-        transform: scalex(1);
-    }
-    26% {
-        transform-origin: right;
-        transform: scalex(1);
-    }
-    50% {
-        transform-origin: right;
-        transform: scalex(0.3);
-    }
-    75% {
-        transform-origin: right;
-        transform: scalex(1);
-    }
-    76% {
-        transform-origin: left;
-        transform: scalex(1);
-    }
-    100% {
-        transform-origin: left;
-        transform: scalex(0.3);
-    }
-}
-
-
-/* /.Color Gradient Preloader */
-
-
 /* Grid Layout */
 
 .d-grid {
@@ -356,19 +354,68 @@ header.header,
 }
 
 .grid-p-2 {
-    grid-gap: .5em;
+    grid-gap: 5em;
 }
 
 .grid-p-3 {
     grid-gap: 1em;
 }
 
-.grid-p-4 {
-    grid-gap: 1.5em;
+
+/* /.Grid Layout */
+
+
+/* Color Gradient Preloader */
+
+.line {
+    height: 5px;
+    width: 100%;
+    background: #6a89cc;
+    z-index: 11000;
+    position: absolute;
+    top: 0;
+}
+
+.line .inner {
+    width: 100%;
+    height: inherit;
+    background: linear-gradient(40deg, #2096ff, #05ffa3, #e55039) !important;
+    animation: slide 2s ease-in-out infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform-origin: left;
+        transform: scalex(0.3);
+    }
+    25% {
+        transform-origin: left;
+        transform: scalex(1);
+    }
+    26% {
+        transform-origin: right;
+        transform: scalex(1);
+    }
+    50% {
+        transform-origin: right;
+        transform: scalex(0.3);
+    }
+    75% {
+        transform-origin: right;
+        transform: scalex(1);
+    }
+    76% {
+        transform-origin: left;
+        transform: scalex(1);
+    }
+    100% {
+        transform-origin: left;
+        transform: scalex(0.3);
+    }
 }
 
 
-/* /.Grid Layout */
+/* /.Color Gradient Preloader */
 
 
 /* Mega Menu Styling */
@@ -522,7 +569,7 @@ header.header,
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
     overflow-x: hidden;
     display: none;
-    z-index: 10000 !important
+    z-index: 1000000 !important
 }
 
 #search-list li:hover {
@@ -530,7 +577,7 @@ header.header,
 }
 
 .search-list:not(:empty),
-.search-list:last-child {
+.search-list>li:last-child {
     border-bottom-left-radius: .5rem !important;
     border-bottom-right-radius: .5rem !important;
     box-shadow: var(--shadow-sm) !important;
@@ -735,6 +782,25 @@ input[name="search"]:focus .search-list li {
 
 /* Products Card */
 
+.product-card .gift-label {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: grid;
+}
+
+.product-card .gift-label * {
+    margin: auto;
+}
+
+.product-card>.product-img-wrapper>.img-overlap>img {
+    height: 50px;
+    width: 45px
+}
+
 .product-price {
     font-weight: 600;
 }
@@ -830,6 +896,12 @@ input[name="search"]:focus .search-list li {
 
 .grid-view .grid-view-d-none {
     display: none !important;
+}
+
+.grid-view>.product-card>.card-content>.card-body .btn-group,
+.grid-view>.placeholder-card .btn-group-placeholder {
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
@@ -1358,11 +1430,11 @@ input[name="search"]:focus .search-list li {
 
 .grid-view>.placeholder-card>.img-wrapper-placeholder {
     position: relative;
-    padding: .5rem;
+    padding: .25rem;
 }
 
 .grid-view>.product-card>.gift-cart-options {
-    top: 153px;
+    top: 155.5px;
 }
 
 .grid-view>.product-card>.product-img-wrapper .card-img-top {
@@ -1608,6 +1680,38 @@ footer.footer {
     margin-top: -10px
 }
 
+
+/* The overlay effect - lays on top of the container and over the image */
+
+.overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 1);
+    /* Black see-through */
+    width: 100%;
+    transition: .5s ease;
+    color: var(--white);
+    z-index: 5
+}
+
+
+/* When you mouse over the container, fade in the overlay title */
+
+.list-view>.card:hover .overlay,
+.grid-view>.card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-icon {
+    color: #fff
+}
+
+.overlay-icon:hover {
+    color: var(--warning);
+}
+
+
+/* /.Gift Card */
+
 .overlay-metric {
     position: relative;
 }
@@ -1636,6 +1740,12 @@ footer.footer {
 
 
 /* /.Gift Cart Options */
+
+.customize-ribbon {
+    position: absolute;
+    top: 8px;
+    left: -3px
+}
 
 
 /* Toast Notifications */
@@ -2663,12 +2773,6 @@ i[role="button"],
     animation: pulse 2s infinite;
 }
 
-.btn-group-placeholder.pulse,
-.product-card-btns.pulse,
-.btn-group.pulse {
-    border-radius: 20px !important
-}
-
 .pulse:hover {
     animation: none;
 }
@@ -2731,6 +2835,89 @@ i[role="button"],
 
 
 /* /.Social Login Buttons */
+
+
+/* Buttons */
+
+.btn-group-placeholder.pulse,
+.product-card-btns.pulse,
+.btn-group.pulse {
+    border-radius: 20px !important;
+}
+
+.btn-block {
+    width: 100%
+}
+
+.btn-default {
+    background-color: var(--btn-light);
+}
+
+
+/* /.Buttons */
+
+
+/* Owl Carousels */
+
+.owl-carousel {
+    position: relative;
+}
+
+.carousel-autoplay .owl-prev,
+.carousel-autoplay .owl-next {
+    opacity: 0;
+}
+
+.carousel-autoplay.owl-carousel:hover .owl-prev,
+.carousel-autoplay.owl-carousel:hover .owl-next {
+    opacity: 1;
+}
+
+.carousel-autoplay.owl-theme .owl-nav [class*=owl-]:hover {
+    background: #fff;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    color: #6c757d !important;
+    font-size: 3rem;
+}
+
+.carousel-autoplay.owl-carousel .owl-nav button.owl-next,
+.carousel-autoplay.owl-carousel .owl-nav button.owl-prev {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    outline: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.carousel-autoplay.owl-carousel .owl-nav button.owl-prev span,
+.carousel-autoplay.owl-carousel .owl-nav button.owl-next span {
+    color: #6c757d !important;
+    margin-top: -23px
+}
+
+.carousel-autoplay.owl-carousel .owl-nav button.owl-prev {
+    left: -20px
+}
+
+.carousel-autoplay.owl-carousel .owl-nav button.owl-next {
+    right: -20px
+}
+
+.owl-nav button.owl-prev.disabled,
+.owl-nav button.owl-next.disabled {
+    visibility: hidden;
+}
+
+
+/* /.Owl Carousel */
 
 
 /*** /.Utility Classes ***/
@@ -2845,7 +3032,6 @@ i[role="button"],
     .grid-view>.placeholder-card .btn-group-placeholder {
         position: absolute;
         bottom: 2%;
-        left: 10%;
     }
     .step-progress-bar-list-item {
         width: 150px;
@@ -2979,7 +3165,54 @@ i[role="button"],
 
 /* Large devices (desktops, 992px and up) */
 
-@media(min-width: 992px) {}
+@media(min-width: 992px) {
+    .settings-bar.show {
+        transform: translateX(0);
+    }
+    .grid-view {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .main-sidebar.show {
+        transform: translateX(0);
+    }
+    .grid-view>.product-card {
+        height: 350px
+    }
+    .list-view>.product-card>.card-content>.card-body .btn-group {
+        left: 50%;
+    }
+    .grid-view>.product-card>.product-img-wrapper>.overlay {
+        top: 47.5%;
+    }
+    .targets-terms {
+        margin-top: 5rem
+    }
+    .terms-section {
+        padding: 3rem
+    }
+    .copyright {
+        text-align: right;
+    }
+    .showcase-overlay {
+        top: 74%;
+    }
+    #blog-page.page-content {
+        margin-top: 3rem
+    }
+    .blog-post,
+    .blog-image {
+        height: 500px
+    }
+    .filtered-products {
+        margin-left: 25%;
+    }
+    .occasions-page>.content {
+        grid-template-columns: 25% 75%;
+    }
+    .comparison-pane {
+        top: 45%;
+    }
+}
 
 
 /* X-Large devices (large desktops, 1200px and up) */
@@ -3008,9 +3241,8 @@ i[role="button"],
     .filter-page .products-shelf.grid-view {
         grid-template-columns: repeat(4, 1fr);
     }
-    .grid-view>.product-card>.card-content>.card-body .btn-group,
-    .grid-view>.placeholder-card .btn-group-placeholder {
-        left: 4.5%;
+    .grid-view {
+        grid-template-columns: repeat(5, 1fr);
     }
     .policy-banner {
         top: 91%;
