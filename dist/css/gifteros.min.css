@@ -7,7 +7,7 @@
 }
 
 
-/*** Default Styling .carousel-autoplay ***/
+/*** Default Styling search ***/
 
 :root {
     --search-border-color: #ced4da;
@@ -33,7 +33,7 @@
     --cream: rgb(255, 218, 137);
     --light-red: rgba(114, 6, 6, 0.698);
     --icon-bg: rgba(47, 85, 107, 0.459);
-    --border-color: #727070;
+    --border-color: #ced4da;
     --text-shadow: 1px 1px 1px #000;
     --dark-green: #689f38;
     --ink-blue: #1976d2;
@@ -168,6 +168,12 @@ body {
 .content-wrapper {
     flex: 1 0 auto;
     min-height: 100%
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
 }
 
 ::-webkit-scrollbar {
@@ -1949,6 +1955,14 @@ textarea#custom-text {
     font-weight: 700 !important;
 }
 
+.fs-1 {
+    font-size: 16px !important;
+}
+
+.fs-2 {
+    font-size: 24px !important;
+}
+
 h1,
 h2,
 h3,
@@ -2998,6 +3012,15 @@ i[role="button"],
     margin-top: 2.4rem !important
 }
 
+.progress-xs {
+    height: 3px;
+}
+
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused),
+.ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline ck-blurred {
+    min-height: 200px !important;
+}
+
 
 /*** /.Utility Classes ***/
 
@@ -3016,6 +3039,9 @@ i[role="button"],
 /* Medium devices (tablets, 768px and up) */
 
 @media(min-width: 768px) {
+    .w-md-50 {
+        width: 50% !important;
+    }
     .rounded-md-2 {
         border-radius: .5rem !important;
     }
@@ -3118,31 +3144,6 @@ i[role="button"],
     .step-progress-bar-list-item {
         width: 150px;
     }
-    .product-images {
-        align-items: flex-start;
-        margin-top: 0rem;
-        margin-left: 5rem;
-    }
-    .zoomWrapper,
-    .product-images,
-    #product-img,
-    .zoomWindowContainer {
-        height: 295px !important;
-        width: 300px !important;
-    }
-    .zoomWindow {
-        margin-left: 1rem;
-    }
-    #gallery {
-        position: absolute;
-        height: 295px;
-        left: -80px;
-        top: 0;
-    }
-    #gallery img {
-        flex-direction: column;
-        margin-bottom: 5px;
-    }
     .post-actions {
         display: flex;
         align-items: center;
@@ -3241,6 +3242,9 @@ i[role="button"],
     }
     .comparison-pane {
         top: 85%;
+    }
+    .border-md-end {
+        border-right: 1px solid var(--border-color);
     }
 }
 
