@@ -1,0 +1,2071 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Description -->
+    <meta name="description" content="Details page">
+    <!-- Developer -->
+    <meta name="developer" content="Tinashe. M. Chaterera">
+    <title>Category Page</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="dist/images/app/gifteros.png" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="dist/plugins/bootstrap-v5/css/bootstrap.min.css">
+    <!-- Bootstrap-Icons -->
+    <link rel="stylesheet" href="dist/plugins/bootstrap-icons-1.2.2/font/bootstrap-icons.css">
+    <!-- Material-Design Icons -->
+    <link rel="stylesheet" href="dist/plugins/material-design-icons/iconfont/material-icons.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="dist/plugins/Ionicons/css/ionicons.min.css">
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="dist/plugins/font-awesome/css/font-awesome.min.css">
+    <!-- Owl-Carousel -->
+    <link rel="stylesheet" href="dist/plugins/OwlCarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="dist/plugins/OwlCarousel/dist/assets/owl.theme.default.min.css">
+    <!-- AnimatesCSS -->
+    <link rel="stylesheet" href="dist/plugins/animate.css/animate.min.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- iziToast -->
+    <link rel="stylesheet" href="dist/plugins/iziToast/css/iziToast.min.css">
+    <!-- SweetAlert -->
+    <link rel="stylesheet" href="dist/plugins/sweetalert2/package/dist/sweetalert2.min.css">
+    <!-- Gifteros -->
+    <link rel="stylesheet" href="dist/css/gifteros.min.css">
+    <style>
+        .sticky-top {
+            z-index: 1000 !important
+        }
+        
+        .price-range-input {
+            width: 4rem;
+        }
+        
+        .list-view>.product-card>.product-img-wrapper .card-img-top {
+            height: auto;
+        }
+        
+        .filter-list>li {
+            padding: .1rem 1.5rem;
+        }
+        
+        .circled-button,
+        .circled-button-sm {
+            border-radius: 50%;
+        }
+        
+        .circled-button {
+            height: 40px;
+            width: 40px;
+        }
+        
+        .circled-button-sm {
+            height: 30px;
+            width: 30px;
+        }
+        
+        .filter-reviews.active {
+            background-color: var(--secondary);
+            color: #fff
+        }
+        
+        .filter-reviews.active span {
+            color: #fff
+        }
+        
+        .custom-option {
+            cursor: pointer
+        }
+        
+        .custom-option,
+        .custom-option.inactive {
+            border: 2px solid var(--border-color);
+            border-radius: .25rem;
+        }
+        
+        .custom-option.active,
+        .custom-option.active .custom-overlay {
+            border: 2px solid var(--danger-warning);
+        }
+        
+        .custom-color:hover .custom-overlay {
+            height: 100%
+        }
+        
+        .custom-option .size,
+        .custom-option.inactive .size {
+            color: var(--border-color);
+        }
+        
+        .custom-btn.active {
+            box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+            color: rgba(0, 123, 255, .25) !important;
+        }
+        
+        .custom-option.active .size {
+            color: var(--danger-warning);
+        }
+        
+        a:hover .size-info,
+        a.active .size-info {
+            color: var(--danger-warning);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page Content -->
+    <div class="content-wrapper">
+        <!-- Progress Indicator -->
+        <div class="line">
+            <div class="inner"></div>
+        </div>
+        <!-- /.Progress Indicator -->
+
+        <!-- Page Backdrop -->
+        <div class="app-backdrop d-none"></div>
+
+        <!-- Floating Action Buttons -->
+        <div class="fabs d-flex align-items-center flex-column justify-content-around">
+            <!-- Mobile Action Buttons -->
+            <div class="d-md-none">
+                <div class="floating-action box-shadow-sm action-btn bg-purple to-top" onclick="scrollToTop()" title="Scroll to top">
+                    <div class="m-auto d-flex flex-column justify-content-center lh-100">
+                        <i class="material-icons text-white my-0">arrow_upward</i>
+                        <small class="text-white font-600 my-0">Top</small>
+                    </div>
+                </div>
+                <div class="floating-action box-shadow-sm action-btn bg-brick-red" title="Theme mode" onclick="userTheme()">
+                    <i class="material-icons text-white m-auto">brightness_medium</i>
+                </div>
+                <div class="floating-action box-shadow-sm action-btn bg-success" id="toggle-whatsapp" title="WhatsApp">
+                    <i class="fa fa-whatsapp fa-2x text-white m-auto"></i>
+                </div>
+                <div class="floating-action box-shadow-sm toggle-actions bg-primary" title="Click to toggle actions">
+                    <i class="material-icons m-auto text-white">add</i>
+                </div>
+            </div>
+            <!-- /.Mobile Action Buttons -->
+
+            <!-- Cart Suggestions -->
+            <div class="d-sm-none d-md-block">
+                <div class="floating-action box-shadow-sm bg-switch" title="Click to toggle actions">
+                    <i class="material-icons m-auto text-white">lightbulb_outline</i>
+                </div>
+            </div>
+            <!-- /.Cart Suggestions -->
+        </div>
+        <!-- /.Floating Action Buttons -->
+
+        <!-- Side Action Panel -->
+        <div class="d-sm-none d-md-block">
+            <div class="navigation-panel bg-meshgrid d-flex flex-column justify-content-around align-items-center">
+                <ul class="panel-lists d-flex flex-column align-items-center px-0">
+                    <li class="panel-icon w-100 py-1">
+                        <a href="#" role="button" class="bi bi-geo-fill icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Trending In Your Area"></a>
+                    </li>
+                    <li class="panel-icon w-100 py-1">
+                        <a href="#" role="button" class="bi bi-clock-history icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Viewed Gifts"></a>
+                    </li>
+                    <li class="panel-icon w-100 py-1">
+                        <a href="#" role="button" class="bi bi-truck icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Track Your Order"></a>
+                    </li>
+                    <li class="panel-icon w-100 py-1">
+                        <a href="#" role="button" class="bi bi-receipt icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Coupons"></a>
+                    </li>
+                </ul>
+                <ul class="panel-lists d-flex flex-column align-items-center px-0">
+                    <li class="panel-icon dropup w-100 py-1">
+                        <a href="#" role="button" class="bi bi-share-fill icon-md text-white" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                        <ul class="dropdown-menu sharing-menu ps-3">
+                            <li class="dropdown-menu-item d-flex align-items-center mb-2">
+                                <div class="social-login-btn bg-aqua" title="Share on Twitter">
+                                    <i class="fa fa-twitter text-white"></i>
+                                </div>
+                                <span class="ms-1 text-sm">Twitter</span>
+                            </li>
+                            <li class="dropdown-menu-item d-flex align-items-center mb-2">
+                                <div class="social-login-btn bg-danger" title="Share on Instagram">
+                                    <i class="fa fa-instagram text-white"></i>
+                                </div>
+                                <span class="ms-1 text-sm">Instagram</span>
+                            </li>
+                            <li class="dropdown-menu-item d-flex align-items-center mb-2">
+                                <div class="social-login-btn bg-primary" title="Share on Facebook">
+                                    <i class="fa fa-facebook text-white"></i>
+                                </div>
+                                <span class="ms-1 text-sm">Facebook</span>
+                            </li>
+                            <li class="dropdown-menu-item d-flex align-items-center">
+                                <div class="social-login-btn bg-primary" title="Share on LinkedIn">
+                                    <i class="fa fa-linkedin text-white"></i>
+                                </div>
+                                <span class="ms-1 text-sm">LinkedIn</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="panel-icon w-100 py-1">
+                        <a href="#" role="button" class="bi bi-question-circle icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Help and Feedback"></a>
+                    </li>
+                    <li class="panel-icon w-100 py-1 to-top">
+                        <a href="#" role="button" class="bi bi-arrow-up-circle icon-md text-white" onclick="scrollToTop();" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Back to Top"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.Side Action Panel -->
+
+        <!-- Main Navbar -->
+        <header class="header fixed-md-top box-shadow-sm d-sm-none d-md-block">
+            <div class="container">
+                <!-- Main Navbar -->
+                <nav class="nav navbar-expand-md main-nav">
+                    <span role="button" class="material-icons menu-btn d-sm-inline-block d-md-none" title="Toggle Sidebar">menu</span>
+                    <!-- Navbrand -->
+                    <a href="index.html" class="navbar-brand font-700">
+                        <img src="dist/images/app/gifteros.png" height="35" class="gifteros-logo" width="35" alt="">
+                        <span class="mobile-brand brandname">Gifteros</span>
+                    </a>
+                    <!-- /.Navbrand -->
+
+                    <!-- Left Navbar Links -->
+                    <ul class="navbar-nav me-auto d-none d-md-flex">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-sm font-600 mega-item" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Occasions</a>
+                            <div class="dropdown-menu mega-menu box-shadow-sm rounded-2">
+                                <div class="container-fluid">
+                                    <div class="categories-grid">
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="anniversary-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/anniversary_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">anniversary</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/anniversary_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="birthday-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/birthday_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">Birthday</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/birthday_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="christmas-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/christmas_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">christmas</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/christmas_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="congrats-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/congrats_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">congrats</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/congrats_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="easter-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/easter_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">easter</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/easter_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="farewell-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/farewell_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">farewell</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/farewell_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="fathersday-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/for_him" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">father's day</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/for_him" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="getwell-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/getwell_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">get well</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/getwell_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="graduation-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/graduation_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">graduation</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/graduation_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="just-because-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/because_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">just because</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/because_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="mothersday-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/for_her" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">mother's day</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/for_her" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="newbaby-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/baby_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">new baby</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/baby_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="newhome-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/home_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">new home</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/home_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="newyear-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/newyear_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">new year</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/newyear_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="retirement-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/retirement_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">retirement</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/retirement_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="sympathy-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/sympathy_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">sympathy</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/sympathy_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="thanks-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/thanks_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">thank you</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/thanks_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="valentines-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/valentines_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">Valentine's</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/valentines_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="wedding-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/wedding_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">wedding</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/wedding_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="workplace-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/workplace_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">workplace</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/workplace_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item d-none d-lg-inline">
+                            <a class="nav-link text-sm font-600" href="trending.html">Trending</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-sm font-600" href="/category/hot_deals">Hot Deals</a>
+                        </li>
+                    </ul>
+                    <!-- /.Left Navbar Links -->
+
+                    <!-- Right Navbar Links -->
+                    <ul class="ms-auto justify-content-sm-around d-flex align-items-center m-0 p-0">
+                        <!-- App Currencies -->
+                        <li class="nav-item d-none d-md-flex" data-bs-toggle="tooltip" title="Select currency">
+                            <div class="text-muted nav-link font-600 navbar-text">
+                                <div class="dropdown dropdown-toggle d-cursor" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img id="currency-flag" src="dist/images/currencies/usd.png" height="15" width="22" alt="">
+                                    <span id="currency-total" class="text-muted text-color-switch">US$12.48</span>
+                                </div>
+                                <div class="dropdown-menu box-shadow-sm rounded-2 currency-dropdown-menu">
+                                    <div class="dropdown-menu-item d-flex align-items-center currency-option d-cursor ps-3 py-1">
+                                        <img src="dist/images/currencies/usd.png" height="15" width="22" alt="">
+                                        <span id="text-muted" data-total="US$12.48" class="font-600 ms-1">USD</span>
+                                    </div>
+                                    <div class="dropdown-menu-item d-flex align-items-center currency-option d-cursor ps-3 py-1">
+                                        <img src="dist/images/currencies/zar.jpg" height="15" width="22" alt="">
+                                        <span id="zar-price" data-total="R183.18" class="font-600 ms-1">ZAR</span>
+                                    </div>
+                                    <div class="dropdown-menu-item d-flex align-items-center currency-option d-cursor ps-3 py-1">
+                                        <img src="dist/images/currencies/zwl.png" height="15" width="22" alt="">
+                                        <span id="zwl-price" data-total="ZW$1248.00" class="font-600 ms-1">ZWL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- /.App Currencies -->
+
+                        <!-- Shopping Cart -->
+                        <li class="nav-item dropdown ms-3">
+                            <a href="#" class="nav-link icon-link" id="shopping-cart" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bi bi-cart4 icon-md pull-up"></i>
+                                <span class="badge nav-badge gift-count">4</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end app-menu rounded-2 box-shadow-sm cart-menu mt-0 p-0">
+                                <div class="shopping-bag rounded-2">
+                                    <div class="list-group-item box-shadow-sm rounded-top-2 lh-100 px-1 py-2 fixed-top">
+                                        <h6 class="lead font-600 ms-2 my-0">4 cart items</h6>
+                                    </div>
+                                    <!-- Cart Item -->
+                                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="d-flex w-100">
+                                                <!-- Product Item -->
+                                                <div class="d-flex align-items-center">
+                                                    <div class="cart-menu-img-wrapper">
+                                                        <div class="d-sm-flex d-xl-none flex-column justify-content-center text-center cart-actions-sm">
+                                                            <i role="button" class="fa fa-chevron-circle-up text-success-warning subtract-product"></i>
+                                                            <span class="font-600 text-success-warning item-count">0</span>
+                                                            <i role="button" class="fa fa-chevron-circle-down text-success-warning increase-qty"></i>
+                                                        </div>
+                                                        <a href="">
+                                                            <img src="dist/images/gifts/15f45885de939d.jpg" height="55" width="55" alt="" class="rounded-2 align-self-center menu-item-img me-2">
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Product Item Details -->
+                                                    <div class="cart-item-details" id="cart-item-details">
+                                                        <p class="text-sm font-600 text-capitalize my-0 py-0">
+                                                            Awesome gift
+                                                        </p>
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&star;</li>
+                                                            <span class="text-sm text-faded font-600">(35)</span>
+                                                        </ul>
+                                                        <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
+                                                            <span class="pr-2">2 in cart</span>
+                                                        </p>
+                                                    </div>
+                                                    <!-- Product Item Details -->
+                                                    <!-- Cart Actions -->
+                                                    <div class="hidden-product-actions w-100">
+                                                        <div class="d-flex align-items-center justify-content-center m-0 p-0 cursor">
+                                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Subtract quantity">remove_circle</span>
+                                                            <span role="button" class="product-actions text-faded mx-4">2</span>
+                                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Add more items">add_circle</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.Cart Actions -->
+                                                </div>
+                                                <!-- /.Product Item -->
+                                            </div>
+                                            <div class="d-block text-center">
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm text-muted">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
+                                                <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- /.Cart Item -->
+                                    <!-- Cart Item -->
+                                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="d-flex w-100">
+                                                <!-- Product Item -->
+                                                <div class="d-flex align-items-center">
+                                                    <div class="cart-menu-img-wrapper">
+                                                        <div class="d-sm-flex d-xl-none flex-column justify-content-center text-center cart-actions-sm">
+                                                            <i role="button" class="fa fa-chevron-circle-up text-success-warning subtract-product"></i>
+                                                            <span class="font-600 text-success-warning item-count">0</span>
+                                                            <i role="button" class="fa fa-chevron-circle-down text-success-warning increase-qty"></i>
+                                                        </div>
+                                                        <a href="">
+                                                            <img src="dist/images/gifts/15f45885de939d.jpg" height="55" width="55" alt="" class="rounded-2 align-self-center menu-item-img me-2">
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Product Item Details -->
+                                                    <div class="cart-item-details" id="cart-item-details">
+                                                        <p class="text-sm font-600 text-capitalize my-0 py-0">
+                                                            Awesome gift
+                                                        </p>
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&star;</li>
+                                                            <span class="text-sm text-faded font-600">(35)</span>
+                                                        </ul>
+                                                        <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
+                                                            <span class="pr-2">2 in cart</span>
+                                                        </p>
+                                                    </div>
+                                                    <!-- Product Item Details -->
+                                                    <!-- Cart Actions -->
+                                                    <div class="hidden-product-actions w-100">
+                                                        <div class="d-flex align-items-center justify-content-center m-0 p-0 cursor">
+                                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Subtract quantity">remove_circle</span>
+                                                            <span role="button" class="product-actions text-faded mx-4">2</span>
+                                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Add more items">add_circle</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.Cart Actions -->
+                                                </div>
+                                                <!-- /.Product Item -->
+                                            </div>
+                                            <div class="d-block text-center">
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm text-muted">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
+                                                <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- /.Cart Item -->
+                                    <!-- Cart Item -->
+                                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="d-flex w-100">
+                                                <!-- Product Item -->
+                                                <div class="d-flex align-items-center">
+                                                    <div class="cart-menu-img-wrapper">
+                                                        <div class="d-sm-flex d-xl-none flex-column justify-content-center text-center cart-actions-sm">
+                                                            <i role="button" class="fa fa-chevron-circle-up text-success-warning subtract-product"></i>
+                                                            <span class="font-600 text-success-warning item-count">0</span>
+                                                            <i role="button" class="fa fa-chevron-circle-down text-success-warning increase-qty"></i>
+                                                        </div>
+                                                        <a href="">
+                                                            <img src="dist/images/gifts/15f45885de939d.jpg" height="55" width="55" alt="" class="rounded-2 align-self-center menu-item-img me-2">
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Product Item Details -->
+                                                    <div class="cart-item-details" id="cart-item-details">
+                                                        <p class="text-sm font-600 text-capitalize my-0 py-0">
+                                                            Awesome gift
+                                                        </p>
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&star;</li>
+                                                            <span class="text-sm text-faded font-600">(35)</span>
+                                                        </ul>
+                                                        <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
+                                                            <span class="pr-2">2 in cart</span>
+                                                        </p>
+                                                    </div>
+                                                    <!-- Product Item Details -->
+                                                    <!-- Cart Actions -->
+                                                    <div class="hidden-product-actions w-100">
+                                                        <div class="d-flex align-items-center justify-content-center m-0 p-0 cursor">
+                                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Subtract quantity">remove_circle</span>
+                                                            <span role="button" class="product-actions text-faded mx-4">2</span>
+                                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Add more items">add_circle</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.Cart Actions -->
+                                                </div>
+                                                <!-- /.Product Item -->
+                                            </div>
+                                            <div class="d-block text-center">
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm text-muted">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
+                                                <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- /.Cart Item -->
+                                    <!-- Cart Item -->
+                                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="d-flex w-100">
+                                                <!-- Product Item -->
+                                                <div class="d-flex align-items-center">
+                                                    <div class="cart-menu-img-wrapper">
+                                                        <div class="d-sm-flex d-xl-none flex-column justify-content-center text-center cart-actions-sm">
+                                                            <i role="button" class="fa fa-chevron-circle-up text-success-warning subtract-product"></i>
+                                                            <span class="font-600 text-success-warning item-count">0</span>
+                                                            <i role="button" class="fa fa-chevron-circle-down text-success-warning increase-qty"></i>
+                                                        </div>
+                                                        <a href="">
+                                                            <img src="dist/images/gifts/15f45885de939d.jpg" height="55" width="55" alt="" class="rounded-2 align-self-center menu-item-img me-2">
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Product Item Details -->
+                                                    <div class="cart-item-details" id="cart-item-details">
+                                                        <p class="text-sm font-600 text-capitalize my-0 py-0">
+                                                            Awesome gift
+                                                        </p>
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&star;</li>
+                                                            <span class="text-sm text-faded font-600">(35)</span>
+                                                        </ul>
+                                                        <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
+                                                            <span class="pr-2">2 in cart</span>
+                                                        </p>
+                                                    </div>
+                                                    <!-- Product Item Details -->
+                                                    <!-- Cart Actions -->
+                                                    <div class="hidden-product-actions w-100">
+                                                        <div class="d-flex align-items-center justify-content-center m-0 p-0 cursor">
+                                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Subtract quantity">remove_circle</span>
+                                                            <span role="button" class="product-actions text-faded mx-4">2</span>
+                                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Add more items">add_circle</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.Cart Actions -->
+                                                </div>
+                                                <!-- /.Product Item -->
+                                            </div>
+                                            <div class="d-block text-center">
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm text-muted">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
+                                                <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- /.Cart Item -->
+                                </div>
+                                <!-- Cart Details -->
+                                <li class="list-group-item w-100 lh-100 font-600 text-sm rounded-bottom-2" id="cart-action-btns">
+                                    <!-- Cart Subtotal -->
+                                    <div class="text-muted">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Subtotal Amount:</span>
+                                            <span class="usd-subtotal">US$0.00</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zar-price d-none">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Subtotal Amount:</span>
+                                            <span class="zar-subtotal">R0.00</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zwl-price d-none">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Subtotal Amount:</span>
+                                            <span class="zwl-subtotal">ZW$0.00</span>
+                                        </h6>
+                                    </div>
+                                    <!-- /.Cart Subtotal -->
+
+                                    <!-- Delivery charges -->
+                                    <div class="text-muted">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Delivery Costs:</span>
+                                            <span class="usd-delivery-cost">US$3.39</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zar-price d-none">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Delivery Costs:</span>
+                                            <span class="zar-delivery-cost">R283.48</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zwl-price d-none">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Delivery Costs:</span>
+                                            <span class="zwl-delivery-cost">ZW$384.48</span>
+                                        </h6>
+                                    </div>
+                                    <!-- /.Delivery Charges -->
+                                    <!-- /.Delivery Charges -->
+
+                                    <!-- Taxes & Discounts -->
+                                    <div class="text-muted">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Discount:</span>
+                                            <span class="usd-discount">US$3.48</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zar-price d-none">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Discount:</span>
+                                            <span class="zar-discount">R49.39</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zwl-price d-none">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Discount:</span>
+                                            <span class="zwl-discount">ZW$393.39</span>
+                                        </h6>
+                                    </div>
+                                    <hr class="my-1">
+                                    <!-- /.Taxes & Discounts -->
+
+                                    <!-- Cart Total -->
+                                    <div class="text-muted">
+                                        <h6 class="font-600 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Cart Total:</span>
+                                            <span class="usd-total">US$0.00</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zar-price d-none">
+                                        <h6 class="font-600 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Cart Total:</span>
+                                            <span class="zar-total">R0.00</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zwl-price d-none">
+                                        <h6 class="font-600 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Cart Total:</span>
+                                            <span class="zwl-total">ZW$0.00</span>
+                                        </h6>
+                                    </div>
+                                    <!-- /.Cart Total -->
+
+                                    <!-- Hidden Inputs -->
+                                    <input type="hidden" name="cart-usd-subtotal" id="cart-usd-subtotal">
+                                    <input type="hidden" name="cart-zar-subtotal" id="cart-zar-subtotal">
+                                    <input type="hidden" name="cart-zwl-subtotal" id="cart-zwl-subtotal">
+                                    <input type="hidden" name="cart-usd-total" id="cart-usd-total">
+                                    <input type="hidden" name="cart-zar-total" id="cart-zar-total">
+                                    <input type="hidden" name="cart-zwl-total" id="cart-zwl-total">
+                                    <!-- /.Hidden Inputs -->
+
+                                    <!-- Action Buttons -->
+                                    <div class="cart-action-btns">
+                                        <div class="d-flex align-items-center justify-content-center mt-2">
+                                            <button class="btn btn-warning btn-sm btn-block font-600 d-flex align-items-center justify-content-center clear-cart me-1">
+                                                <i class="material-icons me-1">delete_sweep</i>
+                                                Clear Cart
+                                            </button>
+                                            <a role="button" href="cart.html" class="btn btn-primary btn-sm btn-block font-600 d-flex align-items-center justify-content-center checkout-btn m-0">
+                                                Go to Cart
+                                                <i class="material-icons ms-1">arrow_forward</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- /.Action Buttons -->
+                                </li>
+                                <!-- /.Cart Details -->
+                            </ul>
+                        </li>
+                        <!-- /.Shopping Cart -->
+
+                        <!-- Visitor -->
+                        <li class="nav-item dropdown ms-3">
+                            <a role="button" class="btn bg-switch btn-sm rounded-pill d-flex align-items-center font-600 dropdown-toggle text-white" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons me-2">person_outline</i>
+                                <span class="text-white">Sign in</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end user-menu app-menu box-shadow-sm rounded-2 px-3" id="visitor-menu">
+                                <div class="d-flex justify-content-center align-items-center text-skyblue font-600">
+                                    <img src="dist/images/greeting-icons/sunrise.svg" alt="" class="greeting-icon">
+                                    <h6 class="user-greeting text-app-color m-0 p-0 font-600">Good morning!</h6>
+                                </div>
+                                <p class="text-faded text-sm text-center font-600">
+                                    Sign in for a personalized shopping experience.
+                                </p>
+                                <form method="POST" class="needs-validation" action="" novalidate>
+                                    <div class="form-group mb-1 pb-1">
+                                        <label for="email" class="mb-0 font-600 text-sm">Email</label>
+                                        <input type="email" name="email" id="email" class="form-control form-control-sm" value="" autocomplete="email" required>
+                                        <small class="invalid-feedback font-600" id="nameError"></small>
+                                    </div>
+
+                                    <div class="form-group mb-1 pb-1">
+                                        <label for="password" class="mb-0 font-600 text-sm">Password</label>
+                                        <input type="password" name="password" id="password" class="form-control form-control-sm" value="" autocomplete="password" required>
+                                        <small class="invalid-feedback font-600" id="nameError"></small>
+                                    </div>
+
+                                    <div class="row gy-0 align-items-center">
+                                        <div class="col-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                                                <label class="form-check-label text-sm" for="autoSizingCheck">
+                                                    Remember me
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="text-sm font-600">Forgot password?</a>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-sm btn-primary rounded-pill lead font-600 btn-block mt-2">
+                                        <span class="text-white">Sign in</span>
+                                    </button>
+                                </form>
+
+                                <div class="flex-column justify-content-center">
+                                    <div class="division-block">
+                                        <hr class="divider bg-border-color d-flex justify-content-center">
+                                        <strong class="divider-title text-uppercase text-muted">or</strong>
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center mt-0">
+                                        <a role="button" href="" class="btn btn-outline-primary btn-sm social-login-btn" title="Sign-in with Facebook">
+                                            <i class="fa fa-facebook text-app-color-inverse"></i>
+                                        </a>
+                                        <a role="button" href="" class="btn btn-outline-primary btn-sm mx-3 social-login-btn" title="Sign-in with Google">
+                                            <i class="fa fa-google text-app-color-inverse"></i>
+                                        </a>
+                                        <a role="button" href="" class="btn btn-outline-primary btn-sm social-login-btn me-3" title="Sign-in with Twitter">
+                                            <i class="fa fa-twitter text-app-color-inverse"></i>
+                                        </a>
+                                        <a role="button" href="" class="btn btn-outline-primary btn-sm social-login-btn" title="Sign-in with Instagram">
+                                            <i class="fa fa-instagram text-app-color-inverse"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <hr class="mb-0 pb-0">
+                                <div class="d-flex align-items-center w-100 mb-2">
+                                    Don't have an account? <a href="/register" class="ms-1 d-flex align-items-center">Sign-Up <i class="fa fa-caret-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- /.Visitor -->
+
+                        <li class="nav-item d-md-flex ms-3" id="app-settings" data-bs-toggle="tooltip" title="See more settings">
+                            <a class="toggle-settings nav-link icon-link material-icons">tune</a>
+                        </li>
+                    </ul>
+                    <!-- /.Right Navbar Links -->
+                </nav>
+                <!-- Main Navbar -->
+
+                <!-- Search Form -->
+                <form method="get" action="/search" id="search-form" class="bg-whitesmoke">
+                    <div class="form-group icon-form-group" id="search-bar">
+                        <i class="material-icons icon text-faded">search</i>
+                        <input type="search" name="search" id="search" class="form-control" placeholder="Search...">
+                        <ul class="list-group bg-whitesmoke search-list rounded-bottom-2 d-none px-0">
+                            <!-- Search Result -->
+                            <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <!-- Product Item Details -->
+                                    <div class="d-flex w-100">
+                                        <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                        <div class="flex-column cart-details-placeholder">
+                                            <div class="content-placeholder cart-item-name-placeholder"></div>
+                                            <div class="content-placeholder cart-category-placeholder"></div>
+                                            <div class="cart-rating-placeholder content-placeholder"></div>
+                                            <div class="content-placeholder cart-stock-placeholder"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Item Details -->
+                                    <div class="d-block text-center">
+                                        <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                        <button class="btn btn-cart-placeholder pt-1"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- /.Search Result -->
+                            <!-- Search Result -->
+                            <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <!-- Product Item Details -->
+                                    <div class="d-flex w-100">
+                                        <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                        <div class="flex-column cart-details-placeholder">
+                                            <div class="content-placeholder cart-item-name-placeholder"></div>
+                                            <div class="content-placeholder cart-category-placeholder"></div>
+                                            <div class="cart-rating-placeholder content-placeholder"></div>
+                                            <div class="content-placeholder cart-stock-placeholder"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Item Details -->
+                                    <div class="d-block text-center">
+                                        <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                        <button class="btn btn-cart-placeholder pt-1"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- /.Search Result -->
+                            <!-- Search Result -->
+                            <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <!-- Product Item Details -->
+                                    <div class="d-flex w-100">
+                                        <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                        <div class="flex-column cart-details-placeholder">
+                                            <div class="content-placeholder cart-item-name-placeholder"></div>
+                                            <div class="content-placeholder cart-category-placeholder"></div>
+                                            <div class="cart-rating-placeholder content-placeholder"></div>
+                                            <div class="content-placeholder cart-stock-placeholder"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Product Item Details -->
+                                    <div class="d-block text-center">
+                                        <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                        <button class="btn btn-cart-placeholder pt-1"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- /.Search Result -->
+                        </ul>
+                    </div>
+                </form>
+                <!-- /.Search Form -->
+            </div>
+        </header>
+        <!-- /.Main Navbar -->
+
+        <div class="page-content">
+            <div class="container">
+                <!-- Breadcrumbs -->
+                <nav class="d-flex align-items-center justify-content-md-between my-2" aria-label="breadcrumb">
+                    <h4 class="text-app-color font-600 my-0">Personal Care</h4>
+                    <ol class="breadcrumb my-0 py-0">
+                        <li class="breadcrumb-item"><a href="index.html">Store</a></li>
+                        <li class="breadcrumb-item"><a href="#">Category</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Personal Care</li>
+                    </ol>
+                </nav>
+                <!-- /.Breadcrumbs -->
+                <div class="row">
+                    <!-- Side Navigation -->
+                    <div class="col-md-3">
+                        <div class="box-shadow-sm bg-whitesmoke sticky-top border p-2">
+                            <div class="d-flex align-items-center justify-content-between m-auto">
+                                <h6 class="font-600 my-0">filter by</h6>
+                                <button class="btn btn-sm btn-light rounded-pill px-3">clear all</button>
+                            </div>
+                            <hr class="my-1">
+                            <!-- Filters -->
+                            <div class="d-block ms-2">
+                                <!-- Related Categories -->
+                                <div class="accordion accordion-flush" id="sub-categories">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="related-subcategories">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#related-categories" aria-expanded="false" aria-controls="related-categories">
+                                                Related Categories
+                                            </button>
+                                        </h2>
+                                        <div id="related-categories" class="accordion-collapse collapse" aria-labelledby="related-subcategories" data-bs-parent="#sub-categories">
+                                            <ul class="filter-list accordion-body p-0 m-0">
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-muted">Related Item</a>
+                                                </li>
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-muted">Related Item</a>
+                                                </li>
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-muted">Related Item</a>
+                                                </li>
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-muted">Related Item</a>
+                                                </li>
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-muted">Related Item</a>
+                                                </li>
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-muted">Related Item</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.Related Categories -->
+
+                                <!-- Price Filters -->
+                                <div class="block mt-1">
+                                    <h6 class="font-600 text-capitalize my-0">price filters</h6>
+                                    <div class="px-0 ps-2">
+                                        <p class="my-0 py-0">
+                                            <label class="text-sm">
+                                                <input class="form-check-input me-1" name="price-filter" type="radio" value="">
+                                                <span class="usd-price text-muted">Under $25</span>
+                                            </label>
+                                        </p>
+                                        <p class="my-0 py-0">
+                                            <label class="text-sm">
+                                                <input class="form-check-input me-1" name="price-filter" type="radio" value="">
+                                                <span class="usd-price text-muted">$25 - $50</span>
+                                            </label>
+                                        </p>
+                                        <p class="my-0 py-0">
+                                            <label class="text-sm">
+                                                <input class="form-check-input me-1" name="price-filter" type="radio" value="">
+                                                <span class="usd-price text-muted">$50 - $100</span>
+                                            </label>
+                                        </p>
+                                        <p class="my-0 py-0">
+                                            <label class="text-sm">
+                                                <input class="form-check-input me-1" name="price-filter" type="radio" value="">
+                                                <span class="usd-price text-muted">Above $100</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- /.Price Filters -->
+
+                                <hr class="my-1">
+
+                                <!-- Clothing Size Filters -->
+                                <div class="block">
+                                    <h6 class="font-600 text-capitalize my-0">Size Filters</h6>
+                                    <div class="px-0 ps-2">
+                                        <p class="my-0 py-0">
+                                            <label class="text-sm">
+                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                <span class="text-muted">S</span>
+                                            </label>
+                                        </p>
+                                        <p class="my-0 py-0">
+                                            <label class="text-sm">
+                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                <span class="text-muted">M</span>
+                                            </label>
+                                        </p>
+                                        <p class="my-0 py-0">
+                                            <label class="text-sm">
+                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                <span class="text-muted">L</span>
+                                            </label>
+                                        </p>
+                                        <p class="my-0 py-0">
+                                            <label class="text-sm">
+                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                <span class="text-muted">XL</span>
+                                            </label>
+                                        </p>
+                                        <p class="my-0 py-0">
+                                            <label class="text-sm">
+                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                <span class="text-muted">XXL</span>
+                                            </label>
+                                        </p>
+                                        <p class="my-0 py-0">
+                                            <label class="text-sm">
+                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                <span class="text-muted">XXXL</span>
+                                            </label>
+                                        </p>
+                                        <p class="my-0 py-0">
+                                            <label class="text-sm">
+                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                <span class="text-muted">4XL</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- /.Clothing Size Filters -->
+
+                                <hr class="my-1">
+
+                                <!-- Shoe Size Filters -->
+                                <div class="block">
+                                    <h6 class="font-600 text-capitalize my-0">Size Filters</h6>
+                                    <div class="d-grid grid-7 grid-p-1 shoe-sizes mt-1">
+                                        <!-- Shoe sizes will be shown here -->
+                                    </div>
+                                </div>
+                                <!-- /.Shoe Size Filters -->
+
+                                <hr class="my-1">
+
+                                <!--  Bed Size Filters -->
+                                <div class="block">
+                                    <h6 class="font-600 text-capitalize my-0">Bed Size Filters</h6>
+                                    <div class="px-0 ps-2">
+                                        <p class="my-0 py-0">
+                                            <label class="text-sm">
+                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                <span class="text-muted">Twin</span>
+                                            </label>
+                                        </p>
+                                        <p class="my-0 py-0">
+                                            <label class="text-sm">
+                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                <span class="text-muted">Twin XL</span>
+                                            </label>
+                                        </p>
+                                        <p class="my-0 py-0">
+                                            <label class="text-sm">
+                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                <span class="text-muted">Double</span>
+                                            </label>
+                                        </p>
+                                        <p class="my-0 py-0">
+                                            <label class="text-sm">
+                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                <span class="text-muted">Queen</span>
+                                            </label>
+                                        </p>
+                                        <p class="my-0 py-0">
+                                            <label class="text-sm">
+                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                <span class="text-muted">King</span>
+                                            </label>
+                                        </p>
+                                        <p class="my-0 py-0">
+                                            <label class="text-sm">
+                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                <span class="text-muted">Super King</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- /. Bed Size Filters -->
+                            </div>
+                            <!-- /.Filters -->
+                        </div>
+                    </div>
+                    <!-- /.Side Navigation -->
+
+                    <!-- Main Content -->
+                    <div class="col-12 col-md-9">
+                        <!-- Right Navbar -->
+                        <nav class="box-shadow-sm bg-whitesmoke sticky-top border p-2">
+                            <!-- Breadcrumbs -->
+                            <div aria-label="breadcrumb">
+                                <ol class="breadcrumb mb-0 pb-0">
+                                    <li class="breadcrumb-item text-sm">
+                                        <a href="#">All Categories</a>
+                                    </li>
+                                    <li class="breadcrumb-item active text-sm text-capitalize" aria-current="page">
+                                        jewelry & accessories (1, 234 results)
+                                    </li>
+                                </ol>
+                            </div>
+                            <!-- /.Breadcrumbs -->
+
+                            <!-- Filtering Options -->
+                            <div class="d-flex align-items-center">
+                                <span class="text-sm me-2">Price:</span>
+                                <!-- Price Range Inputs -->
+                                <form method="post" class="d-flex align-items-center needs-validation mt-1" id="price-range-form" novalidate>
+                                    <input type="text" name="min-price" id="min-price" class="form-control form-control-sm price-range-input text-sm" placeholder="min" onkeyup="forceNumeric()" required>
+                                    <i class="mx-2">-</i>
+                                    <input type="text" name="max-price" id="max-price" class="form-control form-control-sm price-range-input text-sm" placeholder="max" onkeyup="forceNumeric()" required>
+                                    <button type="submit" class="btn btn-sm bg-switch text-white ms-2 px-2">Go</button>
+                                </form>
+                                <!-- /.Price Range Inputs -->
+
+                                <!-- Filter Progress Bars -->
+                                <div class="filter-bars">
+                                    <div class="d-flex mx-3 rating-bars">
+                                        <div class="progress" id="lowest-price-range" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-container="body" data-bs-content="23% of customers bought gifts in this price range.">
+                                            <div id="lowest-filter-rating" class="progress-bar bg-switch filter-ratings" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="progress" id="lower-price-range" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-container="body" data-bs-content="53% of customers bought gifts in this price range.">
+                                            <div id="lower-filter-rating" class="progress-bar bg-switch filter-ratings" role="progressbar" style="width: 53%" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="progress" id="medium-price-range" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-container="body" data-bs-content="87% of customers bought gifts in this price range.">
+                                            <div id="medium-filter-rating" class="progress-bar bg-switch filter-ratings" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="progress" id="high-price-range" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-container="body" data-bs-content="94% of customers bought gifts in this price range.">
+                                            <div id="high-filter-rating" class="progress-bar bg-switch filter-ratings" role="progressbar" style="width: 94%" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="progress" id="highest-price-range" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-container="body" data-bs-content="12% of customers bought gifts in this price range.">
+                                            <div id="highest-filter-rating" class="progress-bar bg-switch filter-ratings" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.Filter Progress Bars -->
+
+                                <!-- Filters -->
+                                <div class="btn-group" role="group" aria-label="First gifts">
+                                    <button type="button" class="btn btn-outline-secondary btn-sm">All</button>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm">Orders</button>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm">Likes</button>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm">Newest</button>
+                                    <div class="btn-group" role="group">
+                                        <button id="price-sorting" type="button" class="btn btn-outline-secondary btn-sm d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-sort dropdown-menu-icon me-2"></i> 
+                                            <span class="dropdown-menu-text">Price sorting</span>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="price-sorting">
+                                            <li>
+                                                <a class="dropdown-item filter-option-item d-flex align-items-center" href="#">
+                                                    <i class="fa fa-sort-numeric-asc me-2"></i>
+                                                    <span>Low to High</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item filter-option-item d-flex align-items-center" href="#">
+                                                    <i class="fa fa-sort-numeric-desc me-2"></i> High to Low
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- /.Filters -->
+
+                                <!-- View Options -->
+                                <div class="d-flex align-items-center ms-auto">
+                                    <i role="button" class="bi bi-list-ul view-option list-icon d-none d-md-block" data-view="list-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="List view"></i>
+                                    <i role="button" class="bi bi-grid view-option grid-icon active d-none d-md-inline-block mx-3" data-view="grid-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Grid View"></i>
+                                </div>
+                                <!-- /.View Options -->
+                            </div>
+                            <!-- /.Filtering Options -->
+                        </nav>
+                        <!-- /.Right Navbar -->
+
+                        <!-- Gift Items -->
+                        <div class="d-grid grid-view grid-p-1 mt-2 display-gifts category-shelf" id="category-gifts">
+                            <!-- Product Card -->
+                            <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                                <!-- Cart Actions -->
+                                <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
+                                    <div class="d-flex align-items-center px-2">
+                                        <div class="d-flex align-items-center justify-content-around m-0 p-0">
+                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Decrease quantity">remove_circle</span>
+                                            <span role="button" class="product-actions item-quantity text-faded" id="item-count">0</span>
+                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Increase quantity">add_circle</span>
+                                        </div>
+                                        <div class="ms-auto d-flex align-items-center">
+                                            <a href="#" class="nav-link icon-link toggle-customization" id="customize" title="Customize gift" data-id="">
+                                                <i class="material-icons">palette</i>
+                                            </a>
+                                            <a href="#" class="nav-link icon-link text-danger remove-item ms-2" title="Remove Item" data-id="">
+                                                <i class="material-icons notifications">delete</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.Cart Actions -->
+                                <div class="product-img-wrapper">
+                                    <div class="badge bg-danger rounded-end customize-ribbon d-flex align-items-center">
+                                        <i class="material-icons text-white me-1" id="sale-icon">alarm_on</i>
+                                        <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
+                                    </div>
+                                    <a href="details.html" title="View product">
+                                        <img data-src="dist/images/gifts/15f4607d0b3c65.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
+                                    </a>
+                                    <div class="overlay d-flex justify-content-around py-1">
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="38 In Stock">
+                                            <i class="fa fa-home text-light"></i>
+                                            <span class="text-light text-sm">38</span>
+                                        </div>
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="27k Total Views">
+                                            <i class="fa fa-eye text-light"></i>
+                                            <span class="text-light text-sm">27k</span>
+                                        </div>
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Wishlisted by 2734 customer(s)">
+                                            <i role="button" class="fa fa-heart text-light overlay-icon text-warning wishlist-icon" data-id="" data-user="" data-action="unwish" title="This gift is in your Wishlist"></i>
+                                            <span class="text-light text-sm">2734</span>
+                                        </div>
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="456 gift(s) sold">
+                                            <i role="button" class="fa fa-truck text-light overlay-icon text-warning" data-action="unwish"></i>
+                                            <span class="text-light text-sm">235</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body my-0 py-0">
+                                        <div class="lh-100 mb-0 pb-0">
+                                            <a href="#">
+                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                    Customizable board
+                                                </p>
+                                                <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                    Customizable board
+                                                </p>
+                                            </a>
+                                            <a href="#" class="text-sm font-500 text-capitalize my-0 py-0">
+                                                Customizables
+                                            </a>
+                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-muted">&star;</li>
+                                                <span class="text-sm text-faded font-600">(35)</span>
+                                            </ul>
+                                        </div>
+                                        <div class="price-tag">
+                                            <div class="text-muted">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="font-600">$<span class="product-price">36.38</span></span>
+                                                    <div class="d-flex align-items-center before-prices">
+                                                        <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="zar-price d-none">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="font-600">R<span class="product-price">273.38</span></span>
+                                                    <div class="d-flex align-items-center before-prices">
+                                                        <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="zwl-price d-none">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="font-600">$<span class="product-price">2737.33</span></span>
+                                                    <div class="d-flex align-items-center before-prices">
+                                                        <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center text-sm">
+                                            <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
+                                            <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
+                                        </div>
+                                        <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
+                                            <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
+                                                <i class="fa fa-cart-plus text-white me-1 d-sm-none d-md-inline-block"></i>
+                                                Buy <span class="text-white text-white ms-1">gift</span>
+                                            </button>
+                                            <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
+                                                <i class="fa fa-exchange text-app-color me-1 d-sm-none d-md-inline-block"></i>
+                                                Compare
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.Product Card -->
+                            <!-- Product Card -->
+                            <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                                <!-- Cart Actions -->
+                                <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
+                                    <div class="d-flex align-items-center px-2">
+                                        <div class="d-flex align-items-center justify-content-around m-0 p-0">
+                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Decrease quantity">remove_circle</span>
+                                            <span role="button" class="product-actions item-quantity text-faded" id="item-count">0</span>
+                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Increase quantity">add_circle</span>
+                                        </div>
+                                        <div class="ms-auto d-flex align-items-center">
+                                            <a href="#" class="nav-link icon-link toggle-customization" id="customize" title="Customize gift" data-id="">
+                                                <i class="material-icons">palette</i>
+                                            </a>
+                                            <a href="#" class="nav-link icon-link text-danger remove-item ms-2" title="Remove Item" data-id="">
+                                                <i class="material-icons notifications">delete</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.Cart Actions -->
+                                <div class="product-img-wrapper">
+                                    <div class="badge bg-danger rounded-end customize-ribbon d-flex align-items-center">
+                                        <i class="material-icons text-white me-1" id="sale-icon">alarm_on</i>
+                                        <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
+                                    </div>
+                                    <a href="details.html" title="View product">
+                                        <img data-src="dist/images/gifts/15f458474b905f.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
+                                    </a>
+                                    <div class="overlay d-flex justify-content-around py-1">
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="38 In Stock">
+                                            <i class="fa fa-home text-light"></i>
+                                            <span class="text-light text-sm">38</span>
+                                        </div>
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="27k Total Views">
+                                            <i class="fa fa-eye text-light"></i>
+                                            <span class="text-light text-sm">27k</span>
+                                        </div>
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Wishlisted by 2734 customer(s)">
+                                            <i role="button" class="fa fa-heart text-light overlay-icon text-warning wishlist-icon" data-id="" data-user="" data-action="unwish" title="This gift is in your Wishlist"></i>
+                                            <span class="text-light text-sm">2734</span>
+                                        </div>
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="456 gift(s) sold">
+                                            <i role="button" class="fa fa-truck text-light overlay-icon text-warning" data-action="unwish"></i>
+                                            <span class="text-light text-sm">235</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body my-0 py-0">
+                                        <div class="lh-100 mb-0 pb-0">
+                                            <a href="#">
+                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                    Customizable board
+                                                </p>
+                                                <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                    Customizable board
+                                                </p>
+                                            </a>
+                                            <a href="#" class="text-sm font-500 text-capitalize my-0 py-0">
+                                                Customizables
+                                            </a>
+                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-muted">&star;</li>
+                                                <span class="text-sm text-faded font-600">(35)</span>
+                                            </ul>
+                                        </div>
+                                        <div class="price-tag">
+                                            <div class="text-muted">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="font-600">$<span class="product-price">36.38</span></span>
+                                                    <div class="d-flex align-items-center before-prices">
+                                                        <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="zar-price d-none">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="font-600">R<span class="product-price">273.38</span></span>
+                                                    <div class="d-flex align-items-center before-prices">
+                                                        <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="zwl-price d-none">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="font-600">$<span class="product-price">2737.33</span></span>
+                                                    <div class="d-flex align-items-center before-prices">
+                                                        <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center text-sm">
+                                            <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
+                                            <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
+                                        </div>
+                                        <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
+                                            <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
+                                                <i class="fa fa-cart-plus text-white me-1 d-sm-none d-md-inline-block"></i>
+                                                Buy <span class="text-white text-white ms-1">gift</span>
+                                            </button>
+                                            <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
+                                                <i class="fa fa-exchange text-app-color me-1 d-sm-none d-md-inline-block"></i>
+                                                Compare
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.Product Card -->
+                            <!-- Product Card -->
+                            <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                                <!-- Cart Actions -->
+                                <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
+                                    <div class="d-flex align-items-center px-2">
+                                        <div class="d-flex align-items-center justify-content-around m-0 p-0">
+                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Decrease quantity">remove_circle</span>
+                                            <span role="button" class="product-actions item-quantity text-faded" id="item-count">0</span>
+                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Increase quantity">add_circle</span>
+                                        </div>
+                                        <div class="ms-auto d-flex align-items-center">
+                                            <a href="#" class="nav-link icon-link toggle-customization" id="customize" title="Customize gift" data-id="">
+                                                <i class="material-icons">palette</i>
+                                            </a>
+                                            <a href="#" class="nav-link icon-link text-danger remove-item ms-2" title="Remove Item" data-id="">
+                                                <i class="material-icons notifications">delete</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.Cart Actions -->
+                                <div class="product-img-wrapper">
+                                    <div class="badge bg-danger rounded-end customize-ribbon d-flex align-items-center">
+                                        <i class="material-icons text-white me-1" id="sale-icon">alarm_on</i>
+                                        <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
+                                    </div>
+                                    <a href="details.html" title="View product">
+                                        <img data-src="dist/images/gifts/15f458254a0dac.2.webp" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
+                                    </a>
+                                    <div class="overlay d-flex justify-content-around py-1">
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="38 In Stock">
+                                            <i class="fa fa-home text-light"></i>
+                                            <span class="text-light text-sm">38</span>
+                                        </div>
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="27k Total Views">
+                                            <i class="fa fa-eye text-light"></i>
+                                            <span class="text-light text-sm">27k</span>
+                                        </div>
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Wishlisted by 2734 customer(s)">
+                                            <i role="button" class="fa fa-heart text-light overlay-icon text-warning wishlist-icon" data-id="" data-user="" data-action="unwish" title="This gift is in your Wishlist"></i>
+                                            <span class="text-light text-sm">2734</span>
+                                        </div>
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="456 gift(s) sold">
+                                            <i role="button" class="fa fa-truck text-light overlay-icon text-warning" data-action="unwish"></i>
+                                            <span class="text-light text-sm">235</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body my-0 py-0">
+                                        <div class="lh-100 mb-0 pb-0">
+                                            <a href="#">
+                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                    Customizable board
+                                                </p>
+                                                <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                    Customizable board
+                                                </p>
+                                            </a>
+                                            <a href="#" class="text-sm font-500 text-capitalize my-0 py-0">
+                                                Customizables
+                                            </a>
+                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-muted">&star;</li>
+                                                <span class="text-sm text-faded font-600">(35)</span>
+                                            </ul>
+                                        </div>
+                                        <div class="price-tag">
+                                            <div class="text-muted">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="font-600">$<span class="product-price">36.38</span></span>
+                                                    <div class="d-flex align-items-center before-prices">
+                                                        <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="zar-price d-none">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="font-600">R<span class="product-price">273.38</span></span>
+                                                    <div class="d-flex align-items-center before-prices">
+                                                        <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="zwl-price d-none">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="font-600">$<span class="product-price">2737.33</span></span>
+                                                    <div class="d-flex align-items-center before-prices">
+                                                        <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center text-sm">
+                                            <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
+                                            <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
+                                        </div>
+                                        <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
+                                            <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
+                                                <i class="fa fa-cart-plus text-white me-1 d-sm-none d-md-inline-block"></i>
+                                                Buy <span class="text-white text-white ms-1">gift</span>
+                                            </button>
+                                            <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
+                                                <i class="fa fa-exchange text-app-color me-1 d-sm-none d-md-inline-block"></i>
+                                                Compare
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.Product Card -->
+                            <!-- Product Card -->
+                            <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                                <!-- Cart Actions -->
+                                <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
+                                    <div class="d-flex align-items-center px-2">
+                                        <div class="d-flex align-items-center justify-content-around m-0 p-0">
+                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Decrease quantity">remove_circle</span>
+                                            <span role="button" class="product-actions item-quantity text-faded" id="item-count">0</span>
+                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Increase quantity">add_circle</span>
+                                        </div>
+                                        <div class="ms-auto d-flex align-items-center">
+                                            <a href="#" class="nav-link icon-link toggle-customization" id="customize" title="Customize gift" data-id="">
+                                                <i class="material-icons">palette</i>
+                                            </a>
+                                            <a href="#" class="nav-link icon-link text-danger remove-item ms-2" title="Remove Item" data-id="">
+                                                <i class="material-icons notifications">delete</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.Cart Actions -->
+                                <div class="product-img-wrapper">
+                                    <div class="badge bg-danger rounded-end customize-ribbon d-flex align-items-center">
+                                        <i class="material-icons text-white me-1" id="sale-icon">alarm_on</i>
+                                        <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
+                                    </div>
+                                    <a href="details.html" title="View product">
+                                        <img data-src="dist/images/gifts/15f458254a0dac.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
+                                    </a>
+                                    <div class="overlay d-flex justify-content-around py-1">
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="38 In Stock">
+                                            <i class="fa fa-home text-light"></i>
+                                            <span class="text-light text-sm">38</span>
+                                        </div>
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="27k Total Views">
+                                            <i class="fa fa-eye text-light"></i>
+                                            <span class="text-light text-sm">27k</span>
+                                        </div>
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Wishlisted by 2734 customer(s)">
+                                            <i role="button" class="fa fa-heart text-light overlay-icon text-warning wishlist-icon" data-id="" data-user="" data-action="unwish" title="This gift is in your Wishlist"></i>
+                                            <span class="text-light text-sm">2734</span>
+                                        </div>
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="456 gift(s) sold">
+                                            <i role="button" class="fa fa-truck text-light overlay-icon text-warning" data-action="unwish"></i>
+                                            <span class="text-light text-sm">235</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body my-0 py-0">
+                                        <div class="lh-100 mb-0 pb-0">
+                                            <a href="#">
+                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                    Customizable board
+                                                </p>
+                                                <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                    Customizable board
+                                                </p>
+                                            </a>
+                                            <a href="#" class="text-sm font-500 text-capitalize my-0 py-0">
+                                                Customizables
+                                            </a>
+                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-muted">&star;</li>
+                                                <span class="text-sm text-faded font-600">(35)</span>
+                                            </ul>
+                                        </div>
+                                        <div class="price-tag">
+                                            <div class="text-muted">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="font-600">$<span class="product-price">36.38</span></span>
+                                                    <div class="d-flex align-items-center before-prices">
+                                                        <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="zar-price d-none">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="font-600">R<span class="product-price">273.38</span></span>
+                                                    <div class="d-flex align-items-center before-prices">
+                                                        <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="zwl-price d-none">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="font-600">$<span class="product-price">2737.33</span></span>
+                                                    <div class="d-flex align-items-center before-prices">
+                                                        <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center text-sm">
+                                            <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
+                                            <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
+                                        </div>
+                                        <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
+                                            <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
+                                                <i class="fa fa-cart-plus text-white me-1 d-sm-none d-md-inline-block"></i>
+                                                Buy <span class="text-white text-white ms-1">gift</span>
+                                            </button>
+                                            <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
+                                                <i class="fa fa-exchange text-app-color me-1 d-sm-none d-md-inline-block"></i>
+                                                Compare
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.Product Card -->
+                            <!-- Product Card -->
+                            <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                                <!-- Cart Actions -->
+                                <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
+                                    <div class="d-flex align-items-center px-2">
+                                        <div class="d-flex align-items-center justify-content-around m-0 p-0">
+                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Decrease quantity">remove_circle</span>
+                                            <span role="button" class="product-actions item-quantity text-faded" id="item-count">0</span>
+                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Increase quantity">add_circle</span>
+                                        </div>
+                                        <div class="ms-auto d-flex align-items-center">
+                                            <a href="#" class="nav-link icon-link toggle-customization" id="customize" title="Customize gift" data-id="">
+                                                <i class="material-icons">palette</i>
+                                            </a>
+                                            <a href="#" class="nav-link icon-link text-danger remove-item ms-2" title="Remove Item" data-id="">
+                                                <i class="material-icons notifications">delete</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.Cart Actions -->
+                                <div class="product-img-wrapper">
+                                    <div class="badge bg-danger rounded-end customize-ribbon d-flex align-items-center">
+                                        <i class="material-icons text-white me-1" id="sale-icon">alarm_on</i>
+                                        <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
+                                    </div>
+                                    <a href="details.html" title="View product">
+                                        <img data-src="dist/images/gifts/15f460ba6e5666.2.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
+                                    </a>
+                                    <div class="overlay d-flex justify-content-around py-1">
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="38 In Stock">
+                                            <i class="fa fa-home text-light"></i>
+                                            <span class="text-light text-sm">38</span>
+                                        </div>
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="27k Total Views">
+                                            <i class="fa fa-eye text-light"></i>
+                                            <span class="text-light text-sm">27k</span>
+                                        </div>
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Wishlisted by 2734 customer(s)">
+                                            <i role="button" class="fa fa-heart text-light overlay-icon text-warning wishlist-icon" data-id="" data-user="" data-action="unwish" title="This gift is in your Wishlist"></i>
+                                            <span class="text-light text-sm">2734</span>
+                                        </div>
+                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="456 gift(s) sold">
+                                            <i role="button" class="fa fa-truck text-light overlay-icon text-warning" data-action="unwish"></i>
+                                            <span class="text-light text-sm">235</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body my-0 py-0">
+                                        <div class="lh-100 mb-0 pb-0">
+                                            <a href="#">
+                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                    Customizable board
+                                                </p>
+                                                <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                    Customizable board
+                                                </p>
+                                            </a>
+                                            <a href="#" class="text-sm font-500 text-capitalize my-0 py-0">
+                                                Customizables
+                                            </a>
+                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-muted">&star;</li>
+                                                <span class="text-sm text-faded font-600">(35)</span>
+                                            </ul>
+                                        </div>
+                                        <div class="price-tag">
+                                            <div class="text-muted">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="font-600">$<span class="product-price">36.38</span></span>
+                                                    <div class="d-flex align-items-center before-prices">
+                                                        <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="zar-price d-none">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="font-600">R<span class="product-price">273.38</span></span>
+                                                    <div class="d-flex align-items-center before-prices">
+                                                        <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="zwl-price d-none">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="font-600">$<span class="product-price">2737.33</span></span>
+                                                    <div class="d-flex align-items-center before-prices">
+                                                        <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center text-sm">
+                                            <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
+                                            <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
+                                        </div>
+                                        <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
+                                            <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
+                                                <i class="fa fa-cart-plus text-white me-1 d-sm-none d-md-inline-block"></i>
+                                                Buy <span class="text-white text-white ms-1">gift</span>
+                                            </button>
+                                            <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
+                                                <i class="fa fa-exchange text-app-color me-1 d-sm-none d-md-inline-block"></i>
+                                                Compare
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.Product Card -->
+                        </div>
+                        <!-- /.Gift Items -->
+                    </div>
+                    <!-- /.Main Content -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.Page Content -->
+
+    <!-- Sticky Bottom Footer -->
+    <footer class=" footer bg-meshgrid mt-5 ">
+        <div class="container my-2 ">
+            <div class="row align-items-md-center ">
+                <div class="col-12 col-md-4 ">
+                    <h5 class="font-600 text-white ">Be the first to know</h5>
+                    <p class="text-sm text-white ">
+                        Be the first to know of all our gift offers, sales, discounts, events and many more. Subscribe to our mailing list and you'll be notified of our exclusive deals.
+                    </p>
+                    <form method="post " class="needs-validation " novalidate>
+                        <div class="input-group ">
+                            <input type="text " class="form-control " placeholder="Your email address " aria-label="Your email address " id="toggle-mailing-list ">
+                            <div class="input-group-append ">
+                                <span class="input-group-text text-white text-uppercase bg-primary " id="subscribe ">subscribe</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12 col-md-4 d-md-flex justify-content-md-center border-left border-white ">
+                    <div class="d-flex ">
+                        <i class="fa fa-map-marker fa-2x align-self-center text-white me-2 "></i>
+                        <div class="d-block text-left ">
+                            <h5 class="font-600 text-white ">Gifts Finder</h5>
+                            <p class="text-sm text-white ">Find gifts trending nearby</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 d-md-flex justify-content-md-center border-left border-white ">
+                    <div class="d-flex ">
+                        <i class="material-icons fa-2x align-self-center text-white me-2 ">record_voice_over</i>
+                        <div class="d-block text-left ">
+                            <h5 class="font-600 text-white ">Customer Services</h5>
+                            <p class="text-sm text-white ">Contact us here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row justify-content-between ">
+                <div class="col-6 col-md-3 ">
+                    <h6 class="font-600 text-white ">Discover Gifteros</h6>
+                    <ul class="px-0 ">
+                        <li>
+                            <a href="/about-us ">About us</a>
+                        </li>
+                        <li>
+                            <a href="/blog ">Blog</a>
+                        </li>
+                        <li>
+                            <a href="/careers ">Careers</a>
+                        </li>
+                        <li>
+                            <a href="/partner ">Become a Partner</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 ">
+                    <h6 class="font-600 text-white ">Shopping with us</h6>
+                    <ul class="px-0 ">
+                        <li>
+                            <a href="# ">Gift Customizations</a>
+                        </li>
+                        <li>
+                            <a href="# ">Making Payments</a>
+                        </li>
+                        <li>
+                            <a href="# ">Delivery Options</a>
+                        </li>
+                        <li>
+                            <a href="/return-and-exchanges ">Return & Exchanges</a>
+                        </li>
+                        <li>
+                            <a href="/order-tracking ">Order Tracking</a>
+                        </li>
+                        <li>
+                            <a href="/refunds ">Refunds</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 ">
+                    <h6 class="font-600 text-white ">Legal</h6>
+                    <ul class="px-0 ">
+                        <li>
+                            <a href="/terms-and-conditions ">Terms & Conditions</a>
+                        </li>
+                        <li>
+                            <a href="/cookie-policy ">Cookies</a>
+                        </li>
+                        <li>
+                            <a href="/privacy ">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 ">
+                    <h6 class="font-600 text-white ">Help</h6>
+                    <ul class="px-0 ">
+                        <li>
+                            <a href="/contact-us ">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="/faq ">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="/brands ">Brands</a>
+                        </li>
+                        <li>
+                            <a href="/site-map ">Site map</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row justify-content-md-between ">
+                <div class="col-12 col-xl-6 ">
+                    <div class="d-flex align-items-center ">
+                        <a href="# ">
+                            <i class="fa icon-md text-white fa-facebook-official " aria-hidden="true "></i>
+                        </a>
+                        <a href="# ">
+                            <i class="fa icon-md text-white fa-twitter ms-2 " aria-hidden="true "></i>
+                        </a>
+                        <a href="# ">
+                            <i class="fa icon-md text-white fa-instagram ms-2 " aria-hidden="true "></i>
+                        </a>
+                        <a href="# ">
+                            <i class="fa icon-md text-white fa-whatsapp mx-2 " aria-hidden="true "></i>
+                        </a>
+                        <h6 class="text-muted text-sm font-600 my-0 ">&copy; 2021 Gifteros Inc. All Rights Reserved.</h6>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-6 text-md-end ">
+                    <a href="/developer/tinashe.chaterera " class="text-sm ">
+                        <h6 class="font-600 text-faded ">Designed & Developed by TinaKing</h6>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /.Sticky Bottom Footer -->
+
+    <!-- JQuery -->
+    <script src="dist/plugins/jquery/jquery.min.js "></script>
+    <!-- Bootstrap 4 -->
+    <script src="dist/plugins/bootstrap-v5/js/bootstrap.bundle.min.js "></script>
+    <!-- OwlCarousel -->
+    <script src="dist/plugins/OwlCarousel/dist/owl.carousel.min.js "></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
+    <!-- iziToast -->
+    <script src="dist/plugins/iziToast/js/iziToast.min.js "></script>
+    <!-- Sweet Alert -->
+    <script src="dist/plugins/sweetalert2/package/dist/sweetalert2.min.js "></script>
+    <!-- Gifteros -->
+    <script src="dist/js/gifteros.min.js "></script>
+    <script>
+        $(function() {
+            shoeSizes(1);
+        });
+    </script>
+</body>
+
+</html>

@@ -312,13 +312,29 @@ header.header,
 /* /.Navs */
 
 
+/* Branding */
+
+h1,
+h2,
+h2,
+h4,
+h5,
+h6 {
+    color: var(--app-color);
+}
+
+
+/* /.Branding */
+
+
 /* Grid Layout */
 
 .d-grid {
     display: grid;
 }
 
-.grid-2 {
+.grid-2,
+.category-shelf.list-view {
     grid-template-columns: repeat(2, 1fr);
 }
 
@@ -328,7 +344,8 @@ header.header,
     grid-template-columns: repeat(3, 1fr);
 }
 
-.grid-4 {
+.grid-4,
+.category-shelf.grid-view {
     grid-template-columns: repeat(4, 1fr);
 }
 
@@ -3050,6 +3067,7 @@ i[role="button"],
         align-items: center;
     }
     .grid-view>.product-card>.card-content>.card-body .btn-group {
+        position: absolute;
         bottom: 2%;
     }
     .grid-view>.placeholder-card .btn-group-placeholder {

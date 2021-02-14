@@ -45,6 +45,11 @@
             margin-right: .5rem;
         }
         
+        .product-images,
+        .right-section {
+            position: sticky;
+        }
+        
         .product-images>#display-img {
             width: 100%;
             border-radius: .5rem;
@@ -178,12 +183,20 @@
         }
         
         @media(max-width: 576px) {
+            .product-images,
+            .right-section {
+                top: 0;
+            }
             .product-images>#display-img {
                 height: 300px;
             }
         }
         
         @media(min-width: 768px) {
+            .product-images,
+            .right-section {
+                top: 3rem;
+            }
             .product-images>#display-img {
                 height: 350px;
             }
@@ -1126,7 +1139,7 @@
                         <div class="row position-relative border-bottom gx-1">
                             <!-- Product Images -->
                             <div class="col-12 col-md-6">
-                                <div class="product-images sticky-top">
+                                <div class="product-images">
                                     <img class="box-shadow-sm" id="display-img" src="dist/images/gifts/15f47b9066c522.jpg" data-zoom-image="dist/images/gifts/15f47b9066c522.jpg">
                                     <div class="img-zoom-result d-none" id="zoom-result"></div>
                                     <div id="gallery">
@@ -2099,105 +2112,63 @@
 
                     <!-- Recommended Items -->
                     <div class="col-12 col-xl-4">
-                        <div class="d-block sticky-top">
-                            <div class="d-flex align-items-center justify-content-between py-1">
-                                <h6 class="lead font-600 my-0">Similar</h6>
-                                <a href="#" class="btn btn-sm bg-switch text-white text-sm font-600 px-2">See more</a>
+                        <div class="right-section py-md-1">
+                            <!-- Gift Combinations -->
+                            <div class="bg-whitesmoke box-shadow-sm mb-2 p-2 rounded-2 bought-together">
+                                <h6 class="font-600 text-app-color">Frequently bought together</h6>
+                                <ul class="flashed-list px-0">
+                                    <!-- Gift Combinations -->
+                                    <li class="d-flex align-items-center justify-content-around mb-2">
+                                        <img src="dist/images/gifts/15f460da949b76.1.webp" height="70" width="70" alt="" class="rounded">
+                                        <i class="material-icons mx-2">add</i>
+                                        <img src="dist/images/gifts/15f460da949b76.2.webp" height="70" width="70" alt="" class="rounded">
+                                        <i class="material-icons mx-2">drag_handle</i>
+                                        <h6 class="font-600 text-danger my-0">US$34.39</h6>
+                                    </li>
+                                    <!-- /.Gift Combinations -->
+                                </ul>
                             </div>
+
                             <!-- Similar Product Items -->
-                            <ul class="px-0 py-2">
-                                <!-- Horizontal Card Item -->
-                                <li class="bg-whitesmoke border box-shadow-sm rounded-2 mb-1 p-2">
-                                    <div class="d-flex align-items-start">
-                                        <img data-src="dist/images/gifts/15f47c6c077748.jpg" src="dist/images/app/bg-placeholder.PNG" height="100" width="100" loading="lazy" alt="" class="lazy me-2">
-                                        <div class="d-block">
-                                            <h6 class="font-600 text-capitalize my-0">Neon Lamp</h6>
-                                            <p class="text-sm text-muted my-0 py-0 text-lowercase">camera accessories</p>
-                                            <p class="text-sm text-justify my-1">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, eaque.
-                                            </p>
-                                            <ul class="list-inline gift-star-rating m-0 p-0">
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                            </ul>
-                                            <a href="#" class="stretched-link"></a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- /.Horizontal Card Item -->
+                            <div class="d-block">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h6 class="lead font-600 my-0">Similar</h6>
+                                    <a href="#" class="btn btn-sm bg-switch text-white text-sm font-600 px-2">See more</a>
+                                </div>
+                                <ul class="px-0 py-2">
+                                    <!-- Horizontal Card Item -->
+                                    <li class="bg-whitesmoke border box-shadow-sm rounded-2 mb-1 p-2">
+                                        <div class="d-flex align-items-start">
+                                            <img data-src="dist/images/gifts/15f47c6c077748.jpg" src="dist/images/app/bg-placeholder.PNG" height="100" width="100" loading="lazy" alt="" class="lazy me-2">
+                                            <div class="d-block">
+                                                <h6 class="font-600 text-capitalize my-0">Neon Lamp</h6>
+                                                <p class="text-sm text-muted my-0 py-0 text-lowercase">camera accessories</p>
+                                                <p class="text-sm text-justify my-1">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, eaque.
+                                                </p>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <!-- Gift  Star Rating -->
+                                                    <ul class="list-inline gift-star-rating m-0 p-0">
+                                                        <li class="list-inline-item text-gold">&starf;</li>
+                                                        <li class="list-inline-item text-gold">&starf;</li>
+                                                        <li class="list-inline-item text-gold">&starf;</li>
+                                                        <li class="list-inline-item text-gold">&starf;</li>
+                                                        <li class="list-inline-item text-gold">&starf;</li>
+                                                        <span class="text-sm text-faded font-600 m-0 p-0">134 ratings</span>
+                                                    </ul>
+                                                    <!-- /.Gift Star Rating -->
 
-                                <!-- Horizontal Card Item -->
-                                <li class="bg-whitesmoke border box-shadow-sm rounded-2 mb-1 p-2">
-                                    <div class="d-flex align-items-start">
-                                        <img data-src="dist/images/gifts/15f47c6c077748.jpg" src="dist/images/app/bg-placeholder.PNG" height="100" width="100" loading="lazy" alt="" class="lazy me-2">
-                                        <div class="d-block">
-                                            <h6 class="font-600 text-capitalize my-0">Neon Lamp</h6>
-                                            <p class="text-sm text-muted my-0 py-0 text-lowercase">camera accessories</p>
-                                            <p class="text-sm text-justify my-1">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, eaque.
-                                            </p>
-                                            <ul class="list-inline gift-star-rating m-0 p-0">
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                            </ul>
-                                            <a href="#" class="stretched-link"></a>
+                                                    <!-- Price -->
+                                                    <p class="usd-price text-sm text-danger font-600 m-0 p-0">US$12.78</p>
+                                                    <!-- /.Price -->
+                                                </div>
+                                                <a href="#" class="stretched-link"></a>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <!-- /.Horizontal Card Item -->
-
-                                <!-- Horizontal Card Item -->
-                                <li class="bg-whitesmoke border box-shadow-sm rounded-2 mb-1 p-2">
-                                    <div class="d-flex align-items-start">
-                                        <img data-src="dist/images/gifts/15f47c6c077748.jpg" src="dist/images/app/bg-placeholder.PNG" height="100" width="100" loading="lazy" alt="" class="lazy me-2">
-                                        <div class="d-block">
-                                            <h6 class="font-600 text-capitalize my-0">Neon Lamp</h6>
-                                            <p class="text-sm text-muted my-0 py-0 text-lowercase">camera accessories</p>
-                                            <p class="text-sm text-justify my-1">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, eaque.
-                                            </p>
-                                            <ul class="list-inline gift-star-rating m-0 p-0">
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                            </ul>
-                                            <a href="#" class="stretched-link"></a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- /.Horizontal Card Item -->
-
-                                <!-- Horizontal Card Item -->
-                                <li class="bg-whitesmoke border box-shadow-sm rounded-2 mb-1 p-2">
-                                    <div class="d-flex align-items-start">
-                                        <img data-src="dist/images/gifts/15f47c6c077748.jpg" src="dist/images/app/bg-placeholder.PNG" height="100" width="100" loading="lazy" alt="" class="lazy me-2">
-                                        <div class="d-block">
-                                            <h6 class="font-600 text-capitalize my-0">Neon Lamp</h6>
-                                            <p class="text-sm text-muted my-0 py-0 text-lowercase">camera accessories</p>
-                                            <p class="text-sm text-justify my-1">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, eaque.
-                                            </p>
-                                            <ul class="list-inline gift-star-rating m-0 p-0">
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                            </ul>
-                                            <a href="#" class="stretched-link"></a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- /.Horizontal Card Item -->
-                            </ul>
+                                    </li>
+                                    <!-- /.Horizontal Card Item -->
+                                </ul>
+                            </div>
                             <!-- /.Similar Product Items -->
                         </div>
                     </div>
@@ -2849,6 +2820,18 @@
             // Gift star rating 
             starRating('.gift-rateyo-rating', rating, 12);
             starRating('.gift-rating', rating, 20);
+
+            // Gift Rating
+            $("#user-rating").rateYo({
+                onSet: function(rating, rateYoInstance) {
+                    $(this).next().text(ratingCategory(rating));
+                    $('#star-rating').val(rating);
+                },
+                normalFill: "#A0A0A0",
+                maxValue: 5,
+                starWidth: "20px",
+                spacing: "10px"
+            });
 
             // Custom options
             customOptions(category_id, gift_id, sub_category_id);
