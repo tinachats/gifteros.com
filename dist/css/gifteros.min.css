@@ -2629,8 +2629,9 @@ i[role="button"],
     color: transparent !important
 }
 
+a.text-underline:hover,
 .text-underline {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
 .text-warning-white {
@@ -2793,6 +2794,19 @@ i[role="button"],
 
 /* Buttons */
 
+.btn-outline-secondary:hover,
+.btn-outline-secondary.active {
+    background-color: var(--secondary);
+    color: #fff
+}
+
+.btn-outline-secondary:hover i,
+.btn-outline-secondary.active i,
+.btn-outline-secondary:hover span,
+.btn-outline-secondary.active span {
+    color: #fff
+}
+
 .btn-group-placeholder.pulse,
 .product-card-btns.pulse,
 .btn-group.pulse {
@@ -2817,25 +2831,25 @@ i[role="button"],
     position: relative;
 }
 
-.carousel-autoplay .owl-prev,
-.carousel-autoplay .owl-next {
+.owl-prev,
+.owl-next {
     opacity: 0;
 }
 
-.carousel-autoplay.owl-carousel:hover .owl-prev,
-.carousel-autoplay.owl-carousel:hover .owl-next {
+.owl-carousel:hover .owl-prev,
+.owl-carousel:hover .owl-next {
     opacity: 1;
 }
 
-.carousel-autoplay.owl-theme .owl-nav [class*=owl-]:hover {
+.owl-theme .owl-nav [class*=owl-]:hover {
     background: #fff;
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
     color: #6c757d !important;
     font-size: 3rem;
 }
 
-.carousel-autoplay.owl-carousel .owl-nav button.owl-next,
-.carousel-autoplay.owl-carousel .owl-nav button.owl-prev {
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
     position: absolute;
     width: 100%;
     z-index: 100;
@@ -2851,17 +2865,17 @@ i[role="button"],
     transform: translateY(-50%);
 }
 
-.carousel-autoplay.owl-carousel .owl-nav button.owl-prev span,
-.carousel-autoplay.owl-carousel .owl-nav button.owl-next span {
+.owl-carousel .owl-nav button.owl-prev span,
+.owl-carousel .owl-nav button.owl-next span {
     color: #6c757d !important;
     margin-top: -23px
 }
 
-.carousel-autoplay.owl-carousel .owl-nav button.owl-prev {
+.owl-carousel .owl-nav button.owl-prev {
     left: -20px
 }
 
-.carousel-autoplay.owl-carousel .owl-nav button.owl-next {
+.owl-carousel .owl-nav button.owl-next {
     right: -20px
 }
 
