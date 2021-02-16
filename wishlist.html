@@ -159,6 +159,7 @@
             height: 100px;
             width: 100px;
             margin-right: .5rem;
+            border-radius: .5rem;
         }
         
         .wishlist-shelf.list-view>.wishlist-item>.item-content .item-body-buttons {
@@ -598,7 +599,7 @@
                             <ul class="dropdown-menu dropdown-menu-end app-menu rounded-2 box-shadow-sm cart-menu mt-0 p-0">
                                 <div class="shopping-bag rounded-2">
                                     <div class="list-group-item box-shadow-sm rounded-top-2 lh-100 px-1 py-2 fixed-top">
-                                        <h6 class="lead font-600 ms-2 my-0">4 cart items</h6>
+                                        <h6 class="lead font-600 ml-2 my-0">4 cart items</h6>
                                     </div>
                                     <!-- Cart Item -->
                                     <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
@@ -648,7 +649,7 @@
                                                 <!-- /.Product Item -->
                                             </div>
                                             <div class="d-block text-center">
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm text-muted">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
                                                 <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
                                                 <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
                                                 <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
@@ -704,7 +705,7 @@
                                                 <!-- /.Product Item -->
                                             </div>
                                             <div class="d-block text-center">
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm text-muted">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
                                                 <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
                                                 <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
                                                 <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
@@ -760,7 +761,7 @@
                                                 <!-- /.Product Item -->
                                             </div>
                                             <div class="d-block text-center">
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm text-muted">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
                                                 <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
                                                 <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
                                                 <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
@@ -816,7 +817,7 @@
                                                 <!-- /.Product Item -->
                                             </div>
                                             <div class="d-block text-center">
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm text-muted">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
                                                 <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
                                                 <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
                                                 <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
@@ -826,9 +827,9 @@
                                     <!-- /.Cart Item -->
                                 </div>
                                 <!-- Cart Details -->
-                                <li class="list-group-similar-item lh-100 font-600 text-sm rounded-bottom-2" id="cart-action-btns">
+                                <li class="list-group-item w-100 lh-100 font-600 text-sm rounded-bottom-2" id="cart-action-btns">
                                     <!-- Cart Subtotal -->
-                                    <div class="text-muted">
+                                    <div class="usd-price">
                                         <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
                                             <span class="text-capitalize">Subtotal Amount:</span>
                                             <span class="usd-subtotal">US$0.00</span>
@@ -849,7 +850,7 @@
                                     <!-- /.Cart Subtotal -->
 
                                     <!-- Delivery charges -->
-                                    <div class="text-muted">
+                                    <div class="usd-price">
                                         <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
                                             <span class="text-capitalize">Delivery Costs:</span>
                                             <span class="usd-delivery-cost">US$3.39</span>
@@ -871,7 +872,7 @@
                                     <!-- /.Delivery Charges -->
 
                                     <!-- Taxes & Discounts -->
-                                    <div class="text-muted">
+                                    <div class="usd-price">
                                         <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
                                             <span class="text-capitalize">Discount:</span>
                                             <span class="usd-discount">US$3.48</span>
@@ -893,7 +894,7 @@
                                     <!-- /.Taxes & Discounts -->
 
                                     <!-- Cart Total -->
-                                    <div class="text-muted">
+                                    <div class="usd-price">
                                         <h6 class="font-600 d-flex justify-content-between align-items-center my-0 py-0">
                                             <span class="text-capitalize">Cart Total:</span>
                                             <span class="usd-total">US$0.00</span>
@@ -942,7 +943,6 @@
                         </li>
                         <!-- /.Shopping Cart -->
 
-                        <!-- Auth -->
                         <!-- Wishlist -->
                         <li class="nav-item dropdown ms-3" title="View your Wishlist">
                             <a href="wishlist.html" class="nav-link icon-link wishlist">
@@ -957,7 +957,7 @@
                                 <i class="material-icons notifications">notifications_none</i>
                                 <span class="badge nav-badge notifications-counter">9+</span>
                             </a>
-                            <div class="dropdown-menu notification-menu app-menu dropdown-menu-end rounded-2 box-shadow-sm" id="notifications">
+                            <div class="dropdown-menu notification-menu app-menu dropdown-menu-end rounded-2 box-shadow-sm pb-0" id="notifications">
                                 <!-- Header -->
                                 <div class="text-sm border-bottom pb-1">
                                     <div class="d-flex align-items-center justify-content-around text-primary">
@@ -968,151 +968,177 @@
                                     </div>
                                 </div>
                                 <!-- /.Header -->
-                                <!-- Notification Item -->
-                                <div class="dropdown-item my-0 py-1">
-                                    <a href="#">
-                                        <div class="d-flex lh-100">
-                                            <img src="dist/images/users/15f9eb408be859.jpg" height="40" width="40" alt="" class="rounded-circle align-self-center me-2">
-                                            <div class="d-block text-sm">
-                                                <p class="my-0 py-0" id="subject">
-                                                    <span class="font-600 text-capitalize">Kenneth Copeland</span> commented on
-                                                </p>
-                                                <p class="text-faded my-0 py-1">
-                                                    Lorem ipsum dolor sit amet, consec...
-                                                </p>
-                                                <div class="d-flex align-items-center text-faded">
-                                                    <i class="tiny material-icons text-blue me-1">forum</i> 2h ago
+                                <div class="list-group list-group-flush px-0">
+                                    <!-- Notification Item -->
+                                    <div class="dropdown-item list-group-item my-0 py-1">
+                                        <a href="#">
+                                            <div class="d-flex lh-100">
+                                                <img src="dist/images/users/15f9eb408be859.jpg" height="40" width="40" alt="" class="rounded-circle align-self-center me-2">
+                                                <div class="d-block text-sm">
+                                                    <p class="my-0 py-0" id="subject">
+                                                        <span class="font-600 text-capitalize">Kenneth Copeland</span> commented on
+                                                    </p>
+                                                    <p class="text-faded my-0 py-1">
+                                                        Lorem ipsum dolor sit amet, consec...
+                                                    </p>
+                                                    <div class="d-flex align-items-center text-faded">
+                                                        <i class="material-icons notification-icon p-1 bg-violet-red-light text-white rounded-circle me-1">forum</i> 2h ago
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- /.Notification Item -->
-                                <!-- Notification Item -->
-                                <div class="dropdown-item my-0 py-1">
-                                    <a href="details.html">
-                                        <div class="d-flex lh-100">
-                                            <img src="dist/images/users/15f9f8d1dee2ba.jpg" height="40" width="40" alt="" class="rounded-circle align-self-center me-2">
-                                            <div class="d-block text-sm">
-                                                <p class="my-0 py-0" id="subject">
-                                                    <span class="font-600 text-capitalize">tinashe chaterera</span> found this helpful
-                                                </p>
-                                                <p class="text-faded my-0 py-1">
-                                                    Lorem ipsum dolor sit amet conse...
-                                                </p>
-                                                <div class="d-flex align-items-center text-faded">
-                                                    <i class="tiny material-icons text-success me-1">thumb_up</i> 1h ago
+                                        </a>
+                                    </div>
+                                    <!-- /.Notification Item -->
+                                    <!-- Notification Item -->
+                                    <div class="dropdown-item list-group-item my-0 py-1">
+                                        <a href="details.html">
+                                            <div class="d-flex lh-100">
+                                                <img src="dist/images/users/15f9f8d1dee2ba.jpg" height="40" width="40" alt="" class="rounded-circle align-self-center me-2">
+                                                <div class="d-block text-sm">
+                                                    <p class="my-0 py-0" id="subject">
+                                                        <span class="font-600 text-capitalize">tinashe chaterera</span> found this helpful
+                                                    </p>
+                                                    <p class="text-faded my-0 py-1">
+                                                        Lorem ipsum dolor sit amet conse...
+                                                    </p>
+                                                    <div class="d-flex align-items-center text-faded">
+                                                        <i class="material-icons notification-icon p-1 bg-iris-pastel text-white rounded-circle me-1">thumb_up</i> 2h ago
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- /.Notification Item -->
-                                <!-- Notification Item -->
-                                <div class="dropdown-item my-0 py-1">
-                                    <a href="orders.php">
-                                        <div class="d-flex lh-100">
-                                            <img src="dist/images/app/gifteros.png" height="40" width="40" alt="" class="rounded-circle align-self-center me-2">
-                                            <div class="d-block text-sm">
-                                                <p class="my-0 py-0" id="subject">
-                                                    <span class="font-600 text-capitalize">Targets</span>
-                                                </p>
-                                                <p class="text-faded my-0 py-1">
-                                                    Your order has been confirmed!
-                                                </p>
-                                                <div class="d-flex align-items-center text-faded">
-                                                    <i class="small material-icons text-blue me-1">store</i> 1h ago
+                                        </a>
+                                    </div>
+                                    <!-- /.Notification Item -->
+                                    <!-- Notification Item -->
+                                    <div class="dropdown-item list-group-item my-0 py-1">
+                                        <a href="orders.php">
+                                            <div class="d-flex lh-100">
+                                                <img src="dist/images/app/gifteros.png" height="40" width="40" alt="" class="rounded-circle align-self-center me-2">
+                                                <div class="d-block text-sm">
+                                                    <p class="my-0 py-0" id="subject">
+                                                        <span class="font-600 text-capitalize">Gifteros</span>
+                                                    </p>
+                                                    <p class="text-faded my-0 py-1">
+                                                        Your order has been confirmed!
+                                                    </p>
+                                                    <div class="d-flex align-items-center text-faded">
+                                                        <i class="material-icons notification-icon p-1 bg-success text-white rounded-circle me-1">done</i> 2h ago
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- /.Notification Item -->
-                                <!-- Notification Item -->
-                                <div class="dropdown-item my-0 py-1">
-                                    <a href="orders.html">
-                                        <div class="d-flex lh-100">
-                                            <img src="dist/images/app/gifteros.png" height="40" width="40" alt="" class="rounded-circle align-self-center me-2">
-                                            <div class="d-block text-sm">
-                                                <p class="my-0 py-0" id="subject">
-                                                    <span class="font-600 text-capitalize">Targets</span>
-                                                </p>
-                                                <p class="text-faded my-0 py-1">
-                                                    Your order is now on the way!
-                                                </p>
-                                                <div class="d-flex align-items-center text-faded">
-                                                    <i class="small material-icons text-blue me-1">local_shipping</i> 1h ago
+                                        </a>
+                                    </div>
+                                    <!-- /.Notification Item -->
+                                    <!-- Notification Item -->
+                                    <div class="dropdown-item list-group-item my-0">
+                                        <a href="orders.html">
+                                            <div class="d-flex lh-100">
+                                                <img src="dist/images/app/gifteros.png" height="40" width="40" alt="" class="rounded-circle align-self-center me-2">
+                                                <div class="d-block text-sm">
+                                                    <p class="my-0 py-0" id="subject">
+                                                        <span class="font-600 text-capitalize">Gifteros</span>
+                                                    </p>
+                                                    <p class="text-faded my-0 py-1">
+                                                        Your order is now on the way!
+                                                    </p>
+                                                    <div class="d-flex align-items-center text-faded">
+                                                        <i class="material-icons notification-icon p-1 bg-primary text-white rounded-circle me-1">local_shipping</i> 2h ago
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    </div>
+                                    <!-- /.Notification Item -->
                                 </div>
-                                <!-- /.Notification Item -->
                             </div>
                         </li>
                         <!-- /.Notifications -->
 
                         <!-- Signed-in User -->
-                        <li class="nav-item dropdown ms-3" title="Account Settings">
+                        <li class="nav-item dropdown ms-3">
                             <img src="dist/images/users/15f9eb408be859.jpg" height="30" width="30" alt="tinashe chaterera" class="rounded-circle prof-pic d-cursor" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="dropdown-menu dropdown-menu-end user-menu app-menu box-shadow-sm rounded-2">
                                 <div class="text-center pb-2">
                                     <form action="/profile_pic" method="post">
-                                        <label class="mb-0 d-cursor" for="profile-pic" onclick="triggerClick()">
-                                            <input class="d-none" type="file" name="profile-pic" id="profile-pic" onchange="displayImg(this)" accept="image/*">
-                                            <img src="dist/images/users/15f9eb408be859.jpg" id="profile-image" class="rounded-circle mt-2 prof-pic" height="80" width="80" alt="tinashe chaterera">
-                                            <span role="button" class="fa fa-camera circled-icon"></span>
-                                        </label>
+                                        <a href="#">
+                                            <label class="mb-0 " for="profile-pic" onclick="triggerClick()">
+                                                <input class="d-none" type="file" name="profile-pic" id="profile-pic" onchange="displayImg(this)" accept="image/*">
+                                                <img src="dist/images/users/15f9eb408be859.jpg" id="profile-image" class="rounded-circle mt-2 prof-pic" height="80" width="80" alt="tinashe chaterera">
+                                                <span role="button" class="fa fa-camera circled-icon"></span>
+                                            </label>
+                                        </a>
                                     </form>
                                     <div class="d-block lh-100 rounded-0 mb-1" style="margin-top: -1rem">
-                                        <h6 class="font-weight-bold mb-0 text-capitalize text-navy">
-                                            tinashe chaterera
-                                        </h6>
-                                        <small class="text-faded">
-                                            marshallchaterera@gmail.com
-                                        </small>
+                                        <a href="account.html">
+                                            <h6 class="font-600 mb-0 text-capitalize text-app-color">
+                                                tinashe chaterera
+                                            </h6>
+                                            <small class="text-faded">
+                                                marshallchaterera@gmail.com
+                                            </small>
+                                        </a>
                                     </div>
                                 </div>
-                                <a class="dropdown-item border-top font-500" href="account.html">
-                                    <div class="d-flex align-items-center text-faded">
-                                        <i class="nav-icon material-icons mr-3">person_outline</i> Account Settings
-                                    </div>
-                                </a>
-                                <a class="dropdown-item font-500" href="orders.html">
-                                    <div class="d-flex align-items-center text-faded">
-                                        <i class="nav-icon material-icons mr-3">local_shipping</i> My Orders
-                                    </div>
-                                </a>
-                                <a class="dropdown-item font-500" href="account.html">
-                                    <div class="d-flex align-items-center text-faded">
-                                        <i class="nav-icon material-icons mr-3">forum</i> My Reviews
-                                    </div>
-                                </a>
-                                <a class="dropdown-item font-500" href="blog.html">
-                                    <div class="d-flex align-items-center text-faded">
-                                        <i class="nav-icon material-icons mr-3">chat</i> My Blog Posts
-                                    </div>
-                                </a>
-                                <a class="dropdown-item font-500" href="wishlist.html">
-                                    <div class="d-flex align-items-center text-faded">
-                                        <i class="nav-icon material-icons mr-3">favorite_border</i> My Wishlist
-                                    </div>
-                                </a>
-                                <a class="dropdown-item font-500" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    <div class="d-flex align-items-center text-faded">
-                                        <i class="nav-icon material-icons mr-3">power_settings_new</i> Sign Out
-                                    </div>
-                                </a>
+                                <ul class="list-group list-group-flush border-top px-0">
+                                    <li class="list-group-item dropdown-item w-100">
+                                        <a href="account.html" class="d-flex align-items-center">
+                                            <i class="material-icons notifications">person_outline</i>
+                                            <h6 class="font-600 ms-2 my-0">My Account</h6>
+                                            <i class="material-icons ms-auto">chevron_right</i>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item dropdown-item w-100">
+                                        <a href="orders.html" class="d-flex align-items-center">
+                                            <i class="material-icons notifications">event_note</i>
+                                            <h6 class="font-600 ms-2 my-0">My Orders</h6>
+                                            <i class="material-icons ms-auto">chevron_right</i>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item dropdown-item w-100">
+                                        <a href="wishlist.html" class="d-flex align-items-center">
+                                            <i class="material-icons notifications">favorite</i>
+                                            <h6 class="font-600 ms-2 my-0">My Wishlist</h6>
+                                            <i class="material-icons ms-auto">chevron_right</i>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item dropdown-item w-100">
+                                        <a href="#" class="d-flex align-items-center">
+                                            <i class="material-icons notifications">settings</i>
+                                            <h6 class="font-600 ms-2 my-0">App Settings</h6>
+                                            <i class="material-icons ms-auto">chevron_right</i>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item dropdown-item w-100">
+                                        <a href="#" class="d-flex align-items-center">
+                                            <i class="material-icons notifications">headset_mic</i>
+                                            <h6 class="font-600 ms-2 my-0">Help & Support</h6>
+                                            <i class="material-icons ms-auto">chevron_right</i>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item dropdown-item w-100">
+                                        <a href="#" class="d-flex align-items-center">
+                                            <i class="material-icons notifications">star_border</i>
+                                            <h6 class="font-600 ms-2 my-0">Rate Us</h6>
+                                            <i class="material-icons ms-auto">chevron_right</i>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item dropdown-item w-100">
+                                        <a href="#" class="d-flex align-items-center">
+                                            <i class="material-icons notifications">power_settings_new</i>
+                                            <h6 class="font-600 ms-2 my-0">Sign Out</h6>
+                                        </a>
+                                    </li>
+                                </ul>
                                 <div class="d-flex my-2 justify-content-center align-items-center">
-                                    <a href="terms.html" class="text-faded text-sm">Privacy Policy</a>
-                                    <i class="fa fa-circle mx-2 text-faded text-xs"></i>
+                                    <a href="privacy-policy.html" class="text-faded text-sm">Privacy Policy</a>
+                                    <i class="bi bi-dot mx-2 text-faded"></i>
                                     <a href="terms.html" class="text-faded text-sm">Terms of Service</a>
                                 </div>
                             </div>
                         </li>
                         <!-- /.Signed-in User -->
 
-                        <li class="nav-item d-md-flex ms-3" id="app-settings" data-bs-toggle="tooltip" title="See more settings">
+                        <li class="nav-item d-cursor d-md-flex ms-3" id="app-settings" data-bs-toggle="tooltip" title="See more settings">
                             <a class="toggle-settings nav-link icon-link material-icons">tune</a>
                         </li>
                     </ul>
@@ -1126,69 +1152,101 @@
                         <i class="material-icons icon text-faded">search</i>
                         <input type="search" name="search" id="search" class="form-control" placeholder="Search...">
                         <ul class="list-group bg-whitesmoke search-list rounded-bottom-2 d-none px-0">
-                            <!-- Search Result -->
+                            <!-- Search Result Item-->
                             <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
                                 <div class="d-flex justify-content-between align-items-start">
                                     <!-- Product Item Details -->
                                     <div class="d-flex w-100">
-                                        <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
-                                        <div class="flex-column cart-details-placeholder">
-                                            <div class="content-placeholder cart-item-name-placeholder"></div>
-                                            <div class="content-placeholder cart-category-placeholder"></div>
-                                            <div class="cart-rating-placeholder content-placeholder"></div>
-                                            <div class="content-placeholder cart-stock-placeholder"></div>
+                                        <a href="details.html">
+                                            <img data-src="dist/images/gifts/15f4598bf99479.2.jpg" src="dist/images/app/bg-placeholder.PNG" height="60" width="60" loading="lazy" alt="" class="align-self-center rounded-2 lazy me-2">
+                                        </a>
+                                        <div class="d-block">
+                                            <a href="details.html">
+                                                <h6 class="font-600 text-capitalize my-0">Kitchen cutting boards</h6>
+                                                <p class="text-sm text-muted text-capitalize my-0 py-0">kitchenware</p>
+                                                <ul class="list-inline gift-star-rating align-items-center bg-transparent gift-star-rating d-cursor my-0 p-0">
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-muted">&star;</li>
+                                                    <span class="text-sm text-faded font-600">(389)</span>
+                                                </ul>
+                                            </a>
                                         </div>
                                     </div>
                                     <!-- Product Item Details -->
                                     <div class="d-block text-center">
-                                        <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
-                                        <button class="btn btn-cart-placeholder pt-1"></button>
+                                        <h6 class="text-sm font-600 text-danger my-0 pt-0 cart-item-price">$12.99</h6>
+                                        <button class="btn btn-sm bg-switch text-white px-2 mt-2 add-to-cart-btn">Buy now</button>
                                     </div>
                                 </div>
                             </li>
-                            <!-- /.Search Result -->
-                            <!-- Search Result -->
+                            <!-- /.Search Result Item-->
+
+                            <!-- Search Result Item-->
                             <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
                                 <div class="d-flex justify-content-between align-items-start">
                                     <!-- Product Item Details -->
                                     <div class="d-flex w-100">
-                                        <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
-                                        <div class="flex-column cart-details-placeholder">
-                                            <div class="content-placeholder cart-item-name-placeholder"></div>
-                                            <div class="content-placeholder cart-category-placeholder"></div>
-                                            <div class="cart-rating-placeholder content-placeholder"></div>
-                                            <div class="content-placeholder cart-stock-placeholder"></div>
+                                        <a href="details.html">
+                                            <img data-src="dist/images/gifts/15f460b1352a38.1.jpg" src="dist/images/app/bg-placeholder.PNG" height="60" width="60" loading="lazy" alt="" class="align-self-center rounded-2 lazy me-2">
+                                        </a>
+                                        <div class="d-block">
+                                            <a href="details.html">
+                                                <h6 class="font-600 text-capitalize my-0">Kitchen cutting boards</h6>
+                                                <p class="text-sm text-muted text-capitalize my-0 py-0">kitchenware</p>
+                                                <ul class="list-inline gift-star-rating align-items-center bg-transparent gift-star-rating d-cursor my-0 p-0">
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-muted">&star;</li>
+                                                    <span class="text-sm text-faded font-600">(389)</span>
+                                                </ul>
+                                            </a>
                                         </div>
                                     </div>
                                     <!-- Product Item Details -->
                                     <div class="d-block text-center">
-                                        <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
-                                        <button class="btn btn-cart-placeholder pt-1"></button>
+                                        <h6 class="text-sm font-600 text-danger my-0 pt-0 cart-item-price">$12.99</h6>
+                                        <button class="btn btn-sm bg-switch text-white px-2 mt-2 add-to-cart-btn">Buy now</button>
                                     </div>
                                 </div>
                             </li>
-                            <!-- /.Search Result -->
-                            <!-- Search Result -->
+                            <!-- /.Search Result Item-->
+
+                            <!-- Search Result Item-->
                             <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
                                 <div class="d-flex justify-content-between align-items-start">
                                     <!-- Product Item Details -->
                                     <div class="d-flex w-100">
-                                        <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
-                                        <div class="flex-column cart-details-placeholder">
-                                            <div class="content-placeholder cart-item-name-placeholder"></div>
-                                            <div class="content-placeholder cart-category-placeholder"></div>
-                                            <div class="cart-rating-placeholder content-placeholder"></div>
-                                            <div class="content-placeholder cart-stock-placeholder"></div>
+                                        <a href="details.html">
+                                            <img data-src="dist/images/gifts/15f460c7f56472.jpg" src="dist/images/app/bg-placeholder.PNG" height="60" width="60" loading="lazy" alt="" class="align-self-center rounded-2 lazy me-2">
+                                        </a>
+                                        <div class="d-block">
+                                            <a href="details.html">
+                                                <h6 class="font-600 text-capitalize my-0">Kitchen cutting boards</h6>
+                                                <p class="text-sm text-muted text-capitalize my-0 py-0">kitchenware</p>
+                                                <ul class="list-inline gift-star-rating align-items-center bg-transparent gift-star-rating d-cursor my-0 p-0">
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-muted">&star;</li>
+                                                    <span class="text-sm text-faded font-600">(389)</span>
+                                                </ul>
+                                            </a>
                                         </div>
                                     </div>
                                     <!-- Product Item Details -->
                                     <div class="d-block text-center">
-                                        <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
-                                        <button class="btn btn-cart-placeholder pt-1"></button>
+                                        <h6 class="text-sm font-600 text-danger my-0 pt-0 cart-item-price">$12.99</h6>
+                                        <button class="btn btn-sm bg-switch text-white px-2 mt-2 add-to-cart-btn">Buy now</button>
                                     </div>
                                 </div>
                             </li>
-                            <!-- /.Search Result -->
+                            <!-- /.Search Result Item-->
                         </ul>
                     </div>
                 </form>
@@ -1211,7 +1269,7 @@
                 <!-- /.Breadcrumbs -->
                 <div class="row">
                     <!-- Side Navigation -->
-                    <div class="col-md-3">
+                    <div class="col-md-3 zoom-out-section">
                         <div class="d-block sticky-top py-1">
                             <div class="d-flex align-items-center justify-content-between">
                                 <h6 class="lead font-600 my-0">Top Selling</h6>
@@ -1255,7 +1313,7 @@
                     <!-- /.Side Navigation -->
 
                     <!-- Main Content -->
-                    <div class="col-12 col-md-9">
+                    <div class="col-12 col-md-9 zoom-out-section">
                         <!-- Right Navbar -->
                         <nav class="box-shadow-sm bg-whitesmoke sticky-top border p-2">
                             <!-- Breadcrumbs -->
@@ -1284,25 +1342,26 @@
 
                                 <!-- Filters -->
                                 <div class="btn-group mx-3" role="group" aria-label="First gifts">
-                                    <button type="button" class="btn btn-outline-secondary btn-sm">All</button>
-                                    <button type="button" class="btn btn-outline-secondary btn-sm">Orders</button>
-                                    <button type="button" class="btn btn-outline-secondary btn-sm">Likes</button>
-                                    <button type="button" class="btn btn-outline-secondary btn-sm">Newest</button>
+                                    <button type="button" class="btn btn-outline-secondary filter-button btn-sm">All (353)</button>
+                                    <button type="button" class="btn btn-outline-secondary filter-button btn-sm">Orders</button>
+                                    <button type="button" class="btn btn-outline-secondary filter-button btn-sm">Likes</button>
+                                    <button type="button" class="btn btn-outline-secondary filter-button btn-sm">Newest</button>
                                     <div class="btn-group" role="group">
-                                        <button id="price-sorting" type="button" class="btn btn-outline-secondary btn-sm d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <button id="price-sorting" type="button" class="btn btn-outline-secondary btn-sm filter-button d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="fa fa-sort dropdown-menu-icon me-2"></i> 
                                             <span class="dropdown-menu-text">Price sorting</span>
                                         </button>
                                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="price-sorting">
                                             <li>
                                                 <a class="dropdown-item filter-option-item d-flex align-items-center" href="#">
-                                                    <i class="fa fa-sort-numeric-asc me-2"></i>
-                                                    <span>Low to High</span>
+                                                    <i class="fa fa-sort-numeric-asc me-2" data-icon="fa-sort-numeric-asc"></i>
+                                                    <span class="dropdown-menu-item-text">Low to High</span>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item filter-option-item d-flex align-items-center" href="#">
-                                                    <i class="fa fa-sort-numeric-desc me-2"></i> High to Low
+                                                    <i class="fa fa-sort-numeric-desc me-2" data-icon="fa-sort-numeric-desc"></i>
+                                                    <span class="dropdown-menu-item-text">High to Low</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -1312,8 +1371,8 @@
 
                                 <!-- View Options -->
                                 <div class="d-flex align-items-center ms-auto">
-                                    <i role="button" class="bi bi-list-ul view-option list-icon d-none d-md-block" data-view="list-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="List view"></i>
-                                    <i role="button" class="bi bi-grid view-option grid-icon active d-none d-md-inline-block mx-3" data-view="grid-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Grid View"></i>
+                                    <i role="button" class="bi bi-list-ul view-option list-icon active" data-view="list-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="List view"></i>
+                                    <i role="button" class="bi bi-grid view-option grid-icon mx-3" data-view="grid-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Grid View"></i>
                                 </div>
                                 <!-- /.View Options -->
                             </div>
@@ -1322,7 +1381,7 @@
                         <!-- /.Right Navbar -->
 
                         <!-- Gift Items -->
-                        <div class="d-grid grid-view grid-p-1 mt-2 display-gifts wishlist-shelf">
+                        <div class="d-grid list-view grid-p-1 mt-2 display-gifts wishlist-shelf">
                             <!-- Wishlist Item -->
                             <div class="wishlist-item mb-1 w-100">
                                 <!-- Item Content -->
@@ -1342,9 +1401,9 @@
                                             <li class="list-inline-item text-gold">&starf;</li>
                                             <li class="list-inline-item text-gold">&starf;</li>
                                             <li class="list-inline-item text-muted">&star;</li>
-                                            <span class="text-sm text-muted d-flex align-items-center popover-info">
-                                                <i class="material-icons">expand_more</i>1,284 ratings
-                                            </span>
+                                            <a href="#" class="text-sm text-muted d-flex align-items-center popover-info">
+                                                <i class="material-icons popover-toggle-icon">expand_more</i>1,284 ratings
+                                            </a>
                                         </ul>
                                     </div>
                                     <div class="item-body-buttons d-block px-2 lh-100">
@@ -1356,7 +1415,7 @@
                                         </button>
                                         <div class="d-flex align-items-center justify-content-between card-buttons w-100">
                                             <button type="button" class="btn btn-sm btn-light d-flex align-items-center toggle-buttons collapse-btn me-2" data-bs-toggle="collapse" data-bs-target="#similar-items" aria-expanded="false" aria-controls="similar-items">
-                                                Similar <i class="material-icons">expand_more</i>
+                                                Similar <i class="material-icons collapse-icon">expand_more</i>
                                             </button>
                                             <button type="button" class="btn btn-sm btn-light d-flex align-items-center toggle-buttons modal-btn" data-bs-toggle="modal" data-bs-target="#similar-modal-items">
                                                 Similar items <i class="material-icons">more_horiz</i>
@@ -1584,9 +1643,9 @@
                                             <li class="list-inline-item text-gold">&starf;</li>
                                             <li class="list-inline-item text-gold">&starf;</li>
                                             <li class="list-inline-item text-muted">&star;</li>
-                                            <span class="text-sm text-muted d-flex align-items-center popover-info">
-                                                <i class="material-icons">expand_more</i>1,284 ratings
-                                            </span>
+                                            <a href="#" class="text-sm text-muted d-flex align-items-center popover-info">
+                                                <i class="material-icons popover-toggle-icon">expand_more</i>1,284 ratings
+                                            </a>
                                         </ul>
                                     </div>
                                     <div class="item-body-buttons d-block px-2 lh-100">
@@ -1598,7 +1657,7 @@
                                         </button>
                                         <div class="d-flex align-items-center justify-content-between card-buttons w-100">
                                             <button type="button" class="btn btn-sm btn-light d-flex align-items-center toggle-buttons collapse-btn me-2" data-bs-toggle="collapse" data-bs-target="#similar-items2" aria-expanded="false" aria-controls="similar-items2">
-                                                Similar <i class="material-icons">expand_more</i>
+                                                Similar <i class="material-icons collapse-icon">expand_more</i>
                                             </button>
                                             <button type="button" class="btn btn-sm btn-light d-flex align-items-center toggle-buttons modal-btn" data-bs-toggle="modal" data-bs-target="#similar-modal-items">
                                                 Similar items <i class="material-icons">more_horiz</i>
@@ -1826,9 +1885,9 @@
                                             <li class="list-inline-item text-gold">&starf;</li>
                                             <li class="list-inline-item text-gold">&starf;</li>
                                             <li class="list-inline-item text-muted">&star;</li>
-                                            <span class="text-sm text-muted d-flex align-items-center popover-info">
-                                                <i class="material-icons">expand_more</i>1,284 ratings
-                                            </span>
+                                            <a href="#" class="text-sm text-muted d-flex align-items-center popover-info">
+                                                <i class="material-icons popover-toggle-icon">expand_more</i>1,284 ratings
+                                            </a>
                                         </ul>
                                     </div>
                                     <div class="item-body-buttons d-block px-2 lh-100">
@@ -1840,7 +1899,7 @@
                                         </button>
                                         <div class="d-flex align-items-center justify-content-between card-buttons w-100">
                                             <button type="button" class="btn btn-sm btn-light d-flex align-items-center toggle-buttons collapse-btn me-2" data-bs-toggle="collapse" data-bs-target="#similar-items3" aria-expanded="false" aria-controls="similar-items3">
-                                                Similar <i class="material-icons">expand_more</i>
+                                                Similar <i class="material-icons collapse-icon">expand_more</i>
                                             </button>
                                             <button type="button" class="btn btn-sm btn-light d-flex align-items-center toggle-buttons modal-btn" data-bs-toggle="modal" data-bs-target="#similar-modal-items">
                                                 Similar items <i class="material-icons">more_horiz</i>
@@ -2389,6 +2448,86 @@
         </div>
     </div>
     <!-- /.Related Items Modal -->
+
+    <!-- Settings Sidebar -->
+    <div class="settings-bar">
+        <div class="settings-header d-flex align-items-center justify-content-between box-shadow-sm p-2">
+            <h2 class="font-600 lead lead-2x">Settings</h2>
+            <i class="material-icons nav-link icon-link me-2 toggle-settings">close</i>
+        </div>
+        <div class="container-fluid px-3 mt-2">
+            <p class="mb-0 font-500 d-none" id="day-mode">
+                <i class="fa fa-sun-o"></i> Toggle Day Mode
+            </p>
+            <p class="mb-0 font-500" id="night-mode">
+                <i class="fa fa-moon-o"></i> Toggle Night Mode
+            </p>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn theme-switch" id="darkmode" onchange="themeMode(this);">
+                </div>
+            </div>
+            <hr class="w-100">
+            <p class="mb-0 font-500">
+                <i class="fa fa-exchange"></i> Change Currency
+            </p>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn usd-currency" id="usd-currency" onchange="usdCurrency(this);" checked>
+                    <label class="form-check-label ms-2" for="usd">USD</label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn zar-currency" id="zar-currency" onchange="zarCurrency(this);">
+                    <label class="form-check-label ms-2" for="zar-currency">ZAR</label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn zwl-currency" id="zwl-currency" onchange="zwlCurrency(this);">
+                    <label class="form-check-label ms-2" for="zwl-currency">ZWL</label>
+                </div>
+            </div>
+            <hr class="w-100">
+            <p class="mb-0 font-500">
+                <i class="fa fa-sort-alpha-asc"></i> Sort by Name
+            </p>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn" id="name-asc" onchange="orderByName(this)" checked>
+                    <label class="form-check-label ms-2" for="name-asc" id="name-sorting-order">Ascending</label>
+                </div>
+            </div>
+            <hr class="w-100">
+            <p class="mb-0 font-500">
+                <i class="fa fa-sort-amount-asc"></i> Sort by Price
+            </p>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn" id="price-ordering" onchange="orderByPrice(this)" checked>
+                    <label class="form-check-label ms-2" for="price-ordering" id="price-ordering-label">Ascending</label>
+                </div>
+            </div>
+            <hr class="w-100">
+            <p class="mb-0 font-500">
+                <i class="fa fa-sort"></i> Sort by Orders
+            </p>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn" id="trending" checked>
+                    <label class="form-check-label ms-2" for="trending">Trending</label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn" id="recent">
+                    <label class="form-check-label ms-2" for="recent">Recent</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.Settings -->
 
     <!-- Sticky Bottom Footer -->
     <footer class=" footer bg-meshgrid mt-5 ">

@@ -7,7 +7,7 @@
 }
 
 
-/*** Default Styling .product-actions ***/
+/*** Default Styling .progress ***/
 
 :root {
     --search-border-color: #ced4da;
@@ -230,6 +230,131 @@ a:hover,
 .stretched-link {
     text-decoration: none;
 }
+
+
+/* Sidebars */
+
+.settings-bar,
+.main-sidebar,
+.customize-panel,
+.reviews-panel {
+    position: fixed;
+    overflow-x: hidden;
+    top: 0;
+    z-index: 99999;
+    height: 100%;
+    overflow-y: auto;
+    transition: transform .5s ease-in-out;
+    background: #fff;
+}
+
+.main-sidebar {
+    left: 0;
+    width: 230px;
+    transform: translateX(-250px);
+}
+
+.bg-meshgrid {
+    background: url('../img/app/Texture-01.webp');
+    background-repeat: repeat;
+    background-size: auto;
+    background-size: inherit;
+}
+
+.side-menu {
+    margin-top: .5rem;
+}
+
+.side-menu-item.active,
+.side-menu-item:hover {
+    background: #c0bcbc75;
+    border-radius: .35rem;
+}
+
+.side-menu-item:hover {
+    border-radius: .25rem;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.side-menu-item:hover .switch-btn {
+    background-color: rgba(138, 180, 248, 0.63);
+}
+
+
+/* /.Sidebars */
+
+
+/* Toggle Switches */
+
+.switch-btn {
+    width: 45px;
+    height: 16px;
+    position: relative;
+    background: #e4e1e1;
+    -webkit-appearance: none;
+    outline: none;
+    border-radius: .5rem !important;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: .5s;
+}
+
+.side-menu-item:hover .switch-btn {
+    background-color: rgba(138, 180, 248, 0.63);
+}
+
+.switch-btn::before {
+    position: absolute;
+    content: '';
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: var(--switch-btn-shadow);
+    top: -4px;
+    left: 0;
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.switch-btn:checked {
+    background: rgb(138, 180, 248);
+    background-image: none !important;
+}
+
+.switch-btn:checked::before {
+    left: 22px;
+}
+
+
+/* /.Sidebar */
+
+
+/* Settings Sidebar */
+
+.settings-bar {
+    display: block;
+    left: 81%;
+    width: 270px;
+    transform: translateX(270px);
+    box-shadow: var(--box-shadow-sm);
+}
+
+.settings-header {
+    height: 45.5px;
+    background-color: var(--whitesmoke);
+}
+
+.toggle-settings {
+    cursor: pointer;
+}
+
+
+/* /.Settings Sidebar */
+
+
+/* /.Sidebars */
 
 
 /* Star Rating */
@@ -656,8 +781,13 @@ input[name="search"]:focus .search-list li {
     cursor: pointer;
 }
 
-.dropdown-menu-item:hover {
+.dropdown-menu-item:hover,
+.search-list>li:hover {
     background-color: rgba(0, 0, 0, .1);
+}
+
+.search-list>li .gift-star-rating>li {
+    background-color: transparent !important;
 }
 
 .dropdown-item:last-child {
@@ -710,12 +840,12 @@ input[name="search"]:focus .search-list li {
     width: 18rem
 }
 
-.user-menu>.dropdown-item:hover>div.text-sm {
-    font-size: 90%;
+.user-menu li.dropdown-item * {
+    color: var(--app-color);
 }
 
-.user-menu>.dropdown-item:hover>div {
-    color: var(--menu-hover);
+.user-menu li.dropdown-item:hover * {
+    color: var(--danger);
 }
 
 
@@ -765,7 +895,11 @@ input[name="search"]:focus .search-list li {
     align-items: center;
     padding: 10px;
     background: var(--badge-light);
-    color: var(--float-icon);
+    color: var(--app-color);
+}
+
+.circled-icon:hover {
+    color: var(--danger);
 }
 
 .fabs {
@@ -1619,8 +1753,32 @@ footer.footer {
     border-bottom-right-radius: .5rem !important;
 }
 
-.grid-view .pull-up-1 {
-    margin-top: -10px
+.pull-up-1 {
+    margin-top: -.25rem
+}
+
+.pull-up-2 {
+    margin-top: -.5rem
+}
+
+.pull-up-3 {
+    margin-top: -1rem
+}
+
+.pull-up-3 {
+    margin-top: -1.5rem
+}
+
+.pull-up-4 {
+    margin-top: -2rem
+}
+
+.pull-up-3 {
+    margin-top: -2.5rem
+}
+
+.pull-up-4 {
+    margin-top: -3rem
 }
 
 
@@ -1969,12 +2127,10 @@ a:hover,
     font-size: 18px;
 }
 
-.lead,
-.display-1,
-.display-2,
-.display-3,
-.display-4,
-.display-5,
+.notification-icon {
+    font-size: 12px;
+}
+
 .text-dark {
     color: var(--dark);
 }
@@ -2113,6 +2269,10 @@ select>option:hover {
 
 .modal.upload-progress-modal {
     background-color: rgba(0, 0, 0, .8) !important;
+}
+
+.progress-bar {
+    transition: 1s linear;
 }
 
 .progress-xxs {
@@ -2659,6 +2819,12 @@ a.text-underline:hover,
     color: var(--warning);
 }
 
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6,
 .text-color-switch {
     color: var(--switch) !important;
 }
@@ -3050,7 +3216,7 @@ a.text-underline:hover,
         z-index: 999
     }
     .settings-bar.show {
-        transform: translateX(-110px);
+        transform: translateX(0);
     }
     #blog-page.page-content {
         margin-top: 5rem

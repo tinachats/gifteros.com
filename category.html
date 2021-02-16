@@ -549,7 +549,7 @@
                                                         <p class="text-sm font-600 text-capitalize my-0 py-0">
                                                             Awesome gift
                                                         </p>
-                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
@@ -605,7 +605,7 @@
                                                         <p class="text-sm font-600 text-capitalize my-0 py-0">
                                                             Awesome gift
                                                         </p>
-                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
@@ -661,7 +661,7 @@
                                                         <p class="text-sm font-600 text-capitalize my-0 py-0">
                                                             Awesome gift
                                                         </p>
-                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
@@ -717,7 +717,7 @@
                                                         <p class="text-sm font-600 text-capitalize my-0 py-0">
                                                             Awesome gift
                                                         </p>
-                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
@@ -1041,7 +1041,7 @@
                 <!-- /.Breadcrumbs -->
                 <div class="row">
                     <!-- Side Navigation -->
-                    <div class="col-md-3">
+                    <div class="col-md-3 zoom-out-section">
                         <div class="box-shadow-sm bg-whitesmoke left-section border pb-2">
                             <div class="d-flex align-items-center justify-content-between py-2 px-2">
                                 <h6 class="font-600 my-0">filter by</h6>
@@ -1231,7 +1231,7 @@
                     <!-- /.Side Navigation -->
 
                     <!-- Main Content -->
-                    <div class="col-12 col-md-9">
+                    <div class="col-12 col-md-9 zoom-out-section">
                         <!-- Right Navbar -->
                         <nav class="box-shadow-sm bg-whitesmoke sticky-top border p-2">
                             <!-- Breadcrumbs -->
@@ -1283,25 +1283,26 @@
 
                                 <!-- Filters -->
                                 <div class="btn-group" role="group" aria-label="First gifts">
-                                    <button type="button" class="btn btn-outline-secondary btn-sm">All</button>
-                                    <button type="button" class="btn btn-outline-secondary btn-sm">Orders</button>
-                                    <button type="button" class="btn btn-outline-secondary btn-sm">Likes</button>
-                                    <button type="button" class="btn btn-outline-secondary btn-sm">Newest</button>
+                                    <button type="button" class="btn btn-outline-secondary filter-button btn-sm">All (353)</button>
+                                    <button type="button" class="btn btn-outline-secondary filter-button btn-sm">Orders</button>
+                                    <button type="button" class="btn btn-outline-secondary filter-button btn-sm">Likes</button>
+                                    <button type="button" class="btn btn-outline-secondary filter-button btn-sm">Newest</button>
                                     <div class="btn-group" role="group">
-                                        <button id="price-sorting" type="button" class="btn btn-outline-secondary btn-sm d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <button id="price-sorting" type="button" class="btn btn-outline-secondary btn-sm filter-button d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="fa fa-sort dropdown-menu-icon me-2"></i> 
                                             <span class="dropdown-menu-text">Price sorting</span>
                                         </button>
                                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="price-sorting">
                                             <li>
                                                 <a class="dropdown-item filter-option-item d-flex align-items-center" href="#">
-                                                    <i class="fa fa-sort-numeric-asc me-2"></i>
-                                                    <span>Low to High</span>
+                                                    <i class="fa fa-sort-numeric-asc me-2" data-icon="fa-sort-numeric-asc"></i>
+                                                    <span class="dropdown-menu-item-text">Low to High</span>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item filter-option-item d-flex align-items-center" href="#">
-                                                    <i class="fa fa-sort-numeric-desc me-2"></i> High to Low
+                                                    <i class="fa fa-sort-numeric-desc me-2" data-icon="fa-sort-numeric-desc"></i>
+                                                    <span class="dropdown-menu-item-text">High to Low</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -1374,17 +1375,17 @@
                                     <div class="card-body my-0 py-0">
                                         <div class="lh-100 mb-0 pb-0">
                                             <a href="#">
-                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
                                                     Customizable board
                                                 </p>
-                                                <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
                                                     Customizable board
                                                 </p>
                                             </a>
                                             <a href="#" class="text-sm font-500 text-capitalize my-0 py-0">
                                                 Customizables
                                             </a>
-                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                 <li class="list-inline-item text-gold">&starf;</li>
@@ -1489,17 +1490,17 @@
                                     <div class="card-body my-0 py-0">
                                         <div class="lh-100 mb-0 pb-0">
                                             <a href="#">
-                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
                                                     Customizable board
                                                 </p>
-                                                <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
                                                     Customizable board
                                                 </p>
                                             </a>
                                             <a href="#" class="text-sm font-500 text-capitalize my-0 py-0">
                                                 Customizables
                                             </a>
-                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                 <li class="list-inline-item text-gold">&starf;</li>
@@ -1604,17 +1605,17 @@
                                     <div class="card-body my-0 py-0">
                                         <div class="lh-100 mb-0 pb-0">
                                             <a href="#">
-                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
                                                     Customizable board
                                                 </p>
-                                                <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
                                                     Customizable board
                                                 </p>
                                             </a>
                                             <a href="#" class="text-sm font-500 text-capitalize my-0 py-0">
                                                 Customizables
                                             </a>
-                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                 <li class="list-inline-item text-gold">&starf;</li>
@@ -1719,17 +1720,17 @@
                                     <div class="card-body my-0 py-0">
                                         <div class="lh-100 mb-0 pb-0">
                                             <a href="#">
-                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
                                                     Customizable board
                                                 </p>
-                                                <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
                                                     Customizable board
                                                 </p>
                                             </a>
                                             <a href="#" class="text-sm font-500 text-capitalize my-0 py-0">
                                                 Customizables
                                             </a>
-                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                 <li class="list-inline-item text-gold">&starf;</li>
@@ -1834,17 +1835,17 @@
                                     <div class="card-body my-0 py-0">
                                         <div class="lh-100 mb-0 pb-0">
                                             <a href="#">
-                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
                                                     Customizable board
                                                 </p>
-                                                <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name popover-info" id="">
+                                                <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
                                                     Customizable board
                                                 </p>
                                             </a>
                                             <a href="#" class="text-sm font-500 text-capitalize my-0 py-0">
                                                 Customizables
                                             </a>
-                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                 <li class="list-inline-item text-gold">&starf;</li>
