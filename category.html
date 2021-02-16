@@ -112,6 +112,42 @@
         a.active .size-info {
             color: var(--danger-warning);
         }
+        
+        .comparison-pane,
+        .close-comparison-pane {
+            background-color: var(--dark-transparent);
+        }
+        
+        .comparison-item {
+            height: 100px;
+        }
+        
+        .remove-comparison-item {
+            top: -.35rem;
+            right: -.5rem;
+            height: 26px;
+            font-size: 30px;
+            width: 26px;
+            background-color: var(--whitesmoke);
+            border-radius: 50%;
+            display: grid;
+        }
+        
+        .remove-comparison-item i {
+            margin: auto;
+        }
+        
+        .close-comparison-pane {
+            position: absolute;
+            bottom: 132px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 40px;
+            height: auto;
+            border-top-left-radius: .5rem;
+            border-top-right-radius: .5rem;
+        }
     </style>
 </head>
 
@@ -1051,36 +1087,30 @@
                             <!-- Filters -->
                             <div class="d-block ms-2">
                                 <!-- Related Categories -->
-                                <div class="accordion accordion-flush" id="sub-categories">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="related-subcategories">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#related-categories" aria-expanded="false" aria-controls="related-categories">
-                                                Related Categories
-                                            </button>
-                                        </h2>
-                                        <div id="related-categories" class="accordion-collapse collapse" aria-labelledby="related-subcategories" data-bs-parent="#sub-categories">
-                                            <ul class="filter-list accordion-body p-0 m-0">
-                                                <li class="text-sm">
-                                                    <a href="#" class="text-muted">Related Item</a>
-                                                </li>
-                                                <li class="text-sm">
-                                                    <a href="#" class="text-muted">Related Item</a>
-                                                </li>
-                                                <li class="text-sm">
-                                                    <a href="#" class="text-muted">Related Item</a>
-                                                </li>
-                                                <li class="text-sm">
-                                                    <a href="#" class="text-muted">Related Item</a>
-                                                </li>
-                                                <li class="text-sm">
-                                                    <a href="#" class="text-muted">Related Item</a>
-                                                </li>
-                                                <li class="text-sm">
-                                                    <a href="#" class="text-muted">Related Item</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                <a class="font-600 text-dark d-flex align-items-center" data-bs-toggle="collapse" href="#related-categories" role="button" aria-expanded="false" aria-controls="related-categories">
+                                    Related Categories <i class="material-icons ms-2 collapse-icon">expand_more</i>
+                                </a>
+                                <div class="collapse" id="related-categories">
+                                    <ul class="filter-list accordion-body p-0 m-0">
+                                        <li class="text-sm mt-0 pt-0">
+                                            <a href="#" class="text-muted">Related Item</a>
+                                        </li>
+                                        <li class="text-sm">
+                                            <a href="#" class="text-muted">Related Item</a>
+                                        </li>
+                                        <li class="text-sm">
+                                            <a href="#" class="text-muted">Related Item</a>
+                                        </li>
+                                        <li class="text-sm">
+                                            <a href="#" class="text-muted">Related Item</a>
+                                        </li>
+                                        <li class="text-sm">
+                                            <a href="#" class="text-muted">Related Item</a>
+                                        </li>
+                                        <li class="text-sm">
+                                            <a href="#" class="text-muted">Related Item</a>
+                                        </li>
+                                    </ul>
                                 </div>
                                 <!-- /.Related Categories -->
 
@@ -1173,7 +1203,7 @@
                                 <!-- Shoe Size Filters -->
                                 <div class="block">
                                     <h6 class="font-600 text-capitalize my-0">Size Filters</h6>
-                                    <div class="d-grid grid-7 grid-p-1 shoe-sizes mt-1">
+                                    <div class="d-grid grid-6 grid-p-1 shoe-sizes m-1">
                                         <!-- Shoe sizes will be shown here -->
                                     </div>
                                 </div>
@@ -1907,6 +1937,57 @@
         </div>
     </div>
     <!-- /.Page Content -->
+
+    <!-- Comparison Pane -->
+    <div class="comparison-pane fixed-bottom p-3">
+        <!-- Close Pane -->
+        <a href="#" class="close-comparison-pane d-grid" onclick="closePanel()">
+            <i class="material-icons fa-2x text-white m-auto">expand_more</i>
+        </a>
+        <!-- /.Close Pane -->
+        <div class="container d-grid grid-4 gap-4 align-items-center justify-content-center">
+            <!-- Product Comparison Item -->
+            <div class="comparison-item filled d-block bg-whitesmoke rounded-2 box-shadow-sm position-relative p-2">
+                <a href="#" class="remove-comparison-item position-absolute">
+                    <i class="material-icons text-danger">cancel</i>
+                </a>
+                <div class="d-flex align-items-center">
+                    <img src="dist/images/gifts/15f460ba6e5666.4.jpg" height="80" width="80" alt="" class="rounded-2 me-2">
+                    <div class="d-block">
+                        <h6 class="text-capitalize my-0">customizable hoodies</h6>
+                        <p class="text-sm text-muted my-0 py-0 text-capitalize">customizable gifts</p>
+                        <h6 class="text-danger text-uppercase font-600">us$12.38</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- /.Product Comparison Item -->
+
+            <!-- Placeholder Comparison Item -->
+            <div class="comparison-item empty d-block bg-transparent rounded-2 border-dashed box-shadow-sm d-grid p-2">
+                <div class="m-auto">
+                    <div class="d-block text-center">
+                        <i class="material-icons text-white fa-2x">add</i>
+                        <h6 class="font-600 text-white">Add an item to compare</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- /.Product Comparison Item -->
+
+            <!-- Placeholder Comparison Item -->
+            <div class="comparison-item empty d-block bg-transparent rounded-2 border-dashed box-shadow-sm d-grid p-2">
+                <div class="m-auto">
+                    <div class="d-block text-center">
+                        <i class="material-icons text-white fa-2x">add</i>
+                        <h6 class="font-600 text-white">Add an item to compare</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- /.Product Comparison Item -->
+
+            <a href="comparisons.html" role="button" class="btn btn-warning rounded-pill">Compare selected</a>
+        </div>
+    </div>
+    <!-- /.Comparison Pane -->
 
     <!-- Sticky Bottom Footer -->
     <footer class=" footer bg-meshgrid mt-5 ">

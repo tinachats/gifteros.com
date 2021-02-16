@@ -7,7 +7,7 @@
 }
 
 
-/*** Default Styling .progress ***/
+/*** Default Styling ***/
 
 :root {
     --search-border-color: #ced4da;
@@ -119,7 +119,7 @@
     --app-color-inverse: #0f2233;
     --btn-light: #1a3349;
     --btn-light-text: #fff;
-    --dark: #fff;
+    --dark: #867a7a;
     --border-color: #fff;
     --float-icon: #e1e1e1;
     --gray: #f4f4f4;
@@ -2840,6 +2840,63 @@ a.text-underline:hover,
 
 /* /.Text Colors */
 
+.strike-through {
+    text-decoration: line-through !important;
+}
+
+
+/* CSS Triangles */
+
+.arrow-left,
+.arrow-right,
+.arrow-down,
+.arrow-up {
+    width: 0;
+    height: 0;
+}
+
+.arrow-up {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid var(--light);
+}
+
+.arrow-down {
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid var(--app-color);
+}
+
+.arrow-left {
+    border-top: 10px solid transparent;
+    border-right: 10px solid var(--app-color);
+    border-bottom: 10px solid transparent;
+}
+
+.arrow-right {
+    border-left: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+
+.comparison-item {
+    z-index: 3;
+}
+
+.comparison-product-img {
+    background-color: var(--app-color);
+}
+
+.comparison-item .arrow-down {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 95px;
+}
+
+
+/* /.CSS Triangles */
+
 
 /*** /Formatting Tools */
 
@@ -3353,9 +3410,6 @@ a.text-underline:hover,
     .filter-page-footer {
         width: 80%
     }
-    .comparison-pane {
-        top: 85%;
-    }
     .border-md-end {
         border-right: 1px solid var(--border-color);
     }
@@ -3404,9 +3458,6 @@ a.text-underline:hover,
     }
     .occasions-page>.content {
         grid-template-columns: 25% 75%;
-    }
-    .comparison-pane {
-        top: 45%;
     }
 }
 
