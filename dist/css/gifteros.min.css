@@ -2289,15 +2289,6 @@ select>option:hover {
     color: var(--float-icon) !important;
 }
 
-select,
-.form-control,
-.form-control:focus,
-.form-control:active,
-.form-control:focus-within {
-    background-color: transparent;
-    color: var(--dark);
-}
-
 #search {
     background-color: var(--whitesmoke);
 }
@@ -3177,7 +3168,7 @@ a.text-underline:hover,
     width: 100%;
 }
 
-.badge {
+.nav-badge.badge {
     padding: .20em .40em;
 }
 

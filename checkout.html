@@ -8,7 +8,7 @@
     <meta name="description" content="Details page">
     <!-- Developer -->
     <meta name="developer" content="Tinashe. M. Chaterera">
-    <title>Comparison Page | 3 Items</title>
+    <title>Checkout</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="dist/images/app/gifteros.png" type="image/x-icon">
     <!-- Bootstrap -->
@@ -37,7 +37,183 @@
     <!-- Gifteros -->
     <link rel="stylesheet" href="dist/css/gifteros.min.css">
     <style>
-
+        .sticky-top {
+            z-index: 1000 !important
+        }
+        
+        .price-range-input {
+            width: 4rem;
+        }
+        
+        .list-view>.product-card>.product-img-wrapper .card-img-top {
+            height: auto;
+        }
+        
+        .filter-list>li {
+            padding: .1rem 1.5rem;
+        }
+        
+        .circled-button,
+        .circled-button {
+            border-radius: 50%;
+        }
+        
+        .circled-button {
+            height: 40px;
+            width: 40px;
+        }
+        
+        .circled-button {
+            height: 30px;
+            width: 30px;
+        }
+        
+        #category-list {
+            width: 50%;
+        }
+        
+        .owl-carousel {
+            position: relative;
+            display: flex;
+            width: 100%;
+        }
+        
+        .owl-carousel>.item {
+            box-sizing: border-box;
+        }
+        
+        .owl-carousel>.item>div {
+            width: 100%;
+        }
+        /*** Wishlist Item ***/
+        
+        .wishlist-item {
+            background-color: var(--white);
+        }
+        
+        .toggle-buttons {
+            display: none;
+        }
+        /*** /.Wishlist Item ***/
+        /*** Grid View ***/
+        
+        .wishlist-shelf.grid-view {
+            grid-template-columns: repeat(2, 1fr);
+            height: 356px;
+        }
+        
+        .wishlist-shelf.grid-view>.wishlist-item {
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            border-radius: .5rem;
+            padding-bottom: .5rem;
+        }
+        
+        .wishlist-shelf.grid-view>.wishlist-item>.item-content {
+            display: block;
+        }
+        
+        .wishlist-shelf.grid-view>.wishlist-item>.item-content img.item-img {
+            height: 150px;
+            width: 100%;
+            object-fit: contain;
+            border-top-left-radius: .5rem;
+            border-top-right-radius: .5rem;
+        }
+        
+        .wishlist-shelf.grid-view>.wishlist-item>.item-content .item-body-content {
+            border-top: 1px solid var(--border-color);
+            padding-top: 3px;
+        }
+        
+        .wishlist-shelf.grid-view>.wishlist-item>.item-content .item-body-buttons {
+            width: 100%;
+            margin-left: auto;
+        }
+        
+        .wishlist-shelf.grid-view>.wishlist-item .additional-btn-text {
+            margin-left: .25rem;
+        }
+        /*** /.Grid View ***/
+        /*** List View ***/
+        
+        .wishlist-shelf.list-view {
+            grid-template-columns: 1fr;
+        }
+        
+        .wishlist-shelf.list-view>.wishlist-item {
+            background-color: var(--whitesmoke);
+            padding: .5rem;
+        }
+        
+        .wishlist-shelf.list-view>.wishlist-item>.item-content {
+            display: flex;
+            align-items: center;
+        }
+        
+        .wishlist-shelf.list-view>.wishlist-item>.item-content img.item-img {
+            height: 100px;
+            width: 100px;
+            margin-right: .5rem;
+            border-radius: .5rem;
+        }
+        
+        .wishlist-shelf.list-view>.wishlist-item>.item-content .item-body-buttons {
+            margin-left: auto !important;
+        }
+        
+        .wishlist-shelf.list-view>.wishlist-item .modal-btn {
+            margin-right: .5rem;
+        }
+        
+        .wishlist-shelf.list-view>.wishlist-item .additional-btn-text {
+            display: none;
+        }
+        /*** /.List View ***/
+        
+        .stats.gift-rating {
+            position: absolute;
+            left: 50%;
+            margin-top: -50px;
+            transform: translateX(-50%);
+        }
+        
+        .popover {
+            width: 28% !important;
+        }
+        
+        .quantity-input {
+            width: 55px;
+        }
+        
+        .action-buttons {
+            height: 42px;
+            width: 42px;
+            border-radius: 50%;
+        }
+        
+        #cart-action-btns {
+            display: none !important;
+        }
+        
+        @media(min-width: 768px) {
+            .section-header {
+                height: 68px;
+            }
+            .desktop-pills {
+                cursor: pointer;
+            }
+            .desktop-pills.active * {
+                color: #fff;
+            }
+            #v-pills-tab {
+                position: sticky;
+                top: 2.5rem;
+            }
+            .page-content {
+                margin-bottom: 50rem;
+            }
+        }
     </style>
 </head>
 
@@ -776,13 +952,13 @@
                                     <!-- /.Hidden Inputs -->
 
                                     <!-- Action Buttons -->
-                                    <div class="cart-action-btns">
+                                    <div class="#">
                                         <div class="d-flex align-items-center justify-content-center mt-2">
-                                            <button class="btn btn-warning btn-sm btn-block font-600 d-flex align-items-center justify-content-center clear-cart me-1">
+                                            <button class="btn btn-warning btn-sm btn-block font-600 d-flex align-items-center justify-content-center clear-cart me-2">
                                                 <i class="material-icons me-1">delete_sweep</i>
                                                 Clear Cart
                                             </button>
-                                            <a role="button" href="cart.html" class="btn btn-primary btn-sm btn-block font-600 d-flex align-items-center justify-content-center checkout-btn m-0">
+                                            <a role="button" href="cart.html" class="btn btn-primary btn-sm btn-block font-600 d-flex align-items-center justify-content-center checkout-btn">
                                                 Go to Cart
                                                 <i class="material-icons ms-1">arrow_forward</i>
                                             </a>
@@ -1030,7 +1206,7 @@
                                     <!-- Product Item Details -->
                                     <div class="d-block text-center">
                                         <h6 class="text-sm font-600 text-danger my-0 pt-0 cart-item-price">$12.99</h6>
-                                        <button class="btn btn-sm rounded-pill bg-switch text-white px-2 mt-2 add-to-cart-btn">Buy now</button>
+                                        <button class="btn btn-sm bg-switch text-white px-2 mt-2 add-to-cart-btn">Buy now</button>
                                     </div>
                                 </div>
                             </li>
@@ -1062,7 +1238,7 @@
                                     <!-- Product Item Details -->
                                     <div class="d-block text-center">
                                         <h6 class="text-sm font-600 text-danger my-0 pt-0 cart-item-price">$12.99</h6>
-                                        <button class="btn btn-sm rounded-pill bg-switch text-white px-2 mt-2 add-to-cart-btn">Buy now</button>
+                                        <button class="btn btn-sm bg-switch text-white px-2 mt-2 add-to-cart-btn">Buy now</button>
                                     </div>
                                 </div>
                             </li>
@@ -1094,7 +1270,7 @@
                                     <!-- Product Item Details -->
                                     <div class="d-block text-center">
                                         <h6 class="text-sm font-600 text-danger my-0 pt-0 cart-item-price">$12.99</h6>
-                                        <button class="btn btn-sm rounded-pill bg-switch text-white px-2 mt-2 add-to-cart-btn">Buy now</button>
+                                        <button class="btn btn-sm bg-switch text-white px-2 mt-2 add-to-cart-btn">Buy now</button>
                                     </div>
                                 </div>
                             </li>
@@ -1111,330 +1287,896 @@
             <div class="container">
                 <!-- Breadcrumbs -->
                 <nav class="d-flex align-items-center justify-content-md-between my-2" aria-label="breadcrumb">
-                    <h4 class="text-app-color font-600 my-0">Comparisons(3)</h4>
+                    <h4 class="text-app-color font-600 my-0">Checkout</h4>
                     <ol class="breadcrumb my-0 py-0">
                         <li class="breadcrumb-item"><a href="index.html">Store</a></li>
-                        <li class="breadcrumb-item active text-capitalize" aria-current="page">Comparison Items</li>
+                        <li class="breadcrumb-item">Payments</li>
+                        <li class="breadcrumb-item active text-capitalize" aria-current="page">Place Order</li>
                     </ol>
                 </nav>
                 <!-- /.Breadcrumbs -->
-                <div class="row bg-whitesmoke box-shadow-sm border rounded-2 p-3">
-                    <div class="col-2 text-center">
-                        <a href="category.html" class="btn btn-sm rounded-pill btn-default d-flex align-items-center justify-content-center rounded-pill mb-2 font-600">
-                            <i class="material-icons ms-1">chevron_left</i> Go back
-                        </a>
-                    </div>
-                    <div class="col-12 zoom-out-section">
-                        <!-- Comparisons Table -->
-                        <div class="table-responsive-sm">
-                            <table class="table-hover table-striped table-sm table-bordered w-100">
-                                <thead class="sticky-top bg-whitesmoke">
-                                    <tr>
-                                        <th></th>
-                                        <th>
-                                            <div class="d-block text-center position-relative comparison-item">
-                                                <a href="details.html" class="stretched-link"></a>
-                                                <img src="dist/images/gifts/15f458474b905f.jpg" height="100" width="100" class="rounded-circle comparison-product-img p-1 mb-2">
-                                                <div class="arrow-down"></div>
-                                                <h6 class="font-600 text-capitalize text-app-color mb-0">Product Item 1</h6>
-                                                <h6 class="text-capitalize text-muted text-sm my-0">Category</h6>
+                <div class="row">
+                    <!-- Checkout Actions -->
+                    <div class="col-12 col-xl-8 d-flex align-items-start zoom-out-section">
+                        <div class="row">
+                            <div class="col-12 col-md-5 col-xl-4">
+                                <!-- Options -->
+                                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                    <!-- Recipient Pill-Button -->
+                                    <div role="tab" class="nav-link desktop-pills active bg-whitesmoke box-shadow-sm border rounded-2 p-2 mb-2" id="v-pills-recipients-tab" data-bs-toggle="pill" data-bs-target="#v-pills-recipients" aria-controls="v-pills-recipients" aria-selected="true">
+                                        <div class="d-block">
+                                            <div class="d-flex align-items-center">
+                                                <i class="material-icons me-1">person_pin_circle</i>
+                                                <h6 class="font-600 text-sm my-0">Select recipient</h6>
                                             </div>
-                                        </th>
-                                        <th>
-                                            <div class="d-block text-center position-relative comparison-item">
-                                                <a href="details.html" class="stretched-link"></a>
-                                                <img src="dist/images/gifts/15f4598bf99479.2.jpg" height="100" width="100" class="rounded-circle comparison-product-img p-1 mb-2">
-                                                <div class="arrow-down"></div>
-                                                <h6 class="font-600 text-capitalize text-app-color mb-0">Product Item 2</h6>
-                                                <h6 class="text-capitalize text-muted text-sm my-0">Category</h6>
+                                        </div>
+                                    </div>
+                                    <!-- /.Recipient Pill-Button -->
+
+                                    <!-- Address Pill-Button -->
+                                    <div role="tab" class="nav-link desktop-pills bg-whitesmoke box-shadow-sm border rounded-2 p-2 mb-2" id="v-pills-delivery-details-tab" data-bs-toggle="pill" data-bs-target="#v-pills-delivery-details" aria-controls="v-pills-delivery-details" aria-selected="false">
+                                        <div class="d-block">
+                                            <div class="d-flex align-items-center">
+                                                <i class="material-icons me-1">add_location</i>
+                                                <h6 class="font-600 text-sm my-0">Delivery Info</h6>
                                             </div>
-                                        </th>
-                                        <th>
-                                            <div class="d-block text-center position-relative comparison-item">
-                                                <a href="details.html" class="stretched-link"></a>
-                                                <img src="dist/images/gifts/15f46084b9eae0.jpg" height="100" width="100" class="rounded-circle comparison-product-img p-1 mb-2">
-                                                <div class="arrow-down"></div>
-                                                <h6 class="font-600 text-capitalize text-app-color mb-0">Product Item 3</h6>
-                                                <h6 class="text-capitalize text-muted text-sm my-0">Category</h6>
+                                        </div>
+                                    </div>
+                                    <!-- /.Address Pill-Button -->
+
+                                    <!-- Payment Method Pill-Button -->
+                                    <div role="tab" class="nav-link desktop-pills bg-whitesmoke box-shadow-sm border rounded-2 p-2 mb-2" id="v-pills-payment-method-tab" data-bs-toggle="pill" data-bs-target="#v-pills-payment-method" aria-controls="v-pills-payment-method" aria-selected="false">
+                                        <div class="d-block">
+                                            <div class="d-flex align-items-center">
+                                                <i class="material-icons me-1">credit_card</i>
+                                                <h6 class="font-600 text-sm my-0">Payment Method</h6>
                                             </div>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <!-- Price -->
-                                    <tr class="bg-light">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Price</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="font-600 lead text-danger mb-0">US$12.38</h6>
-                                            <h6 class="strike-through text-sm text-muted font-600 mt-0">Was US$16.38</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="font-600 lead text-danger mb-0">US$12.38</h6>
-                                            <h6 class="strike-through text-sm text-muted font-600 mt-0">Was US$16.38</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="font-600 lead text-danger mb-0">US$12.38</h6>
-                                            <h6 class="strike-through text-sm text-muted font-600 mt-0">Was US$16.38</h6>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Price -->
+                                        </div>
+                                    </div>
+                                    <!-- /.Payment Method Pill-Button -->
 
-                                    <!-- Reviews -->
-                                    <tr class="bg-whitesmoke">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Reviews</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <ul class="list-inline gift-star-rating justify-content-center align-items-center gift-star-rating my-0 p-0">
-                                                <li class="list-inline-item text-sm text-muted pe-2">(4.3)</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-muted">&star;</li>
-                                                <a href="#" class="text-sm text-muted d-flex align-items-center popover-info w-0">
-                                                    <i class="material-icons popover-toggle-icon">expand_more</i>1,284 ratings
-                                                </a>
-                                            </ul>
-                                        </td>
-                                        <td class="text-center">
-                                            <ul class="list-inline gift-star-rating justify-content-center align-items-center gift-star-rating my-0 p-0">
-                                                <li class="list-inline-item text-sm text-muted pe-2">(4.3)</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-muted">&star;</li>
-                                                <a href="#" class="text-sm text-muted d-flex align-items-center popover-info w-0">
-                                                    <i class="material-icons popover-toggle-icon">expand_more</i>1,284 ratings
-                                                </a>
-                                            </ul>
-                                        </td>
-                                        <td class="text-center">
-                                            <ul class="list-inline gift-star-rating justify-content-center align-items-center gift-star-rating my-0 p-0">
-                                                <li class="list-inline-item text-sm text-muted pe-2">(4.3)</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-muted">&star;</li>
-                                                <a href="#" class="text-sm text-muted d-flex align-items-center popover-info w-0">
-                                                    <i class="material-icons popover-toggle-icon">expand_more</i>1,284 ratings
-                                                </a>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Reviews -->
-
-                                    <!-- Colors -->
-                                    <tr class="bg-light">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Colors</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm my-0">Black, Red, Maroon, Green</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm my-0">Black, Red, Maroon, Green, Pink, Purple</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm my-0">Not mentioned</h6>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Colors -->
-
-                                    <!-- Clothing Sizes -->
-                                    <tr class="bg-whitesmoke">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Clothing Sizes</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm text-uppercase my-0">S, M, L, XL, XXL</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm text-uppercase my-0">M, L, XXL, XXXL</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm text-uppercase my-0">S, M, L</h6>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Clothing Sizes -->
-
-                                    <!-- Shoe Sizes -->
-                                    <tr class="bg-light">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Shoe Sizes</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm my-0">44, 45, 46, 48</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm my-0">45, 49</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm my-0">Not mentioned</h6>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Shoe Sizes -->
-
-                                    <!-- Bed Sizes -->
-                                    <tr class="bg-whitesmoke">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Bed Sizes</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm text-uppercase my-0">Twin, double, queen</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm text-uppercase my-0">queen, king, super-king</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm text-uppercase my-0">twin, twin-xl, double, queen, king, super-king</h6>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Shoe Sizes -->
-
-                                    <!-- Description -->
-                                    <tr class="bg-whitesmoke">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Description</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm text-justify my-0">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed impedit soluta voluptatum tempora illo laboriosam!
-                                            </h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm text-justify my-0">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nisi qui odit illo vero sint deserunt maxime!
-                                            </h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm text-justify my-0">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores error quia ipsum?
-                                            </h6>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Description -->
-
-                                    <!-- Customizable-->
-                                    <tr class="bg-light">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Customizable</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="bi bi-check-circle-fill icon-md text-success"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="bi bi-x-circle-fill icon-md text-danger"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="bi bi-check-circle-fill icon-md text-success"></i>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Customizable-->
-
-                                    <!-- Units -->
-                                    <tr class="bg-whitesmoke">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Units</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="d-block text-center">
-                                                <i class="bi bi-check-circle-fill icon-md text-success"></i>
-                                                <h6 class="text-sm font-600 my-0">100 units in stock</h6>
+                                    <!-- Order Preview Pill-Button -->
+                                    <div role="tab" class="nav-link desktop-pills bg-whitesmoke box-shadow-sm border rounded-2 p-2" id="v-pills-order-preview-tab" data-bs-toggle="pill" data-bs-target="#v-pills-order-preview" aria-controls="v-pills-order-preview" aria-selected="false">
+                                        <div class="d-block">
+                                            <div class="d-flex align-items-center">
+                                                <i class="material-icons me-1">assignment</i>
+                                                <h6 class="font-600 text-sm my-0">Order Preview</h6>
                                             </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="d-block text-center">
-                                                <i class="bi bi-check-circle-fill icon-md text-success"></i>
-                                                <h6 class="text-sm font-600 my-0">100 units in stock</h6>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="d-block text-center">
-                                                <i class="bi bi-exclamation-circle-fill icon-md text-warning"></i>
-                                                <h6 class="text-sm font-600 my-0">out of stock</h6>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Price -->
-
-                                    <!-- Items Sold -->
-                                    <tr class="bg-light">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Sold</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="d-block text-center">
-                                                <i class="bi bi-bag-check-fill icon-md text-success"></i>
-                                                <h6 class="text-sm font-600 my-0">100 units sold</h6>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="d-block text-center">
-                                                <i class="bi bi-bag-check-fill icon-md text-success"></i>
-                                                <h6 class="text-sm font-600 my-0">100 units sold</h6>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="d-block text-center">
-                                                <i class="bi bi-bag-x-fill icon-md text-primary"></i>
-                                                <h6 class="text-sm font-600 my-0">not yet sold</h6>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Items Sold -->
-
-                                    <!-- Actions -->
-                                    <tr class="bg-whitesmoke w-100">
-                                        <td class="py-2">
-                                            <h6 class="font-600 ps-3">Action</h6>
-                                        </td>
-                                        <td class="text-center py-2">
-                                            <div class="d-flex align-items-center justify-content-around">
-                                                <button class="btn btn-sm rounded-pill bg-switch text-white d-flex align-items-center font-600 px-3">
-                                                    <i class="bi bi-cart-plus icon-md me-2"></i> Add to Cart 
+                                        </div>
+                                    </div>
+                                    <!-- /.Recipient Pill-Button -->
+                                </div>
+                                <!-- /.Options -->
+                            </div>
+                            <div class="col-12 col-md-7 col-xl-8">
+                                <!-- Tab Content -->
+                                <div class="tab-content" id="v-pills-tabContent">
+                                    <!-- Recipient List -->
+                                    <div class="tab-pane fade show active" id="v-pills-recipients" role="tabpanel" aria-labelledby="v-pills-recipients-tab">
+                                        <div class="d-block bg-light sticky-top px-md-2">
+                                            <h5 class="fonnt-600">Select your order recipient</h5>
+                                            <p class="text-justify">
+                                                Is the address you'd like to use displayed below? If so click, the corresponding "Deliver to this addrress" button. Or you can enter a new delivery address.
+                                            </p>
+                                            <hr>
+                                        </div>
+                                        <div class="d-grid grid-2 gap-1">
+                                            <!-- Recipient Card -->
+                                            <div class="d-block bg-whitesmoke border rounded-2 box-shadow-sm p-2">
+                                                <div class="d-flex">
+                                                    <img data-src="dist/images/users/user.png" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle me-2 lazy">
+                                                    <div class="d-block lh-100">
+                                                        <h6 class="font-600 text-capitalize my-0">tinashe chaterera</h6>
+                                                        <address class="text-sm">
+                                                            <p class="my-0 py-0 text-capitalize">8069 new canaan</p>
+                                                            <p class="my-0 py-0 text-capitalize">230th st. highfield</p>
+                                                            <p class="my-0 py-0 text-capitalize">harare</p>
+                                                            <p class="my-0 py-0 text-capitalize">zimbabwe</p>
+                                                            <p class="my-0 py-0 text-capitalize">phone: +263 77 602 1140</p>
+                                                        </address>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-block btn-sm bg-switch text-white">
+                                                    Deliver to this address
                                                 </button>
-                                                <button class="btn btn-sm rounded-pill btn-default d-flex align-items-center font-600 px-3 ms-2">
-                                                    <i class="bi bi-heart icon-md me-2"></i> 1.2k 
-                                                </button>
+                                                <div class="d-flex align-items-center justify-content-between mt-2">
+                                                    <button class="btn btn-default btn-sm d-flex align-items-center">
+                                                        <i class="material-icons me-1">edit</i>
+                                                        Edit
+                                                    </button>
+                                                    <button class="btn btn-danger btn-sm d-flex align-items-center">
+                                                        <i class="material-icons me-1">delete</i>
+                                                        Remove
+                                                    </button>
+                                                </div>
                                             </div>
-                                        </td>
-                                        <td class="text-center py-2">
-                                            <div class="d-flex align-items-center justify-content-around">
-                                                <button class="btn btn-sm rounded-pill bg-switch text-white d-flex align-items-center font-600 px-3">
-                                                    <i class="bi bi-cart-check-fill icon-md me-2"></i> In Cart 
+                                            <!-- /.Recipient Card -->
+
+                                            <!-- Recipient Card -->
+                                            <div class="d-block bg-whitesmoke border rounded-2 box-shadow-sm p-2">
+                                                <div class="d-flex">
+                                                    <img data-src="dist/images/users/15f9eb408be859.jpg" src="dist/images/users/user.png" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle me-2 lazy">
+                                                    <div class="d-block lh-100">
+                                                        <h6 class="font-600 text-capitalize my-0">tinashe chaterera</h6>
+                                                        <address class="text-sm">
+                                                            <p class="my-0 py-0 text-capitalize">8069 new canaan</p>
+                                                            <p class="my-0 py-0 text-capitalize">230th st. highfield</p>
+                                                            <p class="my-0 py-0 text-capitalize">harare</p>
+                                                            <p class="my-0 py-0 text-capitalize">zimbabwe</p>
+                                                            <p class="my-0 py-0 text-capitalize">phone: +263 77 602 1140</p>
+                                                        </address>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-block btn-sm bg-switch text-white">
+                                                    Deliver to this address
                                                 </button>
-                                                <button class="btn btn-sm rounded-pill btn-default d-flex align-items-center font-600 px-3 ms-2">
-                                                    <i class="bi bi-heart icon-md me-2"></i> 1.2k 
-                                                </button>
+                                                <div class="d-flex align-items-center justify-content-between mt-2">
+                                                    <button class="btn btn-default btn-sm d-flex align-items-center">
+                                                        <i class="material-icons me-1">edit</i>
+                                                        Edit
+                                                    </button>
+                                                    <button class="btn btn-danger btn-sm d-flex align-items-center">
+                                                        <i class="material-icons me-1">delete</i>
+                                                        Remove
+                                                    </button>
+                                                </div>
                                             </div>
-                                        </td>
-                                        <td class="text-center py-2">
-                                            <div class="d-flex align-items-center justify-content-around">
-                                                <button class="btn btn-sm rounded-pill bg-switch text-white d-flex align-items-center font-600 px-3">
-                                                    <i class="bi bi-cart-check-fill icon-md me-2"></i> In Cart 
+                                            <!-- /.Recipient Card -->
+
+                                            <!-- Recipient Card -->
+                                            <div class="d-block bg-whitesmoke border rounded-2 box-shadow-sm p-2">
+                                                <div class="d-flex">
+                                                    <img data-src="dist/images/users/15f957febc6cdf.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle me-2 lazy">
+                                                    <div class="d-block lh-100">
+                                                        <h6 class="font-600 text-capitalize my-0">tinashe chaterera</h6>
+                                                        <address class="text-sm">
+                                                            <p class="my-0 py-0 text-capitalize">8069 new canaan</p>
+                                                            <p class="my-0 py-0 text-capitalize">230th st. highfield</p>
+                                                            <p class="my-0 py-0 text-capitalize">harare</p>
+                                                            <p class="my-0 py-0 text-capitalize">zimbabwe</p>
+                                                            <p class="my-0 py-0 text-capitalize">phone: +263 77 602 1140</p>
+                                                        </address>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-block btn-sm bg-switch text-white">
+                                                    Deliver to this address
                                                 </button>
-                                                <button class="btn btn-sm rounded-pill btn-default d-flex align-items-center font-600 px-3 ms-2">
-                                                    <i class="bi bi-heart-fill text-warning icon-md me-2"></i> 1.2k 
-                                                </button>
+                                                <div class="d-flex align-items-center justify-content-between mt-2">
+                                                    <button class="btn btn-default btn-sm d-flex align-items-center">
+                                                        <i class="material-icons me-1">edit</i>
+                                                        Edit
+                                                    </button>
+                                                    <button class="btn btn-danger btn-sm d-flex align-items-center">
+                                                        <i class="material-icons me-1">delete</i>
+                                                        Remove
+                                                    </button>
+                                                </div>
                                             </div>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Actions -->
-                                </tbody>
-                            </table>
+                                            <!-- /.Recipient Card -->
+
+                                            <!-- Recipient Card -->
+                                            <div class="d-block bg-whitesmoke border rounded-2 box-shadow-sm p-2">
+                                                <div class="d-flex">
+                                                    <img data-src="dist/images/users/15f947a8ab289c.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle me-2 lazy">
+                                                    <div class="d-block lh-100">
+                                                        <h6 class="font-600 text-capitalize my-0">tinashe chaterera</h6>
+                                                        <address class="text-sm">
+                                                            <p class="my-0 py-0 text-capitalize">8069 new canaan</p>
+                                                            <p class="my-0 py-0 text-capitalize">230th st. highfield</p>
+                                                            <p class="my-0 py-0 text-capitalize">harare</p>
+                                                            <p class="my-0 py-0 text-capitalize">zimbabwe</p>
+                                                            <p class="my-0 py-0 text-capitalize">phone: +263 77 602 1140</p>
+                                                        </address>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-block btn-sm bg-switch text-white">
+                                                    Deliver to this address
+                                                </button>
+                                                <div class="d-flex align-items-center justify-content-between mt-2">
+                                                    <button class="btn btn-default btn-sm d-flex align-items-center">
+                                                        <i class="material-icons me-1">edit</i>
+                                                        Edit
+                                                    </button>
+                                                    <button class="btn btn-danger btn-sm d-flex align-items-center">
+                                                        <i class="material-icons me-1">delete</i>
+                                                        Remove
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <!-- /.Recipient Card -->
+                                        </div>
+                                    </div>
+                                    <!-- /.Recipient List -->
+
+                                    <!-- Delivery Details -->
+                                    <div class="tab-pane fade" id="v-pills-delivery-details" role="tabpanel" aria-labelledby="v-pills-delivery-details-tab">
+                                        <div class="d-block sticky-top bg-light px-2">
+                                            <h5 class="fonnt-600">Delivery Info</h5>
+                                            <p class="text-justify">
+                                                Enter your recipient's contact details.
+                                            </p>
+                                        </div>
+                                        <form method="post" class="row g-3 needs-validation" id="delivery-info-form" novalidate>
+                                            <!-- Full name -->
+                                            <div class="col col-md-6">
+                                                <label for="first-name" class="form-label">First name</label>
+                                                <input type="text" class="form-control" id="first-name" placeholder="John" required>
+                                                <div class="invalid-feedback">
+                                                    Enter recipient's first name.
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <label for="last-name" class="form-label">Last name</label>
+                                                <input type="text" class="form-control" id="last-name" placeholder="Doe" required>
+                                                <div class="invalid-feedback">
+                                                    Enter recipient's last name.
+                                                </div>
+                                            </div>
+                                            <!-- /.Full name -->
+
+                                            <!-- Contact Details -->
+                                            <div class="col-12 col-md-6">
+                                                <label for="phone-number" class="form-label">Phone number</label>
+                                                <div class="input-group has-validation">
+                                                    <span class="input-group-text d-flex align-items-center" id="inputGroupPrepend">
+                                                        <img src="dist/images/countries/flag-of-Zimbabwe.png" height="15" width="22" alt="" class="me-1"> +263
+                                                    </span>
+                                                    <input type="text" class="form-control" id="phone-number" aria-describedby="inputGroupPrepend" required>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid phone number.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <label for="email" class="form-label">Email (Optional)</label>
+                                                <input type="email" class="form-control" id="email" placeholder="example@email.com">
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid email address.
+                                                </div>
+                                            </div>
+                                            <!-- /.Contact Details -->
+
+                                            <!-- Address -->
+                                            <div class="col-12 col-md-6">
+                                                <label for="address" class="form-label">Address</label>
+                                                <input type="text" class="form-control" id="address" placeholder="1234 Main St." required>
+                                                <div class="invalid-feedback">
+                                                    Please provide your address.
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <label for="suburb" class="form-label">Suburb</label>
+                                                <select class="form-select" id="suburb" required>
+                                                    <option selected disabled value="">Select Suburb</option>
+                                                    <option>Adbernie</option>
+                                                    <option>Arlington Estate</option>
+                                                    <option>Borrowdale</option>
+                                                    <option>Chisipiti</option>
+                                                    <option>Dzivarasekwa</option>
+                                                    <option>Epworth</option>
+                                                    <option>Highfield</option>
+                                                    <option>Waterfalls</option>
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                    Please select a valid suburb.
+                                                </div>
+                                            </div>
+                                            <!-- /.Address -->
+
+                                            <!-- Addtional Info -->
+                                            <h6 class="font-600 mb-0 pb-0">Add delivery instructions (Optional)</h6>
+                                            <div class="col-12 mt-0">
+                                                <label for="additional-instructions" class="form-label">Do we need additional instructions to find this address?</label>
+                                                <textarea class="form-control" name="additional-instructions" id="additional-instructions" cols="30" rows="4" placeholder="Provide details such as building description, a nearby landmark, or other navigation instructions."></textarea>
+                                                <div class="invalid-feedback">
+                                                    Please provide your address.
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="access-code" class="form-label">Do we need a security code or call box number to access this building?</label>
+                                                <input type="text" class="form-control" name="access-code" id="access-code" placeholder="1234"></textarea>
+                                                <div class="invalid-feedback">
+                                                    Please provide your address.
+                                                </div>
+                                            </div>
+                                            <!-- /.Additional Info -->
+
+                                            <div class="col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="agreement">
+                                                    <label class="form-check-label" for="agreement">
+                                                        Save this information for next time
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button class="btn btn-primary" type="submit">Save and continue</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- /.Delivery Details -->
+
+                                    <!-- Payment Method -->
+                                    <div class="tab-pane fade" id="v-pills-payment-method" role="tabpanel" aria-labelledby="v-pills-payment-method-tab">
+                                        <div class="d-block sticky-top bg-light px-2">
+                                            <h5 class="fonnt-600">Payment Method</h5>
+                                            <p class="text-justify">
+                                                Choose your payment method and enter your details.
+                                            </p>
+                                            <img src="dist/images/app/payments.PNG" alt="" class="img-fluid">
+                                        </div>
+                                        <form method="post" class="row g-4 needs-validation mt-2" id="billing-info-form" novalidate>
+                                            <div class="pl-3">
+                                                <div class="form-check my-1">
+                                                    <input class="form-check-input payment-method" type="radio" name="payment-method" id="credit-card" value="credit-card" checked>
+                                                    <label class="form-check-label" for="credit-card">
+                                                        Credit card
+                                                    </label>
+                                                </div>
+                                                <div class="form-check my-1">
+                                                    <input class="form-check-input payment-method" type="radio" name="payment-method" id="debit-card" value="debit-card">
+                                                    <label class="form-check-label" for="debit-card">
+                                                        Debit card
+                                                    </label>
+                                                </div>
+                                                <div class="form-check my-1">
+                                                    <input class="form-check-input payment-method" type="radio" name="payment-method" id="paypal" value="paypal">
+                                                    <label class="form-check-label" for="paypal">
+                                                        Paypal
+                                                    </label>
+                                                </div>
+                                                <div class="form-check my-1">
+                                                    <input class="form-check-input payment-method" type="radio" name="payment-method" id="paynow" value="paynow">
+                                                    <label class="form-check-label" for="paynow">
+                                                        Ecocash / OneMoney
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <!-- Credit Card Details -->
+                                            <div id="card-section" class="row">
+                                                <div class="col-12">
+                                                    <label for="card-holder" class="form-label">Name on card</label>
+                                                    <input type="text" class="form-control" id="card-holder" placeholder="Full name as displayed on card." required>
+                                                    <div class="invalid-feedback">
+                                                        Please provide your full name.
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="credit-card-no" class="form-label">Credit card number</label>
+                                                    <input type="text" class="form-control" id="credit-card-no" name="credit-card-no" required>
+                                                    <div class="invalid-feedback">
+                                                        Enter your credit card number.
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <label for="expiration" class="form-label">Expiration</label>
+                                                    <input type="date" class="form-control" id="expiration" name="expiration" required>
+                                                    <div class="invalid-feedback">
+                                                        Enter your credit card expiration date.
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <label for="cvv" class="form-label">CVV</label>
+                                                    <input type="text" class="form-control" id="cvv" name="cvv" required>
+                                                    <div class="invalid-feedback">
+                                                        Enter your credit card cvv number.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.Credit Card Details -->
+
+                                            <!-- Paynow Section -->
+                                            <div id="paynow-section" class="d-none">
+                                                <p>This will use your EcoCash or OneMoney wallet to pay for this transaction.</p>
+                                                <div class="col-12 col-md-6">
+                                                    <label for="mobile-number" class="form-label">Mobile number</label>
+                                                    <div class="input-group has-validation">
+                                                        <span class="input-group-text d-flex align-items-center" id="inputGroupPrepend">
+                                                            <img src="dist/images/countries/flag-of-Zimbabwe.png" height="15" width="22" alt="" class="me-1"> +263
+                                                        </span>
+                                                        <input type="text" class="form-control" id="mobile-number" aria-describedby="inputGroupPrepend" required>
+                                                        <div class="invalid-feedback">
+                                                            Please provide a valid phone number.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.Paynow Section -->
+
+                                            <div class="col-12">
+                                                <button class="btn btn-primary" type="submit">Save and continue</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- /.Payment Method -->
+
+                                    <!-- Order Previewing -->
+                                    <div class="tab-pane fade" id="v-pills-order-preview" role="tabpanel" aria-labelledby="v-pills-order-preview-tab">
+                                        <!-- Right Navbar -->
+                                        <nav class="box-shadow-sm bg-whitesmoke sticky-top border p-2">
+                                            <!-- Breadcrumbs -->
+                                            <div aria-label="breadcrumb">
+                                                <ol class="breadcrumb mb-0 pb-0">
+                                                    <li class="breadcrumb-item text-sm text-capitalize">
+                                                        <a href="index.html">Shop</a>
+                                                    </li>
+                                                    <li class="breadcrumb-item active text-sm text-capitalize" aria-current="page">
+                                                        My Cart (234 results)
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                            <!-- /.Breadcrumbs -->
+
+                                            <!-- Filtering Options -->
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <!-- /Filter by Category -->
+                                                <select class="form-select form-select-sm" id="category-list" aria-label=".form-select-sm category">
+                                                    <option selected>Filter by Category</option>
+                                                    <option value="1">Category One</option>
+                                                    <option value="2">Category Two</option>
+                                                    <option value="3">Category Three</option>
+                                                </select>
+                                                <!-- /.Filter By Category -->
+
+                                                <!-- View Options -->
+                                                <div class="d-flex align-items-center ms-auto">
+                                                    <i role="button" class="bi bi-list-ul view-option list-icon active" data-view="list-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="List view"></i>
+                                                    <i role="button" class="bi bi-grid view-option grid-icon mx-3" data-view="grid-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Grid View"></i>
+                                                </div>
+                                                <!-- /.View Options -->
+                                            </div>
+                                            <!-- /.Filtering Options -->
+                                        </nav>
+                                        <!-- /.Right Navbar -->
+
+                                        <!-- Gift Items -->
+                                        <div class="d-grid list-view grid-p-1 mt-2 display-gifts wishlist-shelf">
+                                            <!-- Wishlist Item -->
+                                            <div class="wishlist-item mb-1 w-100">
+                                                <!-- Item Content -->
+                                                <div class="item-content">
+                                                    <a href="details.html">
+                                                        <img data-src="dist/images/gifts/15f4598bf99479.2.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="lazy item-img bg-white">
+                                                    </a>
+                                                    <div class="item-body-content d-block px-2 lh-100">
+                                                        <h6 class="text-sm font-600 text-capitalize">Customizable Mug</h6>
+                                                        <p class="text-sm text-muted my-0 py-0">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor est beatae quo.
+                                                        </p>
+                                                        <p class="text-sm text-primary my-0 py-1">Items sold: 36</p>
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&star;</li>
+                                                            <a href="#" class="text-sm text-muted d-flex align-items-center popover-info">
+                                                                <i class="material-icons popover-toggle-icon">expand_more</i>1,284
+                                                            </a>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="item-body-buttons d-block px-2 lh-100">
+                                                        <p class="text-sm text-muted m-0 p-0">
+                                                            Item added February 11, 2021
+                                                        </p>
+                                                        <div class="d-flex align-items-center justify-content-between my-2">
+                                                            <button class="btn btn-default btn-sm d-grid action-buttons">
+                                                                <i class="material-icons m-auto">remove</i>
+                                                            </button>
+                                                            <input type="text" name="" id="" class="form-control form-control-sm text-center quantity-input mx-2" value="1">
+                                                            <button class="btn btn-default btn-sm d-grid action-buttons">
+                                                                <i class="material-icons m-auto">add</i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="d-flex align-items-center justify-content-between card-buttons w-100">
+                                                            <button type="button" class="btn btn-sm btn-light d-flex align-items-center toggle-buttons modal-btn" data-bs-toggle="modal" data-bs-target="#similar-modal-items">
+                                                                Similar <span class="additional-btn-text">items</span><i class="material-icons">more_horiz</i>
+                                                            </button>
+                                                            <button class="btn btn-sm btn-danger d-flex align-items-center">
+                                                                <i class="material-icons ms-1">delete</i>
+                                                                Remove
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /.Item Content -->
+                                            </div>
+                                            <!-- /.Wishlist Item -->
+                                        </div>
+                                        <!-- /.Gift Items -->
+                                    </div>
+                                    <!-- /.Order Previewing -->
+                                </div>
+                                <!-- /.Tab Content -->
+                            </div>
                         </div>
-                        <!-- /.Comparisons Table -->
                     </div>
+                    <!-- /.Checkout Actions -->
+                    <!-- Cart Details -->
+                    <div class="col-12 col-xl-4 zoom-out-section">
+                        <div class="d-block sticky-top">
+                            <div class="bg-whitesmoke border box-shadow-sm d-flex align-items-center justify-content-between p-2 section-header">
+                                <h6 class="lead font-600 my-0">Your Cart</h6>
+                                <h6 class="lead font-600 my-0">(3)</h6>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush bg-transparent mt-2">
+                            <li class="list-group-item bg-transparent">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h6 class="my-0">Delivery:</h6>
+                                    <h6 class="my-0">US$5.38</h6>
+                                </div>
+                            </li>
+                            <li class="list-group-item bg-transparent">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h6 class="my-0">Coupon:</h6>
+                                    <h6 class="my-0">US$7.38</h6>
+                                </div>
+                            </li>
+                            <li class="list-group-item bg-transparent">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h6 class="my-0">Subtotal:</h6>
+                                    <h6 class="my-0">US$5.38</h6>
+                                </div>
+                            </li>
+                            <li class="list-group-item bg-transparent">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h6 class="my-0 lead font-600">Total:</h6>
+                                    <h6 class="my-0 lead font-600">US$159.38</h6>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <button type="button" class="btn btn-warning btn-sm d-flex align-items-center font-600">
+                                <i class="material-icons me-1">delete_sweep</i> Clear Cart
+                            </button>
+                            <button type="button" class="btn btn-primary btn-sm d-flex align-items-center font-600">
+                                <i class="material-icons me-1">touch_app</i>
+                                <span class="text-white">Place Your Order</span>
+                                <div class="spinner-border spinner-border-sm text-light ms-2" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- /.Cart Details -->
                 </div>
             </div>
         </div>
     </div>
     <!-- /.Page Content -->
+
+    <!-- Related Items Modal -->
+    <div class="modal fade" id="similar-modal-items" tabindex="-1" role="dialog" aria-labelledby="similar-modal-items" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content w-100">
+                <div class="modal-header d-flex justify-ccontent-between align-items-center">
+                    <h6 class="font-600 text-app-color my-0">Similar Gift Items</h6>
+                    <i role="button" class="material-icons fa-2x" data-bs-dismiss="modal">close</i>
+                </div>
+                <div class="modal-body">
+                    <p class="text-sm font-600">Similar gift items you may also like</p>
+                    <div class="row w-100 gx-1">
+                        <div class="owl-carousel owl-theme related-items">
+                            <!-- Related Gift -->
+                            <div class="item w-100">
+                                <a href="categories.html" class="stretched-link">
+                                    <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
+                                        <img data-src="dist/images/gifts/15f458254a0dac.1.6.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
+                                        <div class="gift-content mx-1">
+                                            <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
+                                            <div class="d-inline-block w-100 lh-100">
+                                                <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
+                                                <div class="d-flex align-items-center justify-content-between w-100">
+                                                    <div>
+                                                        <div class="d-flex align-items-center">
+                                                            <span class="text-warning me-1">&starf;</span>
+                                                            <span class="text-sm text-muted">4.6</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="text-sm text-muted me-2">484 Sold</span>
+                                                </div>
+                                            </div>
+                                            <div class="usd-price">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From US$28.39</h6>
+                                                </div>
+                                            </div>
+                                            <div class="zar-price d-none">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From R384.34</h6>
+                                                </div>
+                                            </div>
+                                            <div class="zwl-price d-none">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From ZW$2893.38</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- /.Related Gift -->
+                            <!-- Related Gift -->
+                            <div class="item w-100">
+                                <a href="categories.html" class="stretched-link">
+                                    <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
+                                        <img data-src="dist/images/gifts/15f458254a0dac.1.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
+                                        <div class="gift-content mx-1">
+                                            <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
+                                            <div class="d-inline-block w-100 lh-100">
+                                                <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
+                                                <div class="d-flex align-items-center justify-content-between w-100">
+                                                    <div>
+                                                        <div class="d-flex align-items-center">
+                                                            <span class="text-warning me-1">&starf;</span>
+                                                            <span class="text-sm text-muted">4.6</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="text-sm text-muted me-2">484 Sold</span>
+                                                </div>
+                                            </div>
+                                            <div class="usd-price">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From US$28.39</h6>
+                                                </div>
+                                            </div>
+                                            <div class="zar-price d-none">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From R384.34</h6>
+                                                </div>
+                                            </div>
+                                            <div class="zwl-price d-none">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From ZW$2893.38</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- /.Related Gift -->
+                            <!-- Related Gift -->
+                            <div class="item w-100">
+                                <a href="categories.html" class="stretched-link">
+                                    <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
+                                        <img data-src="dist/images/gifts/15f458254a0dac.2.webp" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
+                                        <div class="gift-content mx-1">
+                                            <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
+                                            <div class="d-inline-block w-100 lh-100">
+                                                <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
+                                                <div class="d-flex align-items-center justify-content-between w-100">
+                                                    <div>
+                                                        <div class="d-flex align-items-center">
+                                                            <span class="text-warning me-1">&starf;</span>
+                                                            <span class="text-sm text-muted">4.6</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="text-sm text-muted me-2">484 Sold</span>
+                                                </div>
+                                            </div>
+                                            <div class="usd-price">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From US$28.39</h6>
+                                                </div>
+                                            </div>
+                                            <div class="zar-price d-none">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From R384.34</h6>
+                                                </div>
+                                            </div>
+                                            <div class="zwl-price d-none">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From ZW$2893.38</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- /.Related Gift -->
+                            <!-- Related Gift -->
+                            <div class="item w-100">
+                                <a href="categories.html" class="stretched-link">
+                                    <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
+                                        <img data-src="dist/images/gifts/15f458254a0dac.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
+                                        <div class="gift-content mx-1">
+                                            <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
+                                            <div class="d-inline-block w-100 lh-100">
+                                                <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
+                                                <div class="d-flex align-items-center justify-content-between w-100">
+                                                    <div>
+                                                        <div class="d-flex align-items-center">
+                                                            <span class="text-warning me-1">&starf;</span>
+                                                            <span class="text-sm text-muted">4.6</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="text-sm text-muted me-2">484 Sold</span>
+                                                </div>
+                                            </div>
+                                            <div class="usd-price">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From US$28.39</h6>
+                                                </div>
+                                            </div>
+                                            <div class="zar-price d-none">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From R384.34</h6>
+                                                </div>
+                                            </div>
+                                            <div class="zwl-price d-none">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From ZW$2893.38</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- /.Related Gift -->
+                            <!-- Related Gift -->
+                            <div class="item w-100">
+                                <a href="categories.html" class="stretched-link">
+                                    <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
+                                        <img data-src="dist/images/gifts/15f45885de939d.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
+                                        <div class="gift-content mx-1">
+                                            <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
+                                            <div class="d-inline-block w-100 lh-100">
+                                                <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
+                                                <div class="d-flex align-items-center justify-content-between w-100">
+                                                    <div>
+                                                        <div class="d-flex align-items-center">
+                                                            <span class="text-warning me-1">&starf;</span>
+                                                            <span class="text-sm text-muted">4.6</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="text-sm text-muted me-2">484 Sold</span>
+                                                </div>
+                                            </div>
+                                            <div class="usd-price">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From US$28.39</h6>
+                                                </div>
+                                            </div>
+                                            <div class="zar-price d-none">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From R384.34</h6>
+                                                </div>
+                                            </div>
+                                            <div class="zwl-price d-none">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From ZW$2893.38</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- /.Related Gift -->
+                            <!-- Related Gift -->
+                            <div class="item w-100">
+                                <a href="categories.html" class="stretched-link">
+                                    <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
+                                        <img data-src="dist/images/gifts/15f4598bf99479.2.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
+                                        <div class="gift-content mx-1">
+                                            <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
+                                            <div class="d-inline-block w-100 lh-100">
+                                                <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
+                                                <div class="d-flex align-items-center justify-content-between w-100">
+                                                    <div>
+                                                        <div class="d-flex align-items-center">
+                                                            <span class="text-warning me-1">&starf;</span>
+                                                            <span class="text-sm text-muted">4.6</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="text-sm text-muted me-2">484 Sold</span>
+                                                </div>
+                                            </div>
+                                            <div class="usd-price">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From US$28.39</h6>
+                                                </div>
+                                            </div>
+                                            <div class="zar-price d-none">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From R384.34</h6>
+                                                </div>
+                                            </div>
+                                            <div class="zwl-price d-none">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From ZW$2893.38</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- /.Related Gift -->
+                            <!-- Related Gift -->
+                            <div class="item w-100">
+                                <a href="categories.html" class="stretched-link">
+                                    <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
+                                        <img data-src="dist/images/gifts/15f4605c1791a6.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
+                                        <div class="gift-content mx-1">
+                                            <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
+                                            <div class="d-inline-block w-100 lh-100">
+                                                <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
+                                                <div class="d-flex align-items-center justify-content-between w-100">
+                                                    <div>
+                                                        <div class="d-flex align-items-center">
+                                                            <span class="text-warning me-1">&starf;</span>
+                                                            <span class="text-sm text-muted">4.6</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="text-sm text-muted me-2">484 Sold</span>
+                                                </div>
+                                            </div>
+                                            <div class="usd-price">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From US$28.39</h6>
+                                                </div>
+                                            </div>
+                                            <div class="zar-price d-none">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From R384.34</h6>
+                                                </div>
+                                            </div>
+                                            <div class="zwl-price d-none">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From ZW$2893.38</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- /.Related Gift -->
+                            <!-- Related Gift -->
+                            <div class="item w-100">
+                                <a href="categories.html" class="stretched-link">
+                                    <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
+                                        <img data-src="dist/images/gifts/15f460b1352a38.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
+                                        <div class="gift-content mx-1">
+                                            <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
+                                            <div class="d-inline-block w-100 lh-100">
+                                                <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
+                                                <div class="d-flex align-items-center justify-content-between w-100">
+                                                    <div>
+                                                        <div class="d-flex align-items-center">
+                                                            <span class="text-warning me-1">&starf;</span>
+                                                            <span class="text-sm text-muted">4.6</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="text-sm text-muted me-2">484 Sold</span>
+                                                </div>
+                                            </div>
+                                            <div class="usd-price">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From US$28.39</h6>
+                                                </div>
+                                            </div>
+                                            <div class="zar-price d-none">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From R384.34</h6>
+                                                </div>
+                                            </div>
+                                            <div class="zwl-price d-none">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="text-sm">From ZW$2893.38</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- /.Related Gift -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.Related Items Modal -->
 
     <!-- Settings Sidebar -->
     <div class="settings-bar">

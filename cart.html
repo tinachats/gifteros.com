@@ -196,6 +196,16 @@
             width: 42px;
             border-radius: 50%;
         }
+        
+        #cart-action-btns {
+            display: none !important;
+        }
+        
+        @media(min-width: 768px) {
+            .section-header {
+                height: 68px;
+            }
+        }
     </style>
 </head>
 
@@ -934,7 +944,7 @@
                                     <!-- /.Hidden Inputs -->
 
                                     <!-- Action Buttons -->
-                                    <div class="cart-action-btns">
+                                    <div class="#">
                                         <div class="d-flex align-items-center justify-content-center mt-2">
                                             <button class="btn btn-warning btn-sm btn-block font-600 d-flex align-items-center justify-content-center clear-cart me-2">
                                                 <i class="material-icons me-1">delete_sweep</i>
@@ -1277,50 +1287,6 @@
                 </nav>
                 <!-- /.Breadcrumbs -->
                 <div class="row">
-                    <!-- Side Navigation -->
-                    <div class="col-md-3 zoom-out-section">
-                        <div class="d-block sticky-top py-1">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <h6 class="lead font-600 my-0">Top Selling</h6>
-                                <a href="#" class="btn btn-sm bg-switch text-white text-sm font-600 px-2">See more</a>
-                            </div>
-                            <ul class="px-0 py-2">
-                                <!-- Horizontal Card Item -->
-                                <li class="bg-whitesmoke border box-shadow-sm rounded-2 mb-1 p-2">
-                                    <div class="d-flex align-items-start">
-                                        <img data-src="dist/images/gifts/15f47c6c077748.jpg" src="dist/images/app/bg-placeholder.PNG" height="100" width="100" loading="lazy" alt="" class="lazy me-2">
-                                        <div class="d-block">
-                                            <h6 class="font-600 text-capitalize my-0">Neon Lamp</h6>
-                                            <p class="text-sm text-muted my-0 py-0 text-lowercase">camera accessories</p>
-                                            <p class="text-sm text-justify my-1">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing... Alias, eaque.
-                                            </p>
-                                            <div class="d-flex align-items-center justify-content-between">
-                                                <!-- Gift  Star Rating -->
-                                                <ul class="list-inline gift-star-rating m-0 p-0">
-                                                    <li class="list-inline-item text-gold">&starf;</li>
-                                                    <li class="list-inline-item text-gold">&starf;</li>
-                                                    <li class="list-inline-item text-gold">&starf;</li>
-                                                    <li class="list-inline-item text-gold">&starf;</li>
-                                                    <li class="list-inline-item text-gold">&starf;</li>
-                                                </ul>
-                                                <!-- /.Gift Star Rating -->
-
-                                                <!-- Price -->
-                                                <p class="usd-price text-sm text-danger font-600 m-0 p-0">US$12.78</p>
-                                                <!-- /.Price -->
-                                            </div>
-                                            <a href="#" class="stretched-link"></a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- /.Horizontal Card Item -->
-                            </ul>
-                        </div>
-                        <!-- /.Similar Product Items -->
-                    </div>
-                    <!-- /.Side Navigation -->
-
                     <!-- Main Content -->
                     <div class="col-12 col-md-9 zoom-out-section">
                         <!-- Right Navbar -->
@@ -2138,6 +2104,51 @@
                         <!-- /.Gift Items -->
                     </div>
                     <!-- /.Main Content -->
+
+                    <!-- Cart Details -->
+                    <div class="col-md-3 zoom-out-section">
+                        <div class="d-block sticky-top">
+                            <div class="bg-whitesmoke border box-shadow-sm d-flex align-items-center justify-content-between p-2 section-header">
+                                <h6 class="lead font-600 my-0">Cart Items</h6>
+                                <h6 class="lead font-600 my-0">(3)</h6>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush bg-transparent mt-2">
+                            <li class="list-group-item bg-transparent">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h6 class="my-0">Delivery:</h6>
+                                    <h6 class="my-0">US$5.38</h6>
+                                </div>
+                            </li>
+                            <li class="list-group-item bg-transparent">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h6 class="my-0">Coupon:</h6>
+                                    <h6 class="my-0">US$7.38</h6>
+                                </div>
+                            </li>
+                            <li class="list-group-item bg-transparent">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h6 class="my-0">Subtotal:</h6>
+                                    <h6 class="my-0">US$5.38</h6>
+                                </div>
+                            </li>
+                            <li class="list-group-item bg-transparent">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h6 class="my-0 lead font-600">Total:</h6>
+                                    <h6 class="my-0 lead font-600">US$159.38</h6>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <button type="button" class="btn btn-warning btn-sm d-flex align-items-center font-600">
+                                <i class="material-icons me-1">delete_sweep</i> Clear Cart
+                            </button>
+                            <a href="checkout.html" role="button" class="btn btn-primary btn-sm d-flex align-items-center font-600">
+                                Checkout <i class="material-icons ms-1">arrow_forward</i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /.Cart Details -->
                 </div>
             </div>
         </div>
