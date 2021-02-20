@@ -7,7 +7,7 @@
 }
 
 
-/*** Default Styling ***/
+/*** Default Styling .divider-title ***/
 
 :root {
     --search-border-color: #ced4da;
@@ -33,7 +33,7 @@
     --cream: rgb(255, 218, 137);
     --light-red: rgba(114, 6, 6, 0.698);
     --icon-bg: rgba(47, 85, 107, 0.459);
-    --border-color: #ced4da;
+    --border-color: #6c757d;
     --text-shadow: 1px 1px 1px #000;
     --dark-green: #689f38;
     --ink-blue: #1976d2;
@@ -2737,7 +2737,7 @@ i[role="button"],
 }
 
 .text-purple {
-    color: purple
+    color: purple !important
 }
 
 .text-light-gray {
@@ -2817,7 +2817,7 @@ a.text-underline:hover,
 .display-5,
 .display-6,
 .text-color-switch {
-    color: var(--switch) !important;
+    color: var(--switch);
 }
 
 .lead.text-faded {
@@ -2979,6 +2979,14 @@ a.text-underline:hover,
 
 /* Social Login Buttons */
 
+.divider-name {
+    position: absolute;
+    padding: 0 5px;
+    margin-top: -30px;
+    left: 24%;
+    color: #fff;
+}
+
 .divider-title {
     position: absolute;
     background-color: var(--whitesmoke);
@@ -3007,6 +3015,16 @@ a.text-underline:hover,
 
 
 /* Buttons */
+
+.btn-outline-switch {
+    border: 1px solid var(--app-color);
+    color: var(--app-color);
+}
+
+.btn-outline-switch:hover {
+    background-color: var(--app-color);
+    color: #fff;
+}
 
 .btn-outline-secondary:hover,
 .btn-outline-secondary.active {

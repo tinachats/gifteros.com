@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Description -->
+    <meta name="description" content="Details page">
+    <!-- Developer -->
+    <meta name="developer" content="Tinashe. M. Chaterera">
+    <title>Gifteros | Sign-up</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="dist/images/app/gifteros.png" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="dist/plugins/bootstrap-v5/css/bootstrap.min.css">
+    <!-- Bootstrap-Icons -->
+    <link rel="stylesheet" href="dist/plugins/bootstrap-icons-1.2.2/font/bootstrap-icons.css">
+    <!-- Material-Design Icons -->
+    <link rel="stylesheet" href="dist/plugins/material-design-icons/iconfont/material-icons.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="dist/plugins/Ionicons/css/ionicons.min.css">
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="dist/plugins/font-awesome/css/font-awesome.min.css">
+    <!-- AnimatesCSS -->
+    <link rel="stylesheet" href="dist/plugins/animate.css/animate.min.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- iziToast -->
+    <link rel="stylesheet" href="dist/plugins/iziToast/css/iziToast.min.css">
+    <!-- SweetAlert -->
+    <link rel="stylesheet" href="dist/plugins/sweetalert2/package/dist/sweetalert2.min.css">
+    <!-- Gifteros -->
+    <link rel="stylesheet" href="dist/css/gifteros.min.css">
+</head>
+
+<body>
+    <!-- Page Content -->
+    <div class="content-wrapper">
+        <!-- Progress Indicator -->
+        <div class="line">
+            <div class="inner"></div>
+        </div>
+        <!-- /.Progress Indicator -->
+
+        <!-- Page Backdrop -->
+        <div class="app-backdrop d-none"></div>
+
+        <!-- Floating Action Buttons -->
+        <div class="fabs d-flex align-items-center flex-column justify-content-around">
+            <!-- Mobile Action Buttons -->
+            <div class="d-md-none">
+                <div class="floating-action box-shadow-sm action-btn bg-purple to-top" onclick="scrollToTop()" title="Scroll to top">
+                    <div class="m-auto d-flex flex-column justify-content-center lh-100">
+                        <i class="material-icons text-white my-0">arrow_upward</i>
+                        <small class="text-white font-600 my-0">Top</small>
+                    </div>
+                </div>
+                <div class="floating-action box-shadow-sm action-btn bg-brick-red" title="Theme mode" onclick="userTheme()">
+                    <i class="material-icons text-white m-auto">brightness_medium</i>
+                </div>
+                <div class="floating-action box-shadow-sm action-btn bg-success" id="toggle-whatsapp" title="WhatsApp">
+                    <i class="fa fa-whatsapp fa-2x text-white m-auto"></i>
+                </div>
+                <div class="floating-action box-shadow-sm toggle-actions bg-primary" title="Click to toggle actions">
+                    <i class="material-icons m-auto text-white">add</i>
+                </div>
+            </div>
+            <!-- /.Mobile Action Buttons -->
+
+            <!-- Cart Suggestions -->
+            <div class="d-sm-none d-md-block">
+                <div class="floating-action box-shadow-sm bg-switch" title="Click to toggle actions">
+                    <i class="material-icons m-auto text-white">lightbulb_outline</i>
+                </div>
+            </div>
+            <!-- /.Cart Suggestions -->
+        </div>
+        <!-- /.Floating Action Buttons -->
+
+        <!-- Side Action Panel -->
+        <div class="d-sm-none d-md-block">
+            <div class="navigation-panel bg-meshgrid d-flex flex-column justify-content-around align-items-center">
+                <ul class="panel-lists d-flex flex-column align-items-center px-0">
+                    <li class="panel-icon w-100 py-1">
+                        <a href="#" role="button" class="bi bi-geo-fill icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Trending In Your Area"></a>
+                    </li>
+                    <li class="panel-icon w-100 py-1">
+                        <a href="#" role="button" class="bi bi-clock-history icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Viewed Gifts"></a>
+                    </li>
+                    <li class="panel-icon w-100 py-1">
+                        <a href="#" role="button" class="bi bi-truck icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Track Your Order"></a>
+                    </li>
+                    <li class="panel-icon w-100 py-1">
+                        <a href="#" role="button" class="bi bi-receipt icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Coupons"></a>
+                    </li>
+                </ul>
+                <ul class="panel-lists d-flex flex-column align-items-center px-0">
+                    <li class="panel-icon dropup w-100 py-1">
+                        <a href="#" role="button" class="bi bi-share-fill icon-md text-white" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                        <ul class="dropdown-menu sharing-menu ps-3">
+                            <li class="dropdown-menu-item d-flex align-items-center mb-2">
+                                <div class="social-login-btn bg-aqua" title="Share on Twitter">
+                                    <i class="fa fa-twitter text-white"></i>
+                                </div>
+                                <span class="ms-1 text-sm">Twitter</span>
+                            </li>
+                            <li class="dropdown-menu-item d-flex align-items-center mb-2">
+                                <div class="social-login-btn bg-danger" title="Share on Instagram">
+                                    <i class="fa fa-instagram text-white"></i>
+                                </div>
+                                <span class="ms-1 text-sm">Instagram</span>
+                            </li>
+                            <li class="dropdown-menu-item d-flex align-items-center mb-2">
+                                <div class="social-login-btn bg-primary" title="Share on Facebook">
+                                    <i class="fa fa-facebook text-white"></i>
+                                </div>
+                                <span class="ms-1 text-sm">Facebook</span>
+                            </li>
+                            <li class="dropdown-menu-item d-flex align-items-center">
+                                <div class="social-login-btn bg-primary" title="Share on LinkedIn">
+                                    <i class="fa fa-linkedin text-white"></i>
+                                </div>
+                                <span class="ms-1 text-sm">LinkedIn</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="panel-icon w-100 py-1">
+                        <a href="#" role="button" class="bi bi-question-circle icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Help and Feedback"></a>
+                    </li>
+                    <li class="panel-icon w-100 py-1 to-top">
+                        <a href="#" role="button" class="bi bi-arrow-up-circle icon-md text-white" onclick="scrollToTop();" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Back to Top"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.Side Action Panel -->
+
+        <!-- Main Navbar -->
+        <header class="header fixed-md-top box-shadow-sm d-sm-none d-md-block">
+            <div class="container">
+                <!-- Main Navbar -->
+                <nav class="nav navbar-expand-md main-nav">
+                    <span role="button" class="material-icons menu-btn d-sm-inline-block d-md-none" title="Toggle Sidebar">menu</span>
+                    <!-- Navbrand -->
+                    <a href="index.html" class="navbar-brand font-700">
+                        <img src="dist/images/app/gifteros.png" height="35" class="gifteros-logo" width="35" alt="">
+                        <span class="mobile-brand brandname">Gifteros</span>
+                    </a>
+                    <!-- /.Navbrand -->
+
+                    <!-- Left Navbar Links -->
+                    <ul class="navbar-nav me-auto d-none d-md-flex">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-sm font-600 mega-item" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Occasions</a>
+                            <div class="dropdown-menu mega-menu box-shadow-sm rounded-2">
+                                <div class="container-fluid">
+                                    <div class="categories-grid">
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="anniversary-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/anniversary_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">anniversary</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/anniversary_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="birthday-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/birthday_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">Birthday</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/birthday_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="christmas-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/christmas_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">christmas</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/christmas_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="congrats-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/congrats_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">congrats</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/congrats_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="easter-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/easter_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">easter</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/easter_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="farewell-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/farewell_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">farewell</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/farewell_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="fathersday-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/for_him" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">father's day</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/for_him" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="getwell-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/getwell_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">get well</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/getwell_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="graduation-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/graduation_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">graduation</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/graduation_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="just-because-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/because_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">just because</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/because_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="mothersday-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/for_her" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">mother's day</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/for_her" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="newbaby-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/baby_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">new baby</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/baby_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="newhome-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/home_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">new home</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/home_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="newyear-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/newyear_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">new year</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/newyear_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="retirement-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/retirement_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">retirement</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/retirement_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="sympathy-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/sympathy_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">sympathy</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/sympathy_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="thanks-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/thanks_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">thank you</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/thanks_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="valentines-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/valentines_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">Valentine's</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/valentines_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="wedding-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/wedding_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">wedding</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/wedding_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+
+                                        <!-- Occasion Card -->
+                                        <div class="occasion-card d-grid" id="workplace-card">
+                                            <div class="occassion-text m-auto">
+                                                <a href="/category/workplace_gifts" class="d-flex align-items-center">
+                                                    <h5 class="my-0 py-0 font-600 text-capitalize">workplace</h5>
+                                                    <span class="fa fa-caret-right go-there ms-2"></span>
+                                                </a>
+                                                <a href="/category/workplace_gifts" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+                                        <!-- Occasion Card -->
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item d-none d-lg-inline">
+                            <a class="nav-link text-sm font-600" href="trending.html">Trending</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-sm font-600" href="/category/hot_deals">Hot Deals</a>
+                        </li>
+                    </ul>
+                    <!-- /.Left Navbar Links -->
+
+                    <!-- Right Navbar Links -->
+                    <ul class="ms-auto justify-content-sm-around d-flex align-items-center m-0 p-0">
+                        <!-- App Currencies -->
+                        <li class="nav-item d-none d-md-flex" data-bs-toggle="tooltip" title="Select currency">
+                            <div class="usd-price nav-link font-600 navbar-text">
+                                <div class="dropdown dropdown-toggle d-cursor" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img id="currency-flag" src="dist/images/currencies/usd.png" height="15" width="22" alt="">
+                                    <span id="currency-total" class="usd-price text-color-switch">US$12.48</span>
+                                </div>
+                                <div class="dropdown-menu box-shadow-sm rounded-2 currency-dropdown-menu">
+                                    <div class="dropdown-menu-item d-flex align-items-center currency-option d-cursor ps-3 py-1">
+                                        <img src="dist/images/currencies/usd.png" height="15" width="22" alt="">
+                                        <span id="usd-price" data-total="US$12.48" class="font-600 ms-1">USD</span>
+                                    </div>
+                                    <div class="dropdown-menu-item d-flex align-items-center currency-option d-cursor ps-3 py-1">
+                                        <img src="dist/images/currencies/zar.jpg" height="15" width="22" alt="">
+                                        <span id="zar-price" data-total="R183.18" class="font-600 ms-1">ZAR</span>
+                                    </div>
+                                    <div class="dropdown-menu-item d-flex align-items-center currency-option d-cursor ps-3 py-1">
+                                        <img src="dist/images/currencies/zwl.png" height="15" width="22" alt="">
+                                        <span id="zwl-price" data-total="ZW$1248.00" class="font-600 ms-1">ZWL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- /.App Currencies -->
+
+                        <!-- Shopping Cart -->
+                        <li class="nav-item dropdown ms-3">
+                            <a href="#" class="nav-link icon-link" id="shopping-cart" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bi bi-cart4 icon-md pull-up"></i>
+                                <span class="badge nav-badge gift-count">4</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end app-menu rounded-2 box-shadow-sm cart-menu mt-0 p-0">
+                                <div class="shopping-bag rounded-2">
+                                    <div class="list-group-item box-shadow-sm rounded-top-2 lh-100 px-1 py-2 fixed-top">
+                                        <h6 class="lead font-600 ml-2 my-0">4 cart items</h6>
+                                    </div>
+                                    <!-- Cart Item -->
+                                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="d-flex w-100">
+                                                <!-- Product Item -->
+                                                <div class="d-flex align-items-center">
+                                                    <div class="cart-menu-img-wrapper">
+                                                        <div class="d-sm-flex d-xl-none flex-column justify-content-center text-center cart-actions-sm">
+                                                            <i role="button" class="fa fa-chevron-circle-up text-success-warning subtract-product"></i>
+                                                            <span class="font-600 text-success-warning item-count">0</span>
+                                                            <i role="button" class="fa fa-chevron-circle-down text-success-warning increase-qty"></i>
+                                                        </div>
+                                                        <a href="">
+                                                            <img src="dist/images/gifts/15f45885de939d.jpg" height="55" width="55" alt="" class="rounded-2 align-self-center menu-item-img me-2">
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Product Item Details -->
+                                                    <div class="cart-item-details" id="cart-item-details">
+                                                        <p class="text-sm font-600 text-capitalize my-0 py-0">
+                                                            Awesome gift
+                                                        </p>
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&star;</li>
+                                                            <span class="text-sm text-faded font-600">(35)</span>
+                                                        </ul>
+                                                        <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
+                                                            <span class="pr-2">2 in cart</span>
+                                                        </p>
+                                                    </div>
+                                                    <!-- Product Item Details -->
+                                                    <!-- Cart Actions -->
+                                                    <div class="hidden-product-actions w-100">
+                                                        <div class="d-flex align-items-center justify-content-center m-0 p-0 cursor">
+                                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Subtract quantity">remove_circle</span>
+                                                            <span role="button" class="product-actions text-faded mx-4">2</span>
+                                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Add more items">add_circle</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.Cart Actions -->
+                                                </div>
+                                                <!-- /.Product Item -->
+                                            </div>
+                                            <div class="d-block text-center">
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
+                                                <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- /.Cart Item -->
+                                    <!-- Cart Item -->
+                                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="d-flex w-100">
+                                                <!-- Product Item -->
+                                                <div class="d-flex align-items-center">
+                                                    <div class="cart-menu-img-wrapper">
+                                                        <div class="d-sm-flex d-xl-none flex-column justify-content-center text-center cart-actions-sm">
+                                                            <i role="button" class="fa fa-chevron-circle-up text-success-warning subtract-product"></i>
+                                                            <span class="font-600 text-success-warning item-count">0</span>
+                                                            <i role="button" class="fa fa-chevron-circle-down text-success-warning increase-qty"></i>
+                                                        </div>
+                                                        <a href="">
+                                                            <img src="dist/images/gifts/15f45885de939d.jpg" height="55" width="55" alt="" class="rounded-2 align-self-center menu-item-img me-2">
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Product Item Details -->
+                                                    <div class="cart-item-details" id="cart-item-details">
+                                                        <p class="text-sm font-600 text-capitalize my-0 py-0">
+                                                            Awesome gift
+                                                        </p>
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&star;</li>
+                                                            <span class="text-sm text-faded font-600">(35)</span>
+                                                        </ul>
+                                                        <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
+                                                            <span class="pr-2">2 in cart</span>
+                                                        </p>
+                                                    </div>
+                                                    <!-- Product Item Details -->
+                                                    <!-- Cart Actions -->
+                                                    <div class="hidden-product-actions w-100">
+                                                        <div class="d-flex align-items-center justify-content-center m-0 p-0 cursor">
+                                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Subtract quantity">remove_circle</span>
+                                                            <span role="button" class="product-actions text-faded mx-4">2</span>
+                                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Add more items">add_circle</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.Cart Actions -->
+                                                </div>
+                                                <!-- /.Product Item -->
+                                            </div>
+                                            <div class="d-block text-center">
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
+                                                <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- /.Cart Item -->
+                                    <!-- Cart Item -->
+                                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="d-flex w-100">
+                                                <!-- Product Item -->
+                                                <div class="d-flex align-items-center">
+                                                    <div class="cart-menu-img-wrapper">
+                                                        <div class="d-sm-flex d-xl-none flex-column justify-content-center text-center cart-actions-sm">
+                                                            <i role="button" class="fa fa-chevron-circle-up text-success-warning subtract-product"></i>
+                                                            <span class="font-600 text-success-warning item-count">0</span>
+                                                            <i role="button" class="fa fa-chevron-circle-down text-success-warning increase-qty"></i>
+                                                        </div>
+                                                        <a href="">
+                                                            <img src="dist/images/gifts/15f45885de939d.jpg" height="55" width="55" alt="" class="rounded-2 align-self-center menu-item-img me-2">
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Product Item Details -->
+                                                    <div class="cart-item-details" id="cart-item-details">
+                                                        <p class="text-sm font-600 text-capitalize my-0 py-0">
+                                                            Awesome gift
+                                                        </p>
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&star;</li>
+                                                            <span class="text-sm text-faded font-600">(35)</span>
+                                                        </ul>
+                                                        <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
+                                                            <span class="pr-2">2 in cart</span>
+                                                        </p>
+                                                    </div>
+                                                    <!-- Product Item Details -->
+                                                    <!-- Cart Actions -->
+                                                    <div class="hidden-product-actions w-100">
+                                                        <div class="d-flex align-items-center justify-content-center m-0 p-0 cursor">
+                                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Subtract quantity">remove_circle</span>
+                                                            <span role="button" class="product-actions text-faded mx-4">2</span>
+                                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Add more items">add_circle</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.Cart Actions -->
+                                                </div>
+                                                <!-- /.Product Item -->
+                                            </div>
+                                            <div class="d-block text-center">
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
+                                                <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- /.Cart Item -->
+                                    <!-- Cart Item -->
+                                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="d-flex w-100">
+                                                <!-- Product Item -->
+                                                <div class="d-flex align-items-center">
+                                                    <div class="cart-menu-img-wrapper">
+                                                        <div class="d-sm-flex d-xl-none flex-column justify-content-center text-center cart-actions-sm">
+                                                            <i role="button" class="fa fa-chevron-circle-up text-success-warning subtract-product"></i>
+                                                            <span class="font-600 text-success-warning item-count">0</span>
+                                                            <i role="button" class="fa fa-chevron-circle-down text-success-warning increase-qty"></i>
+                                                        </div>
+                                                        <a href="">
+                                                            <img src="dist/images/gifts/15f45885de939d.jpg" height="55" width="55" alt="" class="rounded-2 align-self-center menu-item-img me-2">
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Product Item Details -->
+                                                    <div class="cart-item-details" id="cart-item-details">
+                                                        <p class="text-sm font-600 text-capitalize my-0 py-0">
+                                                            Awesome gift
+                                                        </p>
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&star;</li>
+                                                            <span class="text-sm text-faded font-600">(35)</span>
+                                                        </ul>
+                                                        <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
+                                                            <span class="pr-2">2 in cart</span>
+                                                        </p>
+                                                    </div>
+                                                    <!-- Product Item Details -->
+                                                    <!-- Cart Actions -->
+                                                    <div class="hidden-product-actions w-100">
+                                                        <div class="d-flex align-items-center justify-content-center m-0 p-0 cursor">
+                                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Subtract quantity">remove_circle</span>
+                                                            <span role="button" class="product-actions text-faded mx-4">2</span>
+                                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Add more items">add_circle</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.Cart Actions -->
+                                                </div>
+                                                <!-- /.Product Item -->
+                                            </div>
+                                            <div class="d-block text-center">
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
+                                                <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- /.Cart Item -->
+                                </div>
+                                <!-- Cart Details -->
+                                <li class="list-group-item w-100 lh-100 font-600 text-sm rounded-bottom-2" id="cart-action-btns">
+                                    <!-- Cart Subtotal -->
+                                    <div class="usd-price">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Subtotal Amount:</span>
+                                            <span class="usd-subtotal">US$0.00</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zar-price d-none">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Subtotal Amount:</span>
+                                            <span class="zar-subtotal">R0.00</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zwl-price d-none">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Subtotal Amount:</span>
+                                            <span class="zwl-subtotal">ZW$0.00</span>
+                                        </h6>
+                                    </div>
+                                    <!-- /.Cart Subtotal -->
+
+                                    <!-- Delivery charges -->
+                                    <div class="usd-price">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Delivery Costs:</span>
+                                            <span class="usd-delivery-cost">US$3.39</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zar-price d-none">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Delivery Costs:</span>
+                                            <span class="zar-delivery-cost">R283.48</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zwl-price d-none">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Delivery Costs:</span>
+                                            <span class="zwl-delivery-cost">ZW$384.48</span>
+                                        </h6>
+                                    </div>
+                                    <!-- /.Delivery Charges -->
+                                    <!-- /.Delivery Charges -->
+
+                                    <!-- Taxes & Discounts -->
+                                    <div class="usd-price">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Discount:</span>
+                                            <span class="usd-discount">US$3.48</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zar-price d-none">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Discount:</span>
+                                            <span class="zar-discount">R49.39</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zwl-price d-none">
+                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Discount:</span>
+                                            <span class="zwl-discount">ZW$393.39</span>
+                                        </h6>
+                                    </div>
+                                    <hr class="my-1">
+                                    <!-- /.Taxes & Discounts -->
+
+                                    <!-- Cart Total -->
+                                    <div class="usd-price">
+                                        <h6 class="font-600 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Cart Total:</span>
+                                            <span class="usd-total">US$0.00</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zar-price d-none">
+                                        <h6 class="font-600 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Cart Total:</span>
+                                            <span class="zar-total">R0.00</span>
+                                        </h6>
+                                    </div>
+                                    <div class="zwl-price d-none">
+                                        <h6 class="font-600 d-flex justify-content-between align-items-center my-0 py-0">
+                                            <span class="text-capitalize">Cart Total:</span>
+                                            <span class="zwl-total">ZW$0.00</span>
+                                        </h6>
+                                    </div>
+                                    <!-- /.Cart Total -->
+
+                                    <!-- Hidden Inputs -->
+                                    <input type="hidden" name="cart-usd-subtotal" id="cart-usd-subtotal">
+                                    <input type="hidden" name="cart-zar-subtotal" id="cart-zar-subtotal">
+                                    <input type="hidden" name="cart-zwl-subtotal" id="cart-zwl-subtotal">
+                                    <input type="hidden" name="cart-usd-total" id="cart-usd-total">
+                                    <input type="hidden" name="cart-zar-total" id="cart-zar-total">
+                                    <input type="hidden" name="cart-zwl-total" id="cart-zwl-total">
+                                    <!-- /.Hidden Inputs -->
+
+                                    <!-- Action Buttons -->
+                                    <div class="cart-action-btns">
+                                        <div class="d-flex align-items-center justify-content-center mt-2">
+                                            <button class="btn btn-warning btn-sm btn-block font-600 d-flex align-items-center justify-content-center clear-cart me-1">
+                                                <i class="material-icons me-1">delete_sweep</i>
+                                                Clear Cart
+                                            </button>
+                                            <a role="button" href="cart.html" class="btn btn-primary btn-sm btn-block font-600 d-flex align-items-center justify-content-center checkout-btn m-0">
+                                                Go to Cart
+                                                <i class="material-icons ms-1">arrow_forward</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- /.Action Buttons -->
+                                </li>
+                                <!-- /.Cart Details -->
+                            </ul>
+                        </li>
+                        <!-- /.Shopping Cart -->
+
+                        <!-- Visitor -->
+                        <li class="nav-item dropdown ms-3">
+                            <a role="button" class="btn bg-switch btn-sm rounded-pill d-flex align-items-center font-600 dropdown-toggle text-white" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons me-2">person_outline</i>
+                                <span class="text-white">Sign in</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end user-menu app-menu box-shadow-sm rounded-2 px-3" id="visitor-menu">
+                                <div class="d-flex justify-content-center align-items-center text-skyblue font-600">
+                                    <img src="dist/images/greeting-icons/sunrise.svg" alt="" class="greeting-icon">
+                                    <h6 class="user-greeting text-app-color m-0 p-0 font-600">Good morning!</h6>
+                                </div>
+                                <p class="text-faded text-sm text-center font-600">
+                                    Sign in for a personalized shopping experience.
+                                </p>
+                                <form method="POST" class="needs-validation" action="" novalidate>
+                                    <div class="form-group mb-1 pb-1">
+                                        <label for="email" class="mb-0 font-600 text-sm">Email</label>
+                                        <input type="email" name="email" id="email" class="form-control form-control-sm" value="" autocomplete="email" required>
+                                        <small class="invalid-feedback font-600" id="nameError"></small>
+                                    </div>
+
+                                    <div class="form-group mb-1 pb-1">
+                                        <label for="password" class="mb-0 font-600 text-sm">Password</label>
+                                        <input type="password" name="password" id="password" class="form-control form-control-sm" value="" autocomplete="password" required>
+                                        <small class="invalid-feedback font-600" id="nameError"></small>
+                                    </div>
+
+                                    <div class="row gy-0 align-items-center">
+                                        <div class="col-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                                                <label class="form-check-label text-sm" for="autoSizingCheck">
+                                                    Remember me
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="" class="text-sm font-600">Forgot password?</a>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-sm bg-switch text-white rounded-pill lead font-600 btn-block mt-2">
+                                        <span class="text-white">Sign in</span>
+                                    </button>
+                                </form>
+
+                                <div class="flex-column justify-content-center">
+                                    <div class="division-block">
+                                        <hr class="divider bg-border-color d-flex justify-content-center position-relative">
+                                        <strong class="divider-title text-uppercase text-muted">or</strong>
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center mb-3 mt-0">
+                                        <a role="button" href="" class="btn btn-outline-switch btn-sm social-login-btn" title="Sign-in with Facebook">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                        <a role="button" href="" class="btn btn-outline-switch btn-sm mx-3 social-login-btn" title="Sign-in with Google">
+                                            <i class="fa fa-google"></i>
+                                        </a>
+                                        <a role="button" href="" class="btn btn-outline-switch btn-sm social-login-btn me-3" title="Sign-in with Twitter">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                        <a role="button" href="" class="btn btn-outline-switch btn-sm social-login-btn" title="Sign-in with Instagram">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <hr class="mb-0 pb-0">
+                                <div class="d-flex align-items-center w-100 mb-2">
+                                    Don't have an account? <a href="/register" class="ms-1 d-flex align-items-center">Sign-Up <i class="fa fa-caret-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- /.Visitor -->
+
+                        <li class="nav-item d-md-flex ms-3" id="app-settings" data-bs-toggle="tooltip" title="See more settings">
+                            <a class="toggle-settings nav-link icon-link material-icons">tune</a>
+                        </li>
+                    </ul>
+                    <!-- /.Right Navbar Links -->
+                </nav>
+                <!-- Main Navbar -->
+
+                <!-- Search Form -->
+                <form method="get" action="/search" id="search-form" class="bg-whitesmoke">
+                    <div class="form-group icon-form-group" id="search-bar">
+                        <i class="material-icons icon text-faded">search</i>
+                        <input type="search" name="search" id="search" class="form-control" placeholder="Search...">
+                        <ul class="list-group bg-whitesmoke search-list rounded-bottom-2 d-none px-0">
+                            <!-- Search Result Item-->
+                            <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <!-- Product Item Details -->
+                                    <div class="d-flex w-100">
+                                        <a href="details.html">
+                                            <img data-src="dist/images/gifts/15f4598bf99479.2.jpg" src="dist/images/app/bg-placeholder.PNG" height="60" width="60" loading="lazy" alt="" class="align-self-center rounded-2 lazy me-2">
+                                        </a>
+                                        <div class="d-block">
+                                            <a href="details.html">
+                                                <h6 class="font-600 text-capitalize my-0">Kitchen cutting boards</h6>
+                                                <p class="text-sm text-muted text-capitalize my-0 py-0">kitchenware</p>
+                                                <ul class="list-inline gift-star-rating align-items-center bg-transparent gift-star-rating d-cursor my-0 p-0">
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-muted">&star;</li>
+                                                    <span class="text-sm text-faded font-600">(389)</span>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Item Details -->
+                                    <div class="d-block text-center">
+                                        <h6 class="text-sm font-600 text-danger my-0 pt-0 cart-item-price">$12.99</h6>
+                                        <button class="btn btn-sm bg-switch text-white px-2 mt-2 add-to-cart-btn">Buy now</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- /.Search Result Item-->
+
+                            <!-- Search Result Item-->
+                            <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <!-- Product Item Details -->
+                                    <div class="d-flex w-100">
+                                        <a href="details.html">
+                                            <img data-src="dist/images/gifts/15f460b1352a38.1.jpg" src="dist/images/app/bg-placeholder.PNG" height="60" width="60" loading="lazy" alt="" class="align-self-center rounded-2 lazy me-2">
+                                        </a>
+                                        <div class="d-block">
+                                            <a href="details.html">
+                                                <h6 class="font-600 text-capitalize my-0">Kitchen cutting boards</h6>
+                                                <p class="text-sm text-muted text-capitalize my-0 py-0">kitchenware</p>
+                                                <ul class="list-inline gift-star-rating align-items-center bg-transparent gift-star-rating d-cursor my-0 p-0">
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-muted">&star;</li>
+                                                    <span class="text-sm text-faded font-600">(389)</span>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Item Details -->
+                                    <div class="d-block text-center">
+                                        <h6 class="text-sm font-600 text-danger my-0 pt-0 cart-item-price">$12.99</h6>
+                                        <button class="btn btn-sm bg-switch text-white px-2 mt-2 add-to-cart-btn">Buy now</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- /.Search Result Item-->
+
+                            <!-- Search Result Item-->
+                            <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <!-- Product Item Details -->
+                                    <div class="d-flex w-100">
+                                        <a href="details.html">
+                                            <img data-src="dist/images/gifts/15f460c7f56472.jpg" src="dist/images/app/bg-placeholder.PNG" height="60" width="60" loading="lazy" alt="" class="align-self-center rounded-2 lazy me-2">
+                                        </a>
+                                        <div class="d-block">
+                                            <a href="details.html">
+                                                <h6 class="font-600 text-capitalize my-0">Kitchen cutting boards</h6>
+                                                <p class="text-sm text-muted text-capitalize my-0 py-0">kitchenware</p>
+                                                <ul class="list-inline gift-star-rating align-items-center bg-transparent gift-star-rating d-cursor my-0 p-0">
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-muted">&star;</li>
+                                                    <span class="text-sm text-faded font-600">(389)</span>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Item Details -->
+                                    <div class="d-block text-center">
+                                        <h6 class="text-sm font-600 text-danger my-0 pt-0 cart-item-price">$12.99</h6>
+                                        <button class="btn btn-sm bg-switch text-white px-2 mt-2 add-to-cart-btn">Buy now</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- /.Search Result Item-->
+                        </ul>
+                    </div>
+                </form>
+                <!-- /.Search Form -->
+            </div>
+        </header>
+        <!-- /.Main Navbar -->
+
+        <div class="page-content">
+            <div class="container">
+                <!-- Breadcrumbs -->
+                <nav class="d-flex align-items-center justify-content-md-between my-2" aria-label="breadcrumb">
+                    <h4 class="text-app-color font-600 my-0">Account & Login Issues</h4>
+                    <ol class="breadcrumb my-0 py-0">
+                        <li class="breadcrumb-item"><a href="index.html">Store</a></li>
+                        <li class="breadcrumb-item">Account</li>
+                        <li class="breadcrumb-item active text-capitalize" aria-current="page">Issues</li>
+                    </ol>
+                </nav>
+                <!-- /.Breadcrumbs -->
+                <div class="row justify-content-center p-2">
+                    <div class="col-12 col-md-6 bg-whitesmoke box-shadow-sm rounded-2 border pb-5">
+                        <h6 class="font-600 lead mt-2">What can we help you with?</h6>
+                        <label for="select-issue" class="form-label mb-0">Select an issue</label>
+                        <select class="form-select form-select-sm" id="select-issue" aria-label=".form-select-sm example">
+                            <option selected disabled value="">Please make a selection</option>
+                            <option value="forgot-password">I forgot my password</option>
+                            <option value="not-registered">I do not have a Gifteros account</option>
+                            <option value="failed-regstering">I cannot create an account</option>
+                        </select>
+                        <!-- Forgot password -->
+                        <div class="card card-body issues-card-info rounded-2 my-2 d-none" id="forgot-password">
+                            <h6 class="lead font-600 text-app-color">Did you know?</h6>
+                            <p class="card-text">
+                                Have you tried our <a href="forgot-password.html" class="text-underline">Password Reset page?</a>
+                            </p>
+                            <p class="card-text">
+                                If you've already tried to reset your password, but haven't received an email from Gifteros, check your Junk or Spam folder.
+                            </p>
+                            <p class="card-text">
+                                If you can't access your email, try resetting that first through your email provider.
+                            </p>
+                            <p class="card-text">
+                                If you have recently updated your password, your old password could still be saved in your browser, try clearing it and re-typing in your password.
+                            </p>
+                        </div>
+                        <!-- /.Forgot password -->
+
+                        <!-- Password not working -->
+                        <div class="card card-body issues-card-info rounded-2 my-2 d-none" id="password-malfunctioning">
+                            <h6 class="lead font-600 text-app-color">Did you know?</h6>
+                            <p class="card-text">
+                                Sometimes for added security, we have to authorize your account via email. Please check your inbox for an email from Gifteros with more details.
+                            </p>
+                            <p class="card-text">
+                                If you recently changed your password and are having trouble with it, your browser may have an old password saved. Try clearing any saved passwords and re-entering your new one.
+                            </p>
+                            <p class="card-text">
+                                And if you haven't yet tried resetting your password, please visit out <a href="forgot-password.html">Password reset page?</a>
+                            </p>
+                            <p class="card-text">
+                                If you haven't seen an email from us and are still having trouble getting signed in, please call us at:
+                            </p>
+                            <p class="card-text">
+                                International(charges may apply) +263 77 602 1140.
+                            </p>
+                        </div>
+                        <!-- /.Password not working -->
+
+                        <!-- Don't have an account -->
+                        <div class="card card-body issues-card-info rounded-2 my-2 d-none" id="need-an-account">
+                            <h6 class="lead font-600 text-app-color">Did you know?</h6>
+                            <p class="card-text">
+                                You can quickly set up a Gifteros account from our <a href="register.html">Sign-up page.</a>
+                            </p>
+                            <p class="card-text">
+                                If you need more help creating your Gifteros account, call us at +263 77 602 1140. (international charges may apply.)
+                            </p>
+                        </div>
+                        <!-- /.Don't have an account -->
+
+                        <!-- Don't have an account -->
+                        <div class="card card-body issues-card-info rounded-2 my-2 d-none" id="cannot-create-account">
+                            <h6 class="lead font-600 text-app-color">Did you know?</h6>
+                            <p class="card-text">
+                                Sorry that you're having trouble creating a Gifteros account. Have you tried our <a href="register.html">Sign-up page.</a>
+                            </p>
+                            <p class="card-text">
+                                If you need more help creating your Gifteros account, call us at +263 77 602 1140. (international charges may apply.)
+                            </p>
+                        </div>
+                        <!-- /.Don't have an account -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.Page Content -->
+
+    <!-- JQuery -->
+    <script src="dist/plugins/jquery/jquery.min.js "></script>
+    <!-- Bootstrap 4 -->
+    <script src="dist/plugins/bootstrap-v5/js/bootstrap.bundle.min.js "></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
+    <!-- iziToast -->
+    <script src="dist/plugins/iziToast/js/iziToast.min.js "></script>
+    <!-- Sweet Alert -->
+    <script src="dist/plugins/sweetalert2/package/dist/sweetalert2.min.js "></script>
+    <!-- Gifteros -->
+    <script src="dist/js/gifteros.min.js "></script>
+    <script>
+        $(function() {
+            $('#select-issue').on('change', function() {
+                var issue = $(this).val();
+                switch (issue) {
+                    case 'forgot-password':
+                        $('#forgot-password').removeClass('d-none');
+                        $('.issues-card-info').not('#forgot-password').addClass('d-none');
+                        break;
+                    case 'not-registered':
+                        $('#password-malfunctioning').removeClass('d-none');
+                        $('.issues-card-info').not('#password-malfunctioning').addClass('d-none');
+                        break;
+                    case 'failed-regstering':
+                        $('#cannot-create-account').removeClass('d-none');
+                        $('.issues-card-info').not('#cannot-create-account').addClass('d-none');
+                        break;
+                    default:
+                        $('.issues-card-info').addClass('d-none');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
