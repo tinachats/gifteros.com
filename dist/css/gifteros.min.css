@@ -881,6 +881,11 @@ input[name="search"]:focus .search-list li {
 
 /* Floating Action Buttons */
 
+.card.circled-icon {
+    position: absolute;
+    bottom: 0;
+}
+
 .circled-icon {
     position: relative;
     border: 5px solid var(--badge-light);
