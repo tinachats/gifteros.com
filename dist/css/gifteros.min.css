@@ -883,7 +883,11 @@ input[name="search"]:focus .search-list li {
 
 .card.circled-icon {
     position: absolute;
-    bottom: 0;
+    top: 75%;
+    left: 70%;
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
 }
 
 .circled-icon {
@@ -2724,6 +2728,10 @@ i[role="button"],
 
 
 /* Text Colors */
+
+.text-inherit {
+    color: inherit !important;
+}
 
 .text-success-warning {
     color: var(--text-success-warning);
