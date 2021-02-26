@@ -41,148 +41,26 @@
             z-index: 1000 !important
         }
         
-        .price-range-input {
-            width: 4rem;
+        .nav-pills .show>.nav-link {
+            background: transparent;
+            border: 1px solid rgba(0, 0, 0, .125);
+            border-radius: 0 !important;
         }
         
-        .list-view>.product-card>.product-img-wrapper .card-img-top {
-            height: auto;
+        .nav-pills .nav-link.active {
+            background-color: rgba(0, 0, 0, .125);
+            border-radius: 0 !important;
         }
         
-        .filter-list>li {
-            padding: .1rem 1.5rem;
+        #v-pills-tab {
+            position: sticky;
+            top: 3.5rem;
         }
         
-        .circled-button,
-        .circled-button {
-            border-radius: 50%;
-        }
-        
-        .circled-button {
-            height: 40px;
-            width: 40px;
-        }
-        
-        .circled-button {
-            height: 30px;
-            width: 30px;
-        }
-        
-        .nav-form-control {
-            width: 15%;
-        }
-        
-        .owl-carousel {
-            position: relative;
-            display: flex;
-            width: 100%;
-        }
-        
-        .owl-carousel>.item {
-            box-sizing: border-box;
-        }
-        
-        .owl-carousel>.item>div {
-            width: 100%;
-        }
-        /*** Wishlist Item ***/
-        
-        .ordered-item {
-            background-color: var(--white);
-        }
-        
-        .toggle-buttons {
-            display: none;
-        }
-        /*** /.Wishlist Item ***/
-        /*** List View ***/
-        
-        .ordered-items.list-view {
-            grid-template-columns: 1fr;
-        }
-        
-        .ordered-items.list-view>.ordered-item {
-            background-color: var(--whitesmoke);
-            padding: .5rem;
-        }
-        
-        .ordered-items.list-view>.ordered-item>.item-content {
-            display: flex;
-            height: 70%;
-            width: 100%;
-        }
-        
-        .ordered-items.list-view>.ordered-item>.item-content img.item-img {
-            height: 100px;
-            width: 100px;
-            margin-right: .5rem;
-            border-radius: .5rem;
-        }
-        
-        .ordered-items.list-view>.ordered-item>.item-content .item-body-buttons {
-            margin-left: auto !important;
-        }
-        
-        .ordered-items.list-view>.ordered-item>.item-content .item-body-buttons,
-        .ordered-items.list-view>.ordered-item>.item-content .top-content {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        
-        .ordered-items.list-view>.ordered-item>.item-content .top-content {
-            flex: 1 0 auto;
-        }
-        
-        .ordered-items.list-view>.ordered-item>.item-content .bottom-content {
-            flex-shrink: 0;
-        }
-        
-        .ordered-items.list-view>.ordered-item>.item-content .collapse-btn {
-            display: inline-block;
-            margin-right: .25rem;
-        }
-        
-        .ordered-items.list-view>.ordered-item>.item-content .modal-btn {
-            display: none !important;
-        }
-        /*** /.List View ***/
-        
-        .stats.gift-rating {
-            position: absolute;
-            left: 50%;
-            margin-top: -50px;
-            transform: translateX(-50%);
-        }
-        
-        .popover {
-            width: 28% !important;
-        }
-        
-        .quantity-input {
-            width: 55px;
-        }
-        
-        .action-buttons {
-            height: 42px;
-            width: 42px;
-            border-radius: 50%;
-        }
-        
-        #cart-action-btns {
-            display: none !important;
-        }
-        
-        @media(min-width: 768px) {
-            .section-header {
-                height: 68px;
-            }
-            .desktop-pills {
-                cursor: pointer;
-            }
-            .desktop-pills.active * {
-                color: #fff;
-            }
+        .customer-order:not(:first-child) {
+            margin-top: 1rem;
+            border-top: 1px solid #dee2e6;
+            padding-top: .5rem;
         }
     </style>
 </head>
@@ -1253,7 +1131,7 @@
             <div class="container">
                 <!-- Breadcrumbs -->
                 <nav class="d-flex align-items-center justify-content-md-between my-2" aria-label="breadcrumb">
-                    <h4 class="text-app-color font-600 my-0">My Orders (5)</h4>
+                    <h4 class="text-app-color font-600 my-0">Orders Page</h4>
                     <ol class="breadcrumb my-0 py-0">
                         <li class="breadcrumb-item"><a href="index.html">Store</a></li>
                         <li class="breadcrumb-item">Account</li>
@@ -1261,574 +1139,813 @@
                     </ol>
                 </nav>
                 <!-- /.Breadcrumbs -->
-                <div class="row">
-                    <!-- Nav-Pill Buttons -->
-                    <div class="col-md-3 zoom-out-section">
-                        <!-- Options -->
-                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                            <!-- Sent Orders Pill-Button -->
-                            <div role="tab" class="nav-link desktop-pills active bg-whitesmoke box-shadow-sm border rounded-2 p-2 mb-2" id="v-pills-sent-orders-tab" data-bs-toggle="pill" data-bs-target="#v-pills-sent-orders" aria-controls="v-pills-sent-orders" aria-selected="true">
-                                <div class="d-block">
-                                    <div class="d-flex align-items-center">
-                                        <i class="material-icons me-1">local_shipping</i>
-                                        <h6 class="font-600 text-sm my-0">Sent Orders (4)</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.Sent Orders Pill-Button -->
-
-                            <!-- Received Orders Pill-Button -->
-                            <div role="tab" class="nav-link desktop-pills bg-whitesmoke box-shadow-sm border rounded-2 p-2 mb-2" id="v-pills-received-orders-tab" data-bs-toggle="pill" data-bs-target="#v-pills-received-orders" aria-controls="v-pills-received-orders" aria-selected="false">
-                                <div class="d-block">
-                                    <div class="d-flex align-items-center">
-                                        <i class="material-icons me-1">accessibility</i>
-                                        <h6 class="font-600 text-sm my-0">Received Orders (1)</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.Received Orders Pill-Button -->
-
-                            <!-- Cancelled Orders Pill-Button -->
-                            <div role="tab" class="nav-link desktop-pills bg-whitesmoke box-shadow-sm border rounded-2 p-2 mb-2" id="v-pills-cancelled-orders-tab" data-bs-toggle="pill" data-bs-target="#v-pills-cancelled-orders" aria-controls="v-pills-cancelled-orders" aria-selected="false">
-                                <div class="d-block">
-                                    <div class="d-flex align-items-center">
-                                        <i class="material-icons me-1">event_busy</i>
-                                        <h6 class="font-600 text-sm my-0">Cancelled Orders (3)</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.Cancelled Orders Pill-Button -->
-                        </div>
-                        <!-- /.Options -->
+                <div class="row g-1">
+                    <!-- Orders List -->
+                    <div class="col-12 col-md-3">
+                        <ul class="list-group nav-pills rounded-2 border box-shadow-sm" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <li class="nav-link desktop-pills active w-100" role="tab" id="v-pills-sent-orders-tab" data-bs-toggle="pill" data-bs-target="#v-pills-sent-orders" aria-controls="v-pills-sent-orders" aria-selected="true">
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="material-icons text-app-color">local_shipping</i>
+                                    <h6 class="font-600 text-app-color ms-2 my-0">Sent Orders (23)</h6>
+                                    <i class="material-icons text-app-color ms-auto">chevron_right</i>
+                                </a>
+                            </li>
+                            <li class="nav-link desktop-pills w-100" role="tab" id="v-pills-received-orders-tab" data-bs-toggle="pill" data-bs-target="#v-pills-received-orders" aria-controls="v-pills-received-orders" aria-selected="false">
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="material-icons text-app-color">accessibility</i>
+                                    <h6 class="font-600 text-app-color ms-2 my-0">Received Orders (3)</h6>
+                                    <i class="material-icons text-app-color ms-auto">chevron_right</i>
+                                </a>
+                            </li>
+                            <li class="dropdown-item nav-link desktop-pills w-100" role="tab" id="v-pills-cancelled-orders-tab" data-bs-toggle="pill" data-bs-target="#v-pills-cancelled-orders" aria-controls="v-pills-cancelled-orders" aria-selected="false">
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="material-icons text-app-color">cancel</i>
+                                    <h6 class="font-600 text-app-color ms-2 my-0">Cancelled Orders (3)</h6>
+                                    <i class="material-icons text-app-color ms-auto">chevron_right</i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <!-- /.Nav-Pill Buttons -->
+                    <!-- /.Orders List -->
 
-                    <!-- Main Content -->
-                    <div class="col-12 col-md-9 zoom-out-section">
-                        <!-- Right Navbar -->
-                        <nav class="box-shadow-sm bg-whitesmoke sticky-top border p-2">
-                            <!-- Breadcrumbs -->
-                            <div aria-label="breadcrumb">
-                                <ol class="breadcrumb mb-0 pb-0">
-                                    <li class="breadcrumb-item text-sm text-capitalize">
-                                        <a href="index.html">Shop</a>
-                                    </li>
-                                    <li class="breadcrumb-item text-sm text-capitalize">
-                                        Orders
-                                    </li>
-                                    <li class="breadcrumb-item active text-sm text-capitalize" aria-current="page">
-                                        Sent(2)
-                                    </li>
-                                </ol>
-                            </div>
-                            <!-- /.Breadcrumbs -->
-
-                            <!-- Filtering Options -->
-                            <div class="d-flex align-items-center justify-content-between">
-                                <!-- /Order Searching and Sorting -->
-                                <form method="get" id="order-search-form" class="row align-items-center needs-validation w-100" novalidate>
-                                    <div class="col-3">
-                                        <input type="text" class="form-control form-control-sm" id="order-number" name="order-number" placeholder="Enter your Order No." required>
-                                    </div>
-                                    <div class="col-3">
-                                        <input type="text" class="form-control form-control-sm" id="product-name" name="product-name" placeholder="Enter product name" required>
-                                    </div>
-                                    <div class="col-3 ms-2">
-                                        <button type="submit" class="btn btn-sm bg-switch text-white px-2">Search</button>
-                                    </div>
-                                </form>
-                                <!-- /.Order Searching and Sorting -->
-                                <select class="form-select form-select-sm nav-form-control" id="filter-orders">
-                                    <option selected disabled value="">Filter orders</option>
-                                    <option value="price-asc">Price asc</option>
-                                    <option value="price-desc">Price desc</option>
-                                    <option value="items">Items</option>
-                                </select>
-                            </div>
-                            <!-- /.Filtering Options -->
-                        </nav>
-                        <!-- /.Right Navbar -->
-
-                        <!-- Tab Content -->
+                    <!-- Tab Content -->
+                    <div class="col-12 col-md-9">
                         <div class="tab-content" id="v-pills-tabContent">
                             <!-- Sent Orders -->
-                            <div class="tab-pane fade show active" id="v-pills-sent-orders" role="tabpanel" aria-labelledby="v-pills-sent-orders-tab">
-                                <!-- Gift Items -->
-                                <div class="d-grid list-view grid-p-1 mt-2 display-gifts ordered-items">
-                                    <!-- Ordered Item -->
-                                    <div class="ordered-item mb-1 w-100">
-                                        <!-- Item Content -->
-                                        <div class="item-content">
-                                            <a href="details.html">
-                                                <img data-src="dist/images/gifts/15f4598bf99479.2.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="lazy item-img">
-                                            </a>
-                                            <div class="item-body-content d-block px-2 lh-100">
-                                                <h6 class="text-sm font-600 text-capitalize">Tinashe. M. Chaterera</h6>
-                                                <address class="text-sm">
-                                                    <p class="my-0 py-0 text-capitalize">8069 new canaan</p>
-                                                    <p class="my-0 py-0 text-capitalize">230th st. highfield</p>
-                                                    <p class="my-0 py-0 text-capitalize">harare</p>
-                                                    <p class="my-0 py-0 text-capitalize">zimbabwe</p>
-                                                    <p class="my-0 py-0 text-capitalize">phone: +263 77 602 1140</p>
-                                                </address>
-                                                <p class="text-sm text-muted my-0 py-1">
-                                                    Qty: 36 | <strong class="text-primary">$24.99</strong>
+                            <div class="tab-pane fade show active mb-2" id="v-pills-sent-orders" role="tabpanel" aria-labelledby="v-pills-sent-orders-tab">
+                                <!-- Customer Order -->
+                                <div class="customer-order bg-whitesmoke box-shadow-sm border rounded-2 p-2">
+                                    <div class="d-block bg-whitesmoke sticky-top">
+                                        <div class="d-flex align-items-start">
+                                            <address class="lh-100">
+                                                <div class="d-flex align-items-center">
+                                                    <img data-src="dist/images/users/15f957febc6cdf.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle lazy">
+                                                    <h6 class="my-0 text-capitalize text-app-color font-600 ms-1">tinashe chaterera</h6>
+                                                </div>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    8069 New Canaan
                                                 </p>
-                                            </div>
-                                            <div class="item-body-buttons d-flex flex-column px-2 lh-100">
-                                                <div class="top-content">
-                                                    <p class="text-sm text-muted m-0 p-0">
-                                                        Order placed: February 11, 2021
-                                                    </p>
-                                                    <div class="d-block">
-                                                        <h6 class="text-sm my-0">
-                                                            Order Status: <span class="text-primary">In-transit</span>
-                                                        </h6>
-                                                    </div>
-                                                </div>
-                                                <div class="bottom-content">
-                                                    <div class="d-flex align-items-center justify-content-between card-buttons w-100">
-                                                        <button type="button" class="btn btn-sm btn-light d-flex align-items-center toggle-buttons collapse-btn me-2" data-bs-toggle="collapse" data-bs-target="#all-items" aria-expanded="false" aria-controls="all-items">
-                                                            See all <i class="material-icons collapse-icon">expand_more</i>
-                                                        </button>
-                                                        <button class="btn btn-sm bg-switch text-white d-flex align-items-center">
-                                                            <i class="material-icons ms-1">sync</i>
-                                                            Buy again
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    230th st.
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    highfield
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    harare, zimbabwe
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    cell: +263 77 602 1140
+                                                </p>
+                                            </address>
+                                            <button class="btn btn-light btn-sm rounded-pill font-600 px-2 ms-3" disabled>
+                                                <span class="me-1">Order:</span>
+                                                <span class="text-primary">#R3937447</span>
+                                            </button>
+                                            <h6 class="text-sm text-muted mt-2 mx-3">
+                                                Order Placed: Thu 17th Nov '16
+                                            </h6>
+                                            <button class="btn btn-sm btn-warning rounded-pill d-flex align-items-center text-white px-3 ms-auto">
+                                                <i class="material-icons me-1">gps_fixed</i> TRACK ORDER
+                                            </button>
                                         </div>
-                                        <!-- /.Item Content -->
-
-                                        <!-- Similar Items -->
-                                        <div class="collapse" id="all-items">
-                                            <h6 class="font-600 text-app-color mt-2">Ordered Items</h6>
-                                            <div class="table-responsive">
-                                                <table class="table table-hover table-striped table-sm w-100">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Image</th>
-                                                            <th>Item Name</th>
-                                                            <th>Category</th>
-                                                            <th>Color</th>
-                                                            <th>Garment Size</th>
-                                                            <th>Shoe Size</th>
-                                                            <th>Bed Size</th>
-                                                            <th>Qty</th>
-                                                            <th>Amount</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <img data-src="dist/images/gifts/15f458254a0dac.1.6.jpg" src="dist/images/app/bg-placeholder.PNG" height="45" width="45" alt="" class="rounded-2 lazy">
-                                                            </td>
-                                                            <td class="text-capitalize">Kitchen Cutting Board</td>
-                                                            <td class="text-capitalize">Kitchenware</td>
-                                                            <td class="text-capitalize">mahogany</td>
-                                                            <td class="text-capitalize text-center">-</td>
-                                                            <td class="text-capitalize text-center">-</td>
-                                                            <td class="text-capitalize text-center">-</td>
-                                                            <td class="text-capitalize text-center">1</td>
-                                                            <td class="text-capitalize text-center">$12.99</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <img data-src="dist/images/gifts/15f458254a0dac.1.jpg" src="dist/images/app/bg-placeholder.PNG" height="45" width="45" alt="" class="rounded-2 lazy">
-                                                            </td>
-                                                            <td class="text-capitalize">Kitchen Cutting Board</td>
-                                                            <td class="text-capitalize">Kitchenware</td>
-                                                            <td class="text-capitalize">mahogany</td>
-                                                            <td class="text-capitalize text-center">-</td>
-                                                            <td class="text-capitalize text-center">-</td>
-                                                            <td class="text-capitalize text-center">-</td>
-                                                            <td class="text-capitalize text-center">1</td>
-                                                            <td class="text-capitalize text-center">$12.99</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <img data-src="dist/images/gifts/15f46084b9eae0.jpg" src="dist/images/app/bg-placeholder.PNG" height="45" width="45" alt="" class="rounded-2 lazy">
-                                                            </td>
-                                                            <td class="text-capitalize">Levi's T-Shirt</td>
-                                                            <td class="text-capitalize">Clothing</td>
-                                                            <td class="text-capitalize">blue</td>
-                                                            <td class="text-capitalize text-center">S</td>
-                                                            <td class="text-capitalize text-center">-</td>
-                                                            <td class="text-capitalize text-center">-</td>
-                                                            <td class="text-capitalize text-center">1</td>
-                                                            <td class="text-capitalize text-center">$12.99</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <img data-src="dist/images/gifts/15f460ba6e5666.2.jpg" src="dist/images/app/bg-placeholder.PNG" height="45" width="45" alt="" class="rounded-2 lazy">
-                                                            </td>
-                                                            <td class="text-capitalize">Kitchen Cutting Board</td>
-                                                            <td class="text-capitalize">Kitchenware</td>
-                                                            <td class="text-capitalize">mahogany</td>
-                                                            <td class="text-capitalize text-center">-</td>
-                                                            <td class="text-capitalize text-center">-</td>
-                                                            <td class="text-capitalize text-center">-</td>
-                                                            <td class="text-capitalize text-center">1</td>
-                                                            <td class="text-capitalize text-center">$12.99</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <!-- /.Similar Items -->
                                     </div>
-                                    <!-- /.Ordered Item -->
+                                    <div class="table-responsive">
+                                        <table class="table table-sm h-100 w-100">
+                                            <thead>
+                                                <tr class="text-center w-100">
+                                                    <th class="w-10">Image</th>
+                                                    <th class="w-50">Name</th>
+                                                    <th class="w-20">Category</th>
+                                                    <th class="w-10">Qty</th>
+                                                    <th class="w-10">Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="align-items-center">
+                                                <tr class="text-center">
+                                                    <td class="align-middle">
+                                                        <img data-src="dist/images/gifts/15f458474b905f.jpg" src="dist/images/app/bg-placeholder.PNG" height="90" width="90" loading="lazy" class="lazy rounded">
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            hannorac puma amplified hoodie
+                                                        </h6>
+                                                        <p class="text-muted text-sm my-0 py-0">
+                                                            Size: 3 | Color: Black & White
+                                                        </p>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            category name
+                                                        </h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">2</h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">$12.38</h6>
+                                                    </td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="align-middle">
+                                                        <img data-src="dist/images/gifts/15f458474b905f.jpg" src="dist/images/app/bg-placeholder.PNG" height="90" width="90" loading="lazy" class="lazy rounded">
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            hannorac puma amplified hoodie
+                                                        </h6>
+                                                        <p class="text-muted text-sm my-0 py-0">
+                                                            Size: 3 | Color: Black & White
+                                                        </p>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            category name
+                                                        </h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">2</h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">$12.38</h6>
+                                                    </td>
+                                                </tr>
+                                                <tr class="text-center bg-whitesmoke w-100">
+                                                    <td class="align-middle border-right w-25">
+                                                        <button class="btn btn-default btn-sm d-flex align-items-center rounded-pill px-3">
+                                                            <i class="material-icons me-1">close</i>
+                                                            Cancel Order
+                                                        </button>
+                                                    </td>
+                                                    <td class="align-middle w-40">
+                                                        <h6 class="text-muted text-sm my-0">
+                                                            Paid using credit card ending with 465
+                                                        </h6>
+                                                    </td>
+                                                    <td class="align-middle w-10">
+                                                        <h6 class="text-sm text-muted my-0">Expected Delivery In: 3d</h6>
+                                                    </td>
+                                                    <td class="align-middle w-10">
+                                                        <h6 class="text-app-color font-600 my-0">4</h6>
+                                                    </td>
+                                                    <td class="text-end align-middle w-25">
+                                                        <h6 class="text-app-color font-600 my-0">$34.59</h6>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
-                                <!-- /.Gift Items -->
+                                <!-- /.Customer Order -->
+
+                                <!-- Customer Order -->
+                                <div class="customer-order bg-whitesmoke box-shadow-sm border rounded-2 p-2">
+                                    <div class="d-block bg-whitesmoke sticky-top">
+                                        <div class="d-flex align-items-start">
+                                            <address class="lh-100">
+                                                <div class="d-flex align-items-center">
+                                                    <img data-src="dist/images/users/15f957febc6cdf.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle lazy">
+                                                    <h6 class="my-0 text-capitalize text-app-color font-600 ms-1">tinashe chaterera</h6>
+                                                </div>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    8069 New Canaan
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    230th st.
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    highfield
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    harare, zimbabwe
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    cell: +263 77 602 1140
+                                                </p>
+                                            </address>
+                                            <button class="btn btn-light btn-sm rounded-pill font-600 px-2 ms-3" disabled>
+                                                <span class="me-1">Order:</span>
+                                                <span class="text-primary">#R3937447</span>
+                                            </button>
+                                            <h6 class="text-sm text-muted mt-2 mx-3">
+                                                Order Placed: Thu 17th Nov '16
+                                            </h6>
+                                            <button class="btn btn-sm btn-warning rounded-pill d-flex align-items-center text-white px-3 ms-auto">
+                                                <i class="material-icons me-1">gps_fixed</i> TRACK ORDER
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-sm h-100 w-100">
+                                            <thead>
+                                                <tr class="text-center w-100">
+                                                    <th class="w-10">Image</th>
+                                                    <th class="w-50">Name</th>
+                                                    <th class="w-20">Category</th>
+                                                    <th class="w-10">Qty</th>
+                                                    <th class="w-10">Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="align-items-center">
+                                                <tr class="text-center">
+                                                    <td class="align-middle">
+                                                        <img data-src="dist/images/gifts/15f458474b905f.jpg" src="dist/images/app/bg-placeholder.PNG" height="90" width="90" loading="lazy" class="lazy rounded">
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            hannorac puma amplified hoodie
+                                                        </h6>
+                                                        <p class="text-muted text-sm my-0 py-0">
+                                                            Size: 3 | Color: Black & White
+                                                        </p>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            category name
+                                                        </h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">2</h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">$12.38</h6>
+                                                    </td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="align-middle">
+                                                        <img data-src="dist/images/gifts/15f458474b905f.jpg" src="dist/images/app/bg-placeholder.PNG" height="90" width="90" loading="lazy" class="lazy rounded">
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            hannorac puma amplified hoodie
+                                                        </h6>
+                                                        <p class="text-muted text-sm my-0 py-0">
+                                                            Size: 3 | Color: Black & White
+                                                        </p>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            category name
+                                                        </h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">2</h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">$12.38</h6>
+                                                    </td>
+                                                </tr>
+                                                <tr class="text-center bg-whitesmoke w-100">
+                                                    <td class="align-middle border-right w-25">
+                                                        <button class="btn btn-default btn-sm d-flex align-items-center rounded-pill px-3">
+                                                            <i class="material-icons me-1">close</i>
+                                                            Cancel Order
+                                                        </button>
+                                                    </td>
+                                                    <td class="align-middle w-40">
+                                                        <h6 class="text-muted text-sm my-0">
+                                                            Paid using credit card ending with 465
+                                                        </h6>
+                                                    </td>
+                                                    <td class="align-middle w-10">
+                                                        <h6 class="text-sm text-muted my-0">Expected Delivery In: 3d</h6>
+                                                    </td>
+                                                    <td class="align-middle w-10">
+                                                        <h6 class="text-app-color font-600 my-0">4</h6>
+                                                    </td>
+                                                    <td class="text-end align-middle w-25">
+                                                        <h6 class="text-app-color font-600 my-0">$34.59</h6>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- /.Customer Order -->
                             </div>
                             <!-- Sent Orders -->
+
+                            <!-- received-orders -->
+                            <div class="tab-pane fade mb-2" id="v-pills-received-orders" role="tabpanel" aria-labelledby="v-pills-received-orders-tab">
+                                <!-- Customer Order -->
+                                <div class="customer-order bg-whitesmoke box-shadow-sm border rounded-2 p-2">
+                                    <div class="d-block bg-whitesmoke sticky-top">
+                                        <div class="d-flex align-items-start">
+                                            <address class="lh-100">
+                                                <div class="d-flex align-items-center">
+                                                    <img data-src="dist/images/users/15f957febc6cdf.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle lazy">
+                                                    <h6 class="my-0 text-capitalize text-app-color font-600 ms-1">tinashe chaterera</h6>
+                                                </div>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    8069 New Canaan
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    230th st.
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    highfield
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    harare, zimbabwe
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    cell: +263 77 602 1140
+                                                </p>
+                                            </address>
+                                            <button class="btn btn-light btn-sm rounded-pill font-600 px-2 ms-3" disabled>
+                                                <span class="me-1">Order:</span>
+                                                <span class="text-primary">#R3937447</span>
+                                            </button>
+                                            <h6 class="text-sm text-muted mt-2 mx-3">
+                                                Order Placed: Thu 17th Nov '16
+                                            </h6>
+                                            <button class="btn btn-sm btn-warning rounded-pill d-flex align-items-center text-white px-3 ms-auto">
+                                                <i class="material-icons me-1">gps_fixed</i> TRACK ORDER
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-sm h-100 w-100">
+                                            <thead>
+                                                <tr class="text-center w-100">
+                                                    <th class="w-10">Image</th>
+                                                    <th class="w-50">Name</th>
+                                                    <th class="w-20">Category</th>
+                                                    <th class="w-10">Qty</th>
+                                                    <th class="w-10">Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="align-items-center">
+                                                <tr class="text-center">
+                                                    <td class="align-middle">
+                                                        <img data-src="dist/images/gifts/15f458474b905f.jpg" src="dist/images/app/bg-placeholder.PNG" height="90" width="90" loading="lazy" class="lazy rounded">
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            hannorac puma amplified hoodie
+                                                        </h6>
+                                                        <p class="text-muted text-sm my-0 py-0">
+                                                            Size: 3 | Color: Black & White
+                                                        </p>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            category name
+                                                        </h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">2</h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">$12.38</h6>
+                                                    </td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="align-middle">
+                                                        <img data-src="dist/images/gifts/15f458474b905f.jpg" src="dist/images/app/bg-placeholder.PNG" height="90" width="90" loading="lazy" class="lazy rounded">
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            hannorac puma amplified hoodie
+                                                        </h6>
+                                                        <p class="text-muted text-sm my-0 py-0">
+                                                            Size: 3 | Color: Black & White
+                                                        </p>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            category name
+                                                        </h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">2</h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">$12.38</h6>
+                                                    </td>
+                                                </tr>
+                                                <tr class="text-center bg-whitesmoke w-100">
+                                                    <td class="align-middle border-right w-25">
+                                                        <button class="btn btn-default btn-sm d-flex align-items-center rounded-pill px-3">
+                                                            <i class="material-icons me-1">close</i>
+                                                            Cancel Order
+                                                        </button>
+                                                    </td>
+                                                    <td class="align-middle w-40">
+                                                        <h6 class="text-muted text-sm my-0">
+                                                            Paid using credit card ending with 465
+                                                        </h6>
+                                                    </td>
+                                                    <td class="align-middle w-10">
+                                                        <h6 class="text-sm text-muted my-0">Expected Delivery In: 3d</h6>
+                                                    </td>
+                                                    <td class="align-middle w-10">
+                                                        <h6 class="text-app-color font-600 my-0">4</h6>
+                                                    </td>
+                                                    <td class="text-end align-middle w-25">
+                                                        <h6 class="text-app-color font-600 my-0">$34.59</h6>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- /.Customer Order -->
+
+                                <!-- Customer Order -->
+                                <div class="customer-order bg-whitesmoke box-shadow-sm border rounded-2 p-2">
+                                    <div class="d-block bg-whitesmoke sticky-top">
+                                        <div class="d-flex align-items-start">
+                                            <address class="lh-100">
+                                                <div class="d-flex align-items-center">
+                                                    <img data-src="dist/images/users/15f957febc6cdf.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle lazy">
+                                                    <h6 class="my-0 text-capitalize text-app-color font-600 ms-1">tinashe chaterera</h6>
+                                                </div>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    8069 New Canaan
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    230th st.
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    highfield
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    harare, zimbabwe
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    cell: +263 77 602 1140
+                                                </p>
+                                            </address>
+                                            <button class="btn btn-light btn-sm rounded-pill font-600 px-2 ms-3" disabled>
+                                                <span class="me-1">Order:</span>
+                                                <span class="text-primary">#R3937447</span>
+                                            </button>
+                                            <h6 class="text-sm text-muted mt-2 mx-3">
+                                                Order Placed: Thu 17th Nov '16
+                                            </h6>
+                                            <button class="btn btn-sm btn-warning rounded-pill d-flex align-items-center text-white px-3 ms-auto">
+                                                <i class="material-icons me-1">gps_fixed</i> TRACK ORDER
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-sm h-100 w-100">
+                                            <thead>
+                                                <tr class="text-center w-100">
+                                                    <th class="w-10">Image</th>
+                                                    <th class="w-50">Name</th>
+                                                    <th class="w-20">Category</th>
+                                                    <th class="w-10">Qty</th>
+                                                    <th class="w-10">Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="align-items-center">
+                                                <tr class="text-center">
+                                                    <td class="align-middle">
+                                                        <img data-src="dist/images/gifts/15f458474b905f.jpg" src="dist/images/app/bg-placeholder.PNG" height="90" width="90" loading="lazy" class="lazy rounded">
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            hannorac puma amplified hoodie
+                                                        </h6>
+                                                        <p class="text-muted text-sm my-0 py-0">
+                                                            Size: 3 | Color: Black & White
+                                                        </p>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            category name
+                                                        </h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">2</h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">$12.38</h6>
+                                                    </td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="align-middle">
+                                                        <img data-src="dist/images/gifts/15f458474b905f.jpg" src="dist/images/app/bg-placeholder.PNG" height="90" width="90" loading="lazy" class="lazy rounded">
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            hannorac puma amplified hoodie
+                                                        </h6>
+                                                        <p class="text-muted text-sm my-0 py-0">
+                                                            Size: 3 | Color: Black & White
+                                                        </p>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            category name
+                                                        </h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">2</h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">$12.38</h6>
+                                                    </td>
+                                                </tr>
+                                                <tr class="text-center bg-whitesmoke w-100">
+                                                    <td class="align-middle border-right w-25">
+                                                        <button class="btn btn-default btn-sm d-flex align-items-center rounded-pill px-3">
+                                                            <i class="material-icons me-1">close</i>
+                                                            Cancel Order
+                                                        </button>
+                                                    </td>
+                                                    <td class="align-middle w-40">
+                                                        <h6 class="text-muted text-sm my-0">
+                                                            Paid using credit card ending with 465
+                                                        </h6>
+                                                    </td>
+                                                    <td class="align-middle w-10">
+                                                        <h6 class="text-sm text-muted my-0">Expected Delivery In: 3d</h6>
+                                                    </td>
+                                                    <td class="align-middle w-10">
+                                                        <h6 class="text-app-color font-600 my-0">4</h6>
+                                                    </td>
+                                                    <td class="text-end align-middle w-25">
+                                                        <h6 class="text-app-color font-600 my-0">$34.59</h6>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- /.Customer Order -->
+                            </div>
+                            <!-- /.received-orders -->
+
+                            <!-- Settings -->
+                            <div class="tab-pane fade mb-2" id="v-pills-cancelled-orders" role="tabpanel" aria-labelledby="v-pills-cancelled-orders-tab">
+                                <!-- Customer Order -->
+                                <div class="customer-order bg-whitesmoke box-shadow-sm border rounded-2 p-2">
+                                    <div class="d-block bg-whitesmoke sticky-top">
+                                        <div class="d-flex align-items-start">
+                                            <address class="lh-100">
+                                                <div class="d-flex align-items-center">
+                                                    <img data-src="dist/images/users/15f957febc6cdf.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle lazy">
+                                                    <h6 class="my-0 text-capitalize text-app-color font-600 ms-1">tinashe chaterera</h6>
+                                                </div>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    8069 New Canaan
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    230th st.
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    highfield
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    harare, zimbabwe
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    cell: +263 77 602 1140
+                                                </p>
+                                            </address>
+                                            <button class="btn btn-light btn-sm rounded-pill font-600 px-2 ms-3" disabled>
+                                                <span class="me-1">Order:</span>
+                                                <span class="text-primary">#R3937447</span>
+                                            </button>
+                                            <h6 class="text-sm text-muted mt-2 mx-3">
+                                                Order Placed: Thu 17th Nov '16
+                                            </h6>
+                                            <button class="btn btn-sm btn-warning rounded-pill d-flex align-items-center text-white px-3 ms-auto">
+                                                <i class="material-icons me-1">gps_fixed</i> TRACK ORDER
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-sm h-100 w-100">
+                                            <thead>
+                                                <tr class="text-center w-100">
+                                                    <th class="w-10">Image</th>
+                                                    <th class="w-50">Name</th>
+                                                    <th class="w-20">Category</th>
+                                                    <th class="w-10">Qty</th>
+                                                    <th class="w-10">Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="align-items-center">
+                                                <tr class="text-center">
+                                                    <td class="align-middle">
+                                                        <img data-src="dist/images/gifts/15f458474b905f.jpg" src="dist/images/app/bg-placeholder.PNG" height="90" width="90" loading="lazy" class="lazy rounded">
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            hannorac puma amplified hoodie
+                                                        </h6>
+                                                        <p class="text-muted text-sm my-0 py-0">
+                                                            Size: 3 | Color: Black & White
+                                                        </p>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            category name
+                                                        </h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">2</h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">$12.38</h6>
+                                                    </td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="align-middle">
+                                                        <img data-src="dist/images/gifts/15f458474b905f.jpg" src="dist/images/app/bg-placeholder.PNG" height="90" width="90" loading="lazy" class="lazy rounded">
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            hannorac puma amplified hoodie
+                                                        </h6>
+                                                        <p class="text-muted text-sm my-0 py-0">
+                                                            Size: 3 | Color: Black & White
+                                                        </p>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            category name
+                                                        </h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">2</h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">$12.38</h6>
+                                                    </td>
+                                                </tr>
+                                                <tr class="text-center bg-whitesmoke w-100">
+                                                    <td class="align-middle border-right w-25">
+                                                        <button class="btn btn-default btn-sm d-flex align-items-center rounded-pill px-3">
+                                                            <i class="material-icons me-1">close</i>
+                                                            Cancel Order
+                                                        </button>
+                                                    </td>
+                                                    <td class="align-middle w-40">
+                                                        <h6 class="text-muted text-sm my-0">
+                                                            Paid using credit card ending with 465
+                                                        </h6>
+                                                    </td>
+                                                    <td class="align-middle w-10">
+                                                        <h6 class="text-sm text-muted my-0">Expected Delivery In: 3d</h6>
+                                                    </td>
+                                                    <td class="align-middle w-10">
+                                                        <h6 class="text-app-color font-600 my-0">4</h6>
+                                                    </td>
+                                                    <td class="text-end align-middle w-25">
+                                                        <h6 class="text-app-color font-600 my-0">$34.59</h6>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- /.Customer Order -->
+
+                                <!-- Customer Order -->
+                                <div class="customer-order bg-whitesmoke box-shadow-sm border rounded-2 p-2">
+                                    <div class="d-block bg-whitesmoke sticky-top">
+                                        <div class="d-flex align-items-start">
+                                            <address class="lh-100">
+                                                <div class="d-flex align-items-center">
+                                                    <img data-src="dist/images/users/15f957febc6cdf.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle lazy">
+                                                    <h6 class="my-0 text-capitalize text-app-color font-600 ms-1">tinashe chaterera</h6>
+                                                </div>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    8069 New Canaan
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    230th st.
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    highfield
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    harare, zimbabwe
+                                                </p>
+                                                <p class="my-0 py-0 text-capitalize">
+                                                    cell: +263 77 602 1140
+                                                </p>
+                                            </address>
+                                            <button class="btn btn-light btn-sm rounded-pill font-600 px-2 ms-3" disabled>
+                                                <span class="me-1">Order:</span>
+                                                <span class="text-primary">#R3937447</span>
+                                            </button>
+                                            <h6 class="text-sm text-muted mt-2 mx-3">
+                                                Order Placed: Thu 17th Nov '16
+                                            </h6>
+                                            <button class="btn btn-sm btn-warning rounded-pill d-flex align-items-center text-white px-3 ms-auto">
+                                                <i class="material-icons me-1">gps_fixed</i> TRACK ORDER
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-sm h-100 w-100">
+                                            <thead>
+                                                <tr class="text-center w-100">
+                                                    <th class="w-10">Image</th>
+                                                    <th class="w-50">Name</th>
+                                                    <th class="w-20">Category</th>
+                                                    <th class="w-10">Qty</th>
+                                                    <th class="w-10">Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="align-items-center">
+                                                <tr class="text-center">
+                                                    <td class="align-middle">
+                                                        <img data-src="dist/images/gifts/15f458474b905f.jpg" src="dist/images/app/bg-placeholder.PNG" height="90" width="90" loading="lazy" class="lazy rounded">
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            hannorac puma amplified hoodie
+                                                        </h6>
+                                                        <p class="text-muted text-sm my-0 py-0">
+                                                            Size: 3 | Color: Black & White
+                                                        </p>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            category name
+                                                        </h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">2</h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">$12.38</h6>
+                                                    </td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="align-middle">
+                                                        <img data-src="dist/images/gifts/15f458474b905f.jpg" src="dist/images/app/bg-placeholder.PNG" height="90" width="90" loading="lazy" class="lazy rounded">
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            hannorac puma amplified hoodie
+                                                        </h6>
+                                                        <p class="text-muted text-sm my-0 py-0">
+                                                            Size: 3 | Color: Black & White
+                                                        </p>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="font-600 text-capitalize text-sm text-app-color my-0">
+                                                            category name
+                                                        </h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">2</h6>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <h6 class="text-sm font-600 my-0">$12.38</h6>
+                                                    </td>
+                                                </tr>
+                                                <tr class="text-center bg-whitesmoke w-100">
+                                                    <td class="align-middle border-right w-25">
+                                                        <button class="btn btn-default btn-sm d-flex align-items-center rounded-pill px-3">
+                                                            <i class="material-icons me-1">close</i>
+                                                            Cancel Order
+                                                        </button>
+                                                    </td>
+                                                    <td class="align-middle w-40">
+                                                        <h6 class="text-muted text-sm my-0">
+                                                            Paid using credit card ending with 465
+                                                        </h6>
+                                                    </td>
+                                                    <td class="align-middle w-10">
+                                                        <h6 class="text-sm text-muted my-0">Expected Delivery In: 3d</h6>
+                                                    </td>
+                                                    <td class="align-middle w-10">
+                                                        <h6 class="text-app-color font-600 my-0">4</h6>
+                                                    </td>
+                                                    <td class="text-end align-middle w-25">
+                                                        <h6 class="text-app-color font-600 my-0">$34.59</h6>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- /.Customer Order -->
+                            </div>
+                            <!-- /.Settings -->
                         </div>
                     </div>
-                    <!-- /.Main Content -->
+                    <!-- /.Tab Content -->
                 </div>
             </div>
         </div>
     </div>
     <!-- /.Page Content -->
 
-    <!-- Related Items Modal -->
-    <div class="modal fade" id="similar-modal-items" tabindex="-1" role="dialog" aria-labelledby="similar-modal-items" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content w-100">
-                <div class="modal-header d-flex justify-ccontent-between align-items-center">
-                    <h6 class="font-600 text-app-color my-0">Similar Gift Items</h6>
-                    <i role="button" class="material-icons fa-2x" data-bs-dismiss="modal">close</i>
-                </div>
-                <div class="modal-body">
-                    <p class="text-sm font-600">Similar gift items you may also like</p>
-                    <div class="row w-100 gx-1">
-                        <div class="owl-carousel owl-theme related-items">
-                            <!-- Related Gift -->
-                            <div class="item w-100">
-                                <a href="categories.html" class="stretched-link">
-                                    <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                        <img data-src="dist/images/gifts/15f458254a0dac.1.6.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
-                                        <div class="gift-content mx-1">
-                                            <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
-                                            <div class="d-inline-block w-100 lh-100">
-                                                <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
-                                                <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <div>
-                                                        <div class="d-flex align-items-center">
-                                                            <span class="text-warning me-1">&starf;</span>
-                                                            <span class="text-sm text-muted">4.6</span>
-                                                        </div>
-                                                    </div>
-                                                    <span class="text-sm text-muted me-2">484 Sold</span>
-                                                </div>
-                                            </div>
-                                            <div class="usd-price">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From US$28.39</h6>
-                                                </div>
-                                            </div>
-                                            <div class="zar-price d-none">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From R384.34</h6>
-                                                </div>
-                                            </div>
-                                            <div class="zwl-price d-none">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From ZW$2893.38</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- /.Related Gift -->
-                            <!-- Related Gift -->
-                            <div class="item w-100">
-                                <a href="categories.html" class="stretched-link">
-                                    <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                        <img data-src="dist/images/gifts/15f458254a0dac.1.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
-                                        <div class="gift-content mx-1">
-                                            <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
-                                            <div class="d-inline-block w-100 lh-100">
-                                                <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
-                                                <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <div>
-                                                        <div class="d-flex align-items-center">
-                                                            <span class="text-warning me-1">&starf;</span>
-                                                            <span class="text-sm text-muted">4.6</span>
-                                                        </div>
-                                                    </div>
-                                                    <span class="text-sm text-muted me-2">484 Sold</span>
-                                                </div>
-                                            </div>
-                                            <div class="usd-price">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From US$28.39</h6>
-                                                </div>
-                                            </div>
-                                            <div class="zar-price d-none">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From R384.34</h6>
-                                                </div>
-                                            </div>
-                                            <div class="zwl-price d-none">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From ZW$2893.38</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- /.Related Gift -->
-                            <!-- Related Gift -->
-                            <div class="item w-100">
-                                <a href="categories.html" class="stretched-link">
-                                    <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                        <img data-src="dist/images/gifts/15f458254a0dac.2.webp" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
-                                        <div class="gift-content mx-1">
-                                            <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
-                                            <div class="d-inline-block w-100 lh-100">
-                                                <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
-                                                <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <div>
-                                                        <div class="d-flex align-items-center">
-                                                            <span class="text-warning me-1">&starf;</span>
-                                                            <span class="text-sm text-muted">4.6</span>
-                                                        </div>
-                                                    </div>
-                                                    <span class="text-sm text-muted me-2">484 Sold</span>
-                                                </div>
-                                            </div>
-                                            <div class="usd-price">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From US$28.39</h6>
-                                                </div>
-                                            </div>
-                                            <div class="zar-price d-none">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From R384.34</h6>
-                                                </div>
-                                            </div>
-                                            <div class="zwl-price d-none">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From ZW$2893.38</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- /.Related Gift -->
-                            <!-- Related Gift -->
-                            <div class="item w-100">
-                                <a href="categories.html" class="stretched-link">
-                                    <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                        <img data-src="dist/images/gifts/15f458254a0dac.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
-                                        <div class="gift-content mx-1">
-                                            <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
-                                            <div class="d-inline-block w-100 lh-100">
-                                                <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
-                                                <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <div>
-                                                        <div class="d-flex align-items-center">
-                                                            <span class="text-warning me-1">&starf;</span>
-                                                            <span class="text-sm text-muted">4.6</span>
-                                                        </div>
-                                                    </div>
-                                                    <span class="text-sm text-muted me-2">484 Sold</span>
-                                                </div>
-                                            </div>
-                                            <div class="usd-price">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From US$28.39</h6>
-                                                </div>
-                                            </div>
-                                            <div class="zar-price d-none">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From R384.34</h6>
-                                                </div>
-                                            </div>
-                                            <div class="zwl-price d-none">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From ZW$2893.38</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- /.Related Gift -->
-                            <!-- Related Gift -->
-                            <div class="item w-100">
-                                <a href="categories.html" class="stretched-link">
-                                    <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                        <img data-src="dist/images/gifts/15f45885de939d.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
-                                        <div class="gift-content mx-1">
-                                            <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
-                                            <div class="d-inline-block w-100 lh-100">
-                                                <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
-                                                <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <div>
-                                                        <div class="d-flex align-items-center">
-                                                            <span class="text-warning me-1">&starf;</span>
-                                                            <span class="text-sm text-muted">4.6</span>
-                                                        </div>
-                                                    </div>
-                                                    <span class="text-sm text-muted me-2">484 Sold</span>
-                                                </div>
-                                            </div>
-                                            <div class="usd-price">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From US$28.39</h6>
-                                                </div>
-                                            </div>
-                                            <div class="zar-price d-none">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From R384.34</h6>
-                                                </div>
-                                            </div>
-                                            <div class="zwl-price d-none">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From ZW$2893.38</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- /.Related Gift -->
-                            <!-- Related Gift -->
-                            <div class="item w-100">
-                                <a href="categories.html" class="stretched-link">
-                                    <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                        <img data-src="dist/images/gifts/15f4598bf99479.2.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
-                                        <div class="gift-content mx-1">
-                                            <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
-                                            <div class="d-inline-block w-100 lh-100">
-                                                <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
-                                                <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <div>
-                                                        <div class="d-flex align-items-center">
-                                                            <span class="text-warning me-1">&starf;</span>
-                                                            <span class="text-sm text-muted">4.6</span>
-                                                        </div>
-                                                    </div>
-                                                    <span class="text-sm text-muted me-2">484 Sold</span>
-                                                </div>
-                                            </div>
-                                            <div class="usd-price">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From US$28.39</h6>
-                                                </div>
-                                            </div>
-                                            <div class="zar-price d-none">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From R384.34</h6>
-                                                </div>
-                                            </div>
-                                            <div class="zwl-price d-none">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From ZW$2893.38</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- /.Related Gift -->
-                            <!-- Related Gift -->
-                            <div class="item w-100">
-                                <a href="categories.html" class="stretched-link">
-                                    <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                        <img data-src="dist/images/gifts/15f4605c1791a6.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
-                                        <div class="gift-content mx-1">
-                                            <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
-                                            <div class="d-inline-block w-100 lh-100">
-                                                <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
-                                                <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <div>
-                                                        <div class="d-flex align-items-center">
-                                                            <span class="text-warning me-1">&starf;</span>
-                                                            <span class="text-sm text-muted">4.6</span>
-                                                        </div>
-                                                    </div>
-                                                    <span class="text-sm text-muted me-2">484 Sold</span>
-                                                </div>
-                                            </div>
-                                            <div class="usd-price">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From US$28.39</h6>
-                                                </div>
-                                            </div>
-                                            <div class="zar-price d-none">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From R384.34</h6>
-                                                </div>
-                                            </div>
-                                            <div class="zwl-price d-none">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From ZW$2893.38</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- /.Related Gift -->
-                            <!-- Related Gift -->
-                            <div class="item w-100">
-                                <a href="categories.html" class="stretched-link">
-                                    <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                        <img data-src="dist/images/gifts/15f460b1352a38.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
-                                        <div class="gift-content mx-1">
-                                            <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
-                                            <div class="d-inline-block w-100 lh-100">
-                                                <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
-                                                <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <div>
-                                                        <div class="d-flex align-items-center">
-                                                            <span class="text-warning me-1">&starf;</span>
-                                                            <span class="text-sm text-muted">4.6</span>
-                                                        </div>
-                                                    </div>
-                                                    <span class="text-sm text-muted me-2">484 Sold</span>
-                                                </div>
-                                            </div>
-                                            <div class="usd-price">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From US$28.39</h6>
-                                                </div>
-                                            </div>
-                                            <div class="zar-price d-none">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From R384.34</h6>
-                                                </div>
-                                            </div>
-                                            <div class="zwl-price d-none">
-                                                <div class="d-flex align-items-center">
-                                                    <h6 class="text-sm">From ZW$2893.38</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- /.Related Gift -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /.Related Items Modal -->
-
     <!-- Settings Sidebar -->
     <div class="settings-bar">
         <div class="settings-header d-flex align-items-center justify-content-between box-shadow-sm p-2">
             <h2 class="font-600 lead lead-2x">Settings</h2>
-            <i class="material-icons nav-link icon-link me-2 toggle-settings">close</i>
+            <i class="material-icons nav-link icon-link me-2 toggle-cancelled-orders">close</i>
         </div>
         <div class="container-fluid px-3 mt-2">
             <p class="mb-0 font-500 d-none" id="day-mode">
@@ -2058,6 +2175,14 @@
     <script src="dist/plugins/sweetalert2/package/dist/sweetalert2.min.js "></script>
     <!-- Gifteros -->
     <script src="dist/js/gifteros.min.js "></script>
+    <script>
+        $(function() {
+            $('.desktop-pills').on('click', function() {
+                $('.desktop-pills').not(this).removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
