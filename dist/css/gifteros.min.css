@@ -3499,6 +3499,10 @@ a.text-underline:hover,
         overflow-y: auto;
         border-radius: 0 !important;
     }
+    .search-list,
+    .search-list>li {
+        z-index: 9999;
+    }
     .row,
     .col-12,
     .app-showcase,
@@ -3673,16 +3677,13 @@ a.text-underline:hover,
         z-index: 99999;
         height: 100%;
         overflow-y: auto;
-        transform: translateX(5000);
+        transform: translateX(5000px);
         transition: transform .5s ease-in-out;
         background: #fff;
         width: 80%;
     }
     .filter-panel.show {
         transform: translateX(0);
-    }
-    #category-page .price-range-input {
-        width: 6.5rem;
     }
 }
 
