@@ -34,121 +34,6 @@
     <link rel="stylesheet" href="dist/plugins/sweetalert2/package/dist/sweetalert2.min.css">
     <!-- Gifteros -->
     <link rel="stylesheet" href="dist/css/gifteros.min.css">
-    <style>
-        .sticky-top {
-            z-index: 1000 !important
-        }
-        
-        .price-range-input {
-            width: 4rem;
-        }
-        
-        .list-view>.product-card>.product-img-wrapper .card-img-top {
-            height: auto;
-        }
-        
-        .filter-list>li {
-            padding: .1rem 1.5rem;
-        }
-        
-        .circled-button,
-        .circled-button-sm {
-            border-radius: 50%;
-        }
-        
-        .circled-button {
-            height: 40px;
-            width: 40px;
-        }
-        
-        .circled-button-sm {
-            height: 30px;
-            width: 30px;
-        }
-        
-        .filter-reviews.active {
-            background-color: var(--secondary);
-            color: #fff
-        }
-        
-        .filter-reviews.active span {
-            color: #fff
-        }
-        
-        .custom-option {
-            cursor: pointer
-        }
-        
-        .custom-option,
-        .custom-option.inactive {
-            border: 2px solid var(--border-color);
-            border-radius: .25rem;
-        }
-        
-        .custom-option.active,
-        .custom-option.active .custom-overlay {
-            border: 2px solid var(--danger-warning);
-        }
-        
-        .custom-color:hover .custom-overlay {
-            height: 100%
-        }
-        
-        .custom-option .size,
-        .custom-option.inactive .size {
-            color: var(--border-color);
-        }
-        
-        .custom-btn.active {
-            box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
-            color: rgba(0, 123, 255, .25) !important;
-        }
-        
-        .custom-option.active .size {
-            color: var(--danger-warning);
-        }
-        
-        a:hover .size-info,
-        a.active .size-info {
-            color: var(--danger-warning);
-        }
-        
-        .comparison-pane,
-        .close-comparison-pane {
-            background-color: var(--dark-transparent);
-        }
-        
-        .comparison-item {
-            height: 100px;
-        }
-        
-        .remove-comparison-item {
-            top: -.35rem;
-            right: -.5rem;
-            height: 26px;
-            font-size: 30px;
-            width: 26px;
-            background-color: var(--whitesmoke);
-            border-radius: 50%;
-            display: grid;
-        }
-        
-        .remove-comparison-item i {
-            margin: auto;
-        }
-        
-        .close-comparison-pane {
-            position: absolute;
-            bottom: 132px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 40px;
-            height: auto;
-            border-top-left-radius: .5rem;
-            border-top-right-radius: .5rem;
-        }
-    </style>
 </head>
 
 <body>
@@ -186,7 +71,7 @@
             <!-- /.Mobile Action Buttons -->
 
             <!-- Cart Suggestions -->
-            <div class="d-sm-none d-md-block">
+            <div class="d-none d-md-block">
                 <div class="floating-action box-shadow-sm bg-switch" title="Click to toggle actions">
                     <i class="material-icons m-auto text-white">lightbulb_outline</i>
                 </div>
@@ -196,11 +81,11 @@
         <!-- /.Floating Action Buttons -->
 
         <!-- Side Action Panel -->
-        <div class="d-sm-none d-md-block">
+        <div class="d-none d-md-block">
             <div class="navigation-panel bg-meshgrid d-flex flex-column justify-content-around align-items-center">
                 <ul class="panel-lists d-flex flex-column align-items-center px-0">
                     <li class="panel-icon w-100 py-1">
-                        <a href="#" role="button" class="bi bi-geo-fill icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Trending In Your Area"></a>
+                        <a href="#" role="button" class="bi bi-list icon-md text-white toggle-side-menu" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Toggle Menu"></a>
                     </li>
                     <li class="panel-icon w-100 py-1">
                         <a href="#" role="button" class="bi bi-clock-history icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Viewed Gifts"></a>
@@ -210,6 +95,9 @@
                     </li>
                     <li class="panel-icon w-100 py-1">
                         <a href="#" role="button" class="bi bi-receipt icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Coupons"></a>
+                    </li>
+                    <li class="panel-icon w-100 py-1">
+                        <a href="#" role="button" class="bi bi-gear icon-md text-white toggle-settings" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="App Settings"></a>
                     </li>
                 </ul>
                 <ul class="panel-lists d-flex flex-column align-items-center px-0">
@@ -246,7 +134,7 @@
                         <a href="#" role="button" class="bi bi-question-circle icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Help and Feedback"></a>
                     </li>
                     <li class="panel-icon w-100 py-1 to-top">
-                        <a href="#" role="button" class="bi bi-arrow-up-circle icon-md text-white" onclick="scrollToTop();" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Back to Top"></a>
+                        <a href="#" role="button" class="bi bi-arrow-up-circle icon-md text-white" onclick="scrollToTop()" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Back to Top"></a>
                     </li>
                 </ul>
             </div>
@@ -254,7 +142,7 @@
         <!-- /.Side Action Panel -->
 
         <!-- Main Navbar -->
-        <header class="header fixed-md-top box-shadow-sm d-sm-none d-md-block">
+        <header class="header box-shadow-sm  d-none d-md-block">
             <div class="container">
                 <!-- Main Navbar -->
                 <nav class="nav navbar-expand-md main-nav">
@@ -529,15 +417,15 @@
                     <ul class="ms-auto justify-content-sm-around d-flex align-items-center m-0 p-0">
                         <!-- App Currencies -->
                         <li class="nav-item d-none d-md-flex" data-bs-toggle="tooltip" title="Select currency">
-                            <div class="text-muted nav-link font-600 navbar-text">
+                            <div class="usd-price nav-link font-600 navbar-text">
                                 <div class="dropdown dropdown-toggle d-cursor" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img id="currency-flag" src="dist/images/currencies/usd.png" height="15" width="22" alt="">
-                                    <span id="currency-total" class="text-muted text-color-switch">US$12.48</span>
+                                    <span id="currency-total" class="usd-price text-color-switch">US$12.48</span>
                                 </div>
                                 <div class="dropdown-menu box-shadow-sm rounded-2 currency-dropdown-menu">
                                     <div class="dropdown-menu-item d-flex align-items-center currency-option d-cursor ps-3 py-1">
                                         <img src="dist/images/currencies/usd.png" height="15" width="22" alt="">
-                                        <span id="text-muted" data-total="US$12.48" class="font-600 ms-1">USD</span>
+                                        <span id="usd-price" data-total="US$12.48" class="font-600 ms-1">USD</span>
                                     </div>
                                     <div class="dropdown-menu-item d-flex align-items-center currency-option d-cursor ps-3 py-1">
                                         <img src="dist/images/currencies/zar.jpg" height="15" width="22" alt="">
@@ -585,7 +473,7 @@
                                                         <p class="text-sm font-600 text-capitalize my-0 py-0">
                                                             Awesome gift
                                                         </p>
-                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
@@ -611,7 +499,7 @@
                                                 <!-- /.Product Item -->
                                             </div>
                                             <div class="d-block text-center">
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm text-muted">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
                                                 <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
                                                 <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
                                                 <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
@@ -641,7 +529,7 @@
                                                         <p class="text-sm font-600 text-capitalize my-0 py-0">
                                                             Awesome gift
                                                         </p>
-                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
@@ -667,7 +555,7 @@
                                                 <!-- /.Product Item -->
                                             </div>
                                             <div class="d-block text-center">
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm text-muted">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
                                                 <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
                                                 <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
                                                 <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
@@ -697,7 +585,7 @@
                                                         <p class="text-sm font-600 text-capitalize my-0 py-0">
                                                             Awesome gift
                                                         </p>
-                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
@@ -723,7 +611,7 @@
                                                 <!-- /.Product Item -->
                                             </div>
                                             <div class="d-block text-center">
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm text-muted">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
                                                 <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
                                                 <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
                                                 <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
@@ -753,7 +641,7 @@
                                                         <p class="text-sm font-600 text-capitalize my-0 py-0">
                                                             Awesome gift
                                                         </p>
-                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
+                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
@@ -779,7 +667,7 @@
                                                 <!-- /.Product Item -->
                                             </div>
                                             <div class="d-block text-center">
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm text-muted">US$36.29</p>
+                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
                                                 <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
                                                 <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
                                                 <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
@@ -791,7 +679,7 @@
                                 <!-- Cart Details -->
                                 <li class="list-group-item w-100 lh-100 font-600 text-sm rounded-bottom-2" id="cart-action-btns">
                                     <!-- Cart Subtotal -->
-                                    <div class="text-muted">
+                                    <div class="usd-price">
                                         <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
                                             <span class="text-capitalize">Subtotal Amount:</span>
                                             <span class="usd-subtotal">US$0.00</span>
@@ -812,7 +700,7 @@
                                     <!-- /.Cart Subtotal -->
 
                                     <!-- Delivery charges -->
-                                    <div class="text-muted">
+                                    <div class="usd-price">
                                         <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
                                             <span class="text-capitalize">Delivery Costs:</span>
                                             <span class="usd-delivery-cost">US$3.39</span>
@@ -834,7 +722,7 @@
                                     <!-- /.Delivery Charges -->
 
                                     <!-- Taxes & Discounts -->
-                                    <div class="text-muted">
+                                    <div class="usd-price">
                                         <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
                                             <span class="text-capitalize">Discount:</span>
                                             <span class="usd-discount">US$3.48</span>
@@ -856,7 +744,7 @@
                                     <!-- /.Taxes & Discounts -->
 
                                     <!-- Cart Total -->
-                                    <div class="text-muted">
+                                    <div class="usd-price">
                                         <h6 class="font-600 d-flex justify-content-between align-items-center my-0 py-0">
                                             <span class="text-capitalize">Cart Total:</span>
                                             <span class="usd-total">US$0.00</span>
@@ -977,10 +865,6 @@
                             </div>
                         </li>
                         <!-- /.Visitor -->
-
-                        <li class="nav-item d-md-flex ms-3" id="app-settings" data-bs-toggle="tooltip" title="See more settings">
-                            <a class="toggle-settings nav-link icon-link material-icons">tune</a>
-                        </li>
                     </ul>
                     <!-- /.Right Navbar Links -->
                 </nav>
@@ -1063,10 +947,233 @@
         </header>
         <!-- /.Main Navbar -->
 
-        <div class="page-content">
-            <div class="container">
+        <!-- Fixed-Top Mobile Navbar -->
+        <nav class="navbar navbar-light bg-whitesmoke box-shadow-sm m-0 py-0 d-md-none" id="category-top-nav">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center w-100">
+                    <ul class="d-flex align-items-center my-0 p-0">
+                        <li class="nav-item me-1">
+                            <a href="index.html" role="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center p-0 m-0">
+                                <i class="bi bi-chevron-left mobile-nav-icon"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html" class="navbar-brand font-700">
+                                <img src="dist/images/app/gifteros.png" height="35" class="gifteros-logo" width="35" alt="">
+                                <span class="mobile-brand brandname">Gifteros</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="d-flex align-items-center ms-auto my-0 p-0">
+                        <li class="nav-item me-3">
+                            <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center p-0 m-0" onclick="toggleSearchBar()">
+                                <i class="bi bi-search mobile-nav-icon"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item me-3">
+                            <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center position-relative p-0 m-0">
+                                <i class="bi bi-cart4 mobile-nav-icon"></i>
+                                <span class="badge nav-badge position-absolute gift-count">4</span>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center toggle-side-menu p-0 m-0">
+                                <i class="bi bi-list mobile-nav-icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- /.Fixed-Top Mobile Navbar -->
+
+        <!-- Fixed-Top Mobile Sub-Navbar -->
+        <nav class="navbar navbar-light bg-whitesmoke box-shadow-sm m-0 py-0 d-md-none" id="mobile-sub-nav">
+            <div class="container-fluid">
+                <div class="d-block w-100">
+                    <!-- Breadcrumbs -->
+                    <div aria-label="breadcrumb w-100">
+                        <ol class="breadcrumb mb-0 pb-0">
+                            <li class="breadcrumb-item active text-sm text-capitalize" aria-current="page">
+                                jewelry & accessories (1, 234 results)
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- /.Breadcrumbs -->
+                    <div class="d-flex align-items-center w-100">
+                        <div class="dropdown mx-2">
+                            <a href="#" data-bs-toggle="dropdown" class="btn btn-outline-secondary btn-sm d-flex align-items-center rounded-pill px-md-3" aria-expanded="false" aria-haspopup="true">
+                                <i class="material-icons me-1">sort</i>
+                                <span id="sort-reviews">Sort</span>
+                            </a>
+                            <div class="dropdown-menu rounded-2">
+                                <div class="dropdown-item d-cursor review-filter-item p-2 d-flex align-items-center" data-id="Most relevant">
+                                    <i class="material-icons d-none me-1">done</i> Orders
+                                </div>
+                                <div class="dropdown-item d-cursor p-2 review-filter-item d-flex align-items-center" data-id="Newest">
+                                    <i class="material-icons d-none me-1">done</i> Newest
+                                </div>
+                                <div class="dropdown-item d-cursor review-filter-item p-2 d-flex align-items-center" data-id="Most relevant">
+                                    <i class="material-icons d-none me-1">done</i> Price (Low to High)
+                                </div>
+                                <div class="dropdown-item d-cursor p-2 review-filter-item d-flex align-items-center" data-id="Newest">
+                                    <i class="material-icons d-none me-1">done</i> Prices (High to Low)
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="d-flex align-items-center ms-auto my-0 p-0">
+                            <li class="nav-item me-3">
+                                <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center p-0 m-0 view-option-button grid-view-btn d-none" data-view="grid-view">
+                                    <i class="bi bi-grid mobile-nav-icon"></i>
+                                </button>
+                                <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center p-0 m-0 view-option-button list-view-btn" data-view="list-view">
+                                    <i class="bi bi-list-ul mobile-nav-icon"></i>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center toggle-side-menu p-0 m-0">
+                                    <i class="bi bi-funnel"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- /.Fixed-Top Mobile Sub-Navbar -->
+
+        <!-- Mobile Search -->
+        <nav class="navbar navbar-light bg-whitesmoke fixed-top box-shadow-sm m-0 py-1 d-none" id="mobile-search-bar">
+            <div class="container-fluid w-100">
+                <div class="w-10">
+                    <button type="button" class="btn btn-default circled-button d-flex justify-content-center" onclick="toggleSearchBar()">
+                        <i class="material-icons text-color-switch">arrow_back</i>
+                    </button>
+                </div>
+                <!-- Search Form -->
+                <form method="get" action="/search" id="search-form" class="bg-whitesmoke w-85">
+                    <div class="form-group" id="search-bar">
+                        <input type="search" name="search" id="search" class="form-control rounded-pill" placeholder="Search over 36436 gifts">
+                    </div>
+                </form>
+                <!-- Search List Results -->
+                <ul class="list-group bg-whitesmoke search-list rounded-bottom-2 d-none px-0">
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                </ul>
+                <!-- /.Search List Results -->
+                <!-- /.Search Form -->
+            </div>
+        </nav>
+        <!-- /.Mobile Search -->
+
+        <div class="page-content" id="category-page">
+            <div class="container-fluid container-md w-100">
                 <!-- Breadcrumbs -->
-                <nav class="d-flex align-items-center justify-content-md-between my-2" aria-label="breadcrumb">
+                <nav class="d-none d-md-flex align-items-center justify-content-md-between my-md-2" aria-label="breadcrumb">
                     <h4 class="text-app-color font-600 my-0">Personal Care</h4>
                     <ol class="breadcrumb my-0 py-0">
                         <li class="breadcrumb-item"><a href="index.html">Store</a></li>
@@ -1075,195 +1182,308 @@
                     </ol>
                 </nav>
                 <!-- /.Breadcrumbs -->
-                <div class="row">
-                    <!-- Side Navigation -->
-                    <div class="col-md-3 zoom-out-section">
-                        <div class="box-shadow-sm bg-whitesmoke left-section border pb-2">
-                            <div class="d-flex align-items-center justify-content-between py-2 px-2">
-                                <h6 class="font-600 my-0">filter by</h6>
-                                <button class="btn btn-sm btn-light rounded-pill px-3">clear all</button>
-                            </div>
-                            <hr class="my-1">
-                            <!-- Filters -->
-                            <div class="d-block ms-2">
-                                <!-- Related Categories -->
-                                <a class="font-600 text-dark d-flex align-items-center" data-bs-toggle="collapse" href="#related-categories" role="button" aria-expanded="false" aria-controls="related-categories">
-                                    Related Categories <i class="material-icons ms-2 collapse-icon">expand_more</i>
-                                </a>
-                                <div class="collapse" id="related-categories">
-                                    <ul class="filter-list accordion-body p-0 m-0">
-                                        <li class="text-sm mt-0 pt-0">
-                                            <a href="#" class="text-muted">Related Item</a>
-                                        </li>
-                                        <li class="text-sm">
-                                            <a href="#" class="text-muted">Related Item</a>
-                                        </li>
-                                        <li class="text-sm">
-                                            <a href="#" class="text-muted">Related Item</a>
-                                        </li>
-                                        <li class="text-sm">
-                                            <a href="#" class="text-muted">Related Item</a>
-                                        </li>
-                                        <li class="text-sm">
-                                            <a href="#" class="text-muted">Related Item</a>
-                                        </li>
-                                        <li class="text-sm">
-                                            <a href="#" class="text-muted">Related Item</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- /.Related Categories -->
-
-                                <!-- Price Filters -->
-                                <div class="block mt-1">
-                                    <h6 class="font-600 text-capitalize my-0">price filters</h6>
-                                    <div class="px-0 ps-2">
-                                        <p class="my-0 py-0">
-                                            <label class="text-sm">
-                                                <input class="form-check-input me-1" name="price-filter" type="radio" value="">
-                                                <span class="usd-price text-muted">Under $25</span>
-                                            </label>
-                                        </p>
-                                        <p class="my-0 py-0">
-                                            <label class="text-sm">
-                                                <input class="form-check-input me-1" name="price-filter" type="radio" value="">
-                                                <span class="usd-price text-muted">$25 - $50</span>
-                                            </label>
-                                        </p>
-                                        <p class="my-0 py-0">
-                                            <label class="text-sm">
-                                                <input class="form-check-input me-1" name="price-filter" type="radio" value="">
-                                                <span class="usd-price text-muted">$50 - $100</span>
-                                            </label>
-                                        </p>
-                                        <p class="my-0 py-0">
-                                            <label class="text-sm">
-                                                <input class="form-check-input me-1" name="price-filter" type="radio" value="">
-                                                <span class="usd-price text-muted">Above $100</span>
-                                            </label>
-                                        </p>
+                <div class="row gx-sm-0 gx-md-2 mx-0">
+                    <!-- Filter Panel -->
+                    <div class="col-md-3 d-md-block">
+                        <div class="filter-panel">
+                            <form method="post" class="need-validation" id="filter-form" novalidate>
+                                <div class="sticky-top box-shadow-sm bg-whitesmoke left-section border pb-2">
+                                    <div class="d-flex align-items-center justify-content-between py-2 px-2">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-sliders me-1"></i>
+                                            <h6 class="font-600 my-0 pt-1">Filters</h6>
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-light text-dark rounded-pill d-flex align-items-center justify-content-center px-3">
+                                            <i class="bi bi-trash me-1"></i>
+                                            clear all
+                                        </button>
                                     </div>
-                                </div>
-                                <!-- /.Price Filters -->
+                                    <hr class="my-1">
+                                    <!-- Filters -->
+                                    <div class="d-block ms-2">
+                                        <!-- Related Categories -->
+                                        <div class="d-block">
+                                            <a class="font-600 text-dark d-flex align-items-center py-2 collapse-link" data-bs-toggle="collapse" href="#related-categories" role="button" aria-expanded="true" aria-controls="related-categories">
+                                                Related Categories <i class="bi bi-chevron-up ms-auto me-3 collapse-icon"></i>
+                                            </a>
+                                            <div class="collapse show" id="related-categories">
+                                                <ul class="filter-list accordion-body p-0 m-0">
+                                                    <li class="text-sm mt-0 pt-0">
+                                                        <a href="#" class="text-muted">Related Item</a>
+                                                    </li>
+                                                    <li class="text-sm">
+                                                        <a href="#" class="text-muted">Related Item</a>
+                                                    </li>
+                                                    <li class="text-sm">
+                                                        <a href="#" class="text-muted">Related Item</a>
+                                                    </li>
+                                                    <li class="text-sm">
+                                                        <a href="#" class="text-muted">Related Item</a>
+                                                    </li>
+                                                    <li class="text-sm">
+                                                        <a href="#" class="text-muted">Related Item</a>
+                                                    </li>
+                                                    <li class="text-sm">
+                                                        <a href="#" class="text-muted">Related Item</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- /.Related Categories -->
 
-                                <hr class="my-1">
+                                        <hr class="my-1">
 
-                                <!-- Clothing Size Filters -->
-                                <div class="block">
-                                    <h6 class="font-600 text-capitalize my-0">Size Filters</h6>
-                                    <div class="px-0 ps-2">
-                                        <p class="my-0 py-0">
-                                            <label class="text-sm">
-                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
-                                                <span class="text-muted">S</span>
-                                            </label>
-                                        </p>
-                                        <p class="my-0 py-0">
-                                            <label class="text-sm">
-                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
-                                                <span class="text-muted">M</span>
-                                            </label>
-                                        </p>
-                                        <p class="my-0 py-0">
-                                            <label class="text-sm">
-                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
-                                                <span class="text-muted">L</span>
-                                            </label>
-                                        </p>
-                                        <p class="my-0 py-0">
-                                            <label class="text-sm">
-                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
-                                                <span class="text-muted">XL</span>
-                                            </label>
-                                        </p>
-                                        <p class="my-0 py-0">
-                                            <label class="text-sm">
-                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
-                                                <span class="text-muted">XXL</span>
-                                            </label>
-                                        </p>
-                                        <p class="my-0 py-0">
-                                            <label class="text-sm">
-                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
-                                                <span class="text-muted">XXXL</span>
-                                            </label>
-                                        </p>
-                                        <p class="my-0 py-0">
-                                            <label class="text-sm">
-                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
-                                                <span class="text-muted">4XL</span>
-                                            </label>
-                                        </p>
+                                        <!-- Price Filters -->
+                                        <div class="block mt-1">
+                                            <a class="font-600 text-dark d-flex align-items-center py-2 collapse-link" data-bs-toggle="collapse" href="#price-filters" role="button" aria-expanded="true" aria-controls="price-filters">
+                                                Price Filters <i class="bi bi-chevron-up ms-auto me-3 collapse-icon"></i>
+                                            </a>
+                                            <div class="collapse show" id="price-filters">
+                                                <div class="px-0 ps-2">
+                                                    <p class="my-0 py-0">
+                                                        <label class="text-sm">
+                                                            <input class="form-check-input me-1" name="price-filter" type="radio" value="">
+                                                            <span class="usd-price text-muted">Under $25</span>
+                                                        </label>
+                                                    </p>
+                                                    <p class="my-0 py-0">
+                                                        <label class="text-sm">
+                                                            <input class="form-check-input me-1" name="price-filter" type="radio" value="">
+                                                            <span class="usd-price text-muted">$25 - $50</span>
+                                                        </label>
+                                                    </p>
+                                                    <p class="my-0 py-0">
+                                                        <label class="text-sm">
+                                                            <input class="form-check-input me-1" name="price-filter" type="radio" value="">
+                                                            <span class="usd-price text-muted">$50 - $100</span>
+                                                        </label>
+                                                    </p>
+                                                    <p class="my-0 py-0">
+                                                        <label class="text-sm">
+                                                            <input class="form-check-input me-1" name="price-filter" type="radio" value="">
+                                                            <span class="usd-price text-muted">Above $100</span>
+                                                        </label>
+                                                    </p>
+                                                </div>
+
+                                                <!-- Price Range Inputs -->
+                                                <div class="d-flex align-items-center d-md-none mt-1">
+                                                    <input type="text" name="min-price" id="min-price" class="form-control form-control-sm price-range-input text-sm" placeholder="min" onkeyup="forceNumeric()" required>
+                                                    <i class="mx-2">-</i>
+                                                    <input type="text" name="max-price" id="max-price" class="form-control form-control-sm price-range-input text-sm" placeholder="max" onkeyup="forceNumeric()" required>
+                                                </div>
+                                                <!-- /.Price Range Inputs -->
+                                            </div>
+                                        </div>
+                                        <!-- /.Price Filters -->
+
+                                        <hr class="my-1">
+
+                                        <!-- Rating Filters -->
+                                        <div class="block">
+                                            <a class="font-600 text-dark d-flex align-items-center py-2 collapse-link" data-bs-toggle="collapse" href="#rating-filters" role="button" aria-expanded="true" aria-controls="rating-filters">
+                                                Customer Ratings <i class="bi bi-chevron-up ms-auto me-3 collapse-icon"></i>
+                                            </a>
+                                            <div class="collapse show" id="rating-filters">
+                                                <div class="d-block ms-2">
+                                                    <button type="button" class="btn btn-outline-light btn-sm d-flex align-items-center justify-content-center rounded-pill px-2 mb-2">
+                                                        <ul class="list-inline gift-star-rating m-0 p-0">
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                        </ul>
+                                                        <p class="ms-2 my-0 py-0 text-sm">5 stars only</p>
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-light btn-sm d-flex align-items-center justify-content-center rounded-pill px-2 mb-2">
+                                                        <ul class="list-inline gift-star-rating m-0 p-0">
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&starf;</li>
+                                                        </ul>
+                                                        <p class="ms-2 my-0 py-0 text-sm">4 stars & up</p>
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-light btn-sm d-flex align-items-center justify-content-center rounded-pill px-2 mb-2">
+                                                        <ul class="list-inline gift-star-rating m-0 p-0">
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&starf;</li>
+                                                        </ul>
+                                                        <p class="ms-2 my-0 py-0 text-sm">3 stars & up</p>
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-light btn-sm d-flex align-items-center justify-content-center rounded-pill px-2 mb-2">
+                                                        <ul class="list-inline gift-star-rating m-0 p-0">
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&starf;</li>
+                                                        </ul>
+                                                        <p class="ms-2 my-0 py-0 text-sm">2 stars & up</p>
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-light btn-sm d-flex align-items-center justify-content-center rounded-pill px-2">
+                                                        <ul class="list-inline gift-star-rating m-0 p-0">
+                                                            <li class="list-inline-item text-gold">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&starf;</li>
+                                                            <li class="list-inline-item text-muted">&starf;</li>
+                                                        </ul>
+                                                        <p class="ms-2 my-0 py-0 text-sm">1 star & up</p>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.Rating Filters -->
+
+                                        <hr class="my-1">
+
+                                        <!-- Clothing Size Filters -->
+                                        <div class="block">
+                                            <a class="font-600 text-dark d-flex align-items-center py-2 collapse-link" data-bs-toggle="collapse" href="#clothing-filters" role="button" aria-expanded="true" aria-controls="clothing-filters">
+                                                Clothing Sizes <i class="bi bi-chevron-up ms-auto me-3 collapse-icon"></i>
+                                            </a>
+                                            <div class="collapse show" id="clothing-filters">
+                                                <div class="px-0 ps-2">
+                                                    <p class="my-0 py-0">
+                                                        <label class="text-sm">
+                                                            <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                            <span class="text-muted">S</span>
+                                                        </label>
+                                                    </p>
+                                                    <p class="my-0 py-0">
+                                                        <label class="text-sm">
+                                                            <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                            <span class="text-muted">M</span>
+                                                        </label>
+                                                    </p>
+                                                    <p class="my-0 py-0">
+                                                        <label class="text-sm">
+                                                            <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                            <span class="text-muted">L</span>
+                                                        </label>
+                                                    </p>
+                                                    <p class="my-0 py-0">
+                                                        <label class="text-sm">
+                                                            <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                            <span class="text-muted">XL</span>
+                                                        </label>
+                                                    </p>
+                                                    <p class="my-0 py-0">
+                                                        <label class="text-sm">
+                                                            <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                            <span class="text-muted">XXL</span>
+                                                        </label>
+                                                    </p>
+                                                    <p class="my-0 py-0">
+                                                        <label class="text-sm">
+                                                            <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                            <span class="text-muted">XXXL</span>
+                                                        </label>
+                                                    </p>
+                                                    <p class="my-0 py-0">
+                                                        <label class="text-sm">
+                                                            <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                            <span class="text-muted">4XL</span>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.Clothing Size Filters -->
+
+                                        <hr class="my-1">
+
+                                        <!-- Shoe Size Filters -->
+                                        <div class="block">
+                                            <a class="font-600 text-dark d-flex align-items-center py-2 collapse-link" data-bs-toggle="collapse" href="#shoe-filters" role="button" aria-expanded="true" aria-controls="shoe-filters">
+                                                Shoe Sizes <i class="bi bi-chevron-up ms-auto me-3 collapse-icon"></i>
+                                            </a>
+                                            <div class="collapse show" id="shoe-filters">
+                                                <div class="d-grid grid-6 grid-p-1 shoe-sizes m-1">
+                                                    <!-- Shoe sizes will be shown here -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.Shoe Size Filters -->
+
+                                        <hr class="my-1">
+
+                                        <!--  Bed Size Filters -->
+                                        <div class="block">
+                                            <a class="font-600 text-dark d-flex align-items-center py-2 collapse-link" data-bs-toggle="collapse" href="#bed-filters" role="button" aria-expanded="true" aria-controls="bed-filters">
+                                                Bed Sizes <i class="bi bi-chevron-up ms-auto me-3 collapse-icon"></i>
+                                            </a>
+                                            <div class="collapse show" id="bed-filters">
+                                                <div class="px-0 ps-2">
+                                                    <p class="my-0 py-0">
+                                                        <label class="text-sm">
+                                                            <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                            <span class="text-muted">Twin</span>
+                                                        </label>
+                                                    </p>
+                                                    <p class="my-0 py-0">
+                                                        <label class="text-sm">
+                                                            <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                            <span class="text-muted">Twin XL</span>
+                                                        </label>
+                                                    </p>
+                                                    <p class="my-0 py-0">
+                                                        <label class="text-sm">
+                                                            <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                            <span class="text-muted">Double</span>
+                                                        </label>
+                                                    </p>
+                                                    <p class="my-0 py-0">
+                                                        <label class="text-sm">
+                                                            <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                            <span class="text-muted">Queen</span>
+                                                        </label>
+                                                    </p>
+                                                    <p class="my-0 py-0">
+                                                        <label class="text-sm">
+                                                            <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                            <span class="text-muted">King</span>
+                                                        </label>
+                                                    </p>
+                                                    <p class="my-0 py-0">
+                                                        <label class="text-sm">
+                                                            <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
+                                                            <span class="text-muted">Super King</span>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /. Bed Size Filters -->
                                     </div>
-                                </div>
-                                <!-- /.Clothing Size Filters -->
+                                    <!-- /.Filters -->
 
-                                <hr class="my-1">
+                                    <hr class="my-1">
 
-                                <!-- Shoe Size Filters -->
-                                <div class="block">
-                                    <h6 class="font-600 text-capitalize my-0">Size Filters</h6>
-                                    <div class="d-grid grid-6 grid-p-1 shoe-sizes m-1">
-                                        <!-- Shoe sizes will be shown here -->
+                                    <!-- Submit button -->
+                                    <div class="d-flex justify-content-center mt-2">
+                                        <button type="submit" class="btn btn-success btn-sm d-flex align-items-center justify-content-center px-3 rounded-pill">
+                                            <i class="material-icons me-1">done</i>
+                                            Apply Filters
+                                        </button>
                                     </div>
+                                    <!-- /.Submit button -->
                                 </div>
-                                <!-- /.Shoe Size Filters -->
-
-                                <hr class="my-1">
-
-                                <!--  Bed Size Filters -->
-                                <div class="block">
-                                    <h6 class="font-600 text-capitalize my-0">Bed Size Filters</h6>
-                                    <div class="px-0 ps-2">
-                                        <p class="my-0 py-0">
-                                            <label class="text-sm">
-                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
-                                                <span class="text-muted">Twin</span>
-                                            </label>
-                                        </p>
-                                        <p class="my-0 py-0">
-                                            <label class="text-sm">
-                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
-                                                <span class="text-muted">Twin XL</span>
-                                            </label>
-                                        </p>
-                                        <p class="my-0 py-0">
-                                            <label class="text-sm">
-                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
-                                                <span class="text-muted">Double</span>
-                                            </label>
-                                        </p>
-                                        <p class="my-0 py-0">
-                                            <label class="text-sm">
-                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
-                                                <span class="text-muted">Queen</span>
-                                            </label>
-                                        </p>
-                                        <p class="my-0 py-0">
-                                            <label class="text-sm">
-                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
-                                                <span class="text-muted">King</span>
-                                            </label>
-                                        </p>
-                                        <p class="my-0 py-0">
-                                            <label class="text-sm">
-                                                <input class="form-check-input me-1" name="size-filter" type="checkbox" value="">
-                                                <span class="text-muted">Super King</span>
-                                            </label>
-                                        </p>
-                                    </div>
-                                </div>
-                                <!-- /. Bed Size Filters -->
-                            </div>
-                            <!-- /.Filters -->
+                            </form>
                         </div>
                     </div>
-                    <!-- /.Side Navigation -->
+                    <!-- /.Filter Panel -->
 
                     <!-- Main Content -->
                     <div class="col-12 col-md-9 zoom-out-section">
                         <!-- Right Navbar -->
-                        <nav class="box-shadow-sm bg-whitesmoke sticky-top border p-2">
+                        <nav class="box-shadow-sm bg-whitesmoke sticky-top border d-none d-md-block p-2">
                             <!-- Breadcrumbs -->
                             <div aria-label="breadcrumb">
                                 <ol class="breadcrumb mb-0 pb-0">
@@ -1355,6 +1575,7 @@
                         <div class="d-grid grid-view grid-p-1 mt-2 display-gifts category-shelf" id="category-gifts">
                             <!-- Product Card -->
                             <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                                <a href="details.html" class="stretched-link d-md-none"></a>
                                 <!-- Cart Actions -->
                                 <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
                                     <div class="d-flex align-items-center px-2">
@@ -1402,10 +1623,10 @@
                                     </div>
                                 </div>
                                 <div class="card-content">
-                                    <div class="card-body my-0 py-0">
+                                    <div class="card-body rounded-bottom-2 my-0 py-0">
                                         <div class="lh-100 mb-0 pb-0">
                                             <a href="#">
-                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
+                                                <p class="d-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
                                                     Customizable board
                                                 </p>
                                                 <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
@@ -1421,15 +1642,15 @@
                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                 <li class="list-inline-item text-muted">&star;</li>
-                                                <span class="text-sm text-faded font-600">(35)</span>
+                                                <span class="product-price text-faded font-600">(35)</span>
                                             </ul>
                                         </div>
                                         <div class="price-tag">
-                                            <div class="text-muted">
+                                            <div class="usd-price">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="font-600">$<span class="product-price">36.38</span></span>
+                                                    <span class="product-price font-600">$<span class="product-price">36.38</span></span>
                                                     <div class="d-flex align-items-center before-prices">
-                                                        <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                        <span class="product-price font-600 text-muted strikethrough ms-1">$39.39</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1437,30 +1658,31 @@
                                                 <div class="d-flex align-items-center justify-content-between">
                                                     <span class="font-600">R<span class="product-price">273.38</span></span>
                                                     <div class="d-flex align-items-center before-prices">
-                                                        <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                        <span class="product-price font-600 text-muted strikethrough ms-1">R232.38</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="zwl-price d-none">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="font-600">$<span class="product-price">2737.33</span></span>
+                                                    <span class="product-price font-600">$<span class="product-price">2737.33</span></span>
                                                     <div class="d-flex align-items-center before-prices">
                                                         <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="d-flex align-items-center text-sm">
-                                            <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
-                                            <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
+                                        <div class="d-flex justify-content-sm-center justify-content-md-start text-md-start align-items-center text-sm">
+                                            <span class="d-none d-md-flex">Ends in:</span>
+                                            <i class="fa fa-clock-o d-md-none"></i>
+                                            <span class="ms-1" id="countdown-timer">00d:00h:00m:00s</span>
                                         </div>
-                                        <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
+                                        <div class="btn-group btn-group-sm d-none d-md-flex pt-0 pulse">
                                             <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
-                                                <i class="fa fa-cart-plus text-white me-1 d-sm-none d-md-inline-block"></i>
+                                                <i class="fa fa-cart-plus text-white me-1 d-none d-md-inline-block"></i>
                                                 Buy <span class="text-white text-white ms-1">gift</span>
                                             </button>
                                             <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
-                                                <i class="fa fa-exchange text-app-color me-1 d-sm-none d-md-inline-block"></i>
+                                                <i class="fa fa-exchange text-app-color me-1 d-none d-md-inline-block"></i>
                                                 Compare
                                             </button>
                                         </div>
@@ -1470,6 +1692,7 @@
                             <!-- /.Product Card -->
                             <!-- Product Card -->
                             <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                                <a href="details.html" class="stretched-link d-md-none"></a>
                                 <!-- Cart Actions -->
                                 <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
                                     <div class="d-flex align-items-center px-2">
@@ -1495,7 +1718,7 @@
                                         <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
                                     </div>
                                     <a href="details.html" title="View product">
-                                        <img data-src="dist/images/gifts/15f458474b905f.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
+                                        <img data-src="dist/images/gifts/15f4607d0b3c65.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
                                     </a>
                                     <div class="overlay d-flex justify-content-around py-1">
                                         <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="38 In Stock">
@@ -1517,10 +1740,10 @@
                                     </div>
                                 </div>
                                 <div class="card-content">
-                                    <div class="card-body my-0 py-0">
+                                    <div class="card-body rounded-bottom-2 my-0 py-0">
                                         <div class="lh-100 mb-0 pb-0">
                                             <a href="#">
-                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
+                                                <p class="d-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
                                                     Customizable board
                                                 </p>
                                                 <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
@@ -1536,15 +1759,15 @@
                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                 <li class="list-inline-item text-muted">&star;</li>
-                                                <span class="text-sm text-faded font-600">(35)</span>
+                                                <span class="product-price text-faded font-600">(35)</span>
                                             </ul>
                                         </div>
                                         <div class="price-tag">
-                                            <div class="text-muted">
+                                            <div class="usd-price">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="font-600">$<span class="product-price">36.38</span></span>
+                                                    <span class="product-price font-600">$<span class="product-price">36.38</span></span>
                                                     <div class="d-flex align-items-center before-prices">
-                                                        <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                        <span class="product-price font-600 text-muted strikethrough ms-1">$39.39</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1552,30 +1775,31 @@
                                                 <div class="d-flex align-items-center justify-content-between">
                                                     <span class="font-600">R<span class="product-price">273.38</span></span>
                                                     <div class="d-flex align-items-center before-prices">
-                                                        <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                        <span class="product-price font-600 text-muted strikethrough ms-1">R232.38</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="zwl-price d-none">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="font-600">$<span class="product-price">2737.33</span></span>
+                                                    <span class="product-price font-600">$<span class="product-price">2737.33</span></span>
                                                     <div class="d-flex align-items-center before-prices">
                                                         <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="d-flex align-items-center text-sm">
-                                            <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
-                                            <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
+                                        <div class="d-flex justify-content-sm-center justify-content-md-start text-md-start align-items-center text-sm">
+                                            <span class="d-none d-md-flex">Ends in:</span>
+                                            <i class="fa fa-clock-o d-md-none"></i>
+                                            <span class="ms-1" id="countdown-timer">00d:00h:00m:00s</span>
                                         </div>
-                                        <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
+                                        <div class="btn-group btn-group-sm d-none d-md-flex pt-0 pulse">
                                             <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
-                                                <i class="fa fa-cart-plus text-white me-1 d-sm-none d-md-inline-block"></i>
+                                                <i class="fa fa-cart-plus text-white me-1 d-none d-md-inline-block"></i>
                                                 Buy <span class="text-white text-white ms-1">gift</span>
                                             </button>
                                             <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
-                                                <i class="fa fa-exchange text-app-color me-1 d-sm-none d-md-inline-block"></i>
+                                                <i class="fa fa-exchange text-app-color me-1 d-none d-md-inline-block"></i>
                                                 Compare
                                             </button>
                                         </div>
@@ -1585,6 +1809,7 @@
                             <!-- /.Product Card -->
                             <!-- Product Card -->
                             <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                                <a href="details.html" class="stretched-link d-md-none"></a>
                                 <!-- Cart Actions -->
                                 <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
                                     <div class="d-flex align-items-center px-2">
@@ -1610,7 +1835,7 @@
                                         <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
                                     </div>
                                     <a href="details.html" title="View product">
-                                        <img data-src="dist/images/gifts/15f458254a0dac.2.webp" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
+                                        <img data-src="dist/images/gifts/15f4607d0b3c65.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
                                     </a>
                                     <div class="overlay d-flex justify-content-around py-1">
                                         <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="38 In Stock">
@@ -1632,10 +1857,10 @@
                                     </div>
                                 </div>
                                 <div class="card-content">
-                                    <div class="card-body my-0 py-0">
+                                    <div class="card-body rounded-bottom-2 my-0 py-0">
                                         <div class="lh-100 mb-0 pb-0">
                                             <a href="#">
-                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
+                                                <p class="d-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
                                                     Customizable board
                                                 </p>
                                                 <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
@@ -1651,15 +1876,15 @@
                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                 <li class="list-inline-item text-muted">&star;</li>
-                                                <span class="text-sm text-faded font-600">(35)</span>
+                                                <span class="product-price text-faded font-600">(35)</span>
                                             </ul>
                                         </div>
                                         <div class="price-tag">
-                                            <div class="text-muted">
+                                            <div class="usd-price">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="font-600">$<span class="product-price">36.38</span></span>
+                                                    <span class="product-price font-600">$<span class="product-price">36.38</span></span>
                                                     <div class="d-flex align-items-center before-prices">
-                                                        <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                        <span class="product-price font-600 text-muted strikethrough ms-1">$39.39</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1667,30 +1892,31 @@
                                                 <div class="d-flex align-items-center justify-content-between">
                                                     <span class="font-600">R<span class="product-price">273.38</span></span>
                                                     <div class="d-flex align-items-center before-prices">
-                                                        <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                        <span class="product-price font-600 text-muted strikethrough ms-1">R232.38</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="zwl-price d-none">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="font-600">$<span class="product-price">2737.33</span></span>
+                                                    <span class="product-price font-600">$<span class="product-price">2737.33</span></span>
                                                     <div class="d-flex align-items-center before-prices">
                                                         <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="d-flex align-items-center text-sm">
-                                            <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
-                                            <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
+                                        <div class="d-flex justify-content-sm-center justify-content-md-start text-md-start align-items-center text-sm">
+                                            <span class="d-none d-md-flex">Ends in:</span>
+                                            <i class="fa fa-clock-o d-md-none"></i>
+                                            <span class="ms-1" id="countdown-timer">00d:00h:00m:00s</span>
                                         </div>
-                                        <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
+                                        <div class="btn-group btn-group-sm d-none d-md-flex pt-0 pulse">
                                             <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
-                                                <i class="fa fa-cart-plus text-white me-1 d-sm-none d-md-inline-block"></i>
+                                                <i class="fa fa-cart-plus text-white me-1 d-none d-md-inline-block"></i>
                                                 Buy <span class="text-white text-white ms-1">gift</span>
                                             </button>
                                             <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
-                                                <i class="fa fa-exchange text-app-color me-1 d-sm-none d-md-inline-block"></i>
+                                                <i class="fa fa-exchange text-app-color me-1 d-none d-md-inline-block"></i>
                                                 Compare
                                             </button>
                                         </div>
@@ -1700,6 +1926,7 @@
                             <!-- /.Product Card -->
                             <!-- Product Card -->
                             <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                                <a href="details.html" class="stretched-link d-md-none"></a>
                                 <!-- Cart Actions -->
                                 <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
                                     <div class="d-flex align-items-center px-2">
@@ -1725,7 +1952,7 @@
                                         <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
                                     </div>
                                     <a href="details.html" title="View product">
-                                        <img data-src="dist/images/gifts/15f458254a0dac.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
+                                        <img data-src="dist/images/gifts/15f4607d0b3c65.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
                                     </a>
                                     <div class="overlay d-flex justify-content-around py-1">
                                         <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="38 In Stock">
@@ -1747,10 +1974,10 @@
                                     </div>
                                 </div>
                                 <div class="card-content">
-                                    <div class="card-body my-0 py-0">
+                                    <div class="card-body rounded-bottom-2 my-0 py-0">
                                         <div class="lh-100 mb-0 pb-0">
                                             <a href="#">
-                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
+                                                <p class="d-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
                                                     Customizable board
                                                 </p>
                                                 <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
@@ -1766,15 +1993,15 @@
                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                 <li class="list-inline-item text-muted">&star;</li>
-                                                <span class="text-sm text-faded font-600">(35)</span>
+                                                <span class="product-price text-faded font-600">(35)</span>
                                             </ul>
                                         </div>
                                         <div class="price-tag">
-                                            <div class="text-muted">
+                                            <div class="usd-price">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="font-600">$<span class="product-price">36.38</span></span>
+                                                    <span class="product-price font-600">$<span class="product-price">36.38</span></span>
                                                     <div class="d-flex align-items-center before-prices">
-                                                        <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                        <span class="product-price font-600 text-muted strikethrough ms-1">$39.39</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1782,30 +2009,31 @@
                                                 <div class="d-flex align-items-center justify-content-between">
                                                     <span class="font-600">R<span class="product-price">273.38</span></span>
                                                     <div class="d-flex align-items-center before-prices">
-                                                        <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                        <span class="product-price font-600 text-muted strikethrough ms-1">R232.38</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="zwl-price d-none">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="font-600">$<span class="product-price">2737.33</span></span>
+                                                    <span class="product-price font-600">$<span class="product-price">2737.33</span></span>
                                                     <div class="d-flex align-items-center before-prices">
                                                         <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="d-flex align-items-center text-sm">
-                                            <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
-                                            <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
+                                        <div class="d-flex justify-content-sm-center justify-content-md-start text-md-start align-items-center text-sm">
+                                            <span class="d-none d-md-flex">Ends in:</span>
+                                            <i class="fa fa-clock-o d-md-none"></i>
+                                            <span class="ms-1" id="countdown-timer">00d:00h:00m:00s</span>
                                         </div>
-                                        <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
+                                        <div class="btn-group btn-group-sm d-none d-md-flex pt-0 pulse">
                                             <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
-                                                <i class="fa fa-cart-plus text-white me-1 d-sm-none d-md-inline-block"></i>
+                                                <i class="fa fa-cart-plus text-white me-1 d-none d-md-inline-block"></i>
                                                 Buy <span class="text-white text-white ms-1">gift</span>
                                             </button>
                                             <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
-                                                <i class="fa fa-exchange text-app-color me-1 d-sm-none d-md-inline-block"></i>
+                                                <i class="fa fa-exchange text-app-color me-1 d-none d-md-inline-block"></i>
                                                 Compare
                                             </button>
                                         </div>
@@ -1813,121 +2041,99 @@
                                 </div>
                             </div>
                             <!-- /.Product Card -->
-                            <!-- Product Card -->
-                            <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
-                                <!-- Cart Actions -->
-                                <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
-                                    <div class="d-flex align-items-center px-2">
-                                        <div class="d-flex align-items-center justify-content-around m-0 p-0">
-                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Decrease quantity">remove_circle</span>
-                                            <span role="button" class="product-actions item-quantity text-faded" id="item-count">0</span>
-                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Increase quantity">add_circle</span>
-                                        </div>
-                                        <div class="ms-auto d-flex align-items-center">
-                                            <a href="#" class="nav-link icon-link toggle-customization" id="customize" title="Customize gift" data-id="">
-                                                <i class="material-icons">palette</i>
-                                            </a>
-                                            <a href="#" class="nav-link icon-link text-danger remove-item ms-2" title="Remove Item" data-id="">
-                                                <i class="material-icons notifications">delete</i>
-                                            </a>
-                                        </div>
-                                    </div>
+                            <!-- Product Placeholder Card -->
+                            <div class="card placeholder-card bg-whitesmoke rounded-2 box-shadow-sm">
+                                <div class="overlay-placeholder d-none d-md-block"></div>
+                                <div class="img-wrapper-placeholder">
+                                    <div class="badge customize-ribbon d-flex align-items-center placeholder-label rounded-end"></div>
+                                    <div class="placeholder-img"></div>
                                 </div>
-                                <!-- /.Cart Actions -->
-                                <div class="product-img-wrapper">
-                                    <div class="badge bg-danger rounded-end customize-ribbon d-flex align-items-center">
-                                        <i class="material-icons text-white me-1" id="sale-icon">alarm_on</i>
-                                        <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
-                                    </div>
-                                    <a href="details.html" title="View product">
-                                        <img data-src="dist/images/gifts/15f460ba6e5666.2.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
-                                    </a>
-                                    <div class="overlay d-flex justify-content-around py-1">
-                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="38 In Stock">
-                                            <i class="fa fa-home text-light"></i>
-                                            <span class="text-light text-sm">38</span>
+                                <hr class="grid-view-hr my-0 py-0">
+                                <div class="placeholder-card-content">
+                                    <div class="card-body placeholder-body m-0 p-0 rounded-bottom-2">
+                                        <div class="content-placeholder title-placeholder mt-1 ms-2"></div>
+                                        <div class="content-placeholder category-placeholder my-1 ms-2"></div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="content-placeholder rating-placeholder ms-2"></div>
                                         </div>
-                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="27k Total Views">
-                                            <i class="fa fa-eye text-light"></i>
-                                            <span class="text-light text-sm">27k</span>
+                                        <div class="content-placeholder description-placeholder mt-2 mb-1 mx-2"></div>
+                                        <div class="content-placeholder half-description-placeholder ms-2"></div>
+                                        <div class="d-flex align-items-center justify-content-between placeholder-pricing-block mt-2">
+                                            <div class="content-placeholder price-placeholder me-2 ms-2"></div>
+                                            <div class="content-placeholder before-price-placeholder me-2"></div>
                                         </div>
-                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Wishlisted by 2734 customer(s)">
-                                            <i role="button" class="fa fa-heart text-light overlay-icon text-warning wishlist-icon" data-id="" data-user="" data-action="unwish" title="This gift is in your Wishlist"></i>
-                                            <span class="text-light text-sm">2734</span>
-                                        </div>
-                                        <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="456 gift(s) sold">
-                                            <i role="button" class="fa fa-truck text-light overlay-icon text-warning" data-action="unwish"></i>
-                                            <span class="text-light text-sm">235</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-content">
-                                    <div class="card-body my-0 py-0">
-                                        <div class="lh-100 mb-0 pb-0">
-                                            <a href="#">
-                                                <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
-                                                    Customizable board
-                                                </p>
-                                                <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
-                                                    Customizable board
-                                                </p>
-                                            </a>
-                                            <a href="#" class="text-sm font-500 text-capitalize my-0 py-0">
-                                                Customizables
-                                            </a>
-                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-muted">&star;</li>
-                                                <span class="text-sm text-faded font-600">(35)</span>
-                                            </ul>
-                                        </div>
-                                        <div class="price-tag">
-                                            <div class="text-muted">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="font-600">$<span class="product-price">36.38</span></span>
-                                                    <div class="d-flex align-items-center before-prices">
-                                                        <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
-                                                    </div>
-                                                </div>
+                                        <div class="text-center w-100 d-none d-md-block mx-0 px-0 mb-1">
+                                            <div class="btn-group btn-group-sm mt-0 pt-0 btn-group-placeholder pulse">
+                                                <button class="btn btn-sm btn-cart-placeholder rounded-start"></button>
+                                                <button class="btn btn-sm compare-btn-placeholder rounded-end"></button>
                                             </div>
-                                            <div class="zar-price d-none">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="font-600">R<span class="product-price">273.38</span></span>
-                                                    <div class="d-flex align-items-center before-prices">
-                                                        <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="zwl-price d-none">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="font-600">$<span class="product-price">2737.33</span></span>
-                                                    <div class="d-flex align-items-center before-prices">
-                                                        <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-center text-sm">
-                                            <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
-                                            <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
-                                        </div>
-                                        <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
-                                            <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
-                                                <i class="fa fa-cart-plus text-white me-1 d-sm-none d-md-inline-block"></i>
-                                                Buy <span class="text-white text-white ms-1">gift</span>
-                                            </button>
-                                            <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
-                                                <i class="fa fa-exchange text-app-color me-1 d-sm-none d-md-inline-block"></i>
-                                                Compare
-                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- /.Product Card -->
+                            <!-- /.Product Placeholder Card -->
+                            <!-- Product Placeholder Card -->
+                            <div class="card placeholder-card bg-whitesmoke rounded-2 box-shadow-sm">
+                                <div class="overlay-placeholder d-none d-md-block"></div>
+                                <div class="img-wrapper-placeholder">
+                                    <div class="badge customize-ribbon d-flex align-items-center placeholder-label rounded-end"></div>
+                                    <div class="placeholder-img"></div>
+                                </div>
+                                <hr class="grid-view-hr my-0 py-0">
+                                <div class="placeholder-card-content">
+                                    <div class="card-body placeholder-body m-0 p-0 rounded-bottom-2">
+                                        <div class="content-placeholder title-placeholder mt-1 ms-2"></div>
+                                        <div class="content-placeholder category-placeholder my-1 ms-2"></div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="content-placeholder rating-placeholder ms-2"></div>
+                                        </div>
+                                        <div class="content-placeholder description-placeholder mt-2 mb-1 mx-2"></div>
+                                        <div class="content-placeholder half-description-placeholder ms-2"></div>
+                                        <div class="d-flex align-items-center justify-content-between placeholder-pricing-block mt-2">
+                                            <div class="content-placeholder price-placeholder me-2 ms-2"></div>
+                                            <div class="content-placeholder before-price-placeholder me-2"></div>
+                                        </div>
+                                        <div class="text-center w-100 d-none d-md-block mx-0 px-0 mb-1">
+                                            <div class="btn-group btn-group-sm mt-0 pt-0 btn-group-placeholder pulse">
+                                                <button class="btn btn-sm btn-cart-placeholder rounded-start"></button>
+                                                <button class="btn btn-sm compare-btn-placeholder rounded-end"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.Product Placeholder Card -->
+                            <!-- Product Placeholder Card -->
+                            <div class="card placeholder-card bg-whitesmoke rounded-2 box-shadow-sm">
+                                <div class="overlay-placeholder d-none d-md-block"></div>
+                                <div class="img-wrapper-placeholder">
+                                    <div class="badge customize-ribbon d-flex align-items-center placeholder-label rounded-end"></div>
+                                    <div class="placeholder-img"></div>
+                                </div>
+                                <hr class="grid-view-hr my-0 py-0">
+                                <div class="placeholder-card-content">
+                                    <div class="card-body placeholder-body m-0 p-0 rounded-bottom-2">
+                                        <div class="content-placeholder title-placeholder mt-1 ms-2"></div>
+                                        <div class="content-placeholder category-placeholder my-1 ms-2"></div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="content-placeholder rating-placeholder ms-2"></div>
+                                        </div>
+                                        <div class="content-placeholder description-placeholder mt-2 mb-1 mx-2"></div>
+                                        <div class="content-placeholder half-description-placeholder ms-2"></div>
+                                        <div class="d-flex align-items-center justify-content-between placeholder-pricing-block mt-2">
+                                            <div class="content-placeholder price-placeholder me-2 ms-2"></div>
+                                            <div class="content-placeholder before-price-placeholder me-2"></div>
+                                        </div>
+                                        <div class="text-center w-100 d-none d-md-block mx-0 px-0 mb-1">
+                                            <div class="btn-group btn-group-sm mt-0 pt-0 btn-group-placeholder pulse">
+                                                <button class="btn btn-sm btn-cart-placeholder rounded-start"></button>
+                                                <button class="btn btn-sm compare-btn-placeholder rounded-end"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.Product Placeholder Card -->
                         </div>
                         <!-- /.Gift Items -->
                     </div>
@@ -1938,8 +2144,325 @@
     </div>
     <!-- /.Page Content -->
 
+    <!-- Side Nav -->
+    <aside class="main-sidebar box-shadow-sm">
+        <!-- Sidebar Menu -->
+        <nav class="sidebar-menu" id="sidebar-main-menu">
+            <!-- User Panel -->
+            <div class="d-flex px-2 py-1">
+                <a href="sign-in.html">
+                    <img src="dist/images/users/user.png" height="40" width="40" class="img align-self-center rounded-circle prof-pic me-2">
+                </a>
+                <div class="d-block">
+                    <a href="sign-in.html">
+                        <h6 class="text-app-color font-600 user-greeting my-0 py-0">Good evening!</h6>
+                        <h6 class="text-muted my-0">
+                            Sign-in
+                        </h6>
+                    </a>
+                </div>
+            </div>
+            <!-- /.User Panel -->
+
+            <hr class="my-0">
+
+            <!-- Menu list -->
+            <ul class="side-menu px-2">
+                <!-- Side-menu-item -->
+                <li class="side-menu-item active p-2">
+                    <a href="index.html" class="d-flex align-items-center">
+                        <i class="material-icons me-2">store</i>
+                        <span class="text-capitalize">Store</span>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="account.html" class="d-flex align-items-center">
+                        <i class="material-icons me-2">person</i>
+                        <span class="text-capitalize">Account</span>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item d-sm-block d-md-none p-2">
+                    <a href="index.html" class="d-flex align-items-center">
+                        <i class="material-icons me-2">store</i>
+                        <span class="text-capitalize">Gift store</span>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li role="button" class="side-menu-item collapsible-item p-2">
+                    <a href="#" class="d-flex align-items-center toggle-departments">
+                        <i class="material-icons me-2">apps</i>
+                        <span class="text-capitalize">Categories</span>
+                        <span role="button" class="material-icons ms-auto">chevron_right</span>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a class="d-flex align-items-center" href="orders.html">
+                        <i class="material-icons me-2">assignment</i>
+                        <span class="text-capitalize">My Orders</span>
+                        <span class="badge app-badge ms-auto">
+                            4
+                        </span>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="d-flex align-items-center side-menu-item p-2">
+                    <i class="material-icons me-2">sync</i>
+                    <span class="text-capitalize">Buy again</span>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="coupons.html" class="d-flex align-items-center">
+                        <i class="material-icons me-2">monetization_on</i>
+                        <span class="text-capitalize">my coupons</span>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <hr class="border-inverse my-1">
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="javascript:void()" class="d-flex align-items-center toggle-ratingbox">
+                        <i class="material-icons me-2">stars</i>
+                        <span class="text-capitalize">rate & review</span>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="about.html" class="d-flex align-items-center">
+                        <i class="material-icons me-2">info_outline</i>
+                        <span class="text-capitalize">about</span>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+            </ul>
+            <!-- /.Menu list -->
+        </nav>
+        <!-- /.Sidebar Menu -->
+
+        <!-- Categories Sidebar Menu -->
+        <nav class="sidebar-menu d-none" id="categories-menu">
+            <!-- Category Title -->
+            <a href="#" class="d-flex align-items-center font-600 text-app-color toggle-main-menu p-2">
+                <i class="material-icons me-2">arrow_back</i> Main Menu
+            </a>
+            <!-- /.Category Title -->
+
+            <hr class="my-1">
+
+            <h6 class="ms-3 mt-2 font-600 text-app-color">All Categories</h6>
+
+            <!-- Menu list -->
+            <ul class="side-menu px-2">
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="#" class="toggle-category-menu d-flex align-items-center justify-content-between text-muted" data-category="Home & Gardening">
+                        Home & Gardening
+                        <i class="material-icons">chevron_right</i>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="#" class="toggle-category-menu d-flex align-items-center justify-content-between text-muted" data-category="Personal Care">
+                        Personal Care
+                        <i class="material-icons">chevron_right</i>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="#" class="toggle-category-menu d-flex align-items-center justify-content-between text-muted" data-category="Kitchenware">
+                        Kitchenware
+                        <i class="material-icons">chevron_right</i>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="#" class="toggle-category-menu d-flex align-items-center justify-content-between text-muted" data-category="Plasticware">
+                        Plasticware
+                        <i class="material-icons">chevron_right</i>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="#" class="toggle-category-menu d-flex align-items-center justify-content-between text-muted" data-category="Customizable Gifts">
+                        Customizable Gifts
+                        <i class="material-icons">chevron_right</i>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+            </ul>
+            <!-- /.Menu list -->
+        </nav>
+        <!-- /.Categories Sidebar Menu -->
+
+        <!-- Category Sidebar Menu -->
+        <nav class="sidebar-menu d-none" id="category-menu">
+            <!-- Category Title -->
+            <a href="#" class="d-flex align-items-center font-600 text-app-color p-2 toggle-departments">
+                <i class="material-icons me-2">arrow_back</i> All Categories
+            </a>
+            <!-- /.Category Title -->
+
+            <hr class="my-1">
+
+            <h6 class="ms-3 mt-2 font-600 text-app-color" id="sidemenu-category-name">Category name</h6>
+
+            <!-- Menu list -->
+            <ul class="side-menu px-2">
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="category.html" class="d-flex align-items-center justify-content-between text-muted">
+                        Home & Gardening
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="category.html" class="d-flex align-items-center justify-content-between text-muted">
+                        Home & Gardening
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="category.html" class="d-flex align-items-center justify-content-between text-muted">
+                        Home & Gardening
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="category.html" class="d-flex align-items-center justify-content-between text-muted">
+                        Home & Gardening
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="category.html" class="toggle-category-menu d-flex align-items-center justify-content-between text-muted">
+                        Home & Gardening
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+            </ul>
+            <!-- /.Menu list -->
+        </nav>
+        <!-- /.Category Sidebar Menu -->
+    </aside>
+    <!-- /.Side bar -->
+
+    <!-- Settings Sidebar -->
+    <div class="settings-bar">
+        <div class="settings-header d-flex align-items-center justify-content-between box-shadow-sm p-2">
+            <h2 class="font-600 lead lead-2x">Settings</h2>
+            <i class="material-icons nav-link icon-link me-2 toggle-settings">close</i>
+        </div>
+        <div class="container-fluid px-3 mt-2">
+            <p class="mb-0 font-500 d-none" id="day-mode">
+                <i class="fa fa-sun-o"></i> Toggle Day Mode
+            </p>
+            <p class="mb-0 font-500" id="night-mode">
+                <i class="fa fa-moon-o"></i> Toggle Night Mode
+            </p>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn theme-switch" id="darkmode" onchange="themeMode(this);">
+                </div>
+            </div>
+            <hr class="w-100">
+            <p class="mb-0 font-500">
+                <i class="fa fa-exchange"></i> Change Currency
+            </p>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn usd-currency" id="usd-currency" onchange="usdCurrency(this);" checked>
+                    <label class="form-check-label ms-2" for="usd">USD</label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn zar-currency" id="zar-currency" onchange="zarCurrency(this);">
+                    <label class="form-check-label ms-2" for="zar-currency">ZAR</label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn zwl-currency" id="zwl-currency" onchange="zwlCurrency(this);">
+                    <label class="form-check-label ms-2" for="zwl-currency">ZWL</label>
+                </div>
+            </div>
+            <hr class="w-100">
+            <p class="mb-0 font-500">
+                <i class="fa fa-sort-alpha-asc"></i> Sort by Name
+            </p>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn" id="name-asc" onchange="orderByName(this)" checked>
+                    <label class="form-check-label ms-2" for="name-asc" id="name-sorting-order">Ascending</label>
+                </div>
+            </div>
+            <hr class="w-100">
+            <p class="mb-0 font-500">
+                <i class="fa fa-sort-amount-asc"></i> Sort by Price
+            </p>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn" id="price-ordering" onchange="orderByPrice(this)" checked>
+                    <label class="form-check-label ms-2" for="price-ordering" id="price-ordering-label">Ascending</label>
+                </div>
+            </div>
+            <hr class="w-100">
+            <p class="mb-0 font-500">
+                <i class="fa fa-sort"></i> Sort by Orders
+            </p>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn" id="trending" checked>
+                    <label class="form-check-label ms-2" for="trending">Trending</label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn" id="recent">
+                    <label class="form-check-label ms-2" for="recent">Recent</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.Settings -->
+
     <!-- Comparison Pane -->
-    <div class="comparison-pane fixed-bottom p-3">
+    <div class="comparison-pane fixed-bottom d-none p-3">
         <!-- Close Pane -->
         <a href="#" class="close-comparison-pane d-grid" onclick="closePanel()">
             <i class="material-icons fa-2x text-white m-auto">expand_more</i>

@@ -34,18 +34,6 @@
     <link rel="stylesheet" href="dist/plugins/sweetalert2/package/dist/sweetalert2.min.css">
     <!-- Gifteros -->
     <link rel="stylesheet" href="dist/css/gifteros.min.css">
-    <style>
-        .fixed-md-top {
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: 0;
-        }
-        
-        .popover {
-            min-width: 20%;
-        }
-    </style>
 </head>
 
 <body>
@@ -83,7 +71,7 @@
             <!-- /.Mobile Action Buttons -->
 
             <!-- Cart Suggestions -->
-            <div class="d-sm-none d-md-block">
+            <div class="d-none d-md-block">
                 <div class="floating-action box-shadow-sm bg-switch" title="Click to toggle actions">
                     <i class="material-icons m-auto text-white">lightbulb_outline</i>
                 </div>
@@ -93,7 +81,7 @@
         <!-- /.Floating Action Buttons -->
 
         <!-- Side Action Panel -->
-        <div class="d-sm-none d-md-block">
+        <div class="d-none d-md-block">
             <div class="navigation-panel bg-meshgrid d-flex flex-column justify-content-around align-items-center">
                 <ul class="panel-lists d-flex flex-column align-items-center px-0">
                     <li class="panel-icon w-100 py-1">
@@ -109,7 +97,7 @@
                         <a href="#" role="button" class="bi bi-receipt icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Coupons"></a>
                     </li>
                     <li class="panel-icon w-100 py-1">
-                        <a href="#" role="button" class="bi bi-sliders icon-md text-white toggle-settings" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="App Settings"></a>
+                        <a href="#" role="button" class="bi bi-gear icon-md text-white toggle-settings" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="App Settings"></a>
                     </li>
                 </ul>
                 <ul class="panel-lists d-flex flex-column align-items-center px-0">
@@ -146,7 +134,7 @@
                         <a href="#" role="button" class="bi bi-question-circle icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Help and Feedback"></a>
                     </li>
                     <li class="panel-icon w-100 py-1 to-top">
-                        <a href="#" role="button" class="bi bi-arrow-up-circle icon-md text-white" onclick="scrollToTop();" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Back to Top"></a>
+                        <a href="#" role="button" class="bi bi-arrow-up-circle icon-md text-white" onclick="scrollToTop()" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Back to Top"></a>
                     </li>
                 </ul>
             </div>
@@ -154,11 +142,10 @@
         <!-- /.Side Action Panel -->
 
         <!-- Main Navbar -->
-        <header class="header fixed-md-top box-shadow-sm d-sm-none d-md-block">
+        <header class="header fixed-md-top box-shadow-sm d-none d-md-block">
             <div class="container">
                 <!-- Main Navbar -->
                 <nav class="nav navbar-expand-md main-nav">
-                    <span role="button" class="material-icons toggle-side-menu d-md-none" title="Toggle Sidebar">menu</span>
                     <!-- Navbrand -->
                     <a href="index.html" class="navbar-brand font-700">
                         <img src="dist/images/app/gifteros.png" height="35" class="gifteros-logo" width="35" alt="">
@@ -491,7 +478,7 @@
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-muted">&star;</li>
-                                                            <span class="text-sm text-faded font-600">(35)</span>
+                                                            <span class="product-price text-faded font-600">(35)</span>
                                                         </ul>
                                                         <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
                                                             <span class="pr-2">2 in cart</span>
@@ -547,7 +534,7 @@
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-muted">&star;</li>
-                                                            <span class="text-sm text-faded font-600">(35)</span>
+                                                            <span class="product-price text-faded font-600">(35)</span>
                                                         </ul>
                                                         <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
                                                             <span class="pr-2">2 in cart</span>
@@ -603,7 +590,7 @@
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-muted">&star;</li>
-                                                            <span class="text-sm text-faded font-600">(35)</span>
+                                                            <span class="product-price text-faded font-600">(35)</span>
                                                         </ul>
                                                         <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
                                                             <span class="pr-2">2 in cart</span>
@@ -659,7 +646,7 @@
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-gold">&starf;</li>
                                                             <li class="list-inline-item text-muted">&star;</li>
-                                                            <span class="text-sm text-faded font-600">(35)</span>
+                                                            <span class="product-price text-faded font-600">(35)</span>
                                                         </ul>
                                                         <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
                                                             <span class="pr-2">2 in cart</span>
@@ -886,7 +873,7 @@
                 <form method="get" action="/search" id="search-form" class="bg-whitesmoke">
                     <div class="form-group icon-form-group" id="search-bar">
                         <i class="material-icons icon text-faded">search</i>
-                        <input type="search" name="search" id="search" class="form-control" placeholder="Search...">
+                        <input type="search" name="search" id="search" class="form-control" placeholder="Search over 36436 gifts">
                         <ul class="list-group bg-whitesmoke search-list rounded-bottom-2 d-none px-0">
                             <!-- Search Result -->
                             <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
@@ -959,39 +946,223 @@
         </header>
         <!-- /.Main Navbar -->
 
-        <div class="page-content">
-            <div class="container">
+        <!-- Fixed-Top Mobile Navbar -->
+        <nav class="navbar navbar-light bg-whitesmoke fixed-top box-shadow-sm m-0 py-0 d-md-none" id="mobile-top-nav">
+            <div class="container-fluid">
+                <!-- Navbrand -->
+                <a href="index.html" class="navbar-brand font-700">
+                    <img src="dist/images/app/gifteros.png" height="35" class="gifteros-logo" width="35" alt="">
+                    <span class="mobile-brand brandname">Gifteros</span>
+                </a>
+                <ul class="ms-auto d-flex align-items-center my-0 me-2 p-0">
+                    <li class="nav-item me-3">
+                        <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center p-0 m-0">
+                            <i class="bi bi-calendar2-date mobile-nav-icon"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item me-3">
+                        <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center p-0 m-0" onclick="toggleSearchBar()">
+                            <i class="bi bi-search mobile-nav-icon"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link icon-link">
+                            <img data-src="dist/images/users/15f9eb408be859.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle lazy toggle-side-menu">
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.Navbrand -->
+            </div>
+        </nav>
+        <!-- /.Fixed-Top Mobile Navbar -->
+
+        <!-- Fixed-Bottom Mobile Navbar -->
+        <nav class="navbar navbar-light bg-whitesmoke fixed-bottom box-shadow-sm m-0 py-0 d-md-none" id="mobile-bottom-nav">
+            <div class="container-fluid">
+                <a href="index.html" class="nav-menu-item d-block text-center lh-100 active" aria-current="page">
+                    <i class="bi bi-shop icon-md"></i>
+                    <i class="fa fa-circle position-absolute new-gifts"></i>
+                    <p class="text-sm my-0 py-1">Home</p>
+                </a>
+                <a href="#" class="nav-menu-item d-block text-center lh-100">
+                    <i class="bi bi-card-list icon-md"></i>
+                    <p class="text-sm my-0 py-1">Categories</p>
+                </a>
+                <a href="#" class="nav-menu-item d-block text-center position-relative lh-100">
+                    <i class="bi bi-cart4 icon-md"></i>
+                    <span class="badge nav-badge position-absolute gift-count">4</span>
+                    <p class="text-sm my-0 py-1">Cart</p>
+                </a>
+                <a href="#" class="nav-menu-item d-block text-center position-relative lh-100" id="app-notifications">
+                    <i class="bi bi-bell icon-md"></i>
+                    <span class="badge nav-badge position-absolute notifications-counter">9+</span>
+                    <p class="text-sm my-0 py-1">Notifications</p>
+                </a>
+            </div>
+        </nav>
+        <!-- /.Fixed-Bottom Mobile Navbar -->
+
+        <!-- Mobile Search -->
+        <nav class="navbar navbar-light bg-whitesmoke fixed-top box-shadow-sm m-0 py-1 d-none" id="mobile-search-bar">
+            <div class="container-fluid w-100">
+                <div class="w-10">
+                    <button type="button" class="btn btn-default circled-button d-flex justify-content-center" onclick="toggleSearchBar()">
+                        <i class="material-icons text-color-switch">arrow_back</i>
+                    </button>
+                </div>
+                <!-- Search Form -->
+                <form method="get" action="/search" id="search-form" class="bg-whitesmoke w-85">
+                    <div class="form-group" id="search-bar">
+                        <input type="search" name="search" id="search" class="form-control rounded-pill" placeholder="Search over 36436 gifts">
+                    </div>
+                </form>
+                <!-- Search List Results -->
+                <ul class="list-group bg-whitesmoke search-list rounded-bottom-2 d-none px-0">
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                </ul>
+                <!-- /.Search List Results -->
+                <!-- /.Search Form -->
+            </div>
+        </nav>
+        <!-- /.Mobile Search -->
+
+        <div class="page-content" id="index-page">
+            <div class="container-md">
                 <!-- Showcase Section -->
-                <div class="row w-100 gx-1 app-showcase mt-5">
+                <div class="row w-100 gx-md-1 app-showcase mt-5">
                     <!-- Main Carousel -->
                     <div class="col-12 col-md-8 col-xl-6 grid-columns">
                         <div class="owl-carousel owl-theme main-carousel">
                             <div class="item rounded-2">
                                 <a href="#" class="stretched-link"></a>
-                                <img src="dist/images/banners/H3113b4df99eb45a5be20bb5a0dbbdab1n.png_.webp" class="img-responsive rounded-md-2">
+                                <img src="dist/images/banners/H3113b4df99eb45a5be20bb5a0dbbdab1n.png_.webp" class="img-responsive rounded-2 w-100">
                             </div>
                             <div class="item rounded-2">
                                 <a href="#" class="stretched-link"></a>
-                                <img src="dist/images/banners/H3db5a79fca424c0c9e0b3683d6b8c173O.png_.webp" class="img-responsive rounded-md-2">
+                                <img src="dist/images/banners/H3db5a79fca424c0c9e0b3683d6b8c173O.png_.webp" class="img-responsive rounded-2 w-100">
                             </div>
                             <div class="item rounded-2">
                                 <a href="#" class="stretched-link"></a>
-                                <img src="dist/images/banners/H490c7d140d0a49fd9b7362cfe2095b22d.png_.webp" class="img-responsive rounded-md-2">
+                                <img src="dist/images/banners/H490c7d140d0a49fd9b7362cfe2095b22d.png_.webp" class="img-responsive rounded-2 w-100">
                             </div>
                             <div class="item rounded-2">
                                 <a href="#" class="stretched-link"></a>
-                                <img src="dist/images/banners/Hb431c4e82e1b41c0a83aed68f84490a8E.png_.webp" class="img-responsive rounded-md-2">
+                                <img src="dist/images/banners/Hb431c4e82e1b41c0a83aed68f84490a8E.png_.webp" class="img-responsive rounded-2 w-100">
                             </div>
                         </div>
                     </div>
                     <!-- /.Main Carousel -->
 
                     <!-- Metro Grid Layout -->
-                    <div class="col-12 col-md-8 col-xl-6 grid-columns">
+                    <div class="col-12 col-md-8 col-xl-6 metro-grid grid-columns">
                         <!-- Grid Section -->
                         <div class="row gx-1">
                             <!-- Account Details -->
-                            <div class="col-12 col-xl-6">
+                            <div class="col-12 col-xl-6 account-details-grid">
                                 <div class="row gx-0">
                                     <div class="col-12">
                                         <div class="bg-whitesmoke rounded-2 p-2 box-shadow-sm">
@@ -1004,7 +1175,10 @@
                                                 <div class="col-6">
                                                     <a href="register.html" role="button" class="btn bg-switch text-white btn-sm btn-block rounded-pill px-2">Join</a>
                                                 </div>
-                                                <div class="col-6">
+                                                <div class="col-6 d-md-none">
+                                                    <a href="sign-in.html" role="button" class="btn btn-default btn-sm btn-block rounded-pill px-2">Sign in</a>
+                                                </div>
+                                                <div class="col-6 d-none d-md-block">
                                                     <a href="#" role="button" class="btn btn-default btn-sm btn-block rounded-pill px-2" onclick="showLoginForm()">Sign in</a>
                                                 </div>
                                             </div>
@@ -1026,7 +1200,7 @@
                             </div>
                             <!-- /.Account Details -->
                             <!-- Relationship Categories -->
-                            <div class="col-12 col-xl-6">
+                            <div class="col-12 col-xl-6 relationship-categories-grid">
                                 <div class="rounded-2 bg-whitesmoke p-2 box-shadow-sm">
                                     <h6 class="font-600 text-app-color">Shop by relationship</h6>
                                     <div class="d-grid grid-2 grid-p-1">
@@ -1062,7 +1236,7 @@
                 <!-- /.Showcase Section -->
 
                 <!-- Gift Categories -->
-                <div class="row w-100 gx-1 mt-1">
+                <div class="row w-100 gx-1 mt-md-1 gift-categories">
                     <div class="box-shadow-sm bg-whitesmoke p-2 rounded-2">
                         <h6 class="font-600 text-app-color">Explore Gift Categories</h6>
                         <div class="owl-carousel owl-theme carousel-autoplay">
@@ -1390,10 +1564,10 @@
                 <div class="d-block my-2 w-100">
                     <!-- Gift Title -->
                     <div class="d-flex justify-content-between align-items-center title">
-                        <h6 class="font-600 text-app-color text-capitalize">Customizable Gifts</h6>
+                        <h6 class="font-600 text-app-color text-capitalize my-0">Customizables</h6>
                         <div class="d-flex justify-content-around align-items-center">
-                            <i role="button" class="bi bi-list-ul view-option list-icon d-none d-md-block" data-view="list-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="List view"></i>
-                            <i role="button" class="bi bi-grid view-option grid-icon active d-none d-md-inline-block mx-3" data-view="grid-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Grid View"></i>
+                            <i role="button" class="bi bi-list-ul view-option list-icon" data-view="list-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="List view"></i>
+                            <i role="button" class="bi bi-grid view-option grid-icon active mx-3" data-view="grid-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Grid View"></i>
                             <a role="button" href="category.html" class="btn btn-sm bg-switch" id="all-customizable">
                                 <span class="text-white">View all</span>
                                 <i class="ion ion-chevron-right text-white ms-2"></i>
@@ -1402,9 +1576,10 @@
                     </div>
                     <!-- /.Gift Title -->
                     <!-- Gifts -->
-                    <div class="d-grid grid-view grid-p-1 mt-3 display-gifts products-shelf" id="test-gifts">
+                    <div class="d-grid grid-view grid-p-1 mt-3 display-gifts products-shelf">
                         <!-- Product Card -->
                         <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                            <a href="details.html" class="stretched-link d-md-none"></a>
                             <!-- Cart Actions -->
                             <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
                                 <div class="d-flex align-items-center px-2">
@@ -1452,10 +1627,10 @@
                                 </div>
                             </div>
                             <div class="card-content">
-                                <div class="card-body my-0 py-0">
+                                <div class="card-body rounded-bottom-2 my-0 py-0">
                                     <div class="lh-100 mb-0 pb-0">
                                         <a href="#">
-                                            <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
+                                            <p class="d-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
                                                 Customizable board
                                             </p>
                                             <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
@@ -1471,15 +1646,15 @@
                                             <li class="list-inline-item text-gold">&starf;</li>
                                             <li class="list-inline-item text-gold">&starf;</li>
                                             <li class="list-inline-item text-muted">&star;</li>
-                                            <span class="text-sm text-faded font-600">(35)</span>
+                                            <span class="product-price text-faded font-600">(35)</span>
                                         </ul>
                                     </div>
                                     <div class="price-tag">
                                         <div class="usd-price">
                                             <div class="d-flex align-items-center justify-content-between">
-                                                <span class="font-600">$<span class="product-price">36.38</span></span>
+                                                <span class="product-price font-600">$<span class="product-price">36.38</span></span>
                                                 <div class="d-flex align-items-center before-prices">
-                                                    <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                    <span class="product-price font-600 text-muted strikethrough ms-1">$39.39</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1487,30 +1662,31 @@
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <span class="font-600">R<span class="product-price">273.38</span></span>
                                                 <div class="d-flex align-items-center before-prices">
-                                                    <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                    <span class="product-price font-600 text-muted strikethrough ms-1">R232.38</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="zwl-price d-none">
                                             <div class="d-flex align-items-center justify-content-between">
-                                                <span class="font-600">$<span class="product-price">2737.33</span></span>
+                                                <span class="product-price font-600">$<span class="product-price">2737.33</span></span>
                                                 <div class="d-flex align-items-center before-prices">
                                                     <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex align-items-center text-sm">
-                                        <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
-                                        <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
+                                    <div class="d-flex justify-content-sm-center justify-content-md-start text-md-start align-items-center text-sm">
+                                        <span class="d-none d-md-flex">Ends in:</span>
+                                        <i class="fa fa-clock-o d-md-none"></i>
+                                        <span class="ms-1" id="countdown-timer">00d:00h:00m:00s</span>
                                     </div>
-                                    <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
+                                    <div class="btn-group btn-group-sm d-none d-md-flex pt-0 pulse">
                                         <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
-                                            <i class="fa fa-cart-plus text-white me-1 d-sm-none d-md-inline-block"></i>
+                                            <i class="fa fa-cart-plus text-white me-1 d-none d-md-inline-block"></i>
                                             Buy <span class="text-white text-white ms-1">gift</span>
                                         </button>
                                         <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
-                                            <i class="fa fa-exchange text-app-color me-1 d-sm-none d-md-inline-block"></i>
+                                            <i class="fa fa-exchange text-app-color me-1 d-none d-md-inline-block"></i>
                                             Compare
                                         </button>
                                     </div>
@@ -1520,6 +1696,7 @@
                         <!-- /.Product Card -->
                         <!-- Product Card -->
                         <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                            <a href="details.html" class="stretched-link d-md-none"></a>
                             <!-- Cart Actions -->
                             <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
                                 <div class="d-flex align-items-center px-2">
@@ -1545,7 +1722,7 @@
                                     <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
                                 </div>
                                 <a href="details.html" title="View product">
-                                    <img data-src="dist/images/gifts/15f458474b905f.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
+                                    <img data-src="dist/images/gifts/15f47b9066c522.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
                                 </a>
                                 <div class="overlay d-flex justify-content-around py-1">
                                     <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="38 In Stock">
@@ -1567,10 +1744,10 @@
                                 </div>
                             </div>
                             <div class="card-content">
-                                <div class="card-body my-0 py-0">
+                                <div class="card-body rounded-bottom-2 my-0 py-0">
                                     <div class="lh-100 mb-0 pb-0">
                                         <a href="#">
-                                            <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
+                                            <p class="d-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
                                                 Customizable board
                                             </p>
                                             <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
@@ -1586,15 +1763,15 @@
                                             <li class="list-inline-item text-gold">&starf;</li>
                                             <li class="list-inline-item text-gold">&starf;</li>
                                             <li class="list-inline-item text-muted">&star;</li>
-                                            <span class="text-sm text-faded font-600">(35)</span>
+                                            <span class="product-price text-faded font-600">(35)</span>
                                         </ul>
                                     </div>
                                     <div class="price-tag">
                                         <div class="usd-price">
                                             <div class="d-flex align-items-center justify-content-between">
-                                                <span class="font-600">$<span class="product-price">36.38</span></span>
+                                                <span class="product-price font-600">$<span class="product-price">36.38</span></span>
                                                 <div class="d-flex align-items-center before-prices">
-                                                    <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                    <span class="product-price font-600 text-muted strikethrough ms-1">$39.39</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1602,30 +1779,31 @@
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <span class="font-600">R<span class="product-price">273.38</span></span>
                                                 <div class="d-flex align-items-center before-prices">
-                                                    <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                    <span class="product-price font-600 text-muted strikethrough ms-1">R232.38</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="zwl-price d-none">
                                             <div class="d-flex align-items-center justify-content-between">
-                                                <span class="font-600">$<span class="product-price">2737.33</span></span>
+                                                <span class="product-price font-600">$<span class="product-price">2737.33</span></span>
                                                 <div class="d-flex align-items-center before-prices">
                                                     <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex align-items-center text-sm">
-                                        <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
-                                        <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
+                                    <div class="d-flex justify-content-md-start align-items-center text-sm">
+                                        <span class="d-none d-md-flex">Ends in:</span>
+                                        <i class="fa fa-clock-o d-md-none"></i>
+                                        <span class="ms-1" id="countdown-timer">00d:00h:00m:00s</span>
                                     </div>
-                                    <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
+                                    <div class="btn-group btn-group-sm d-none d-md-flex pt-0 pulse">
                                         <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
-                                            <i class="fa fa-cart-plus text-white me-1 d-sm-none d-md-inline-block"></i>
+                                            <i class="fa fa-cart-plus text-white me-1 d-none d-md-inline-block"></i>
                                             Buy <span class="text-white text-white ms-1">gift</span>
                                         </button>
                                         <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
-                                            <i class="fa fa-exchange text-app-color me-1 d-sm-none d-md-inline-block"></i>
+                                            <i class="fa fa-exchange text-app-color me-1 d-none d-md-inline-block"></i>
                                             Compare
                                         </button>
                                     </div>
@@ -1635,6 +1813,7 @@
                         <!-- /.Product Card -->
                         <!-- Product Card -->
                         <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                            <a href="details.html" class="stretched-link d-md-none"></a>
                             <!-- Cart Actions -->
                             <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
                                 <div class="d-flex align-items-center px-2">
@@ -1660,7 +1839,7 @@
                                     <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
                                 </div>
                                 <a href="details.html" title="View product">
-                                    <img data-src="dist/images/gifts/15f458254a0dac.2.webp" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
+                                    <img data-src="dist/images/gifts/81SmYqXTgHL._AC_UL320_.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
                                 </a>
                                 <div class="overlay d-flex justify-content-around py-1">
                                     <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="38 In Stock">
@@ -1682,10 +1861,10 @@
                                 </div>
                             </div>
                             <div class="card-content">
-                                <div class="card-body my-0 py-0">
+                                <div class="card-body rounded-bottom-2 my-0 py-0">
                                     <div class="lh-100 mb-0 pb-0">
                                         <a href="#">
-                                            <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
+                                            <p class="d-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
                                                 Customizable board
                                             </p>
                                             <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
@@ -1701,15 +1880,15 @@
                                             <li class="list-inline-item text-gold">&starf;</li>
                                             <li class="list-inline-item text-gold">&starf;</li>
                                             <li class="list-inline-item text-muted">&star;</li>
-                                            <span class="text-sm text-faded font-600">(35)</span>
+                                            <span class="product-price text-faded font-600">(35)</span>
                                         </ul>
                                     </div>
                                     <div class="price-tag">
                                         <div class="usd-price">
                                             <div class="d-flex align-items-center justify-content-between">
-                                                <span class="font-600">$<span class="product-price">36.38</span></span>
+                                                <span class="product-price font-600">$<span class="product-price">36.38</span></span>
                                                 <div class="d-flex align-items-center before-prices">
-                                                    <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                    <span class="product-price font-600 text-muted strikethrough ms-1">$39.39</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1717,30 +1896,31 @@
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <span class="font-600">R<span class="product-price">273.38</span></span>
                                                 <div class="d-flex align-items-center before-prices">
-                                                    <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                    <span class="product-price font-600 text-muted strikethrough ms-1">R232.38</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="zwl-price d-none">
                                             <div class="d-flex align-items-center justify-content-between">
-                                                <span class="font-600">$<span class="product-price">2737.33</span></span>
+                                                <span class="product-price font-600">$<span class="product-price">2737.33</span></span>
                                                 <div class="d-flex align-items-center before-prices">
                                                     <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex align-items-center text-sm">
-                                        <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
-                                        <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
+                                    <div class="d-flex justify-content-md-start align-items-center text-sm">
+                                        <span class="d-none d-md-flex">Ends in:</span>
+                                        <i class="fa fa-clock-o d-md-none"></i>
+                                        <span class="ms-1" id="countdown-timer">00d:00h:00m:00s</span>
                                     </div>
-                                    <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
+                                    <div class="btn-group btn-group-sm d-none d-md-flex pt-0 pulse">
                                         <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
-                                            <i class="fa fa-cart-plus text-white me-1 d-sm-none d-md-inline-block"></i>
+                                            <i class="fa fa-cart-plus text-white me-1 d-none d-md-inline-block"></i>
                                             Buy <span class="text-white text-white ms-1">gift</span>
                                         </button>
                                         <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
-                                            <i class="fa fa-exchange text-app-color me-1 d-sm-none d-md-inline-block"></i>
+                                            <i class="fa fa-exchange text-app-color me-1 d-none d-md-inline-block"></i>
                                             Compare
                                         </button>
                                     </div>
@@ -1750,6 +1930,7 @@
                         <!-- /.Product Card -->
                         <!-- Product Card -->
                         <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                            <a href="details.html" class="stretched-link d-md-none"></a>
                             <!-- Cart Actions -->
                             <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
                                 <div class="d-flex align-items-center px-2">
@@ -1775,7 +1956,7 @@
                                     <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
                                 </div>
                                 <a href="details.html" title="View product">
-                                    <img data-src="dist/images/gifts/15f458254a0dac.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
+                                    <img data-src="dist/images/gifts/81iupwTS-jL._AC_UL320_.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
                                 </a>
                                 <div class="overlay d-flex justify-content-around py-1">
                                     <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="38 In Stock">
@@ -1797,10 +1978,10 @@
                                 </div>
                             </div>
                             <div class="card-content">
-                                <div class="card-body my-0 py-0">
+                                <div class="card-body rounded-bottom-2 my-0 py-0">
                                     <div class="lh-100 mb-0 pb-0">
                                         <a href="#">
-                                            <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
+                                            <p class="d-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
                                                 Customizable board
                                             </p>
                                             <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
@@ -1816,15 +1997,15 @@
                                             <li class="list-inline-item text-gold">&starf;</li>
                                             <li class="list-inline-item text-gold">&starf;</li>
                                             <li class="list-inline-item text-muted">&star;</li>
-                                            <span class="text-sm text-faded font-600">(35)</span>
+                                            <span class="product-price text-faded font-600">(35)</span>
                                         </ul>
                                     </div>
                                     <div class="price-tag">
                                         <div class="usd-price">
                                             <div class="d-flex align-items-center justify-content-between">
-                                                <span class="font-600">$<span class="product-price">36.38</span></span>
+                                                <span class="product-price font-600">$<span class="product-price">36.38</span></span>
                                                 <div class="d-flex align-items-center before-prices">
-                                                    <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                    <span class="product-price font-600 text-muted strikethrough ms-1">$39.39</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1832,30 +2013,31 @@
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <span class="font-600">R<span class="product-price">273.38</span></span>
                                                 <div class="d-flex align-items-center before-prices">
-                                                    <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                    <span class="product-price font-600 text-muted strikethrough ms-1">R232.38</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="zwl-price d-none">
                                             <div class="d-flex align-items-center justify-content-between">
-                                                <span class="font-600">$<span class="product-price">2737.33</span></span>
+                                                <span class="product-price font-600">$<span class="product-price">2737.33</span></span>
                                                 <div class="d-flex align-items-center before-prices">
                                                     <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex align-items-center text-sm">
-                                        <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
-                                        <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
+                                    <div class="d-flex justify-content-md-start align-items-center text-sm">
+                                        <span class="d-none d-md-flex">Ends in:</span>
+                                        <i class="fa fa-clock-o d-md-none"></i>
+                                        <span class="ms-1" id="countdown-timer">00d:00h:00m:00s</span>
                                     </div>
-                                    <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
+                                    <div class="btn-group btn-group-sm d-none d-md-flex pt-0 pulse">
                                         <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
-                                            <i class="fa fa-cart-plus text-white me-1 d-sm-none d-md-inline-block"></i>
+                                            <i class="fa fa-cart-plus text-white me-1 d-none d-md-inline-block"></i>
                                             Buy <span class="text-white text-white ms-1">gift</span>
                                         </button>
                                         <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
-                                            <i class="fa fa-exchange text-app-color me-1 d-sm-none d-md-inline-block"></i>
+                                            <i class="fa fa-exchange text-app-color me-1 d-none d-md-inline-block"></i>
                                             Compare
                                         </button>
                                     </div>
@@ -1865,6 +2047,7 @@
                         <!-- /.Product Card -->
                         <!-- Product Card -->
                         <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                            <a href="details.html" class="stretched-link d-md-none"></a>
                             <!-- Cart Actions -->
                             <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
                                 <div class="d-flex align-items-center px-2">
@@ -1890,7 +2073,7 @@
                                     <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
                                 </div>
                                 <a href="details.html" title="View product">
-                                    <img data-src="dist/images/gifts/15f460ba6e5666.2.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
+                                    <img data-src="dist/images/gifts/81YlKeBDwML._AC_UL320_.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
                                 </a>
                                 <div class="overlay d-flex justify-content-around py-1">
                                     <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="38 In Stock">
@@ -1912,10 +2095,10 @@
                                 </div>
                             </div>
                             <div class="card-content">
-                                <div class="card-body my-0 py-0">
+                                <div class="card-body rounded-bottom-2 my-0 py-0">
                                     <div class="lh-100 mb-0 pb-0">
                                         <a href="#">
-                                            <p class="d-sm-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
+                                            <p class="d-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
                                                 Customizable board
                                             </p>
                                             <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
@@ -1931,15 +2114,15 @@
                                             <li class="list-inline-item text-gold">&starf;</li>
                                             <li class="list-inline-item text-gold">&starf;</li>
                                             <li class="list-inline-item text-muted">&star;</li>
-                                            <span class="text-sm text-faded font-600">(35)</span>
+                                            <span class="product-price text-faded font-600">(35)</span>
                                         </ul>
                                     </div>
                                     <div class="price-tag">
                                         <div class="usd-price">
                                             <div class="d-flex align-items-center justify-content-between">
-                                                <span class="font-600">$<span class="product-price">36.38</span></span>
+                                                <span class="product-price font-600">$<span class="product-price">36.38</span></span>
                                                 <div class="d-flex align-items-center before-prices">
-                                                    <span class="font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                    <span class="product-price font-600 text-muted strikethrough ms-1">$39.39</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1947,30 +2130,148 @@
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <span class="font-600">R<span class="product-price">273.38</span></span>
                                                 <div class="d-flex align-items-center before-prices">
-                                                    <span class="font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                    <span class="product-price font-600 text-muted strikethrough ms-1">R232.38</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="zwl-price d-none">
                                             <div class="d-flex align-items-center justify-content-between">
-                                                <span class="font-600">$<span class="product-price">2737.33</span></span>
+                                                <span class="product-price font-600">$<span class="product-price">2737.33</span></span>
                                                 <div class="d-flex align-items-center before-prices">
                                                     <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex align-items-center text-sm">
-                                        <span class="d-xs-none">Ends<span class="d-sm-none d-md-inline ms-1">in</span>:</span>
-                                        <span class="ms-1 d-flex align-items-center" id="countdown-timer">00d:00h:00m:00s</span>
+                                    <div class="d-flex justify-content-md-start align-items-center text-sm">
+                                        <span class="d-none d-md-flex">Ends in:</span>
+                                        <i class="fa fa-clock-o d-md-none"></i>
+                                        <span class="ms-1" id="countdown-timer">00d:00h:00m:00s</span>
                                     </div>
-                                    <div class="btn-group btn-group-sm mt-0 pt-0 pulse">
+                                    <div class="btn-group btn-group-sm d-none d-md-flex pt-0 pulse">
                                         <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
-                                            <i class="fa fa-cart-plus text-white me-1 d-sm-none d-md-inline-block"></i>
+                                            <i class="fa fa-cart-plus text-white me-1 d-none d-md-inline-block"></i>
                                             Buy <span class="text-white text-white ms-1">gift</span>
                                         </button>
                                         <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
-                                            <i class="fa fa-exchange text-app-color me-1 d-sm-none d-md-inline-block"></i>
+                                            <i class="fa fa-exchange text-app-color me-1 d-none d-md-inline-block"></i>
+                                            Compare
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.Product Card -->
+                        <!-- Product Card -->
+                        <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                            <a href="details.html" class="stretched-link d-md-none"></a>
+                            <!-- Cart Actions -->
+                            <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
+                                <div class="d-flex align-items-center px-2">
+                                    <div class="d-flex align-items-center justify-content-around m-0 p-0">
+                                        <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Decrease quantity">remove_circle</span>
+                                        <span role="button" class="product-actions item-quantity text-faded" id="item-count">0</span>
+                                        <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Increase quantity">add_circle</span>
+                                    </div>
+                                    <div class="ms-auto d-flex align-items-center">
+                                        <a href="#" class="nav-link icon-link toggle-customization" id="customize" title="Customize gift" data-id="">
+                                            <i class="material-icons">palette</i>
+                                        </a>
+                                        <a href="#" class="nav-link icon-link text-danger remove-item ms-2" title="Remove Item" data-id="">
+                                            <i class="material-icons notifications">delete</i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.Cart Actions -->
+                            <div class="product-img-wrapper">
+                                <div class="badge bg-danger rounded-end customize-ribbon d-flex align-items-center">
+                                    <i class="material-icons text-white me-1" id="sale-icon">alarm_on</i>
+                                    <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
+                                </div>
+                                <a href="details.html" title="View product">
+                                    <img data-src="dist/images/gifts/15f460c7f56472.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
+                                </a>
+                                <div class="overlay d-flex justify-content-around py-1">
+                                    <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="38 In Stock">
+                                        <i class="fa fa-home text-light"></i>
+                                        <span class="text-light text-sm">38</span>
+                                    </div>
+                                    <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="27k Total Views">
+                                        <i class="fa fa-eye text-light"></i>
+                                        <span class="text-light text-sm">27k</span>
+                                    </div>
+                                    <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Wishlisted by 2734 customer(s)">
+                                        <i role="button" class="fa fa-heart text-light overlay-icon text-warning wishlist-icon" data-id="" data-user="" data-action="unwish" title="This gift is in your Wishlist"></i>
+                                        <span class="text-light text-sm">2734</span>
+                                    </div>
+                                    <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="456 gift(s) sold">
+                                        <i role="button" class="fa fa-truck text-light overlay-icon text-warning" data-action="unwish"></i>
+                                        <span class="text-light text-sm">235</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body rounded-bottom-2 my-0 py-0">
+                                    <div class="lh-100 mb-0 pb-0">
+                                        <a href="#">
+                                            <p class="d-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
+                                                Customizable board
+                                            </p>
+                                            <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
+                                                Customizable board
+                                            </p>
+                                        </a>
+                                        <a href="#" class="text-sm font-500 text-capitalize my-0 py-0">
+                                            Customizables
+                                        </a>
+                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-gold">&starf;</li>
+                                            <li class="list-inline-item text-muted">&star;</li>
+                                            <span class="product-price text-faded font-600">(35)</span>
+                                        </ul>
+                                    </div>
+                                    <div class="price-tag">
+                                        <div class="usd-price">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="product-price font-600">$<span class="product-price">36.38</span></span>
+                                                <div class="d-flex align-items-center before-prices">
+                                                    <span class="product-price font-600 text-muted strikethrough ms-1">$39.39</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="zar-price d-none">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="font-600">R<span class="product-price">273.38</span></span>
+                                                <div class="d-flex align-items-center before-prices">
+                                                    <span class="product-price font-600 text-muted strikethrough ms-1">R232.38</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="zwl-price d-none">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="product-price font-600">$<span class="product-price">2737.33</span></span>
+                                                <div class="d-flex align-items-center before-prices">
+                                                    <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-md-start align-items-center text-sm">
+                                        <span class="d-none d-md-flex">Ends in:</span>
+                                        <i class="fa fa-clock-o d-md-none"></i>
+                                        <span class="ms-1" id="countdown-timer">00d:00h:00m:00s</span>
+                                    </div>
+                                    <div class="btn-group btn-group-sm d-none d-md-flex pt-0 pulse">
+                                        <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
+                                            <i class="fa fa-cart-plus text-white me-1 d-none d-md-inline-block"></i>
+                                            Buy <span class="text-white text-white ms-1">gift</span>
+                                        </button>
+                                        <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
+                                            <i class="fa fa-exchange text-app-color me-1 d-none d-md-inline-block"></i>
                                             Compare
                                         </button>
                                     </div>
@@ -1986,10 +2287,10 @@
                 <div class="d-block my-2 w-100">
                     <!-- Gift Title -->
                     <div class="d-flex justify-content-between align-items-center title">
-                        <h6 class="font-600 text-app-color text-capitalize">Customizable Gifts</h6>
+                        <h6 class="font-600 text-app-color text-capitalize my-0">Customizables</h6>
                         <div class="d-flex justify-content-around align-items-center">
-                            <i role="button" class="bi bi-list-ul view-option list-icon d-none d-md-block" data-view="list-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="List view"></i>
-                            <i role="button" class="bi bi-grid view-option grid-icon active d-none d-md-inline-block mx-3" data-view="grid-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Grid View"></i>
+                            <i role="button" class="bi bi-list-ul view-option list-icon" data-view="list-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="List view"></i>
+                            <i role="button" class="bi bi-grid view-option grid-icon active mx-3" data-view="grid-view" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Grid View"></i>
                             <a role="button" href="category.html" class="btn btn-sm bg-switch" id="all-customizable">
                                 <span class="text-white">View all</span>
                                 <i class="ion ion-chevron-right text-white ms-2"></i>
@@ -1998,10 +2299,10 @@
                     </div>
                     <!-- /.Gift Title -->
                     <!-- Gifts -->
-                    <div class="d-grid list-view grid-p-1 mt-3 products-shelf" id="preloaders">
+                    <div class="d-grid grid-view grid-p-1 mt-3 products-shelf">
                         <!-- Product Placeholder Card -->
                         <div class="card placeholder-card bg-whitesmoke rounded-2 box-shadow-sm">
-                            <div class="overlay-placeholder"></div>
+                            <div class="overlay-placeholder d-none d-md-block"></div>
                             <div class="img-wrapper-placeholder">
                                 <div class="badge customize-ribbon d-flex align-items-center placeholder-label rounded-end"></div>
                                 <div class="placeholder-img"></div>
@@ -2020,7 +2321,162 @@
                                         <div class="content-placeholder price-placeholder me-2 ms-2"></div>
                                         <div class="content-placeholder before-price-placeholder me-2"></div>
                                     </div>
-                                    <div class="text-center w-100 mx-0 px-0 mb-1">
+                                    <div class="text-center w-100 d-none d-md-block mx-0 px-0 mb-1">
+                                        <div class="btn-group btn-group-sm mt-0 pt-0 btn-group-placeholder pulse">
+                                            <button class="btn btn-sm btn-cart-placeholder rounded-start"></button>
+                                            <button class="btn btn-sm compare-btn-placeholder rounded-end"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.Product Placeholder Card -->
+                        <!-- Product Placeholder Card -->
+                        <div class="card placeholder-card bg-whitesmoke rounded-2 box-shadow-sm">
+                            <div class="overlay-placeholder d-none d-md-block"></div>
+                            <div class="img-wrapper-placeholder">
+                                <div class="badge customize-ribbon d-flex align-items-center placeholder-label rounded-end"></div>
+                                <div class="placeholder-img"></div>
+                            </div>
+                            <hr class="grid-view-hr my-0 py-0">
+                            <div class="placeholder-card-content">
+                                <div class="card-body placeholder-body m-0 p-0 rounded-bottom-2">
+                                    <div class="content-placeholder title-placeholder mt-1 ms-2"></div>
+                                    <div class="content-placeholder category-placeholder my-1 ms-2"></div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="content-placeholder rating-placeholder ms-2"></div>
+                                    </div>
+                                    <div class="content-placeholder description-placeholder mt-2 mb-1 mx-2"></div>
+                                    <div class="content-placeholder half-description-placeholder ms-2"></div>
+                                    <div class="d-flex align-items-center justify-content-between placeholder-pricing-block mt-2">
+                                        <div class="content-placeholder price-placeholder me-2 ms-2"></div>
+                                        <div class="content-placeholder before-price-placeholder me-2"></div>
+                                    </div>
+                                    <div class="text-center w-100 d-none d-md-block mx-0 px-0 mb-1">
+                                        <div class="btn-group btn-group-sm mt-0 pt-0 btn-group-placeholder pulse">
+                                            <button class="btn btn-sm btn-cart-placeholder rounded-start"></button>
+                                            <button class="btn btn-sm compare-btn-placeholder rounded-end"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.Product Placeholder Card -->
+                        <!-- Product Placeholder Card -->
+                        <div class="card placeholder-card bg-whitesmoke rounded-2 box-shadow-sm">
+                            <div class="overlay-placeholder d-none d-md-block"></div>
+                            <div class="img-wrapper-placeholder">
+                                <div class="badge customize-ribbon d-flex align-items-center placeholder-label rounded-end"></div>
+                                <div class="placeholder-img"></div>
+                            </div>
+                            <hr class="grid-view-hr my-0 py-0">
+                            <div class="placeholder-card-content">
+                                <div class="card-body placeholder-body m-0 p-0 rounded-bottom-2">
+                                    <div class="content-placeholder title-placeholder mt-1 ms-2"></div>
+                                    <div class="content-placeholder category-placeholder my-1 ms-2"></div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="content-placeholder rating-placeholder ms-2"></div>
+                                    </div>
+                                    <div class="content-placeholder description-placeholder mt-2 mb-1 mx-2"></div>
+                                    <div class="content-placeholder half-description-placeholder ms-2"></div>
+                                    <div class="d-flex align-items-center justify-content-between placeholder-pricing-block mt-2">
+                                        <div class="content-placeholder price-placeholder me-2 ms-2"></div>
+                                        <div class="content-placeholder before-price-placeholder me-2"></div>
+                                    </div>
+                                    <div class="text-center w-100 d-none d-md-block mx-0 px-0 mb-1">
+                                        <div class="btn-group btn-group-sm mt-0 pt-0 btn-group-placeholder pulse">
+                                            <button class="btn btn-sm btn-cart-placeholder rounded-start"></button>
+                                            <button class="btn btn-sm compare-btn-placeholder rounded-end"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.Product Placeholder Card -->
+                        <!-- Product Placeholder Card -->
+                        <div class="card placeholder-card bg-whitesmoke rounded-2 box-shadow-sm">
+                            <div class="overlay-placeholder d-none d-md-block"></div>
+                            <div class="img-wrapper-placeholder">
+                                <div class="badge customize-ribbon d-flex align-items-center placeholder-label rounded-end"></div>
+                                <div class="placeholder-img"></div>
+                            </div>
+                            <hr class="grid-view-hr my-0 py-0">
+                            <div class="placeholder-card-content">
+                                <div class="card-body placeholder-body m-0 p-0 rounded-bottom-2">
+                                    <div class="content-placeholder title-placeholder mt-1 ms-2"></div>
+                                    <div class="content-placeholder category-placeholder my-1 ms-2"></div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="content-placeholder rating-placeholder ms-2"></div>
+                                    </div>
+                                    <div class="content-placeholder description-placeholder mt-2 mb-1 mx-2"></div>
+                                    <div class="content-placeholder half-description-placeholder ms-2"></div>
+                                    <div class="d-flex align-items-center justify-content-between placeholder-pricing-block mt-2">
+                                        <div class="content-placeholder price-placeholder me-2 ms-2"></div>
+                                        <div class="content-placeholder before-price-placeholder me-2"></div>
+                                    </div>
+                                    <div class="text-center w-100 d-none d-md-block mx-0 px-0 mb-1">
+                                        <div class="btn-group btn-group-sm mt-0 pt-0 btn-group-placeholder pulse">
+                                            <button class="btn btn-sm btn-cart-placeholder rounded-start"></button>
+                                            <button class="btn btn-sm compare-btn-placeholder rounded-end"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.Product Placeholder Card -->
+                        <!-- Product Placeholder Card -->
+                        <div class="card placeholder-card bg-whitesmoke rounded-2 box-shadow-sm">
+                            <div class="overlay-placeholder d-none d-md-block"></div>
+                            <div class="img-wrapper-placeholder">
+                                <div class="badge customize-ribbon d-flex align-items-center placeholder-label rounded-end"></div>
+                                <div class="placeholder-img"></div>
+                            </div>
+                            <hr class="grid-view-hr my-0 py-0">
+                            <div class="placeholder-card-content">
+                                <div class="card-body placeholder-body m-0 p-0 rounded-bottom-2">
+                                    <div class="content-placeholder title-placeholder mt-1 ms-2"></div>
+                                    <div class="content-placeholder category-placeholder my-1 ms-2"></div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="content-placeholder rating-placeholder ms-2"></div>
+                                    </div>
+                                    <div class="content-placeholder description-placeholder mt-2 mb-1 mx-2"></div>
+                                    <div class="content-placeholder half-description-placeholder ms-2"></div>
+                                    <div class="d-flex align-items-center justify-content-between placeholder-pricing-block mt-2">
+                                        <div class="content-placeholder price-placeholder me-2 ms-2"></div>
+                                        <div class="content-placeholder before-price-placeholder me-2"></div>
+                                    </div>
+                                    <div class="text-center w-100 d-none d-md-block mx-0 px-0 mb-1">
+                                        <div class="btn-group btn-group-sm mt-0 pt-0 btn-group-placeholder pulse">
+                                            <button class="btn btn-sm btn-cart-placeholder rounded-start"></button>
+                                            <button class="btn btn-sm compare-btn-placeholder rounded-end"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.Product Placeholder Card -->
+                        <!-- Product Placeholder Card -->
+                        <div class="card placeholder-card bg-whitesmoke rounded-2 box-shadow-sm">
+                            <div class="overlay-placeholder d-none d-md-block"></div>
+                            <div class="img-wrapper-placeholder">
+                                <div class="badge customize-ribbon d-flex align-items-center placeholder-label rounded-end"></div>
+                                <div class="placeholder-img"></div>
+                            </div>
+                            <hr class="grid-view-hr my-0 py-0">
+                            <div class="placeholder-card-content">
+                                <div class="card-body placeholder-body m-0 p-0 rounded-bottom-2">
+                                    <div class="content-placeholder title-placeholder mt-1 ms-2"></div>
+                                    <div class="content-placeholder category-placeholder my-1 ms-2"></div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="content-placeholder rating-placeholder ms-2"></div>
+                                    </div>
+                                    <div class="content-placeholder description-placeholder mt-2 mb-1 mx-2"></div>
+                                    <div class="content-placeholder half-description-placeholder ms-2"></div>
+                                    <div class="d-flex align-items-center justify-content-between placeholder-pricing-block mt-2">
+                                        <div class="content-placeholder price-placeholder me-2 ms-2"></div>
+                                        <div class="content-placeholder before-price-placeholder me-2"></div>
+                                    </div>
+                                    <div class="text-center w-100 d-none d-md-block mx-0 px-0 mb-1">
                                         <div class="btn-group btn-group-sm mt-0 pt-0 btn-group-placeholder pulse">
                                             <button class="btn btn-sm btn-cart-placeholder rounded-start"></button>
                                             <button class="btn btn-sm compare-btn-placeholder rounded-end"></button>
