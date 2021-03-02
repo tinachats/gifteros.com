@@ -1578,32 +1578,40 @@
                     <!-- Gifts -->
                     <div class="d-grid grid-view grid-p-1 mt-3 display-gifts products-shelf">
                         <!-- Product Card -->
-                        <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
-                            <a href="details.html" class="stretched-link d-md-none"></a>
-                            <!-- Cart Actions -->
-                            <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
-                                <div class="d-flex align-items-center px-2">
-                                    <div class="d-flex align-items-center justify-content-around m-0 p-0">
-                                        <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Decrease quantity">remove_circle</span>
-                                        <span role="button" class="product-actions item-quantity text-faded" id="item-count">0</span>
-                                        <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Increase quantity">add_circle</span>
+                        <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="1">
+                            <!-- Card Actions -->
+                            <div class="card-actions position-absolute d-none p-1" id="card-actions1">
+                                <div class="my-1">
+                                    <div class="d-grid available-colors"></div>
+                                </div>
+                                <div class="card-action-buttons w-100 my-0 pe-2 py-0">
+                                    <div class="d-flex align-items-center action-title">
+                                        <a href="javascript:void()" class="nav-link icon-link toggle-card-actions" id="customize1">
+                                            <i class="material-icons">arrow_back</i>
+                                        </a>
+                                        <h6 class="font-600 text-app-color my-0 ms-3">
+                                            Item colors
+                                        </h6>
                                     </div>
-                                    <div class="ms-auto d-flex align-items-center">
-                                        <a href="#" class="nav-link icon-link toggle-customization" id="customize" title="Customize gift" data-id="">
-                                            <i class="material-icons">palette</i>
-                                        </a>
-                                        <a href="#" class="nav-link icon-link text-danger remove-item ms-2" title="Remove Item" data-id="">
-                                            <i class="material-icons notifications">delete</i>
-                                        </a>
+                                    <div class="d-flex align-items-center increment-buttons">
+                                        <button type="button" class="btn bg-switch circled-button-sm subtract-product d-grid justify-content-center" data-id="1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Decrease quantity">
+                                            <i class="material-icons pull-up-1 text-white">remove</i>
+                                        </button>
+                                        <span role="button" class="product-actions item-quantity text-app-color" id="gift-item-count1">10</span>
+                                        <button type="button" class="btn bg-switch circled-button-sm add-to-cart-btn d-grid justify-content-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Increase quantity" data-id="1">
+                                            <i class="material-icons pull-up-1 text-white">add</i>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                            <!-- /.Cart Actions -->
+                            <!-- /.Card Actions -->
+
+                            <!-- Image Wrapper -->
                             <div class="product-img-wrapper">
-                                <div class="badge bg-danger rounded-end customize-ribbon d-flex align-items-center">
-                                    <i class="material-icons text-white me-1" id="sale-icon">alarm_on</i>
-                                    <span class="text-white pr-2" id="sale-statu">SALE - 37% OFF</span>
-                                </div>
+                                <img src="dist/images/labels/hot.gif" height="22" width="56" class="gift-item-label">
+                                <button type="button" class="btn btn-light circled-button-sm d-grid justify-content-center text-center wishlist-btn position-absolute p-0 m-0" id="wish" data-id="1">
+                                    <i class="bi bi-heart text-warning m-auto"></i>
+                                </button>
                                 <a href="details.html" title="View product">
                                     <img data-src="dist/images/gifts/15f4607d0b3c65.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="card-img-top img-responsive lazy">
                                 </a>
@@ -1617,85 +1625,81 @@
                                         <span class="text-light text-sm">27k</span>
                                     </div>
                                     <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Wishlisted by 2734 customer(s)">
-                                        <i role="button" class="fa fa-heart text-light overlay-icon text-warning wishlist-icon" data-id="" data-user="" data-action="unwish" title="This gift is in your Wishlist"></i>
-                                        <span class="text-light text-sm">2734</span>
+                                        <i class="fa fa-heart text-light overlay-icon text-warning wishlist-icon"></i>
+                                        <span class="text-light text-sm" id="gift-wishlist-count1">2734</span>
                                     </div>
                                     <div class="d-flex flex-column text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="456 gift(s) sold">
-                                        <i role="button" class="fa fa-truck text-light overlay-icon text-warning" data-action="unwish"></i>
+                                        <i class="fa fa-truck text-light overlay-icon text-warning" data-action="unwish"></i>
                                         <span class="text-light text-sm">235</span>
                                     </div>
                                 </div>
                             </div>
+                            <!-- /.Image Wrapper -->
+
+                            <!-- Product Info -->
                             <div class="card-content">
                                 <div class="card-body rounded-bottom-2 my-0 py-0">
                                     <div class="lh-100 mb-0 pb-0">
-                                        <a href="#">
-                                            <p class="d-none d-md-block font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
-                                                Customizable board
-                                            </p>
-                                            <p class="d-md-none font-600 text-capitalize mt-1 mb-0 py-0 product-name" id="">
-                                                Customizable board
+                                        <a href="details.html">
+                                            <p class="font-600 text-faded text-capitalize mt-1 mb-0 py-0 product-name">
+                                                White D&G Han...
                                             </p>
                                         </a>
-                                        <a href="#" class="text-sm font-500 text-capitalize my-0 py-0">
-                                            Customizables
+                                        <a href="category.html" class="text-sm font-500 text-capitalize my-0 py-0">
+                                            Bags
                                         </a>
-                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating popover-info d-cursor my-0 p-0">
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-muted">&star;</li>
-                                            <span class="product-price text-faded font-600">(35)</span>
-                                        </ul>
+                                        <div class="d-flex align-items-center popover-info">
+                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating d-cursor my-0 p-0">
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-muted">&star;</li>
+                                            </ul>
+                                            <p class="text-sm text-muted my-0 py-0">(453)</p>
+                                        </div>
                                     </div>
                                     <div class="price-tag">
                                         <div class="usd-price">
-                                            <div class="d-flex align-items-center justify-content-between">
-                                                <span class="product-price font-600">$<span class="product-price">36.38</span></span>
-                                                <div class="d-flex align-items-center before-prices">
-                                                    <span class="product-price font-600 text-muted strikethrough ms-1">$39.39</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="zar-price d-none">
-                                            <div class="d-flex align-items-center justify-content-between">
-                                                <span class="font-600">R<span class="product-price">273.38</span></span>
-                                                <div class="d-flex align-items-center before-prices">
-                                                    <span class="product-price font-600 text-muted strikethrough ms-1">R232.38</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="zwl-price d-none">
-                                            <div class="d-flex align-items-center justify-content-between">
-                                                <span class="product-price font-600">$<span class="product-price">2737.33</span></span>
-                                                <div class="d-flex align-items-center before-prices">
-                                                    <span class="font-600 text-muted strikethrough ms-1">$3334.34</span>
-                                                </div>
+                                            <div class="d-flex align-items-center justify-content-between gift-prices font-600">
+                                                <p class="usd-price item-price my-0 py-0">$36.38</p>
+                                                <p class="before-price strike-through text-muted my-0 py-0">$44.69</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex justify-content-sm-center justify-content-md-start text-md-start align-items-center text-sm">
+                                    <div class="d-flex justify-content-start align-items-center text-sm">
                                         <span class="d-none d-md-flex">Ends in:</span>
                                         <i class="fa fa-clock-o d-md-none"></i>
-                                        <span class="ms-1" id="countdown-timer">00d:00h:00m:00s</span>
+                                        <span class="ms-1 countdown-timer">00d:00h:00m:00s</span>
                                     </div>
                                     <div class="btn-group btn-group-sm d-none d-md-flex pt-0 pulse">
-                                        <button class="btn bg-switch btn-sm d-flex align-items-center add-to-cart-btn text-white rounded-start" data-id="">
-                                            <i class="fa fa-cart-plus text-white me-1 d-none d-md-inline-block"></i>
+                                        <button class="btn bg-switch btn-sm d-flex align-items-center toggle-card-actions text-white rounded-start" data-id="1">
+                                            <i class="bi bi-cart-plus text-white me-1 d-none d-md-inline-block"></i>
                                             Buy <span class="text-white text-white ms-1">gift</span>
                                         </button>
-                                        <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn" data-name="" data-id="">
+                                        <button class="btn border-switch btn-sm text-app-color compare-btn d-flex align-items-center rounded-end" id="compare-btn1" data-id="1">
                                             <i class="fa fa-exchange text-app-color me-1 d-none d-md-inline-block"></i>
                                             Compare
                                         </button>
                                     </div>
                                 </div>
                             </div>
+                            <!-- /.Product Info -->
+
+                            <!-- Hidden Inputs -->
+                            <input type="hidden" name="hidden-gift-id1" id="hidden-gift-id1" value="1">
+                            <input type="hidden" name="hidden-gift-name1" id="hidden-gift-name1" value="White D&G Handbag">
+                            <input type="hidden" name="hidden-gift-category1" id="hidden-gift-category1" value="Bags">
+                            <input type="hidden" name="hidden-gift-image1" id="hidden-gift-image1" value="15f4607d0b3c65.jpg">
+                            <input type="hidden" name="hidden-gift-price1" id="hidden-gift-price1" value="36.28">
+                            <input type="hidden" name="hidden-gift-qty1" id="hidden-gift-qty1" value="1">
+                            <input type="hidden" name="hidden-gift-units1" id="hidden-gift-units1" value="100">
+                            <input type="hidden" name="hidden-gift-description1" id="hidden-gift-description1" value="36.28">
+                            <!-- /.Hidden Inputs -->
                         </div>
                         <!-- /.Product Card -->
                         <!-- Product Card -->
-                        <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="">
+                        <div class="card product-card rounded-2 box-shadow-sm position-relative" data-id="2">
                             <a href="details.html" class="stretched-link d-md-none"></a>
                             <!-- Cart Actions -->
                             <div class="gift-cart-options bg-whitesmoke box-shadow-sm d-none" id="cart-options">
@@ -2812,6 +2816,52 @@
     </div>
     <!-- /.Settings -->
 
+    <!-- Comparison Pane -->
+    <div class="comparison-pane fixed-bottom d-none p-3">
+        <!-- Close Pane -->
+        <a href="#" class="close-comparison-pane d-grid" onclick="closePanel()">
+            <i class="material-icons fa-2x text-white m-auto">expand_more</i>
+        </a>
+        <!-- /.Close Pane -->
+        <div class="container comparisons-wrapper d-grid grid-4 gap-4 align-items-center justify-content-center">
+            <!-- Placeholder Comparison Item -->
+            <div class="comparison-item empty d-block bg-transparent rounded-2 border-dashed box-shadow-sm d-grid p-2">
+                <div class="m-auto">
+                    <div class="d-block text-center">
+                        <i class="bi bi-plus text-white fa-2x"></i>
+                        <h6 class="font-600 text-white">Add an item to compare</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- /.Product Comparison Item -->
+
+            <!-- Placeholder Comparison Item -->
+            <div class="comparison-item empty d-block bg-transparent rounded-2 border-dashed box-shadow-sm d-grid p-2">
+                <div class="m-auto">
+                    <div class="d-block text-center">
+                        <i class="bi bi-plus text-white fa-2x"></i>
+                        <h6 class="font-600 text-white">Add an item to compare</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- /.Product Comparison Item -->
+
+            <!-- Placeholder Comparison Item -->
+            <div class="comparison-item empty d-block bg-transparent rounded-2 border-dashed box-shadow-sm d-grid p-2">
+                <div class="m-auto">
+                    <div class="d-block text-center">
+                        <i class="bi bi-plus text-white fa-2x"></i>
+                        <h6 class="font-600 text-white">Add an item to compare</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- /.Product Comparison Item -->
+
+            <a role="button" href="javascript:void()" class="btn btn-warning rounded-pill d-none" id="submit-comparisons" disabled>Compare selected</a>
+        </div>
+    </div>
+    <!-- /.Comparison Pane -->
+
     <!-- Sticky Bottom Footer -->
     <footer class=" footer bg-meshgrid mt-5 ">
         <div class="container my-2 ">
@@ -2969,6 +3019,7 @@
     <script>
         $(function() {
             productPreloaders(5);
+            availableColors();
         });
     </script>
 </body>
