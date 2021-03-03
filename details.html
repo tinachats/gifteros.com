@@ -407,10 +407,10 @@
                             </div>
                         </li>
                         <li class="nav-item d-none d-lg-inline">
-                            <a class="nav-link text-sm font-600" href="trending.html">Trending</a>
+                            <a class="nav-link text-sm font-600" href="occasion.html">Trending</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-sm font-600" href="/category/hot_deals">Hot Deals</a>
+                            <a class="nav-link text-sm font-600" href="occasion.html">Hot Deals</a>
                         </li>
                     </ul>
                     <!-- /.Left Navbar Links -->
@@ -990,7 +990,7 @@
         <!-- /.Fixed-Top Mobile Navbar -->
 
         <!-- Fixed-Bottom Mobile Navbar -->
-        <div class="d-flex align-items-center justify-content-around fixed-bottom bg-whitesmoke box-shadow-sm w-100" id="details-bottom-nav">
+        <div class="d-flex align-items-center justify-content-around fixed-bottom bg-whitesmoke box-shadow-sm d-md-none w-100" id="details-bottom-nav">
             <a href="index.html" class="nav-item bg-whitesmoke w-20 d-grid">
                 <i class="bi bi-shop m-auto"></i>
             </a>
@@ -1193,7 +1193,7 @@
                                         <span class="text-muted">1233 reviews</span>
                                     </div>
                                 </div>
-                                <button class="btn btn-default btn-sm py-0 my-1 d-flex align-items-center">
+                                <button class="btn btn-default btn-sm py-0 my-1 d-flex align-items-center wishlist-btn" id="wish" data-id="1">
                                     <i class="bi bi-heart text-muted icon-md"></i>
                                     <span class="text-muted text-sm font-600 ms-1">Add to Wishlist</span>
                                 </button>
@@ -1214,7 +1214,7 @@
                                         </div>
                                     </div>
                                     <div class="d-block lh-100 text-center text-sm">
-                                        <p class="my-0 py-0 text-primary">1234</p>
+                                        <p class="my-0 py-0 text-primary" id="gift-wishlist-count1">1234</p>
                                         <div class="d-flex align-items-center mt-1">
                                             <i class="bi bi-heart-fill text-muted me-1"></i>
                                             <span class="text-muted">Wishlisted</span>
@@ -1374,6 +1374,17 @@
                                     </form>
                                 </div>
                                 <!-- /.Product Options -->
+
+                                <!-- Hidden Inputs -->
+                                <input type="hidden" name="hidden-gift-id1" id="hidden-gift-id1" value="1">
+                                <input type="hidden" name="hidden-gift-name1" id="hidden-gift-name1" value="White D&G Handbag">
+                                <input type="hidden" name="hidden-gift-category1" id="hidden-gift-category1" value="Bags">
+                                <input type="hidden" name="hidden-gift-image1" id="hidden-gift-image1" value="15f4607d0b3c65.jpg">
+                                <input type="hidden" name="hidden-gift-price1" id="hidden-gift-price1" value="36.28">
+                                <input type="hidden" name="hidden-gift-qty1" id="hidden-gift-qty1" value="1">
+                                <input type="hidden" name="hidden-gift-units1" id="hidden-gift-units1" value="100">
+                                <input type="hidden" name="hidden-gift-description1" id="hidden-gift-description1" value="36.28">
+                                <!-- /.Hidden Inputs -->
                             </div>
                             <!-- /.Product Details -->
                         </div>
@@ -1437,13 +1448,13 @@
                         <!-- /.Reviews Preview For Mobile Devices -->
 
                         <!-- Similar Gift Recommendations Carousel -->
-                        <div class="row w-100 gx-1 mb-2 gift-categories">
+                        <div class="row w-100 gx-1 mt-1 mb-2">
                             <div class="box-shadow-sm bg-whitesmoke p-1 rounded-2">
                                 <h6 class="font-600 text-app-color">You may also like</h6>
-                                <div class="owl-carousel owl-theme carousel-autoplay">
+                                <div class="owl-carousel owl-theme related-items">
                                     <!-- Related Gift -->
                                     <div class="item w-100">
-                                        <a href="category.html" class="stretched-link">
+                                        <a href="details.html" class="stretched-link">
                                             <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
                                                 <img data-src="dist/images/gifts/15f458254a0dac.1.6.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
                                                 <div class="gift-content mx-1">
@@ -1482,7 +1493,7 @@
                                     <!-- /.Related Gift -->
                                     <!-- Related Gift -->
                                     <div class="item w-100">
-                                        <a href="category.html" class="stretched-link">
+                                        <a href="details.html" class="stretched-link">
                                             <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
                                                 <img data-src="dist/images/gifts/15f458254a0dac.1.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
                                                 <div class="gift-content mx-1">
@@ -1521,7 +1532,7 @@
                                     <!-- /.Related Gift -->
                                     <!-- Related Gift -->
                                     <div class="item w-100">
-                                        <a href="category.html" class="stretched-link">
+                                        <a href="details.html" class="stretched-link">
                                             <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
                                                 <img data-src="dist/images/gifts/15f458254a0dac.2.webp" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
                                                 <div class="gift-content mx-1">
@@ -1560,7 +1571,7 @@
                                     <!-- /.Related Gift -->
                                     <!-- Related Gift -->
                                     <div class="item w-100">
-                                        <a href="category.html" class="stretched-link">
+                                        <a href="details.html" class="stretched-link">
                                             <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
                                                 <img data-src="dist/images/gifts/15f458254a0dac.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
                                                 <div class="gift-content mx-1">
@@ -1599,7 +1610,7 @@
                                     <!-- /.Related Gift -->
                                     <!-- Related Gift -->
                                     <div class="item w-100">
-                                        <a href="category.html" class="stretched-link">
+                                        <a href="details.html" class="stretched-link">
                                             <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
                                                 <img data-src="dist/images/gifts/15f45885de939d.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
                                                 <div class="gift-content mx-1">
@@ -1638,7 +1649,7 @@
                                     <!-- /.Related Gift -->
                                     <!-- Related Gift -->
                                     <div class="item w-100">
-                                        <a href="category.html" class="stretched-link">
+                                        <a href="details.html" class="stretched-link">
                                             <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
                                                 <img data-src="dist/images/gifts/15f4598bf99479.2.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
                                                 <div class="gift-content mx-1">
@@ -1677,7 +1688,7 @@
                                     <!-- /.Related Gift -->
                                     <!-- Related Gift -->
                                     <div class="item w-100">
-                                        <a href="category.html" class="stretched-link">
+                                        <a href="details.html" class="stretched-link">
                                             <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
                                                 <img data-src="dist/images/gifts/15f4605c1791a6.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
                                                 <div class="gift-content mx-1">
@@ -1716,7 +1727,7 @@
                                     <!-- /.Related Gift -->
                                     <!-- Related Gift -->
                                     <div class="item w-100">
-                                        <a href="category.html" class="stretched-link">
+                                        <a href="details.html" class="stretched-link">
                                             <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
                                                 <img data-src="dist/images/gifts/15f460b1352a38.jpg" src="dist/images/app/bg-placeholder.PNG" height="150" class="card-img-top w-100 rounded-top-2 owl-lazy">
                                                 <div class="gift-content mx-1">
@@ -1759,7 +1770,7 @@
                         <!-- /.Similar Gift Recommendations Carousel -->
 
                         <!-- Product Reviews -->
-                        <div class="bg-whitesmoke box-shadow-sm rounded border my-2" id="product-review-section">
+                        <div class="bg-whitesmoke box-shadow-sm rounded border" id="product-review-section">
                             <div class="container-fluid">
                                 <!-- Headings -->
                                 <div class="review-headers my-2">

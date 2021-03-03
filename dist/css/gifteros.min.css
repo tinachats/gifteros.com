@@ -3644,7 +3644,7 @@ a.text-underline:hover,
         margin-bottom: .25rem;
     }
     .grid-view>.product-card>.product-img-wrapper,
-    .grid-view>.product-card>.product-img-wrapper img {
+    .grid-view>.product-card>.product-img-wrapper img.card-img-top {
         height: 150px;
     }
     .grid-view>.product-card .card-content {
