@@ -3209,6 +3209,23 @@ a.text-underline:hover,
 
 /* Social Login Buttons */
 
+.sign-in-text {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.login-page .account-box {
+    width: 18rem;
+}
+
+.register-page .account-box {
+    width: 30rem;
+}
+
+.suggestion-box {
+    padding: .75rem 0;
+}
+
 .divider-name {
     position: absolute;
     padding: 0 5px;
@@ -3607,6 +3624,9 @@ a.text-underline:hover,
     }
     #index-page .gift-categories {
         margin-top: 32.25rem;
+    }
+    .register-page .account-box {
+        width: 20rem;
     }
     .products-shelf.grid-view,
     .category-shelf.grid-view {
