@@ -1652,7 +1652,7 @@ a.active .size-info {
 .grid-view>.product-card>.card-actions .available-colors {
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 5px;
-    margin: 3rem 0 0 .25rem;
+    margin: 2.5rem 0 0 .25rem;
 }
 
 .grid-view>.product-card>.card-actions .card-action-buttons {
@@ -1673,7 +1673,7 @@ a.active .size-info {
 }
 
 .grid-view>.product-card>.card-actions .card-action-buttons .increment-buttons {
-    bottom: 15%;
+    bottom: 2%;
 }
 
 .grid-view>.product-card>.product-img-wrapper,
@@ -3219,7 +3219,6 @@ a.text-underline:hover,
 
 .divider-title {
     position: absolute;
-    background-color: var(--whitesmoke);
     padding: 0 5px;
     margin-top: -30px;
     left: 45%

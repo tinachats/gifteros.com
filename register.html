@@ -37,59 +37,110 @@
     <!-- Gifteros -->
     <link rel="stylesheet" href="dist/css/gifteros.min.css">
     <style>
-        body,
-        .btn-gradient {
-            background: linear-gradient(40deg, hsl(208, 56%, 31%), #b62897, #e55039) !important;
+        @media(max-width: 576px) {
+            body {
+                background-color: var(--whitesmoke);
+            }
+            .d-grid {
+                justify-content: center;
+            }
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .grid-2,
+            .divider-title {
+                background-color: var(--whitesmoke);
+            }
+            .navbrand {
+                color: var(--app-color);
+            }
+            .sign-in-text>h6 {
+                font-size: 1.25rem;
+                color: var(--app-color);
+            }
+            .btn-gradient {
+                background-color: var(--app-color);
+                color: #fff;
+            }
         }
         
-        .hero-section {
-            position: relative;
-            background: url('dist/images/app/account-page-bg.jpg') no-repeat center center/cover;
-        }
-        
-        .hero-section,
-        .hero-section::after {
-            border-top-left-radius: 1rem;
-            border-bottom-left-radius: 1rem;
-        }
-        
-        .hero-section::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, .5);
-            z-index: 1;
-        }
-        
-        .hero-section * {
-            z-index: 3;
-            color: #fff;
-        }
-        
-        .hero-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-        }
-        
-        .social-accounts {
-            left: 0;
-            bottom: 3%;
-            width: 100%;
-            border-top: 1px solid #fff;
-            padding-top: 5px;
+        @media(min-width: 768px) {
+            body {
+                background-color: var(--whitesmoke);
+            }
+            html,
+            body,
+            .card-wrapper,
+            .d-grid {
+                min-height: 100%;
+            }
+            .hero-section {
+                position: relative;
+                background: url('dist/images/app/account-page-bg.jpg') no-repeat center center/cover;
+            }
+            .hero-section::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, .5);
+                z-index: 1;
+            }
+            .hero-section * {
+                z-index: 3;
+                color: #fff;
+            }
+            .hero-content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+            }
+            .navbrand {
+                color: #fff
+            }
+            .sign-in-text>h6 {
+                font-size: 1.5rem;
+                color: var(--app-color);
+            }
+            .btn-gradient {
+                background: var(--app-color);
+                color: #fff
+            }
+            .social-accounts {
+                left: 0;
+                bottom: 3%;
+                width: 100%;
+                border-top: 1px solid #fff;
+                padding-top: 5px;
+            }
         }
         
         @media(min-width: 1200px) {
+            body {
+                background: linear-gradient(40deg, hsl(208, 56%, 31%), #b62897, #e55039) !important;
+            }
             .card-wrapper {
-                width: 1000px;
-                height: 650px;
+                width: 900px;
+                height: 600px;
                 background-color: var(--whitesmoke);
+            }
+            .card-wrapper {
+                border-radius: 1rem;
+            }
+            .hero-section,
+            .hero-section::after {
+                border-top-left-radius: 1rem;
+                border-bottom-left-radius: 1rem;
+            }
+            .sign-in-text>h6 {
+                color: var(--app-color);
+            }
+            .btn-gradient {
+                background: linear-gradient(40deg, hsl(208, 56%, 31%), #b62897, #e55039) !important;
             }
         }
     </style>
@@ -98,9 +149,9 @@
 <body>
     <div class="wrapper d-grid h-100 w-100">
         <div class="m-auto">
-            <div class="card-wrapper d-grid grid-2 box-shadow-lg rounded-3">
+            <div class="card-wrapper d-grid grid-2 box-shadow-lg">
                 <!-- Hero Section -->
-                <div class="hero-section position-relative">
+                <div class="hero-section position-relative d-none d-md-block">
                     <a href="index.html" class="d-flex align-items-center p-2">
                         <img src="dist/images/app/gifteros.png" height="35" width="35" alt="" class="me-1">
                         <h6 class="font-600 lead-2x text-white my-0">Gifteros</h6>
@@ -140,46 +191,45 @@
                 <!-- /.Hero Section -->
 
                 <!-- Sign-in Form -->
-                <div class="container-fluid">
+                <div class="container-fluid sign-in-form">
                     <div class="d-grid h-100 w-100">
                         <div class="m-auto">
                             <div class="row justify-content-center">
-                                <div class="col-12 text-center">
-                                    <h6 class="lead-2x font-600 text-app-color my-0">Sign up</h6>
+                                <div class="col-12 text-center d-md-none">
+                                    <a href="index.html" class="d-flex align-items-center justify-content-center p-2">
+                                        <img src="dist/images/app/gifteros.png" height="35" width="35" alt="" class="me-1">
+                                        <h6 class="font-600 lead-2x navbrand my-0">Gifteros</h6>
+                                    </a>
+                                </div>
+                                <div class="col-12 text-md-center sign-in-text">
+                                    <h6 class="font-600 my-0">Sign up</h6>
                                     <p class="my-0">
                                         Create an account to get access to exclusive secret deals.
                                     </p>
                                 </div>
                                 <div class="col-12 mt-2">
                                     <form method="post" class="row g-3 needs-validation" id="register-form" novalidate>
-                                        <div class="col-12 col-md-6">
-                                            <label for="first-name" class="form-label mb-0">First name</label>
-                                            <input type="text" class="form-control text-capitalize" name="first-name" id="first-name" placeholder="John" required>
+                                        <div class="col-12">
+                                            <label for="full-name" class="form-label mb-0">Full name</label>
+                                            <input type="text" class="form-control text-capitalize" name="full-name" id="full-name" required>
                                             <div class="invalid-feedback">
-                                                First name is required.
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-md-6">
-                                            <label for="last-name" class="form-label mb-0">last name</label>
-                                            <input type="text" class="form-control text-capitalize" name="last-name" id="last-name" placeholder="Doe" required>
-                                            <div class="invalid-feedback">
-                                                Last name is required.
+                                                Full name is required.
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <label for="email" class="form-label mb-0">Email</label>
-                                            <input type="email" class="form-control" name="email" id="email" placeholder="email@example.com" required>
+                                            <input type="email" class="form-control" name="email" id="email" required>
                                             <div class="invalid-feedback">
                                                 Invalid email address.
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-6">
-                                            <label for="phone-number" class="form-label">Phone number</label>
+                                            <label for="phone-number" class="form-label mb-0">Phone number</label>
                                             <div class="input-group has-validation">
                                                 <span class="input-group-text d-flex align-items-center" id="inputGroupPrepend">
-                                                    <img src="dist/images/countries/flag-of-Zimbabwe.png" height="15" width="22" alt="" class="me-1"> +263
+                                                    <img src="dist/images/countries/flag-of-Zimbabwe.png" height="15" width="22" alt="" class="me-1"> 263
                                                 </span>
-                                                <input type="text" class="form-control" id="phone-number" placeholder="776021140" aria-describedby="inputGroupPrepend" required>
+                                                <input type="text" class="form-control" id="phone-number" aria-describedby="inputGroupPrepend" required>
                                                 <div class="invalid-feedback">
                                                     Invalid phone no.
                                                 </div>
