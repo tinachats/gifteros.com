@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Meta Description -->
-    <meta name="description" content="Details page">
+    <meta name="description" content="My Cart">
     <!-- Developer -->
     <meta name="developer" content="Tinashe. M. Chaterera">
     <title>My Cart(3)</title>
@@ -37,120 +37,62 @@
     <!-- Gifteros -->
     <link rel="stylesheet" href="dist/css/gifteros.min.css">
     <style>
-        .sticky-top {
-            z-index: 1000 !important
-        }
-        
-        .price-range-input {
-            width: 4rem;
-        }
-        
-        .list-view>.product-card>.product-img-wrapper .card-img-top {
-            height: auto;
-        }
-        
-        .filter-list>li {
-            padding: .1rem 1.5rem;
-        }
-        
-        .circled-button,
-        .circled-button {
-            border-radius: 50%;
-        }
-        
-        .circled-button {
-            height: 40px;
-            width: 40px;
-        }
-        
-        .circled-button {
-            height: 30px;
-            width: 30px;
-        }
-        
-        #category-list {
-            width: 30%;
-        }
-        
-        .owl-carousel {
-            position: relative;
-            display: flex;
-            width: 100%;
-        }
-        
-        .owl-carousel>.item {
-            box-sizing: border-box;
-        }
-        
-        .owl-carousel>.item>div {
-            width: 100%;
+        footer.footer {
+            margin-top: 10rem !important;
         }
         /*** Wishlist Item ***/
         
-        .wishlist-item {
+        #cart-page .wishlist-item {
             background-color: var(--whitesmoke);
         }
         
-        .toggle-buttons {
+        #cart-page .toggle-buttons {
             display: none;
         }
         /*** /.Wishlist Item ***/
         /*** Grid View ***/
         
-        .wishlist-shelf.grid-view {
-            grid-template-columns: repeat(3, 1fr);
-            height: 356px;
-        }
-        
-        .wishlist-shelf.grid-view>.wishlist-item {
+        #cart-page .wishlist-shelf.grid-view>.wishlist-item {
             box-shadow: var(--shadow-sm);
             border: 1px solid var(--border-color);
             border-radius: .5rem;
             padding-bottom: .5rem;
         }
         
-        .wishlist-shelf.grid-view>.wishlist-item>.item-content {
+        #cart-page .wishlist-shelf.grid-view>.wishlist-item>.item-content {
             display: block;
         }
         
-        .wishlist-shelf.grid-view>.wishlist-item>.item-content img.item-img {
-            height: 150px;
+        #cart-page .wishlist-shelf.grid-view>.wishlist-item>.item-content img.item-img {
             width: 100%;
             object-fit: contain;
             border-top-left-radius: .5rem;
             border-top-right-radius: .5rem;
         }
         
-        .wishlist-shelf.grid-view>.wishlist-item>.item-content .item-body-content {
+        #cart-page .wishlist-shelf.grid-view>.wishlist-item>.item-content .item-body-content {
             border-top: 1px solid var(--border-color);
             padding-top: 3px;
         }
         
-        .wishlist-shelf.grid-view>.wishlist-item>.item-content .item-body-buttons {
+        #cart-page .wishlist-shelf.grid-view>.wishlist-item>.item-content .item-body-buttons {
             width: 100%;
             margin-left: auto;
-        }
-        
-        .wishlist-shelf.grid-view>.wishlist-item>.item-content .collapse-btn {
-            display: none !important;
-        }
-        
-        .wishlist-shelf.grid-view>.wishlist-item>.item-content .modal-btn {
-            display: inline-block;
         }
         /*** /.Grid View ***/
         /*** List View ***/
         
-        .wishlist-shelf.list-view {
+        #cart-page .wishlist-shelf.list-view {
             grid-template-columns: 1fr;
         }
         
-        .wishlist-shelf.list-view>.wishlist-item {
+        #cart-page .wishlist-shelf.list-view>.wishlist-item {
             background-color: var(--whitesmoke);
             padding: .5rem;
         }
         
-        .wishlist-shelf.list-view>.wishlist-item>.item-content {
+        #cart-page .wishlist-shelf.list-view>.wishlist-item>.item-content,
+        #cart-page .wishlist-shelf.list-view>.wishlist-item>.item-content>.item-body-content {
             display: flex;
             align-items: center;
         }
@@ -162,47 +104,44 @@
             border-radius: .5rem;
         }
         
-        .wishlist-shelf.list-view>.wishlist-item>.item-content .item-body-buttons {
+        #cart-page .wishlist-shelf.list-view>.wishlist-item>.item-content .item-body-buttons {
             margin-left: auto !important;
-        }
-        
-        .wishlist-shelf.list-view>.wishlist-item>.item-content .collapse-btn {
-            display: inline-block;
-        }
-        
-        .wishlist-shelf.list-view>.wishlist-item>.item-content .modal-btn {
-            display: none !important;
         }
         /*** /.List View ***/
         
-        .stats.gift-rating {
+        #cart-page .stats.gift-rating {
             position: absolute;
             left: 50%;
             margin-top: -50px;
             transform: translateX(-50%);
         }
         
-        .popover {
-            width: 28% !important;
-        }
-        
-        .quantity-input {
+        #cart-page .quantity-input {
             width: 55px;
         }
         
-        .action-buttons {
+        #cart-page .action-buttons {
             height: 42px;
             width: 42px;
             border-radius: 50%;
         }
         
-        #cart-action-btns {
+        #cart-page #cart-action-btns {
             display: none !important;
         }
         
-        @media(min-width: 768px) {
-            .section-header {
-                height: 68px;
+        @media(max-width: 576px) {
+            #cart-page .wishlist-shelf.grid-view>.wishlist-item>.item-content img.item-img {
+                height: 100px;
+            }
+            #cart-page .wishlist-shelf.list-view>.wishlist-item>.item-content {
+                display: block;
+            }
+            #cart-page .wishlist-shelf .collapse-btn {
+                display: none !important;
+            }
+            #cart-page .wishlist-shelf .modal-btn {
+                display: inline-block;
             }
         }
     </style>
@@ -314,7 +253,7 @@
         <!-- /.Side Action Panel -->
 
         <!-- Main Navbar -->
-        <header class="header box-shadow-sm d-sm-none d-md-block">
+        <header class="header box-shadow-sm d-none d-md-block">
             <div class="container">
                 <!-- Main Navbar -->
                 <nav class="nav navbar-expand-md main-nav">
@@ -1276,29 +1215,33 @@
         <!-- Fixed-Top Mobile Navbar -->
         <nav class="navbar navbar-light bg-whitesmoke fixed-top box-shadow-sm m-0 py-0 d-md-none" id="mobile-top-nav">
             <div class="container-fluid">
-                <!-- Navbrand -->
-                <a href="index.html" class="navbar-brand font-700">
-                    <img src="dist/images/app/gifteros.png" height="35" class="gifteros-logo" width="35" alt="">
-                    <span class="mobile-brand brandname">Gifteros</span>
-                </a>
-                <ul class="ms-auto d-flex align-items-center my-0 me-2 p-0">
-                    <li class="nav-item me-3">
-                        <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center p-0 m-0">
-                            <i class="bi bi-calendar2-date mobile-nav-icon"></i>
-                        </button>
-                    </li>
-                    <li class="nav-item me-3">
-                        <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center p-0 m-0" onclick="toggleSearchBar()">
-                            <i class="bi bi-search mobile-nav-icon"></i>
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link icon-link">
-                            <img data-src="dist/images/users/15f9eb408be859.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle lazy toggle-side-menu">
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.Navbrand -->
+                <div class="d-flex align-items-center w-100">
+                    <ul class="d-flex align-items-center my-0 p-0">
+                        <li class="nav-item me-1">
+                            <a href="index.html" role="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center p-0 m-0">
+                                <i class="bi bi-chevron-left mobile-nav-icon"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html" class="navbar-brand font-700">
+                                <img src="dist/images/app/gifteros.png" height="35" class="gifteros-logo" width="35" alt="">
+                                <span class="mobile-brand brandname">Gifteros</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="d-flex align-items-center ms-auto my-0 p-0">
+                        <li class="nav-item me-3">
+                            <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center p-0 m-0" onclick="toggleSearchBar()">
+                                <i class="bi bi-search mobile-nav-icon"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center toggle-side-menu p-0 m-0">
+                                <i class="bi bi-list mobile-nav-icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <!-- /.Fixed-Top Mobile Navbar -->
@@ -1306,7 +1249,7 @@
         <!-- Fixed-Bottom Mobile Navbar -->
         <nav class="navbar navbar-light bg-whitesmoke fixed-bottom box-shadow-sm m-0 py-0 d-md-none" id="mobile-bottom-nav">
             <div class="container-fluid">
-                <a href="index.html" class="nav-menu-item d-block text-center lh-100 active" aria-current="page">
+                <a href="index.html" class="nav-menu-item d-block text-center lh-100">
                     <i class="bi bi-shop icon-md"></i>
                     <i class="fa fa-circle position-absolute new-gifts"></i>
                     <p class="text-sm my-0 py-1">Home</p>
@@ -1315,7 +1258,7 @@
                     <i class="bi bi-card-list icon-md"></i>
                     <p class="text-sm my-0 py-1">Categories</p>
                 </a>
-                <a href="#" class="nav-menu-item d-block text-center position-relative lh-100">
+                <a href="#" class="nav-menu-item d-block text-center position-relative active lh-100" aria-current="page">
                     <i class="bi bi-cart4 icon-md"></i>
                     <span class="badge nav-badge position-absolute gift-count">4</span>
                     <p class="text-sm my-0 py-1">Cart</p>
@@ -1457,7 +1400,7 @@
         </nav>
         <!-- /.Mobile Search -->
 
-        <div class="page-content">
+        <div class="page-content" id="cart-page">
             <div class="container">
                 <!-- Breadcrumbs -->
                 <nav class="d-flex align-items-center justify-content-md-between my-2" aria-label="breadcrumb">
@@ -1472,7 +1415,7 @@
                     <!-- Main Content -->
                     <div class="col-12 col-md-9 zoom-out-section">
                         <!-- Right Navbar -->
-                        <nav class="box-shadow-sm bg-whitesmoke sticky-top border p-2">
+                        <nav class="box-shadow-sm bg-whitesmoke sticky-top border d-none d-md-block p-2">
                             <!-- Breadcrumbs -->
                             <div aria-label="breadcrumb">
                                 <ol class="breadcrumb mb-0 pb-0">
@@ -1539,70 +1482,76 @@
 
                         <!-- Gift Items -->
                         <div class="d-grid list-view grid-p-1 mt-2 display-gifts wishlist-shelf">
-                            <!-- Wishlist Item -->
+                            <!-- Gift Item -->
                             <div class="wishlist-item mb-1 w-100" id="wishlist-item1">
                                 <!-- Item Content -->
                                 <div class="item-content">
-                                    <a href="details.html">
-                                        <img data-src="dist/images/gifts/15f4598bf99479.2.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="lazy item-img">
-                                    </a>
-                                    <div class="item-body-content d-block px-2 lh-100">
-                                        <h6 class="text-sm font-600 text-capitalize">Customizable Mug</h6>
-                                        <p class="text-sm text-muted my-0 py-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor est beatae quo.
-                                        </p>
-                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-muted">&star;</li>
-                                            <a href="#" class="text-sm text-muted d-flex align-items-center popover-info">
-                                                <i class="bi bi-chevron-down popover-toggle-icon me-1"></i>1,284 ratings
-                                            </a>
-                                        </ul>
-                                        <div class="d-flex align-items-center">
-                                            <i class="bi bi-arrow-return-right me-1"></i>
-                                            <p class="text-sm text-muted border-right pe-1 my-0 py-0">
-                                                Size: <span class="text-uppercase text-muted">l</span>
+                                    <div class="item-body-content px-2 lh-100">
+                                        <a href="details.html">
+                                            <img data-src="dist/images/gifts/15f4598bf99479.2.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="lazy item-img">
+                                        </a>
+                                        <div class="d-block">
+                                            <h6 class="text-sm font-600 text-capitalize">Queen-sized Quilted Comforter</h6>
+                                            <p class="text-sm text-muted d-none d-md-block my-0 py-0">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor est beatae quo.
                                             </p>
-                                            <p class="text-sm text-muted px-1 my-0 py-0">
-                                                Color: <span class="text-capitalize text-muted">Dark Grey</span>
-                                            </p>
+                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-muted">&star;</li>
+                                                <a href="#" class="text-sm text-muted d-flex align-items-center popover-info">
+                                                    <i class="bi bi-chevron-down popover-toggle-icon me-1"></i>1,284 ratings
+                                                </a>
+                                            </ul>
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-arrow-return-right me-1"></i>
+                                                <p class="text-sm text-muted border-right pe-1 my-0 py-0">
+                                                    Size: <span class="text-uppercase text-muted">l</span>
+                                                </p>
+                                                <p class="text-sm text-muted px-1 my-0 py-0">
+                                                    Color: <span class="text-capitalize text-muted">Dark Grey</span>
+                                                </p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <h6 class="usd-price font-600 d-flex my-0 me-3">
+                                                    <span class="currency-symbol text-danger">US$</span>
+                                                    <span class="text-danger" id="gift-price1">12.38</span>
+                                                </h6>
+                                                <h6 class="text-muted strike-through font-600 my-0">US$18.46</h6>
+                                            </div>
+                                            <div class="d-flex align-items-center text-muted text-sm">
+                                                Expected Delivery Time: <span class="mx-1">3</span> - <span class="mx-1">5</span> days
+                                            </div>
+                                            <div class="d-flex">
+                                                <p class="text-sm text-muted my-0 py-1">Items sold: 36</p>
+                                                <div class="border-right mx-1"></div>
+                                                <p class="text-sm text-muted my-0 py-1">4 items left</p>
+                                            </div>
                                         </div>
-                                        <div class="d-flex align-items-center">
-                                            <h6 class="usd-price font-600 d-flex my-0 me-3">
-                                                <span class="currency-symbol text-danger">US$</span>
-                                                <span class="text-danger" id="gift-price1">12.38</span>
-                                            </h6>
-                                            <h6 class="text-muted strike-through font-600 my-0">US$18.46</h6>
-                                        </div>
-                                        <div class="d-flex align-items-center text-muted text-sm">
-                                            Expected Delivery Time: <span class="mx-1">3</span> - <span class="mx-1">5</span> days
-                                        </div>
-                                        <p class="text-sm text-primary my-0 py-1">Items sold: 36</p>
                                     </div>
                                     <div class="item-body-buttons d-block px-2 lh-100">
-                                        <p class="text-sm text-muted m-0 p-0">
+                                        <p class="text-sm text-muted text-center m-0 p-0">
                                             Item added February 11, 2021
                                         </p>
-                                        <div class="d-flex align-items-center justify-content-between my-2">
+                                        <div class="d-flex align-items-center justify-content-sm-center justify-content-md-between my-2">
                                             <button class="btn btn-default btn-sm d-grid action-buttons decrease-qty" data-id="1">
                                                 <i class="material-icons m-auto">remove</i>
                                             </button>
-                                            <input type="text" class="form-control form-control-sm text-center quantity-input mx-2" id="quantity-input1" value="1">
+                                            <input type="tel" class="form-control form-control-sm text-center quantity-input mx-sm-4 mx-md-2" id="quantity-input1" onkeyup="forceNumeric(this)" data-id="1" value="1">
                                             <button class="btn btn-default btn-sm d-grid action-buttons increase-qty" data-id="1">
                                                 <i class="material-icons m-auto">add</i>
                                             </button>
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-between card-buttons w-100">
+                                        <div class="d-flex align-items-center justify-content-sm-center justify-content-md-between card-buttons w-100">
                                             <button type="button" class="btn btn-sm btn-light d-flex align-items-center toggle-buttons collapse-btn collapse-link" data-bs-toggle="collapse" data-bs-target="#similar-items" aria-expanded="false" aria-controls="similar-items">
                                                 Similar <i class="bi bi-chevron-down collapse-icon ms-1"></i>
                                             </button>
                                             <button type="button" class="btn btn-sm btn-light d-flex align-items-center toggle-buttons modal-btn" data-bs-toggle="modal" data-bs-target="#similar-modal-items">
-                                                Similar items <i class="material-icons">more_horiz</i>
+                                                Similar <span class="d-none d-md-flex align-items-md-center ms-1">items <i class="material-icons">more_horiz</i></span>
                                             </button>
-                                            <button class="btn btn-light btn-sm wishlist-btn" id="wish" data-id="1">
+                                            <button class="btn btn-light btn-sm wishlist-btn mx-sm-4 mx-md-2" id="wish" data-id="1">
                                                 <i class="bi bi-heart text-warning"></i>
                                             </button>
                                             <button class="btn btn-light btn-sm remove-item" data-id="1">
@@ -1816,7 +1765,292 @@
                                 </div>
                                 <!-- /.Similar Items -->
                             </div>
-                            <!-- /.Wishlist Item -->
+                            <!-- /.Gift Item -->
+
+                            <!-- Gift Item -->
+                            <div class="wishlist-item mb-1 w-100" id="wishlist-item2">
+                                <!-- Item Content -->
+                                <div class="item-content">
+                                    <div class="item-body-content px-2 lh-100">
+                                        <a href="details.html">
+                                            <img data-src="dist/images/gifts/15f47b9066c522.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="lazy item-img">
+                                        </a>
+                                        <div class="d-block">
+                                            <h6 class="text-sm font-600 text-capitalize">Sculp massager</h6>
+                                            <p class="text-sm text-muted d-none d-md-block my-0 py-0">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor est beatae quo.
+                                            </p>
+                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-gold">&starf;</li>
+                                                <li class="list-inline-item text-muted">&star;</li>
+                                                <a href="#" class="text-sm text-muted d-flex align-items-center popover-info">
+                                                    <i class="bi bi-chevron-down popover-toggle-icon me-1"></i>1,284 ratings
+                                                </a>
+                                            </ul>
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-arrow-return-right me-1"></i>
+                                                <p class="text-sm text-muted border-right pe-1 my-0 py-0">
+                                                    Size: <span class="text-uppercase text-muted">l</span>
+                                                </p>
+                                                <p class="text-sm text-muted px-1 my-0 py-0">
+                                                    Color: <span class="text-capitalize text-muted">Dark Grey</span>
+                                                </p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <h6 class="usd-price font-600 d-flex my-0 me-3">
+                                                    <span class="currency-symbol text-danger">US$</span>
+                                                    <span class="text-danger" id="gift-price2">12.38</span>
+                                                </h6>
+                                                <h6 class="text-muted strike-through font-600 my-0">US$18.46</h6>
+                                            </div>
+                                            <div class="d-flex align-items-center text-muted text-sm">
+                                                Expected Delivery Time: <span class="mx-1">3</span> - <span class="mx-1">5</span> days
+                                            </div>
+                                            <div class="d-flex">
+                                                <p class="text-sm text-muted my-0 py-1">Items sold: 36</p>
+                                                <div class="border-right mx-1"></div>
+                                                <p class="text-sm text-muted my-0 py-1">4 items left</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-body-buttons d-block px-2 lh-100">
+                                        <p class="text-sm text-muted text-center m-0 p-0">
+                                            Item added February 11, 2021
+                                        </p>
+                                        <div class="d-flex align-items-center justify-content-sm-center justify-content-md-between my-2">
+                                            <button class="btn btn-default btn-sm d-grid action-buttons decrease-qty" data-id="2">
+                                                <i class="material-icons m-auto">remove</i>
+                                            </button>
+                                            <input type="tel" class="form-control form-control-sm text-center quantity-input mx-sm-4 mx-md-2" id="quantity-input2" onkeyup="forceNumeric(this)" data-id="2" value="1">
+                                            <button class="btn btn-default btn-sm d-grid action-buttons increase-qty" data-id="2">
+                                                <i class="material-icons m-auto">add</i>
+                                            </button>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-sm-center justify-content-md-between card-buttons w-100">
+                                            <button type="button" class="btn btn-sm btn-light d-flex align-items-center toggle-buttons collapse-btn collapse-link" data-bs-toggle="collapse" data-bs-target="#similar-items" aria-expanded="false" aria-controls="similar-items">
+                                                Similar <i class="bi bi-chevron-down collapse-icon ms-1"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-sm btn-light d-flex align-items-center toggle-buttons modal-btn" data-bs-toggle="modal" data-bs-target="#similar-modal-items">
+                                                Similar <span class="d-none d-md-flex align-items-md-center ms-1">items <i class="material-icons">more_horiz</i></span>
+                                            </button>
+                                            <button class="btn btn-light btn-sm wishlist-btn mx-sm-4 mx-md-2" id="wish" data-id="2">
+                                                <i class="bi bi-heart text-warning"></i>
+                                            </button>
+                                            <button class="btn btn-light btn-sm remove-item" data-id="2">
+                                                <i class="bi bi-trash-fill text-danger ms-1"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Hidden Inputs -->
+                                    <input type="hidden" name="hidden-gift-id2" id="hidden-gift-id2" value="2">
+                                    <input type="hidden" name="hidden-gift-name2" id="hidden-gift-name2" value="Sculp Massager">
+                                    <input type="hidden" name="hidden-gift-category2" id="hidden-gift-category2" value="Bags">
+                                    <input type="hidden" name="hidden-gift-image2" id="hidden-gift-image2" value="15f47b9066c522.jpg">
+                                    <input type="hidden" name="hidden-gift-price2" id="hidden-gift-price2" value="12.38">
+                                    <input type="hidden" name="hidden-gift-qty2" id="hidden-gift-qty2" value="1">
+                                    <input type="hidden" name="hidden-gift-units2" id="hidden-gift-units2" value="100">
+                                    <input type="hidden" name="hidden-gift-description2" id="hidden-gift-description2" value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor est beatae quo.">
+                                    <!-- /.Hidden Inputs -->
+                                </div>
+                                <!-- /.Item Content -->
+
+                                <!-- Similar Items -->
+                                <div class="collapse" id="similar-items">
+                                    <h6 class="font-600 text-app-color mt-2">Similar Gift Items</h6>
+                                    <div class="d-grid grid-5 grid-p-1">
+                                        <!-- Related Gift -->
+                                        <a href="categories.html">
+                                            <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
+                                                <img src="dist/images/gifts/15f458254a0dac.1.6.jpg" height="150" class="card-img-top w-100 rounded-top-2">
+                                                <div class="gift-content mx-1">
+                                                    <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
+                                                    <div class="d-inline-block w-100 lh-100">
+                                                        <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
+                                                        <div class="d-flex align-items-center justify-content-between w-100">
+                                                            <div>
+                                                                <div class="d-flex align-items-center">
+                                                                    <span class="text-warning me-1">&starf;</span>
+                                                                    <span class="text-sm text-muted">4.6</span>
+                                                                </div>
+                                                            </div>
+                                                            <span class="text-sm text-muted me-2">484 Sold</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="usd-price">
+                                                        <div class="d-flex align-items-center">
+                                                            <h6 class="text-sm">From US$28.39</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zar-price d-none">
+                                                        <div class="d-flex align-items-center">
+                                                            <h6 class="text-sm">From R384.34</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zwl-price d-none">
+                                                        <div class="d-flex align-items-center">
+                                                            <h6 class="text-sm">From ZW$2893.38</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- /.Related Gift -->
+                                        <!-- Related Gift -->
+                                        <a href="categories.html">
+                                            <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
+                                                <img src="dist/images/gifts/15f458254a0dac.1.jpg" height="150" class="card-img-top w-100 rounded-top-2">
+                                                <div class="gift-content mx-1">
+                                                    <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
+                                                    <div class="d-inline-block w-100 lh-100">
+                                                        <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
+                                                        <div class="d-flex align-items-center justify-content-between w-100">
+                                                            <div>
+                                                                <div class="d-flex align-items-center">
+                                                                    <span class="text-warning me-1">&starf;</span>
+                                                                    <span class="text-sm text-muted">4.6</span>
+                                                                </div>
+                                                            </div>
+                                                            <span class="text-sm text-muted me-2">484 Sold</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="usd-price">
+                                                        <div class="d-flex align-items-center">
+                                                            <h6 class="text-sm">From US$28.39</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zar-price d-none">
+                                                        <div class="d-flex align-items-center">
+                                                            <h6 class="text-sm">From R384.34</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zwl-price d-none">
+                                                        <div class="d-flex align-items-center">
+                                                            <h6 class="text-sm">From ZW$2893.38</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- /.Related Gift -->
+                                        <!-- Related Gift -->
+                                        <a href="categories.html">
+                                            <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
+                                                <img src="dist/images/gifts/15f458254a0dac.2.webp" height="150" class="card-img-top w-100 rounded-top-2">
+                                                <div class="gift-content mx-1">
+                                                    <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
+                                                    <div class="d-inline-block w-100 lh-100">
+                                                        <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
+                                                        <div class="d-flex align-items-center justify-content-between w-100">
+                                                            <div>
+                                                                <div class="d-flex align-items-center">
+                                                                    <span class="text-warning me-1">&starf;</span>
+                                                                    <span class="text-sm text-muted">4.6</span>
+                                                                </div>
+                                                            </div>
+                                                            <span class="text-sm text-muted me-2">484 Sold</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="usd-price">
+                                                        <div class="d-flex align-items-center">
+                                                            <h6 class="text-sm">From US$28.39</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zar-price d-none">
+                                                        <div class="d-flex align-items-center">
+                                                            <h6 class="text-sm">From R384.34</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zwl-price d-none">
+                                                        <div class="d-flex align-items-center">
+                                                            <h6 class="text-sm">From ZW$2893.38</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- /.Related Gift -->
+                                        <!-- Related Gift -->
+                                        <a href="categories.html">
+                                            <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
+                                                <img src="dist/images/gifts/15f458254a0dac.jpg" height="150" class="card-img-top w-100 rounded-top-2">
+                                                <div class="gift-content mx-1">
+                                                    <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
+                                                    <div class="d-inline-block w-100 lh-100">
+                                                        <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
+                                                        <div class="d-flex align-items-center justify-content-between w-100">
+                                                            <div>
+                                                                <div class="d-flex align-items-center">
+                                                                    <span class="text-warning me-1">&starf;</span>
+                                                                    <span class="text-sm text-muted">4.6</span>
+                                                                </div>
+                                                            </div>
+                                                            <span class="text-sm text-muted me-2">484 Sold</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="usd-price">
+                                                        <div class="d-flex align-items-center">
+                                                            <h6 class="text-sm">From US$28.39</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zar-price d-none">
+                                                        <div class="d-flex align-items-center">
+                                                            <h6 class="text-sm">From R384.34</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zwl-price d-none">
+                                                        <div class="d-flex align-items-center">
+                                                            <h6 class="text-sm">From ZW$2893.38</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- /.Related Gift -->
+                                        <!-- Related Gift -->
+                                        <a href="categories.html">
+                                            <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
+                                                <img src="dist/images/gifts/15f45885de939d.jpg" height="150" class="card-img-top w-100 rounded-top-2">
+                                                <div class="gift-content mx-1">
+                                                    <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
+                                                    <div class="d-inline-block w-100 lh-100">
+                                                        <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
+                                                        <div class="d-flex align-items-center justify-content-between w-100">
+                                                            <div>
+                                                                <div class="d-flex align-items-center">
+                                                                    <span class="text-warning me-1">&starf;</span>
+                                                                    <span class="text-sm text-muted">4.6</span>
+                                                                </div>
+                                                            </div>
+                                                            <span class="text-sm text-muted me-2">484 Sold</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="usd-price">
+                                                        <div class="d-flex align-items-center">
+                                                            <h6 class="text-sm">From US$28.39</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zar-price d-none">
+                                                        <div class="d-flex align-items-center">
+                                                            <h6 class="text-sm">From R384.34</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zwl-price d-none">
+                                                        <div class="d-flex align-items-center">
+                                                            <h6 class="text-sm">From ZW$2893.38</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- /.Related Gift -->
+                                    </div>
+                                </div>
+                                <!-- /.Similar Items -->
+                            </div>
+                            <!-- /.Gift Item -->
                         </div>
                         <!-- /.Gift Items -->
                     </div>
