@@ -88,7 +88,7 @@
         /*** Wishlist Item ***/
         
         .wishlist-item {
-            background-color: var(--white);
+            background-color: var(--whitesmoke);
         }
         
         .toggle-buttons {
@@ -168,7 +168,6 @@
         
         .wishlist-shelf.list-view>.wishlist-item>.item-content .collapse-btn {
             display: inline-block;
-            margin-right: .25rem;
         }
         
         .wishlist-shelf.list-view>.wishlist-item>.item-content .modal-btn {
@@ -244,7 +243,7 @@
             <!-- /.Mobile Action Buttons -->
 
             <!-- Cart Suggestions -->
-            <div class="d-sm-none d-md-block">
+            <div class="d-none d-md-block">
                 <div class="floating-action box-shadow-sm bg-switch" title="Click to toggle actions">
                     <i class="material-icons m-auto text-white">lightbulb_outline</i>
                 </div>
@@ -254,11 +253,11 @@
         <!-- /.Floating Action Buttons -->
 
         <!-- Side Action Panel -->
-        <div class="d-sm-none d-md-block">
+        <div class="d-none d-xl-block">
             <div class="navigation-panel bg-meshgrid d-flex flex-column justify-content-around align-items-center">
                 <ul class="panel-lists d-flex flex-column align-items-center px-0">
                     <li class="panel-icon w-100 py-1">
-                        <a href="#" role="button" class="bi bi-geo-fill icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Trending In Your Area"></a>
+                        <a href="#" role="button" class="bi bi-list icon-md text-white toggle-side-menu" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Toggle Menu"></a>
                     </li>
                     <li class="panel-icon w-100 py-1">
                         <a href="#" role="button" class="bi bi-clock-history icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Viewed Gifts"></a>
@@ -268,6 +267,9 @@
                     </li>
                     <li class="panel-icon w-100 py-1">
                         <a href="#" role="button" class="bi bi-receipt icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Coupons"></a>
+                    </li>
+                    <li class="panel-icon w-100 py-1">
+                        <a href="#" role="button" class="bi bi-gear icon-md text-white toggle-settings" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="App Settings"></a>
                     </li>
                 </ul>
                 <ul class="panel-lists d-flex flex-column align-items-center px-0">
@@ -304,7 +306,7 @@
                         <a href="#" role="button" class="bi bi-question-circle icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Help and Feedback"></a>
                     </li>
                     <li class="panel-icon w-100 py-1 to-top">
-                        <a href="#" role="button" class="bi bi-arrow-up-circle icon-md text-white" onclick="scrollToTop();" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Back to Top"></a>
+                        <a href="#" role="button" class="bi bi-arrow-up-circle icon-md text-white" onclick="scrollToTop()" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Back to Top"></a>
                     </li>
                 </ul>
             </div>
@@ -312,7 +314,7 @@
         <!-- /.Side Action Panel -->
 
         <!-- Main Navbar -->
-        <header class="header fixed-md-top box-shadow-sm d-sm-none d-md-block">
+        <header class="header box-shadow-sm d-sm-none d-md-block">
             <div class="container">
                 <!-- Main Navbar -->
                 <nav class="nav navbar-expand-md main-nav">
@@ -1157,10 +1159,6 @@
                             </div>
                         </li>
                         <!-- /.Signed-in User -->
-
-                        <li class="nav-item d-cursor d-md-flex ms-3" id="app-settings" data-bs-toggle="tooltip" title="See more settings">
-                            <a class="toggle-settings nav-link icon-link material-icons">tune</a>
-                        </li>
                     </ul>
                     <!-- /.Right Navbar Links -->
                 </nav>
@@ -1275,6 +1273,190 @@
         </header>
         <!-- /.Main Navbar -->
 
+        <!-- Fixed-Top Mobile Navbar -->
+        <nav class="navbar navbar-light bg-whitesmoke fixed-top box-shadow-sm m-0 py-0 d-md-none" id="mobile-top-nav">
+            <div class="container-fluid">
+                <!-- Navbrand -->
+                <a href="index.html" class="navbar-brand font-700">
+                    <img src="dist/images/app/gifteros.png" height="35" class="gifteros-logo" width="35" alt="">
+                    <span class="mobile-brand brandname">Gifteros</span>
+                </a>
+                <ul class="ms-auto d-flex align-items-center my-0 me-2 p-0">
+                    <li class="nav-item me-3">
+                        <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center p-0 m-0">
+                            <i class="bi bi-calendar2-date mobile-nav-icon"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item me-3">
+                        <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center p-0 m-0" onclick="toggleSearchBar()">
+                            <i class="bi bi-search mobile-nav-icon"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link icon-link">
+                            <img data-src="dist/images/users/15f9eb408be859.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle lazy toggle-side-menu">
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.Navbrand -->
+            </div>
+        </nav>
+        <!-- /.Fixed-Top Mobile Navbar -->
+
+        <!-- Fixed-Bottom Mobile Navbar -->
+        <nav class="navbar navbar-light bg-whitesmoke fixed-bottom box-shadow-sm m-0 py-0 d-md-none" id="mobile-bottom-nav">
+            <div class="container-fluid">
+                <a href="index.html" class="nav-menu-item d-block text-center lh-100 active" aria-current="page">
+                    <i class="bi bi-shop icon-md"></i>
+                    <i class="fa fa-circle position-absolute new-gifts"></i>
+                    <p class="text-sm my-0 py-1">Home</p>
+                </a>
+                <a href="#" class="nav-menu-item d-block text-center lh-100">
+                    <i class="bi bi-card-list icon-md"></i>
+                    <p class="text-sm my-0 py-1">Categories</p>
+                </a>
+                <a href="#" class="nav-menu-item d-block text-center position-relative lh-100">
+                    <i class="bi bi-cart4 icon-md"></i>
+                    <span class="badge nav-badge position-absolute gift-count">4</span>
+                    <p class="text-sm my-0 py-1">Cart</p>
+                </a>
+                <a href="#" class="nav-menu-item d-block text-center position-relative lh-100" id="app-notifications">
+                    <i class="bi bi-bell icon-md"></i>
+                    <span class="badge nav-badge position-absolute notifications-counter">9+</span>
+                    <p class="text-sm my-0 py-1">Notifications</p>
+                </a>
+            </div>
+        </nav>
+        <!-- /.Fixed-Bottom Mobile Navbar -->
+
+        <!-- Mobile Search -->
+        <nav class="navbar navbar-light bg-whitesmoke fixed-top box-shadow-sm m-0 py-1 d-none" id="mobile-search-bar">
+            <div class="container-fluid w-100">
+                <div class="w-10">
+                    <button type="button" class="btn btn-default circled-button d-flex justify-content-center" onclick="toggleSearchBar()">
+                        <i class="material-icons text-color-switch">arrow_back</i>
+                    </button>
+                </div>
+                <!-- Search Form -->
+                <form method="get" action="/search" id="search-form" class="bg-whitesmoke w-85">
+                    <div class="form-group" id="search-bar">
+                        <input type="search" name="search" id="search" class="form-control rounded-pill" placeholder="Search over 36436 gifts">
+                    </div>
+                </form>
+                <!-- Search List Results -->
+                <ul class="list-group bg-whitesmoke search-list rounded-bottom-2 d-none px-0">
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                </ul>
+                <!-- /.Search List Results -->
+                <!-- /.Search Form -->
+            </div>
+        </nav>
+        <!-- /.Mobile Search -->
+
         <div class="page-content">
             <div class="container">
                 <!-- Breadcrumbs -->
@@ -1358,7 +1540,7 @@
                         <!-- Gift Items -->
                         <div class="d-grid list-view grid-p-1 mt-2 display-gifts wishlist-shelf">
                             <!-- Wishlist Item -->
-                            <div class="wishlist-item mb-1 w-100">
+                            <div class="wishlist-item mb-1 w-100" id="wishlist-item1">
                                 <!-- Item Content -->
                                 <div class="item-content">
                                     <a href="details.html">
@@ -1369,7 +1551,6 @@
                                         <p class="text-sm text-muted my-0 py-0">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor est beatae quo.
                                         </p>
-                                        <p class="text-sm text-primary my-0 py-1">Items sold: 36</p>
                                         <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
                                             <li class="list-inline-item text-gold">&starf;</li>
                                             <li class="list-inline-item text-gold">&starf;</li>
@@ -1377,537 +1558,73 @@
                                             <li class="list-inline-item text-gold">&starf;</li>
                                             <li class="list-inline-item text-muted">&star;</li>
                                             <a href="#" class="text-sm text-muted d-flex align-items-center popover-info">
-                                                <i class="material-icons popover-toggle-icon">expand_more</i>1,284 ratings
+                                                <i class="bi bi-chevron-down popover-toggle-icon me-1"></i>1,284 ratings
                                             </a>
                                         </ul>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-arrow-return-right me-1"></i>
+                                            <p class="text-sm text-muted border-right pe-1 my-0 py-0">
+                                                Size: <span class="text-uppercase text-muted">l</span>
+                                            </p>
+                                            <p class="text-sm text-muted px-1 my-0 py-0">
+                                                Color: <span class="text-capitalize text-muted">Dark Grey</span>
+                                            </p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <h6 class="usd-price font-600 d-flex my-0 me-3">
+                                                <span class="currency-symbol text-danger">US$</span>
+                                                <span class="text-danger" id="gift-price1">12.38</span>
+                                            </h6>
+                                            <h6 class="text-muted strike-through font-600 my-0">US$18.46</h6>
+                                        </div>
+                                        <div class="d-flex align-items-center text-muted text-sm">
+                                            Expected Delivery Time: <span class="mx-1">3</span> - <span class="mx-1">5</span> days
+                                        </div>
+                                        <p class="text-sm text-primary my-0 py-1">Items sold: 36</p>
                                     </div>
                                     <div class="item-body-buttons d-block px-2 lh-100">
                                         <p class="text-sm text-muted m-0 p-0">
                                             Item added February 11, 2021
                                         </p>
                                         <div class="d-flex align-items-center justify-content-between my-2">
-                                            <button class="btn btn-default btn-sm d-grid action-buttons">
+                                            <button class="btn btn-default btn-sm d-grid action-buttons decrease-qty" data-id="1">
                                                 <i class="material-icons m-auto">remove</i>
                                             </button>
-                                            <input type="text" name="" id="" class="form-control form-control-sm text-center quantity-input mx-2" value="1">
-                                            <button class="btn btn-default btn-sm d-grid action-buttons">
+                                            <input type="text" class="form-control form-control-sm text-center quantity-input mx-2" id="quantity-input1" value="1">
+                                            <button class="btn btn-default btn-sm d-grid action-buttons increase-qty" data-id="1">
                                                 <i class="material-icons m-auto">add</i>
                                             </button>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-between card-buttons w-100">
-                                            <button type="button" class="btn btn-sm btn-light d-flex align-items-center toggle-buttons collapse-btn me-2" data-bs-toggle="collapse" data-bs-target="#similar-items" aria-expanded="false" aria-controls="similar-items">
-                                                Similar <i class="material-icons collapse-icon">expand_more</i>
+                                            <button type="button" class="btn btn-sm btn-light d-flex align-items-center toggle-buttons collapse-btn collapse-link" data-bs-toggle="collapse" data-bs-target="#similar-items" aria-expanded="false" aria-controls="similar-items">
+                                                Similar <i class="bi bi-chevron-down collapse-icon ms-1"></i>
                                             </button>
                                             <button type="button" class="btn btn-sm btn-light d-flex align-items-center toggle-buttons modal-btn" data-bs-toggle="modal" data-bs-target="#similar-modal-items">
                                                 Similar items <i class="material-icons">more_horiz</i>
                                             </button>
-                                            <button class="btn btn-sm btn-danger d-flex align-items-center">
-                                                <i class="material-icons ms-1">delete</i>
-                                                Remove
+                                            <button class="btn btn-light btn-sm wishlist-btn" id="wish" data-id="1">
+                                                <i class="bi bi-heart text-warning"></i>
+                                            </button>
+                                            <button class="btn btn-light btn-sm remove-item" data-id="1">
+                                                <i class="bi bi-trash-fill text-danger ms-1"></i>
                                             </button>
                                         </div>
                                     </div>
+                                    <!-- Hidden Inputs -->
+                                    <input type="hidden" name="hidden-gift-id1" id="hidden-gift-id1" value="1">
+                                    <input type="hidden" name="hidden-gift-name1" id="hidden-gift-name1" value="Queen-Sized Quilted Comforter">
+                                    <input type="hidden" name="hidden-gift-category1" id="hidden-gift-category1" value="Bags">
+                                    <input type="hidden" name="hidden-gift-image1" id="hidden-gift-image1" value="15f4598bf99479.2.jpg">
+                                    <input type="hidden" name="hidden-gift-price1" id="hidden-gift-price1" value="12.38">
+                                    <input type="hidden" name="hidden-gift-qty1" id="hidden-gift-qty1" value="1">
+                                    <input type="hidden" name="hidden-gift-units1" id="hidden-gift-units1" value="100">
+                                    <input type="hidden" name="hidden-gift-description1" id="hidden-gift-description1" value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor est beatae quo.">
+                                    <!-- /.Hidden Inputs -->
                                 </div>
                                 <!-- /.Item Content -->
 
                                 <!-- Similar Items -->
                                 <div class="collapse" id="similar-items">
-                                    <h6 class="font-600 text-app-color mt-2">Similar Gift Items</h6>
-                                    <div class="d-grid grid-5 grid-p-1">
-                                        <!-- Related Gift -->
-                                        <a href="categories.html">
-                                            <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                                <img src="dist/images/gifts/15f458254a0dac.1.6.jpg" height="150" class="card-img-top w-100 rounded-top-2">
-                                                <div class="gift-content mx-1">
-                                                    <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
-                                                    <div class="d-inline-block w-100 lh-100">
-                                                        <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
-                                                        <div class="d-flex align-items-center justify-content-between w-100">
-                                                            <div>
-                                                                <div class="d-flex align-items-center">
-                                                                    <span class="text-warning me-1">&starf;</span>
-                                                                    <span class="text-sm text-muted">4.6</span>
-                                                                </div>
-                                                            </div>
-                                                            <span class="text-sm text-muted me-2">484 Sold</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="usd-price">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From US$28.39</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zar-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From R384.34</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zwl-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From ZW$2893.38</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <!-- /.Related Gift -->
-                                        <!-- Related Gift -->
-                                        <a href="categories.html">
-                                            <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                                <img src="dist/images/gifts/15f458254a0dac.1.jpg" height="150" class="card-img-top w-100 rounded-top-2">
-                                                <div class="gift-content mx-1">
-                                                    <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
-                                                    <div class="d-inline-block w-100 lh-100">
-                                                        <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
-                                                        <div class="d-flex align-items-center justify-content-between w-100">
-                                                            <div>
-                                                                <div class="d-flex align-items-center">
-                                                                    <span class="text-warning me-1">&starf;</span>
-                                                                    <span class="text-sm text-muted">4.6</span>
-                                                                </div>
-                                                            </div>
-                                                            <span class="text-sm text-muted me-2">484 Sold</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="usd-price">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From US$28.39</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zar-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From R384.34</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zwl-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From ZW$2893.38</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <!-- /.Related Gift -->
-                                        <!-- Related Gift -->
-                                        <a href="categories.html">
-                                            <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                                <img src="dist/images/gifts/15f458254a0dac.2.webp" height="150" class="card-img-top w-100 rounded-top-2">
-                                                <div class="gift-content mx-1">
-                                                    <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
-                                                    <div class="d-inline-block w-100 lh-100">
-                                                        <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
-                                                        <div class="d-flex align-items-center justify-content-between w-100">
-                                                            <div>
-                                                                <div class="d-flex align-items-center">
-                                                                    <span class="text-warning me-1">&starf;</span>
-                                                                    <span class="text-sm text-muted">4.6</span>
-                                                                </div>
-                                                            </div>
-                                                            <span class="text-sm text-muted me-2">484 Sold</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="usd-price">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From US$28.39</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zar-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From R384.34</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zwl-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From ZW$2893.38</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <!-- /.Related Gift -->
-                                        <!-- Related Gift -->
-                                        <a href="categories.html">
-                                            <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                                <img src="dist/images/gifts/15f458254a0dac.jpg" height="150" class="card-img-top w-100 rounded-top-2">
-                                                <div class="gift-content mx-1">
-                                                    <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
-                                                    <div class="d-inline-block w-100 lh-100">
-                                                        <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
-                                                        <div class="d-flex align-items-center justify-content-between w-100">
-                                                            <div>
-                                                                <div class="d-flex align-items-center">
-                                                                    <span class="text-warning me-1">&starf;</span>
-                                                                    <span class="text-sm text-muted">4.6</span>
-                                                                </div>
-                                                            </div>
-                                                            <span class="text-sm text-muted me-2">484 Sold</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="usd-price">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From US$28.39</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zar-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From R384.34</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zwl-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From ZW$2893.38</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <!-- /.Related Gift -->
-                                        <!-- Related Gift -->
-                                        <a href="categories.html">
-                                            <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                                <img src="dist/images/gifts/15f45885de939d.jpg" height="150" class="card-img-top w-100 rounded-top-2">
-                                                <div class="gift-content mx-1">
-                                                    <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
-                                                    <div class="d-inline-block w-100 lh-100">
-                                                        <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
-                                                        <div class="d-flex align-items-center justify-content-between w-100">
-                                                            <div>
-                                                                <div class="d-flex align-items-center">
-                                                                    <span class="text-warning me-1">&starf;</span>
-                                                                    <span class="text-sm text-muted">4.6</span>
-                                                                </div>
-                                                            </div>
-                                                            <span class="text-sm text-muted me-2">484 Sold</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="usd-price">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From US$28.39</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zar-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From R384.34</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zwl-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From ZW$2893.38</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <!-- /.Related Gift -->
-                                    </div>
-                                </div>
-                                <!-- /.Similar Items -->
-                            </div>
-                            <!-- /.Wishlist Item -->
-
-                            <!-- Wishlist Item -->
-                            <div class="wishlist-item mb-1 w-100">
-                                <!-- Item Content -->
-                                <div class="item-content">
-                                    <a href="details.html">
-                                        <img data-src="dist/images/gifts/15f4598bf99479.2.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="lazy item-img">
-                                    </a>
-                                    <div class="item-body-content d-block px-2 lh-100">
-                                        <h6 class="text-sm font-600 text-capitalize">Customizable Mug</h6>
-                                        <p class="text-sm text-muted my-0 py-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor est beatae quo.
-                                        </p>
-                                        <p class="text-sm text-primary my-0 py-1">Items sold: 36</p>
-                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-muted">&star;</li>
-                                            <a href="#" class="text-sm text-muted d-flex align-items-center popover-info">
-                                                <i class="material-icons popover-toggle-icon">expand_more</i>1,284 ratings
-                                            </a>
-                                        </ul>
-                                    </div>
-                                    <div class="item-body-buttons d-block px-2 lh-100">
-                                        <p class="text-sm text-muted m-0 p-0">
-                                            Item added February 11, 2021
-                                        </p>
-                                        <div class="d-flex align-items-center justify-content-between my-2">
-                                            <button class="btn btn-default btn-sm d-grid action-buttons">
-                                                <i class="material-icons m-auto">remove</i>
-                                            </button>
-                                            <input type="text" name="" id="" class="form-control form-control-sm text-center quantity-input mx-2" value="1">
-                                            <button class="btn btn-default btn-sm d-grid action-buttons">
-                                                <i class="material-icons m-auto">add</i>
-                                            </button>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between card-buttons w-100">
-                                            <button type="button" class="btn btn-sm btn-light d-flex align-items-center toggle-buttons collapse-btn me-2" data-bs-toggle="collapse" data-bs-target="#similar-items2" aria-expanded="false" aria-controls="similar-items2">
-                                                Similar <i class="material-icons collapse-icon">expand_more</i>
-                                            </button>
-                                            <button type="button" class="btn btn-sm btn-light d-flex align-items-center toggle-buttons modal-btn" data-bs-toggle="modal" data-bs-target="#similar-modal-items">
-                                                Similar items <i class="material-icons">more_horiz</i>
-                                            </button>
-                                            <button class="btn btn-sm btn-danger d-flex align-items-center">
-                                                <i class="material-icons ms-1">delete</i>
-                                                Remove
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.Item Content -->
-
-                                <!-- Similar Items -->
-                                <div class="collapse" id="similar-items2">
-                                    <h6 class="font-600 text-app-color mt-2">Similar Gift Items</h6>
-                                    <div class="d-grid grid-5 grid-p-1">
-                                        <!-- Related Gift -->
-                                        <a href="categories.html">
-                                            <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                                <img src="dist/images/gifts/15f458254a0dac.1.6.jpg" height="150" class="card-img-top w-100 rounded-top-2">
-                                                <div class="gift-content mx-1">
-                                                    <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
-                                                    <div class="d-inline-block w-100 lh-100">
-                                                        <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
-                                                        <div class="d-flex align-items-center justify-content-between w-100">
-                                                            <div>
-                                                                <div class="d-flex align-items-center">
-                                                                    <span class="text-warning me-1">&starf;</span>
-                                                                    <span class="text-sm text-muted">4.6</span>
-                                                                </div>
-                                                            </div>
-                                                            <span class="text-sm text-muted me-2">484 Sold</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="usd-price">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From US$28.39</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zar-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From R384.34</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zwl-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From ZW$2893.38</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <!-- /.Related Gift -->
-                                        <!-- Related Gift -->
-                                        <a href="categories.html">
-                                            <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                                <img src="dist/images/gifts/15f458254a0dac.1.jpg" height="150" class="card-img-top w-100 rounded-top-2">
-                                                <div class="gift-content mx-1">
-                                                    <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
-                                                    <div class="d-inline-block w-100 lh-100">
-                                                        <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
-                                                        <div class="d-flex align-items-center justify-content-between w-100">
-                                                            <div>
-                                                                <div class="d-flex align-items-center">
-                                                                    <span class="text-warning me-1">&starf;</span>
-                                                                    <span class="text-sm text-muted">4.6</span>
-                                                                </div>
-                                                            </div>
-                                                            <span class="text-sm text-muted me-2">484 Sold</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="usd-price">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From US$28.39</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zar-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From R384.34</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zwl-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From ZW$2893.38</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <!-- /.Related Gift -->
-                                        <!-- Related Gift -->
-                                        <a href="categories.html">
-                                            <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                                <img src="dist/images/gifts/15f458254a0dac.2.webp" height="150" class="card-img-top w-100 rounded-top-2">
-                                                <div class="gift-content mx-1">
-                                                    <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
-                                                    <div class="d-inline-block w-100 lh-100">
-                                                        <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
-                                                        <div class="d-flex align-items-center justify-content-between w-100">
-                                                            <div>
-                                                                <div class="d-flex align-items-center">
-                                                                    <span class="text-warning me-1">&starf;</span>
-                                                                    <span class="text-sm text-muted">4.6</span>
-                                                                </div>
-                                                            </div>
-                                                            <span class="text-sm text-muted me-2">484 Sold</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="usd-price">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From US$28.39</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zar-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From R384.34</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zwl-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From ZW$2893.38</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <!-- /.Related Gift -->
-                                        <!-- Related Gift -->
-                                        <a href="categories.html">
-                                            <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                                <img src="dist/images/gifts/15f458254a0dac.jpg" height="150" class="card-img-top w-100 rounded-top-2">
-                                                <div class="gift-content mx-1">
-                                                    <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
-                                                    <div class="d-inline-block w-100 lh-100">
-                                                        <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
-                                                        <div class="d-flex align-items-center justify-content-between w-100">
-                                                            <div>
-                                                                <div class="d-flex align-items-center">
-                                                                    <span class="text-warning me-1">&starf;</span>
-                                                                    <span class="text-sm text-muted">4.6</span>
-                                                                </div>
-                                                            </div>
-                                                            <span class="text-sm text-muted me-2">484 Sold</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="usd-price">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From US$28.39</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zar-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From R384.34</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zwl-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From ZW$2893.38</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <!-- /.Related Gift -->
-                                        <!-- Related Gift -->
-                                        <a href="categories.html">
-                                            <div class="related-gift card bg-whitesmoke box-shadow-sm rounded-2 w-100">
-                                                <img src="dist/images/gifts/15f45885de939d.jpg" height="150" class="card-img-top w-100 rounded-top-2">
-                                                <div class="gift-content mx-1">
-                                                    <h6 class="my-0 py-0 text-capitalize text-sm">Computer accessories</h6>
-                                                    <div class="d-inline-block w-100 lh-100">
-                                                        <h6 class="my-0 py-0 text-sm text-capitalize">49 gifts</h6>
-                                                        <div class="d-flex align-items-center justify-content-between w-100">
-                                                            <div>
-                                                                <div class="d-flex align-items-center">
-                                                                    <span class="text-warning me-1">&starf;</span>
-                                                                    <span class="text-sm text-muted">4.6</span>
-                                                                </div>
-                                                            </div>
-                                                            <span class="text-sm text-muted me-2">484 Sold</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="usd-price">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From US$28.39</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zar-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From R384.34</h6>
-                                                        </div>
-                                                    </div>
-                                                    <div class="zwl-price d-none">
-                                                        <div class="d-flex align-items-center">
-                                                            <h6 class="text-sm">From ZW$2893.38</h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <!-- /.Related Gift -->
-                                    </div>
-                                </div>
-                                <!-- /.Similar Items -->
-                            </div>
-                            <!-- /.Wishlist Item -->
-
-                            <!-- Wishlist Item -->
-                            <div class="wishlist-item mb-1 w-100">
-                                <!-- Item Content -->
-                                <div class="item-content">
-                                    <a href="details.html">
-                                        <img data-src="dist/images/gifts/15f4598bf99479.2.jpg" src="dist/images/app/bg-placeholder.PNG" alt="" loading="lazy" class="lazy item-img">
-                                    </a>
-                                    <div class="item-body-content d-block px-2 lh-100">
-                                        <h6 class="text-sm font-600 text-capitalize">Customizable Mug</h6>
-                                        <p class="text-sm text-muted my-0 py-0">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor est beatae quo.
-                                        </p>
-                                        <p class="text-sm text-primary my-0 py-1">Items sold: 36</p>
-                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-gold">&starf;</li>
-                                            <li class="list-inline-item text-muted">&star;</li>
-                                            <a href="#" class="text-sm text-muted d-flex align-items-center popover-info">
-                                                <i class="material-icons popover-toggle-icon">expand_more</i>1,284 ratings
-                                            </a>
-                                        </ul>
-                                    </div>
-                                    <div class="item-body-buttons d-block px-2 lh-100">
-                                        <p class="text-sm text-muted m-0 p-0">
-                                            Item added February 11, 2021
-                                        </p>
-                                        <div class="d-flex align-items-center justify-content-between my-2">
-                                            <button class="btn btn-default btn-sm d-grid action-buttons">
-                                                <i class="material-icons m-auto">remove</i>
-                                            </button>
-                                            <input type="text" name="" id="" class="form-control form-control-sm text-center quantity-input mx-2" value="1">
-                                            <button class="btn btn-default btn-sm d-grid action-buttons">
-                                                <i class="material-icons m-auto">add</i>
-                                            </button>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between card-buttons w-100">
-                                            <button type="button" class="btn btn-sm btn-light d-flex align-items-center toggle-buttons collapse-btn me-2" data-bs-toggle="collapse" data-bs-target="#similar-items3" aria-expanded="false" aria-controls="similar-items3">
-                                                Similar <i class="material-icons collapse-icon">expand_more</i>
-                                            </button>
-                                            <button type="button" class="btn btn-sm btn-light d-flex align-items-center toggle-buttons modal-btn" data-bs-toggle="modal" data-bs-target="#similar-modal-items">
-                                                Similar items <i class="material-icons">more_horiz</i>
-                                            </button>
-                                            <button class="btn btn-sm btn-danger d-flex align-items-center">
-                                                <i class="material-icons ms-1">delete</i>
-                                                Remove
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.Item Content -->
-
-                                <!-- Similar Items -->
-                                <div class="collapse" id="similar-items3">
                                     <h6 class="font-600 text-app-color mt-2">Similar Gift Items</h6>
                                     <div class="d-grid grid-5 grid-p-1">
                                         <!-- Related Gift -->
@@ -2164,7 +1881,6 @@
                     <i role="button" class="material-icons fa-2x" data-bs-dismiss="modal">close</i>
                 </div>
                 <div class="modal-body">
-                    <p class="text-sm font-600">Similar gift items you may also like</p>
                     <div class="row w-100 gx-1">
                         <div class="owl-carousel owl-theme related-items">
                             <!-- Related Gift -->
@@ -2486,6 +2202,243 @@
         </div>
     </div>
     <!-- /.Related Items Modal -->
+
+    <!-- Side Nav -->
+    <aside class="main-sidebar box-shadow-sm">
+        <!-- Sidebar Menu -->
+        <nav class="sidebar-menu" id="sidebar-main-menu">
+            <!-- User Panel -->
+            <div class="d-flex px-2 py-1">
+                <a href="sign-in.html">
+                    <img src="dist/images/users/user.png" height="40" width="40" class="img align-self-center rounded-circle prof-pic me-2">
+                </a>
+                <div class="d-block">
+                    <a href="sign-in.html">
+                        <h6 class="text-app-color font-600 user-greeting my-0 py-0">Good evening!</h6>
+                        <h6 class="text-muted my-0">
+                            Sign-in
+                        </h6>
+                    </a>
+                </div>
+            </div>
+            <!-- /.User Panel -->
+
+            <hr class="my-0">
+
+            <!-- Menu list -->
+            <ul class="side-menu px-2">
+                <!-- Side-menu-item -->
+                <li class="side-menu-item active p-2">
+                    <a href="index.html" class="d-flex align-items-center">
+                        <i class="material-icons me-2">store</i>
+                        <span class="text-capitalize">Store</span>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="account.html" class="d-flex align-items-center">
+                        <i class="material-icons me-2">person</i>
+                        <span class="text-capitalize">Account</span>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item d-sm-block d-md-none p-2">
+                    <a href="index.html" class="d-flex align-items-center">
+                        <i class="material-icons me-2">store</i>
+                        <span class="text-capitalize">Gift store</span>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li role="button" class="side-menu-item collapsible-item p-2">
+                    <a href="#" class="d-flex align-items-center toggle-departments">
+                        <i class="material-icons me-2">apps</i>
+                        <span class="text-capitalize">Categories</span>
+                        <span role="button" class="material-icons ms-auto">chevron_right</span>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a class="d-flex align-items-center" href="orders.html">
+                        <i class="material-icons me-2">assignment</i>
+                        <span class="text-capitalize">My Orders</span>
+                        <span class="badge app-badge ms-auto">
+                            4
+                        </span>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="d-flex align-items-center side-menu-item p-2">
+                    <i class="material-icons me-2">sync</i>
+                    <span class="text-capitalize">Buy again</span>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="coupons.html" class="d-flex align-items-center">
+                        <i class="material-icons me-2">monetization_on</i>
+                        <span class="text-capitalize">my coupons</span>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <hr class="border-inverse my-1">
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="javascript:void()" class="d-flex align-items-center toggle-ratingbox">
+                        <i class="material-icons me-2">stars</i>
+                        <span class="text-capitalize">rate & review</span>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="about.html" class="d-flex align-items-center">
+                        <i class="material-icons me-2">info_outline</i>
+                        <span class="text-capitalize">about</span>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+            </ul>
+            <!-- /.Menu list -->
+        </nav>
+        <!-- /.Sidebar Menu -->
+
+        <!-- Categories Sidebar Menu -->
+        <nav class="sidebar-menu d-none" id="categories-menu">
+            <!-- Category Title -->
+            <a href="#" class="d-flex align-items-center font-600 text-app-color toggle-main-menu p-2">
+                <i class="material-icons me-2">arrow_back</i> Main Menu
+            </a>
+            <!-- /.Category Title -->
+
+            <hr class="my-1">
+
+            <h6 class="ms-3 mt-2 font-600 text-app-color">All Categories</h6>
+
+            <!-- Menu list -->
+            <ul class="side-menu px-2">
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="#" class="toggle-category-menu d-flex align-items-center justify-content-between text-muted" data-category="Home & Gardening">
+                        Home & Gardening
+                        <i class="material-icons">chevron_right</i>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="#" class="toggle-category-menu d-flex align-items-center justify-content-between text-muted" data-category="Personal Care">
+                        Personal Care
+                        <i class="material-icons">chevron_right</i>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="#" class="toggle-category-menu d-flex align-items-center justify-content-between text-muted" data-category="Kitchenware">
+                        Kitchenware
+                        <i class="material-icons">chevron_right</i>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="#" class="toggle-category-menu d-flex align-items-center justify-content-between text-muted" data-category="Plasticware">
+                        Plasticware
+                        <i class="material-icons">chevron_right</i>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="#" class="toggle-category-menu d-flex align-items-center justify-content-between text-muted" data-category="Customizable Gifts">
+                        Customizable Gifts
+                        <i class="material-icons">chevron_right</i>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+            </ul>
+            <!-- /.Menu list -->
+        </nav>
+        <!-- /.Categories Sidebar Menu -->
+
+        <!-- Category Sidebar Menu -->
+        <nav class="sidebar-menu d-none" id="category-menu">
+            <!-- Category Title -->
+            <a href="#" class="d-flex align-items-center font-600 text-app-color p-2 toggle-departments">
+                <i class="material-icons me-2">arrow_back</i> All Categories
+            </a>
+            <!-- /.Category Title -->
+
+            <hr class="my-1">
+
+            <h6 class="ms-3 mt-2 font-600 text-app-color" id="sidemenu-category-name">Category name</h6>
+
+            <!-- Menu list -->
+            <ul class="side-menu px-2">
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="category.html" class="d-flex align-items-center justify-content-between text-muted">
+                        Home & Gardening
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="category.html" class="d-flex align-items-center justify-content-between text-muted">
+                        Home & Gardening
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="category.html" class="d-flex align-items-center justify-content-between text-muted">
+                        Home & Gardening
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="category.html" class="d-flex align-items-center justify-content-between text-muted">
+                        Home & Gardening
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+
+                <!-- Side-menu-item -->
+                <li class="side-menu-item p-2">
+                    <a href="category.html" class="toggle-category-menu d-flex align-items-center justify-content-between text-muted">
+                        Home & Gardening
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+            </ul>
+            <!-- /.Menu list -->
+        </nav>
+        <!-- /.Category Sidebar Menu -->
+    </aside>
+    <!-- /.Side bar -->
 
     <!-- Settings Sidebar -->
     <div class="settings-bar">
