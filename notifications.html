@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Meta Description -->
-    <meta name="description" content="Comparisons page">
+    <meta name="description" content="Notifications page">
     <!-- Developer -->
     <meta name="developer" content="Tinashe. M. Chaterera">
-    <title>Comparison Page | 3 Items</title>
+    <title>My Cart(3)</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="dist/images/app/gifteros.png" type="image/x-icon">
     <!-- Bootstrap -->
@@ -36,6 +36,11 @@
     <link rel="stylesheet" href="dist/plugins/rateYo/jquery.rateyo.min.css">
     <!-- Gifteros -->
     <link rel="stylesheet" href="dist/css/gifteros.min.css">
+    <style>
+        footer.footer {
+            margin-top: 10rem !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -73,7 +78,7 @@
             <!-- /.Mobile Action Buttons -->
 
             <!-- Cart Suggestions -->
-            <div class="d-sm-none d-md-block">
+            <div class="d-none d-md-block">
                 <div class="floating-action box-shadow-sm bg-switch" title="Click to toggle actions">
                     <i class="material-icons m-auto text-white">lightbulb_outline</i>
                 </div>
@@ -83,11 +88,11 @@
         <!-- /.Floating Action Buttons -->
 
         <!-- Side Action Panel -->
-        <div class="d-sm-none d-md-block">
+        <div class="d-none d-xl-block">
             <div class="navigation-panel bg-meshgrid d-flex flex-column justify-content-around align-items-center">
                 <ul class="panel-lists d-flex flex-column align-items-center px-0">
                     <li class="panel-icon w-100 py-1">
-                        <a href="#" role="button" class="bi bi-geo-fill icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Trending In Your Area"></a>
+                        <a href="#" role="button" class="bi bi-list icon-md text-white toggle-side-menu" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Toggle Menu"></a>
                     </li>
                     <li class="panel-icon w-100 py-1">
                         <a href="#" role="button" class="bi bi-clock-history icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Viewed Gifts"></a>
@@ -97,6 +102,9 @@
                     </li>
                     <li class="panel-icon w-100 py-1">
                         <a href="#" role="button" class="bi bi-receipt icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Coupons"></a>
+                    </li>
+                    <li class="panel-icon w-100 py-1">
+                        <a href="#" role="button" class="bi bi-gear icon-md text-white toggle-settings" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="App Settings"></a>
                     </li>
                 </ul>
                 <ul class="panel-lists d-flex flex-column align-items-center px-0">
@@ -133,7 +141,7 @@
                         <a href="#" role="button" class="bi bi-question-circle icon-md text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Help and Feedback"></a>
                     </li>
                     <li class="panel-icon w-100 py-1 to-top">
-                        <a href="#" role="button" class="bi bi-arrow-up-circle icon-md text-white" onclick="scrollToTop();" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Back to Top"></a>
+                        <a href="#" role="button" class="bi bi-arrow-up-circle icon-md text-white" onclick="scrollToTop()" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-animation="true" data-delay="100" title="Back to Top"></a>
                     </li>
                 </ul>
             </div>
@@ -141,10 +149,11 @@
         <!-- /.Side Action Panel -->
 
         <!-- Main Navbar -->
-        <header class="header fixed-md-top box-shadow-sm d-none d-md-block">
+        <header class="header box-shadow-sm d-none d-md-block">
             <div class="container">
                 <!-- Main Navbar -->
                 <nav class="nav navbar-expand-md main-nav">
+                    <span role="button" class="material-icons menu-btn d-sm-inline-block d-md-none" title="Toggle Sidebar">menu</span>
                     <!-- Navbrand -->
                     <a href="index.html" class="navbar-brand font-700">
                         <img src="dist/images/app/gifteros.png" height="35" class="gifteros-logo" width="35" alt="">
@@ -420,15 +429,15 @@
                     <ul class="ms-auto justify-content-sm-around d-flex align-items-center m-0 p-0">
                         <!-- App Currencies -->
                         <li class="nav-item d-none d-md-flex" data-bs-toggle="tooltip" title="Select currency">
-                            <div class="usd-price nav-link font-600 navbar-text">
+                            <div class="text-muted nav-link font-600 navbar-text">
                                 <div class="dropdown dropdown-toggle d-cursor" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img id="currency-flag" src="dist/images/currencies/usd.png" height="15" width="22" alt="">
-                                    <span id="currency-total" class="usd-price text-color-switch">US$12.48</span>
+                                    <span id="currency-total" class="text-muted text-color-switch">US$12.48</span>
                                 </div>
                                 <div class="dropdown-menu box-shadow-sm rounded-2 currency-dropdown-menu">
                                     <div class="dropdown-menu-item d-flex align-items-center currency-option d-cursor ps-3 py-1">
                                         <img src="dist/images/currencies/usd.png" height="15" width="22" alt="">
-                                        <span id="usd-price" data-total="US$12.48" class="font-600 ms-1">USD</span>
+                                        <span id="text-muted" data-total="US$12.48" class="font-600 ms-1">USD</span>
                                     </div>
                                     <div class="dropdown-menu-item d-flex align-items-center currency-option d-cursor ps-3 py-1">
                                         <img src="dist/images/currencies/zar.jpg" height="15" width="22" alt="">
@@ -445,84 +454,207 @@
 
                         <!-- Shopping Cart -->
                         <li class="nav-item ms-3">
-                            <a href="cart.html" class="nav-link icon-link position-relative">
+                            <a href="#" class="nav-link icon-link position-relative">
                                 <i class="bi bi-cart4 icon-md pull-up"></i>
                                 <span class="badge nav-badge gift-count pasition-absolute">4</span>
                             </a>
                         </li>
                         <!-- /.Shopping Cart -->
 
-                        <!-- Visitor -->
-                        <li class="nav-item dropdown ms-3">
-                            <a role="button" class="btn bg-switch btn-sm rounded-pill d-flex align-items-center font-600 dropdown-toggle text-white" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="material-icons me-2">person_outline</i>
-                                <span class="text-white">Sign in</span>
+                        <!-- Wishlist -->
+                        <li class="nav-item dropdown ms-3" title="View your Wishlist">
+                            <a href="wishlist.html" class="nav-link icon-link wishlist">
+                                <i class="material-icons">favorite_border</i>
+                                <span class="badge nav-badge count-wishlist">7</span>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-end user-menu app-menu box-shadow-sm rounded-2 px-3" id="visitor-menu">
-                                <div class="d-flex justify-content-center align-items-center text-skyblue font-600">
-                                    <img src="dist/images/greeting-icons/sunrise.svg" alt="" class="greeting-icon">
-                                    <h6 class="user-greeting text-app-color m-0 p-0 font-600">Good morning!</h6>
+                        </li>
+
+                        <!-- Notifications -->
+                        <li class="nav-item dropdown ms-3 notification-link">
+                            <a href="#" class="nav-link icon-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons notifications">notifications_none</i>
+                                <span class="badge nav-badge notifications-counter">9+</span>
+                            </a>
+                            <div class="dropdown-menu notification-menu app-menu dropdown-menu-end rounded-2 box-shadow-sm pb-0" id="notifications">
+                                <!-- Header -->
+                                <div class="text-sm border-bottom pb-1">
+                                    <div class="d-flex align-items-center justify-content-around text-primary">
+                                        <span class="text-capitalization font-600">2 New Notifications</span>
+                                        <a href="#" role="button" class="d-flex align-items-center mx-2">
+                                            <i class="material-icons me-1">settings</i> Settings
+                                        </a>
+                                    </div>
                                 </div>
-                                <p class="text-faded text-sm text-center font-600">
-                                    Sign in for a personalized shopping experience.
-                                </p>
-                                <form method="post" class="needs-validation" novalidate>
-                                    <div class="form-group mb-1 pb-1">
-                                        <label for="email" class="mb-0 font-600 text-sm">Email</label>
-                                        <input type="email" name="email" id="email" class="form-control form-control-sm" value="" autocomplete="email" required>
-                                        <small class="invalid-feedback">Email address is required!</small>
-                                    </div>
-
-                                    <div class="form-group mb-1 pb-1">
-                                        <label for="password" class="mb-0 font-600 text-sm">Password</label>
-                                        <input type="password" name="password" id="password" class="form-control form-control-sm" value="" autocomplete="password" required>
-                                        <small class="invalid-feedback">Password is required!</small>
-                                    </div>
-
-                                    <div class="row gy-0 align-items-center">
-                                        <div class="col-6">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="autoSizingCheck">
-                                                <label class="form-check-label text-sm" for="autoSizingCheck">
-                                                    Remember me
-                                                </label>
+                                <!-- /.Header -->
+                                <div class="list-group list-group-flush px-0">
+                                    <!-- Notification Item -->
+                                    <div class="dropdown-item list-group-item my-0 py-1">
+                                        <a href="#">
+                                            <div class="d-flex lh-100">
+                                                <img src="dist/images/users/15f9eb408be859.jpg" height="40" width="40" alt="" class="rounded-circle align-self-center me-2">
+                                                <div class="d-block text-sm">
+                                                    <p class="my-0 py-0" id="subject">
+                                                        <span class="font-600 text-capitalize">Kenneth Copeland</span> commented on
+                                                    </p>
+                                                    <p class="text-faded my-0 py-1">
+                                                        Lorem ipsum dolor sit amet, consec...
+                                                    </p>
+                                                    <div class="d-flex align-items-center text-faded">
+                                                        <i class="material-icons notification-icon p-1 bg-violet-red-light text-white rounded-circle me-1">forum</i> 2h ago
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <a href="" class="text-sm font-600">Forgot password?</a>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-sm bg-switch text-white lead font-600 btn-block btn-lg mt-2">
-                                        <span class="text-white">Sign in</span>
-                                    </button>
-                                </form>
-
-                                <div class="flex-column justify-content-center">
-                                    <div class="division-block">
-                                        <hr class="divider bg-border-color d-flex justify-content-center position-relative">
-                                        <strong class="divider-title bg-whitesmoke text-uppercase text-muted">or</strong>
-                                    </div>
-                                    <div class="d-flex justify-content-center align-items-center mb-3 mt-0">
-                                        <a role="button" href="" class="btn btn-outline-switch btn-sm social-login-btn" title="Sign-in with Facebook">
-                                            <i class="fa fa-facebook"></i>
-                                        </a>
-                                        <a role="button" href="" class="btn btn-outline-switch btn-sm mx-3 social-login-btn" title="Sign-in with Google">
-                                            <i class="fa fa-google"></i>
-                                        </a>
-                                        <a role="button" href="" class="btn btn-outline-switch btn-sm social-login-btn me-3" title="Sign-in with Twitter">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                        <a role="button" href="" class="btn btn-outline-switch btn-sm social-login-btn" title="Sign-in with Instagram">
-                                            <i class="fa fa-instagram"></i>
                                         </a>
                                     </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-center text-sm w-100 my-2">
-                                    New to Gifteros? <a href="sign-up.html" class="ms-1 d-flex align-items-center">Create an account.</a>
+                                    <!-- /.Notification Item -->
+                                    <!-- Notification Item -->
+                                    <div class="dropdown-item list-group-item my-0 py-1">
+                                        <a href="details.html">
+                                            <div class="d-flex lh-100">
+                                                <img src="dist/images/users/15f9f8d1dee2ba.jpg" height="40" width="40" alt="" class="rounded-circle align-self-center me-2">
+                                                <div class="d-block text-sm">
+                                                    <p class="my-0 py-0" id="subject">
+                                                        <span class="font-600 text-capitalize">tinashe chaterera</span> found this helpful
+                                                    </p>
+                                                    <p class="text-faded my-0 py-1">
+                                                        Lorem ipsum dolor sit amet conse...
+                                                    </p>
+                                                    <div class="d-flex align-items-center text-faded">
+                                                        <i class="material-icons notification-icon p-1 bg-iris-pastel text-white rounded-circle me-1">thumb_up</i> 2h ago
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- /.Notification Item -->
+                                    <!-- Notification Item -->
+                                    <div class="dropdown-item list-group-item my-0 py-1">
+                                        <a href="orders.php">
+                                            <div class="d-flex lh-100">
+                                                <img src="dist/images/app/gifteros.png" height="40" width="40" alt="" class="rounded-circle align-self-center me-2">
+                                                <div class="d-block text-sm">
+                                                    <p class="my-0 py-0" id="subject">
+                                                        <span class="font-600 text-capitalize">Gifteros</span>
+                                                    </p>
+                                                    <p class="text-faded my-0 py-1">
+                                                        Your order has been confirmed!
+                                                    </p>
+                                                    <div class="d-flex align-items-center text-faded">
+                                                        <i class="material-icons notification-icon p-1 bg-success text-white rounded-circle me-1">done</i> 2h ago
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- /.Notification Item -->
+                                    <!-- Notification Item -->
+                                    <div class="dropdown-item list-group-item my-0">
+                                        <a href="orders.html">
+                                            <div class="d-flex lh-100">
+                                                <img src="dist/images/app/gifteros.png" height="40" width="40" alt="" class="rounded-circle align-self-center me-2">
+                                                <div class="d-block text-sm">
+                                                    <p class="my-0 py-0" id="subject">
+                                                        <span class="font-600 text-capitalize">Gifteros</span>
+                                                    </p>
+                                                    <p class="text-faded my-0 py-1">
+                                                        Your order is now on the way!
+                                                    </p>
+                                                    <div class="d-flex align-items-center text-faded">
+                                                        <i class="material-icons notification-icon p-1 bg-primary text-white rounded-circle me-1">local_shipping</i> 2h ago
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- /.Notification Item -->
                                 </div>
                             </div>
                         </li>
-                        <!-- /.Visitor -->
+                        <!-- /.Notifications -->
+
+                        <!-- Signed-in User -->
+                        <li class="nav-item dropdown ms-3">
+                            <img src="dist/images/users/15f9eb408be859.jpg" height="30" width="30" alt="tinashe chaterera" class="rounded-circle prof-pic d-cursor" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="dropdown-menu dropdown-menu-end user-menu app-menu box-shadow-sm rounded-2">
+                                <div class="text-center pb-2">
+                                    <form action="/profile_pic" method="post">
+                                        <a href="#">
+                                            <label class="mb-0 " for="profile-pic" onclick="triggerClick()">
+                                                <input class="d-none" type="file" name="profile-pic" id="profile-pic" onchange="displayImg(this)" accept="image/*">
+                                                <img src="dist/images/users/15f9eb408be859.jpg" id="profile-image" class="rounded-circle mt-2 prof-pic" height="80" width="80" alt="tinashe chaterera">
+                                                <span role="button" class="fa fa-camera circled-icon"></span>
+                                            </label>
+                                        </a>
+                                    </form>
+                                    <div class="d-block lh-100 rounded-0 mb-1" style="margin-top: -1rem">
+                                        <a href="account.html">
+                                            <h6 class="font-600 mb-0 text-capitalize text-app-color">
+                                                tinashe chaterera
+                                            </h6>
+                                            <small class="text-faded">
+                                                marshallchaterera@gmail.com
+                                            </small>
+                                        </a>
+                                    </div>
+                                </div>
+                                <ul class="list-group list-group-flush border-top px-0">
+                                    <li class="list-group-item dropdown-item w-100">
+                                        <a href="account.html" class="d-flex align-items-center">
+                                            <i class="material-icons notifications">person_outline</i>
+                                            <h6 class="font-600 ms-2 my-0">My Account</h6>
+                                            <i class="material-icons ms-auto">chevron_right</i>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item dropdown-item w-100">
+                                        <a href="orders.html" class="d-flex align-items-center">
+                                            <i class="material-icons notifications">event_note</i>
+                                            <h6 class="font-600 ms-2 my-0">My Orders</h6>
+                                            <i class="material-icons ms-auto">chevron_right</i>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item dropdown-item w-100">
+                                        <a href="wishlist.html" class="d-flex align-items-center">
+                                            <i class="material-icons notifications">favorite</i>
+                                            <h6 class="font-600 ms-2 my-0">My Wishlist</h6>
+                                            <i class="material-icons ms-auto">chevron_right</i>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item dropdown-item w-100">
+                                        <a href="#" class="d-flex align-items-center">
+                                            <i class="material-icons notifications">settings</i>
+                                            <h6 class="font-600 ms-2 my-0">App Settings</h6>
+                                            <i class="material-icons ms-auto">chevron_right</i>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item dropdown-item w-100">
+                                        <a href="#" class="d-flex align-items-center">
+                                            <i class="material-icons notifications">headset_mic</i>
+                                            <h6 class="font-600 ms-2 my-0">Help & Support</h6>
+                                            <i class="material-icons ms-auto">chevron_right</i>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item dropdown-item w-100">
+                                        <a href="#" class="d-flex align-items-center">
+                                            <i class="material-icons notifications">star_border</i>
+                                            <h6 class="font-600 ms-2 my-0">Rate Us</h6>
+                                            <i class="material-icons ms-auto">chevron_right</i>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item dropdown-item w-100">
+                                        <a href="#" class="d-flex align-items-center">
+                                            <i class="material-icons notifications">power_settings_new</i>
+                                            <h6 class="font-600 ms-2 my-0">Sign Out</h6>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="d-flex my-2 justify-content-center align-items-center">
+                                    <a href="privacy-policy.html" class="text-faded text-sm">Privacy Policy</a>
+                                    <i class="bi bi-dot mx-2 text-faded"></i>
+                                    <a href="terms.html" class="text-faded text-sm">Terms of Service</a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- /.Signed-in User -->
                     </ul>
                     <!-- /.Right Navbar Links -->
                 </nav>
@@ -532,71 +664,103 @@
                 <form method="get" action="/search" id="search-form" class="bg-whitesmoke">
                     <div class="form-group icon-form-group" id="search-bar">
                         <i class="material-icons icon text-faded">search</i>
-                        <input type="search" name="search" id="search" class="form-control" placeholder="Search">
+                        <input type="search" name="search" id="search" class="form-control" placeholder="Search...">
                         <ul class="list-group bg-whitesmoke search-list rounded-bottom-2 d-none px-0">
-                            <!-- Search Result -->
+                            <!-- Search Result Item-->
                             <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
                                 <div class="d-flex justify-content-between align-items-start">
                                     <!-- Product Item Details -->
                                     <div class="d-flex w-100">
-                                        <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
-                                        <div class="flex-column cart-details-placeholder">
-                                            <div class="content-placeholder cart-item-name-placeholder"></div>
-                                            <div class="content-placeholder cart-category-placeholder"></div>
-                                            <div class="cart-rating-placeholder content-placeholder"></div>
-                                            <div class="content-placeholder cart-stock-placeholder"></div>
+                                        <a href="details.html">
+                                            <img data-src="dist/images/gifts/15f4598bf99479.2.jpg" src="dist/images/app/bg-placeholder.PNG" height="60" width="60" loading="lazy" alt="" class="align-self-center rounded-2 lazy me-2">
+                                        </a>
+                                        <div class="d-block">
+                                            <a href="details.html">
+                                                <h6 class="text-app-color font-600 text-capitalize my-0">Kitchen cutting boards</h6>
+                                                <p class="text-sm text-muted text-capitalize my-0 py-0">kitchenware</p>
+                                                <ul class="list-inline gift-star-rating align-items-center bg-transparent gift-star-rating d-cursor my-0 p-0">
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-muted">&star;</li>
+                                                    <span class="text-sm text-faded font-600">(389)</span>
+                                                </ul>
+                                            </a>
                                         </div>
                                     </div>
                                     <!-- Product Item Details -->
                                     <div class="d-block text-center">
-                                        <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
-                                        <button class="btn btn-cart-placeholder pt-1"></button>
+                                        <h6 class="text-sm font-600 text-danger my-0 pt-0 cart-item-price">$12.99</h6>
+                                        <button class="btn btn-sm bg-switch text-white px-2 mt-2 add-to-cart-btn">Buy now</button>
                                     </div>
                                 </div>
                             </li>
-                            <!-- /.Search Result -->
-                            <!-- Search Result -->
+                            <!-- /.Search Result Item-->
+
+                            <!-- Search Result Item-->
                             <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
                                 <div class="d-flex justify-content-between align-items-start">
                                     <!-- Product Item Details -->
                                     <div class="d-flex w-100">
-                                        <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
-                                        <div class="flex-column cart-details-placeholder">
-                                            <div class="content-placeholder cart-item-name-placeholder"></div>
-                                            <div class="content-placeholder cart-category-placeholder"></div>
-                                            <div class="cart-rating-placeholder content-placeholder"></div>
-                                            <div class="content-placeholder cart-stock-placeholder"></div>
+                                        <a href="details.html">
+                                            <img data-src="dist/images/gifts/15f460b1352a38.1.jpg" src="dist/images/app/bg-placeholder.PNG" height="60" width="60" loading="lazy" alt="" class="align-self-center rounded-2 lazy me-2">
+                                        </a>
+                                        <div class="d-block">
+                                            <a href="details.html">
+                                                <h6 class="text-app-color font-600 text-capitalize my-0">Kitchen cutting boards</h6>
+                                                <p class="text-sm text-muted text-capitalize my-0 py-0">kitchenware</p>
+                                                <ul class="list-inline gift-star-rating align-items-center bg-transparent gift-star-rating d-cursor my-0 p-0">
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-muted">&star;</li>
+                                                    <span class="text-sm text-faded font-600">(389)</span>
+                                                </ul>
+                                            </a>
                                         </div>
                                     </div>
                                     <!-- Product Item Details -->
                                     <div class="d-block text-center">
-                                        <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
-                                        <button class="btn btn-cart-placeholder pt-1"></button>
+                                        <h6 class="text-sm font-600 text-danger my-0 pt-0 cart-item-price">$12.99</h6>
+                                        <button class="btn btn-sm bg-switch text-white px-2 mt-2 add-to-cart-btn">Buy now</button>
                                     </div>
                                 </div>
                             </li>
-                            <!-- /.Search Result -->
-                            <!-- Search Result -->
+                            <!-- /.Search Result Item-->
+
+                            <!-- Search Result Item-->
                             <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
                                 <div class="d-flex justify-content-between align-items-start">
                                     <!-- Product Item Details -->
                                     <div class="d-flex w-100">
-                                        <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
-                                        <div class="flex-column cart-details-placeholder">
-                                            <div class="content-placeholder cart-item-name-placeholder"></div>
-                                            <div class="content-placeholder cart-category-placeholder"></div>
-                                            <div class="cart-rating-placeholder content-placeholder"></div>
-                                            <div class="content-placeholder cart-stock-placeholder"></div>
+                                        <a href="details.html">
+                                            <img data-src="dist/images/gifts/15f460c7f56472.jpg" src="dist/images/app/bg-placeholder.PNG" height="60" width="60" loading="lazy" alt="" class="align-self-center rounded-2 lazy me-2">
+                                        </a>
+                                        <div class="d-block">
+                                            <a href="details.html">
+                                                <h6 class="text-app-color font-600 text-capitalize my-0">Kitchen cutting boards</h6>
+                                                <p class="text-sm text-muted text-capitalize my-0 py-0">kitchenware</p>
+                                                <ul class="list-inline gift-star-rating align-items-center bg-transparent gift-star-rating d-cursor my-0 p-0">
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-gold">&starf;</li>
+                                                    <li class="list-inline-item text-muted">&star;</li>
+                                                    <span class="text-sm text-faded font-600">(389)</span>
+                                                </ul>
+                                            </a>
                                         </div>
                                     </div>
                                     <!-- Product Item Details -->
                                     <div class="d-block text-center">
-                                        <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
-                                        <button class="btn btn-cart-placeholder pt-1"></button>
+                                        <h6 class="text-sm font-600 text-danger my-0 pt-0 cart-item-price">$12.99</h6>
+                                        <button class="btn btn-sm bg-switch text-white px-2 mt-2 add-to-cart-btn">Buy now</button>
                                     </div>
                                 </div>
                             </li>
-                            <!-- /.Search Result -->
+                            <!-- /.Search Result Item-->
                         </ul>
                     </div>
                 </form>
@@ -605,414 +769,213 @@
         </header>
         <!-- /.Main Navbar -->
 
-        <div class="page-content">
+        <!-- Fixed-Top Mobile Navbar -->
+        <nav class="navbar navbar-light bg-whitesmoke fixed-top box-shadow-sm m-0 py-0 d-md-none" id="mobile-top-nav">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center w-100">
+                    <ul class="d-flex align-items-center my-0 p-0">
+                        <li class="nav-item me-1">
+                            <a href="index.html" role="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center p-0 m-0">
+                                <i class="bi bi-chevron-left mobile-nav-icon"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html" class="navbar-brand font-700">
+                                <img src="dist/images/app/gifteros.png" height="35" class="gifteros-logo" width="35" alt="">
+                                <span class="mobile-brand brandname">Gifteros</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="d-flex align-items-center ms-auto my-0 p-0">
+                        <li class="nav-item me-3">
+                            <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center p-0 m-0" onclick="toggleSearchBar()">
+                                <i class="bi bi-search mobile-nav-icon"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center toggle-side-menu p-0 m-0">
+                                <i class="bi bi-list mobile-nav-icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- /.Fixed-Top Mobile Navbar -->
+
+        <!-- Fixed-Bottom Mobile Navbar -->
+        <nav class="navbar navbar-light bg-whitesmoke fixed-bottom box-shadow-sm m-0 py-0 d-md-none" id="mobile-bottom-nav">
+            <div class="container-fluid">
+                <a href="index.html" class="nav-menu-item d-block text-center lh-100">
+                    <i class="bi bi-shop icon-md"></i>
+                    <i class="fa fa-circle position-absolute new-gifts"></i>
+                    <p class="text-sm my-0 py-1">Home</p>
+                </a>
+                <a href="categories.html" class="nav-menu-item d-block text-center lh-100">
+                    <i class="bi bi-card-list icon-md"></i>
+                    <p class="text-sm my-0 py-1">Categories</p>
+                </a>
+                <a href="cart.html" class="nav-menu-item d-block text-center position-relative lh-100">
+                    <i class="bi bi-cart4 icon-md"></i>
+                    <span class="badge nav-badge position-absolute gift-count">4</span>
+                    <p class="text-sm my-0 py-1">Cart</p>
+                </a>
+                <a href="notifications.html" class="nav-menu-item d-block text-center position-relative active lh-100" id="app-notifications" aria-current="page">
+                    <i class="bi bi-bell icon-md"></i>
+                    <span class="badge nav-badge position-absolute notifications-counter">9+</span>
+                    <p class="text-sm my-0 py-1">Notifications</p>
+                </a>
+            </div>
+        </nav>
+        <!-- /.Fixed-Bottom Mobile Navbar -->
+
+        <!-- Mobile Search -->
+        <nav class="navbar navbar-light bg-whitesmoke fixed-top box-shadow-sm m-0 py-1 d-none" id="mobile-search-bar">
+            <div class="container-fluid w-100">
+                <div class="w-10">
+                    <button type="button" class="btn btn-default circled-button d-flex justify-content-center" onclick="toggleSearchBar()">
+                        <i class="material-icons text-color-switch">arrow_back</i>
+                    </button>
+                </div>
+                <!-- Search Form -->
+                <form method="get" action="/search" id="search-form" class="bg-whitesmoke w-85">
+                    <div class="form-group" id="search-bar">
+                        <input type="search" name="search" id="search" class="form-control rounded-pill" placeholder="Search over 36436 gifts">
+                    </div>
+                </form>
+                <!-- Search List Results -->
+                <ul class="list-group bg-whitesmoke search-list rounded-bottom-2 d-none px-0">
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                    <!-- Search Result -->
+                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <!-- Product Item Details -->
+                            <div class="d-flex w-100">
+                                <div class="cart-item-img-placeholder rounded-2 align-self-center me-2"></div>
+                                <div class="flex-column cart-details-placeholder">
+                                    <div class="content-placeholder cart-item-name-placeholder"></div>
+                                    <div class="content-placeholder cart-category-placeholder"></div>
+                                    <div class="cart-rating-placeholder content-placeholder"></div>
+                                    <div class="content-placeholder cart-stock-placeholder"></div>
+                                </div>
+                            </div>
+                            <!-- Product Item Details -->
+                            <div class="d-block text-center">
+                                <p class="content-placeholder my-0 pt-0 pb-1 cart-item-price"></p>
+                                <button class="btn btn-cart-placeholder pt-1"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /.Search Result -->
+                </ul>
+                <!-- /.Search List Results -->
+                <!-- /.Search Form -->
+            </div>
+        </nav>
+        <!-- /.Mobile Search -->
+
+        <div class="page-content breadcrumbed">
             <div class="container">
                 <!-- Breadcrumbs -->
                 <nav class="d-flex align-items-center justify-content-md-between my-2" aria-label="breadcrumb">
-                    <h4 class="text-app-color font-600 my-0">Comparisons(3)</h4>
-                    <ol class="breadcrumb my-0 py-0">
+                    <h4 class="text-app-color font-600 my-0">My Notifications (325)</h4>
+                    <ol class="breadcrumb my-0 py-0 d-none d-md-inline-flex">
                         <li class="breadcrumb-item"><a href="index.html">Store</a></li>
-                        <li class="breadcrumb-item active text-capitalize" aria-current="page">Comparison Items</li>
+                        <li class="breadcrumb-item active text-capitalize" aria-current="page">Cart</li>
                     </ol>
                 </nav>
                 <!-- /.Breadcrumbs -->
-                <div class="row bg-whitesmoke box-shadow-sm border rounded-2 p-3">
-                    <div class="col-2 text-center">
-                        <a href="category.html" class="btn btn-sm rounded-pill btn-default d-flex align-items-center justify-content-center rounded-pill mb-2 font-600">
-                            <i class="material-icons ms-1">chevron_left</i> Go back
-                        </a>
-                    </div>
-                    <div class="col-12 zoom-out-section">
-                        <!-- Comparisons Table -->
-                        <div class="table-responsive-sm">
-                            <table class="table-hover table-striped table-sm table-bordered w-100">
-                                <thead class="sticky-top bg-whitesmoke">
-                                    <tr>
-                                        <th></th>
-                                        <th>
-                                            <div class="d-block text-center position-relative comparison-item">
-                                                <a href="details.html" class="stretched-link"></a>
-                                                <img src="dist/images/gifts/15f458474b905f.jpg" height="100" width="100" class="rounded-circle comparison-product-img p-1 mb-2">
-                                                <div class="arrow-down"></div>
-                                                <h6 class="font-600 text-capitalize text-app-color mb-0">Product Item 1</h6>
-                                                <h6 class="text-capitalize text-muted text-sm my-0">Category</h6>
-                                            </div>
-                                        </th>
-                                        <th>
-                                            <div class="d-block text-center position-relative comparison-item">
-                                                <a href="details.html" class="stretched-link"></a>
-                                                <img src="dist/images/gifts/15f4598bf99479.2.jpg" height="100" width="100" class="rounded-circle comparison-product-img p-1 mb-2">
-                                                <div class="arrow-down"></div>
-                                                <h6 class="font-600 text-capitalize text-app-color mb-0">Product Item 2</h6>
-                                                <h6 class="text-capitalize text-muted text-sm my-0">Category</h6>
-                                            </div>
-                                        </th>
-                                        <th>
-                                            <div class="d-block text-center position-relative comparison-item">
-                                                <a href="details.html" class="stretched-link"></a>
-                                                <img src="dist/images/gifts/15f46084b9eae0.jpg" height="100" width="100" class="rounded-circle comparison-product-img p-1 mb-2">
-                                                <div class="arrow-down"></div>
-                                                <h6 class="font-600 text-capitalize text-app-color mb-0">Product Item 3</h6>
-                                                <h6 class="text-capitalize text-muted text-sm my-0">Category</h6>
-                                            </div>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <!-- Price -->
-                                    <tr class="bg-light">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Price</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="font-600 lead text-danger mb-0">US$12.38</h6>
-                                            <h6 class="strike-through text-sm text-muted font-600 mt-0">Was US$16.38</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="font-600 lead text-danger mb-0">US$12.38</h6>
-                                            <h6 class="strike-through text-sm text-muted font-600 mt-0">Was US$16.38</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="font-600 lead text-danger mb-0">US$12.38</h6>
-                                            <h6 class="strike-through text-sm text-muted font-600 mt-0">Was US$16.38</h6>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Price -->
-
-                                    <!-- Reviews -->
-                                    <tr class="bg-whitesmoke">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Reviews</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <ul class="list-inline gift-star-rating justify-content-center align-items-center gift-star-rating my-0 p-0">
-                                                <li class="list-inline-item text-sm text-muted pe-2">(4.3)</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-muted">&star;</li>
-                                                <a href="#" class="text-sm text-muted d-flex align-items-center popover-info w-0">
-                                                    <i class="material-icons popover-toggle-icon">expand_more</i>1,284 ratings
-                                                </a>
-                                            </ul>
-                                        </td>
-                                        <td class="text-center">
-                                            <ul class="list-inline gift-star-rating justify-content-center align-items-center gift-star-rating my-0 p-0">
-                                                <li class="list-inline-item text-sm text-muted pe-2">(4.3)</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-muted">&star;</li>
-                                                <a href="#" class="text-sm text-muted d-flex align-items-center popover-info w-0">
-                                                    <i class="material-icons popover-toggle-icon">expand_more</i>1,284 ratings
-                                                </a>
-                                            </ul>
-                                        </td>
-                                        <td class="text-center">
-                                            <ul class="list-inline gift-star-rating justify-content-center align-items-center gift-star-rating my-0 p-0">
-                                                <li class="list-inline-item text-sm text-muted pe-2">(4.3)</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-gold">&starf;</li>
-                                                <li class="list-inline-item text-muted">&star;</li>
-                                                <a href="#" class="text-sm text-muted d-flex align-items-center popover-info w-0">
-                                                    <i class="material-icons popover-toggle-icon">expand_more</i>1,284 ratings
-                                                </a>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Reviews -->
-
-                                    <!-- Colors -->
-                                    <tr class="bg-light">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Colors</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm my-0">Black, Red, Maroon, Green</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm my-0">Black, Red, Maroon, Green, Pink, Purple</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm my-0">Not mentioned</h6>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Colors -->
-
-                                    <!-- Clothing Sizes -->
-                                    <tr class="bg-whitesmoke">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Clothing Sizes</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm text-uppercase my-0">S, M, L, XL, XXL</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm text-uppercase my-0">M, L, XXL, XXXL</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm text-uppercase my-0">S, M, L</h6>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Clothing Sizes -->
-
-                                    <!-- Shoe Sizes -->
-                                    <tr class="bg-light">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Shoe Sizes</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm my-0">44, 45, 46, 48</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm my-0">45, 49</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm my-0">Not mentioned</h6>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Shoe Sizes -->
-
-                                    <!-- Bed Sizes -->
-                                    <tr class="bg-whitesmoke">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Bed Sizes</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm text-uppercase my-0">Twin, double, queen</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm text-uppercase my-0">queen, king, super-king</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm text-uppercase my-0">twin, twin-xl, double, queen, king, super-king</h6>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Shoe Sizes -->
-
-                                    <!-- Description -->
-                                    <tr class="bg-whitesmoke">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Description</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm text-justify my-0">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed impedit soluta voluptatum tempora illo laboriosam!
-                                            </h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm text-justify my-0">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nisi qui odit illo vero sint deserunt maxime!
-                                            </h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <h6 class="text-sm text-justify my-0">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores error quia ipsum?
-                                            </h6>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Description -->
-
-                                    <!-- Customizable-->
-                                    <tr class="bg-light">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Customizable</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="bi bi-check-circle-fill icon-md text-success"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="bi bi-x-circle-fill icon-md text-danger"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="bi bi-check-circle-fill icon-md text-success"></i>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Customizable-->
-
-                                    <!-- Units -->
-                                    <tr class="bg-whitesmoke">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Units</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="d-block text-center">
-                                                <i class="bi bi-check-circle-fill icon-md text-success"></i>
-                                                <h6 class="text-sm font-600 my-0">100 units in stock</h6>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="d-block text-center">
-                                                <i class="bi bi-check-circle-fill icon-md text-success"></i>
-                                                <h6 class="text-sm font-600 my-0">100 units in stock</h6>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="d-block text-center">
-                                                <i class="bi bi-exclamation-circle-fill icon-md text-warning"></i>
-                                                <h6 class="text-sm font-600 my-0">out of stock</h6>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Price -->
-
-                                    <!-- Items Sold -->
-                                    <tr class="bg-light">
-                                        <td>
-                                            <h6 class="font-600 ps-3">Sold</h6>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="d-block text-center">
-                                                <i class="bi bi-bag-check-fill icon-md text-success"></i>
-                                                <h6 class="text-sm font-600 my-0">100 units sold</h6>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="d-block text-center">
-                                                <i class="bi bi-bag-check-fill icon-md text-success"></i>
-                                                <h6 class="text-sm font-600 my-0">100 units sold</h6>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="d-block text-center">
-                                                <i class="bi bi-bag-x-fill icon-md text-primary"></i>
-                                                <h6 class="text-sm font-600 my-0">not yet sold</h6>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Items Sold -->
-
-                                    <!-- Actions -->
-                                    <tr class="bg-whitesmoke w-100">
-                                        <td class="py-2">
-                                            <h6 class="font-600 ps-3">Action</h6>
-                                        </td>
-                                        <td class="text-center py-2">
-                                            <div class="d-flex align-items-center justify-content-around">
-                                                <button class="btn btn-sm rounded-pill bg-switch text-white d-flex align-items-center font-600 px-3">
-                                                    <i class="bi bi-cart-plus icon-md me-2"></i> Add to Cart 
-                                                </button>
-                                                <button class="btn btn-sm rounded-pill btn-default d-flex align-items-center font-600 px-3 ms-2">
-                                                    <i class="bi bi-heart icon-md me-2"></i> 1.2k 
-                                                </button>
-                                            </div>
-                                        </td>
-                                        <td class="text-center py-2">
-                                            <div class="d-flex align-items-center justify-content-around">
-                                                <button class="btn btn-sm rounded-pill bg-switch text-white d-flex align-items-center font-600 px-3">
-                                                    <i class="bi bi-cart-check-fill icon-md me-2"></i> In Cart 
-                                                </button>
-                                                <button class="btn btn-sm rounded-pill btn-default d-flex align-items-center font-600 px-3 ms-2">
-                                                    <i class="bi bi-heart icon-md me-2"></i> 1.2k 
-                                                </button>
-                                            </div>
-                                        </td>
-                                        <td class="text-center py-2">
-                                            <div class="d-flex align-items-center justify-content-around">
-                                                <button class="btn btn-sm rounded-pill bg-switch text-white d-flex align-items-center font-600 px-3">
-                                                    <i class="bi bi-cart-check-fill icon-md me-2"></i> In Cart 
-                                                </button>
-                                                <button class="btn btn-sm rounded-pill btn-default d-flex align-items-center font-600 px-3 ms-2">
-                                                    <i class="bi bi-heart-fill text-warning icon-md me-2"></i> 1.2k 
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!-- /.Actions -->
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- /.Comparisons Table -->
-                    </div>
+                <div class="row">
+                    <!-- Main Content -->
+                    <!-- /.Main Content -->
                 </div>
             </div>
         </div>
     </div>
     <!-- /.Page Content -->
-
-    <!-- Settings Sidebar -->
-    <div class="settings-bar">
-        <div class="settings-header d-flex align-items-center justify-content-between box-shadow-sm p-2">
-            <h2 class="font-600 lead lead-2x">Settings</h2>
-            <i class="material-icons nav-link icon-link me-2 toggle-settings">close</i>
-        </div>
-        <div class="container-fluid px-3 mt-2">
-            <p class="mb-0 font-500 d-none" id="day-mode">
-                <i class="fa fa-sun-o"></i> Toggle Day Mode
-            </p>
-            <p class="mb-0 font-500" id="night-mode">
-                <i class="fa fa-moon-o"></i> Toggle Night Mode
-            </p>
-            <div class="d-flex align-items-center mt-2">
-                <div class="form-check toggle-switch">
-                    <input type="checkbox" class="form-check-input switch-btn theme-switch" id="darkmode" onchange="themeMode(this);">
-                </div>
-            </div>
-            <hr class="w-100">
-            <p class="mb-0 font-500">
-                <i class="fa fa-exchange"></i> Change Currency
-            </p>
-            <div class="d-flex align-items-center mt-2">
-                <div class="form-check toggle-switch">
-                    <input type="checkbox" class="form-check-input switch-btn usd-currency" id="usd-currency" onchange="usdCurrency(this);" checked>
-                    <label class="form-check-label ms-2" for="usd">USD</label>
-                </div>
-            </div>
-            <div class="d-flex align-items-center mt-2">
-                <div class="form-check toggle-switch">
-                    <input type="checkbox" class="form-check-input switch-btn zar-currency" id="zar-currency" onchange="zarCurrency(this);">
-                    <label class="form-check-label ms-2" for="zar-currency">ZAR</label>
-                </div>
-            </div>
-            <div class="d-flex align-items-center mt-2">
-                <div class="form-check toggle-switch">
-                    <input type="checkbox" class="form-check-input switch-btn zwl-currency" id="zwl-currency" onchange="zwlCurrency(this);">
-                    <label class="form-check-label ms-2" for="zwl-currency">ZWL</label>
-                </div>
-            </div>
-            <hr class="w-100">
-            <p class="mb-0 font-500">
-                <i class="fa fa-sort-alpha-asc"></i> Sort by Name
-            </p>
-            <div class="d-flex align-items-center mt-2">
-                <div class="form-check toggle-switch">
-                    <input type="checkbox" class="form-check-input switch-btn" id="name-asc" onchange="orderByName(this)" checked>
-                    <label class="form-check-label ms-2" for="name-asc" id="name-sorting-order">Ascending</label>
-                </div>
-            </div>
-            <hr class="w-100">
-            <p class="mb-0 font-500">
-                <i class="fa fa-sort-amount-asc"></i> Sort by Price
-            </p>
-            <div class="d-flex align-items-center mt-2">
-                <div class="form-check toggle-switch">
-                    <input type="checkbox" class="form-check-input switch-btn" id="price-ordering" onchange="orderByPrice(this)" checked>
-                    <label class="form-check-label ms-2" for="price-ordering" id="price-ordering-label">Ascending</label>
-                </div>
-            </div>
-            <hr class="w-100">
-            <p class="mb-0 font-500">
-                <i class="fa fa-sort"></i> Sort by Orders
-            </p>
-            <div class="d-flex align-items-center mt-2">
-                <div class="form-check toggle-switch">
-                    <input type="checkbox" class="form-check-input switch-btn" id="trending" checked>
-                    <label class="form-check-label ms-2" for="trending">Trending</label>
-                </div>
-            </div>
-            <div class="d-flex align-items-center mt-2">
-                <div class="form-check toggle-switch">
-                    <input type="checkbox" class="form-check-input switch-btn" id="recent">
-                    <label class="form-check-label ms-2" for="recent">Recent</label>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /.Settings -->
 
     <!-- Side Nav -->
     <aside class="main-sidebar box-shadow-sm">
@@ -1277,6 +1240,86 @@
     </aside>
     <!-- /.Side bar -->
 
+    <!-- Settings Sidebar -->
+    <div class="settings-bar">
+        <div class="settings-header d-flex align-items-center justify-content-between box-shadow-sm p-2">
+            <h2 class="font-600 lead lead-2x">Settings</h2>
+            <i class="material-icons nav-link icon-link me-2 toggle-settings">close</i>
+        </div>
+        <div class="container-fluid px-3 mt-2">
+            <p class="mb-0 font-500 d-none" id="day-mode">
+                <i class="fa fa-sun-o"></i> Toggle Day Mode
+            </p>
+            <p class="mb-0 font-500" id="night-mode">
+                <i class="fa fa-moon-o"></i> Toggle Night Mode
+            </p>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn theme-switch" id="darkmode" onchange="themeMode(this);">
+                </div>
+            </div>
+            <hr class="w-100">
+            <p class="mb-0 font-500">
+                <i class="fa fa-exchange"></i> Change Currency
+            </p>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn usd-currency" id="usd-currency" onchange="usdCurrency(this);" checked>
+                    <label class="form-check-label ms-2" for="usd">USD</label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn zar-currency" id="zar-currency" onchange="zarCurrency(this);">
+                    <label class="form-check-label ms-2" for="zar-currency">ZAR</label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn zwl-currency" id="zwl-currency" onchange="zwlCurrency(this);">
+                    <label class="form-check-label ms-2" for="zwl-currency">ZWL</label>
+                </div>
+            </div>
+            <hr class="w-100">
+            <p class="mb-0 font-500">
+                <i class="fa fa-sort-alpha-asc"></i> Sort by Name
+            </p>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn" id="name-asc" onchange="orderByName(this)" checked>
+                    <label class="form-check-label ms-2" for="name-asc" id="name-sorting-order">Ascending</label>
+                </div>
+            </div>
+            <hr class="w-100">
+            <p class="mb-0 font-500">
+                <i class="fa fa-sort-amount-asc"></i> Sort by Price
+            </p>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn" id="price-ordering" onchange="orderByPrice(this)" checked>
+                    <label class="form-check-label ms-2" for="price-ordering" id="price-ordering-label">Ascending</label>
+                </div>
+            </div>
+            <hr class="w-100">
+            <p class="mb-0 font-500">
+                <i class="fa fa-sort"></i> Sort by Orders
+            </p>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn" id="trending" checked>
+                    <label class="form-check-label ms-2" for="trending">Trending</label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn" id="recent">
+                    <label class="form-check-label ms-2" for="recent">Recent</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.Settings -->
+
     <!-- Mailing List Modal -->
     <div class="modal fade rounded-0" id="mailing-list-modal" tabindex="-1" role="dialog" aria-labelledby="mailing-list-modal" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -1528,6 +1571,11 @@
     <script src="dist/plugins/rateYo/jquery.rateyo.min.js"></script>
     <!-- Gifteros -->
     <script src="dist/js/gifteros.min.js "></script>
+    <script>
+        $(function() {
+            starRating('.gift-rating', 4.5, 20);
+        });
+    </script>
 </body>
 
 </html>

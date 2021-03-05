@@ -934,33 +934,33 @@
                             <div class="col-12 col-xl-4">
                                 <!-- Large Devices Options -->
                                 <ul class="list-group box-shadow-sm rounded-2 d-none d-xl-block px-0 mx-0 mb-2" id="delivery-information" role="tablist" aria-orientation="vertical">
-                                    <li class="list-group-item dropdown-item w-100">
-                                        <a role="tab" href="javascript:void()" class="d-flex align-items-center text-app-color active" id="recipients-tab" data-bs-toggle="pill" data-bs-target="#recipients" aria-controls="recipients" aria-selected="true">
+                                    <li role="tab" class="list-group-item dropdown-item desktop-pills active w-100" id="recipients-tab" data-bs-toggle="pill" data-bs-target="#recipients" aria-controls="recipients" aria-selected="true">
+                                        <div class="d-flex align-items-center text-app-color">
                                             <i class="material-icons notifications">person_outline</i>
                                             <h6 class="text-app-color font-600 ms-2 my-0">Select Recipient</h6>
-                                            <i class="material-icons ms-auto">chevron_right</i>
-                                        </a>
+                                            <i class="bi bi-chevron-right icon-md ms-auto"></i>
+                                        </div>
                                     </li>
-                                    <li class="list-group-item dropdown-item w-100">
-                                        <a role="tab" href="javascript:void()" class="d-flex align-items-center text-app-color" id="delivery-address-tab" data-bs-toggle="pill" data-bs-target="#delivery-address" aria-controls="delivery-address" aria-selected="false">
+                                    <li role="tab" class="list-group-item dropdown-item desktop-pills w-100" id="delivery-address-tab" data-bs-toggle="pill" data-bs-target="#delivery-address" aria-controls="delivery-address" aria-selected="false">
+                                        <div class="d-flex align-items-center text-app-color">
                                             <i class="material-icons notifications">person_pin_circle</i>
                                             <h6 class="text-app-color font-600 ms-2 my-0">Billing Info</h6>
-                                            <i class="material-icons ms-auto">chevron_right</i>
-                                        </a>
+                                            <i class="bi bi-chevron-right icon-md ms-auto"></i>
+                                        </div>
                                     </li>
-                                    <li class="list-group-item dropdown-item w-100">
-                                        <a role="tab" href="javascript:void()" class="d-flex align-items-center text-app-color" id="payment-method-tab" data-bs-toggle="pill" data-bs-target="#payment-method" aria-controls="payment-method" aria-selected="false">
+                                    <li class="list-group-item dropdown-item desktop-pills w-100" id="payment-method-tab" data-bs-toggle="pill" data-bs-target="#payment-method" aria-controls="payment-method" aria-selected="false">
+                                        <div class="d-flex align-items-center text-app-color">
                                             <i class="material-icons notifications">credit_card</i>
                                             <h6 class="text-app-color font-600 ms-2 my-0">Payment Details</h6>
-                                            <i class="material-icons ms-auto">chevron_right</i>
-                                        </a>
+                                            <i class="bi bi-chevron-right icon-md ms-auto"></i>
+                                        </div>
                                     </li>
-                                    <li class="list-group-item dropdown-item w-100">
-                                        <a role="tab" href="javascript:void()" class="d-flex align-items-center text-app-color" id="order-preview-tab" data-bs-toggle="pill" data-bs-target="#order-preview" aria-controls="order-preview" aria-selected="false">
+                                    <li class="list-group-item dropdown-item desktop-pills w-100" id="order-preview-tab" data-bs-toggle="pill" data-bs-target="#order-preview" aria-controls="order-preview" aria-selected="false">
+                                        <div class="d-flex align-items-center text-app-color">
                                             <i class="material-icons notifications">assignment</i>
                                             <h6 class="text-app-color font-600 ms-2 my-0">Order Preview</h6>
-                                            <i class="material-icons ms-auto">chevron_right</i>
-                                        </a>
+                                            <i class="bi bi-chevron-right icon-md ms-auto"></i>
+                                        </div>
                                     </li>
                                 </ul>
                                 <!-- /.Large Devices Options -->
@@ -1980,50 +1980,43 @@
             <!-- /.User Panel -->
 
             <hr class="my-0">
-
             <!-- Menu list -->
-            <ul class="side-menu px-2">
+            <ul class="side-menu mb-0 pb-0 px-2">
                 <!-- Side-menu-item -->
                 <li class="side-menu-item active p-2">
                     <a href="index.html" class="d-flex align-items-center">
-                        <i class="material-icons me-2">store</i>
+                        <i class="bi bi-shop icon-md pull-up-2 me-2"></i>
                         <span class="text-capitalize">Store</span>
                     </a>
                 </li>
                 <!-- /.Side-menu-item -->
+                <!-- Side-menu-item -->
+                <li role="button" class="side-menu-item collapsible-item p-2">
+                    <a href="#" class="d-flex align-items-center toggle-departments">
+                        <i class="bi bi-card-list icon-md pull-up-2 me-2"></i>
+                        <span class="text-capitalize">Categories</span>
+                        <i class="bi bi-chevron-right ms-auto"></i>
+                    </a>
+                </li>
+                <!-- /.Side-menu-item -->
+            </ul>
+            <!-- /.Menu list -->
 
+            <h5 class="lead font-600 mt-1 mx-2">My Account</h5>
+            <!-- Menu list -->
+            <ul class="side-menu px-2">
                 <!-- Side-menu-item -->
                 <li class="side-menu-item p-2">
                     <a href="account.html" class="d-flex align-items-center">
-                        <i class="material-icons me-2">person</i>
+                        <i class="bi bi-person icon-md pull-up-2 me-2"></i>
                         <span class="text-capitalize">Account</span>
                     </a>
                 </li>
                 <!-- /.Side-menu-item -->
-
-                <!-- Side-menu-item -->
-                <li class="side-menu-item d-sm-block d-md-none p-2">
-                    <a href="index.html" class="d-flex align-items-center">
-                        <i class="material-icons me-2">store</i>
-                        <span class="text-capitalize">Gift store</span>
-                    </a>
-                </li>
-                <!-- /.Side-menu-item -->
-
-                <!-- Side-menu-item -->
-                <li role="button" class="side-menu-item collapsible-item p-2">
-                    <a href="#" class="d-flex align-items-center toggle-departments">
-                        <i class="material-icons me-2">apps</i>
-                        <span class="text-capitalize">Categories</span>
-                        <span role="button" class="material-icons ms-auto">chevron_right</span>
-                    </a>
-                </li>
-                <!-- /.Side-menu-item -->
-
                 <!-- Side-menu-item -->
                 <li class="side-menu-item p-2">
                     <a class="d-flex align-items-center" href="orders.html">
-                        <i class="material-icons me-2">assignment</i>
+                        <i class="bi bi-person-lines-fill icon-md pull-up-2 me-2"></i>
                         <span class="text-capitalize">My Orders</span>
                         <span class="badge app-badge ms-auto">
                             4
@@ -2034,7 +2027,7 @@
 
                 <!-- Side-menu-item -->
                 <li class="d-flex align-items-center side-menu-item p-2">
-                    <i class="material-icons me-2">sync</i>
+                    <i class="bi bi-arrow-repeat icon-md pull-up-2 me-2"></i>
                     <span class="text-capitalize">Buy again</span>
                 </li>
                 <!-- /.Side-menu-item -->
@@ -2042,32 +2035,65 @@
                 <!-- Side-menu-item -->
                 <li class="side-menu-item p-2">
                     <a href="coupons.html" class="d-flex align-items-center">
-                        <i class="material-icons me-2">monetization_on</i>
+                        <i class="bi bi-trophy icon-md pull-up-2 me-2"></i>
                         <span class="text-capitalize">my coupons</span>
                     </a>
                 </li>
                 <!-- /.Side-menu-item -->
+            </ul>
+            <!-- /.Menu list -->
 
-                <hr class="border-inverse my-1">
+            <h5 class="lead font-600 mx-2">Discovery</h5>
 
+            <!-- Menu list -->
+            <ul class="side-menu px-2">
                 <!-- Side-menu-item -->
                 <li class="side-menu-item p-2">
-                    <a href="javascript:void()" class="d-flex align-items-center toggle-ratingbox">
-                        <i class="material-icons me-2">stars</i>
-                        <span class="text-capitalize">rate & review</span>
+                    <a href="occasion.html" class="d-flex align-items-center">
+                        <i class="bi bi-alarm icon-md pull-up-2 me-2"></i>
+                        <span class="text-capitalize">Hot Deals</span>
                     </a>
                 </li>
                 <!-- /.Side-menu-item -->
+            </ul>
+            <!-- /.Menu list -->
 
+            <h5 class="lead font-600 mx-2">Settings</h5>
+
+            <!-- Menu list -->
+            <ul class="side-menu px-2">
                 <!-- Side-menu-item -->
+                <li class="side-menu-item d-md-none p-2">
+                    <a href="#" class="d-flex align-items-center" onclick="sidebarsExchange()">
+                        <i class="bi bi-gear icon-md pull-up-2 me-2"></i>
+                        <span class="text-capitalize">App Settings</span>
+                    </a>
+                </li>
                 <li class="side-menu-item p-2">
-                    <a href="about.html" class="d-flex align-items-center">
-                        <i class="material-icons me-2">info_outline</i>
-                        <span class="text-capitalize">about</span>
+                    <a href="#" class="d-flex align-items-center">
+                        <i class="bi bi-globe icon-md pull-up-2 me-2"></i>
+                        <span class="text-capitalize">Language</span>
+                    </a>
+                </li>
+                <li class="side-menu-item d-md-none p-2">
+                    <a href="customer-service.html" class="d-flex align-items-center">
+                        <i class="bi bi-headset icon-md pull-up-2 me-2"></i>
+                        <span class="text-capitalize">Help Center</span>
+                    </a>
+                </li>
+                <li class="side-menu-item p-2">
+                    <a href="#" class="d-flex align-items-center" onclick="toggleRatingBox()">
+                        <i class="bi bi-star-half icon-md pull-up-2 me-2"></i>
+                        <span class="text-capitalize">Rate & Review</span>
+                    </a>
+                </li>
+                <li class="side-menu-item p-2">
+                    <a href="about-us.html" class="d-flex align-items-center">
+                        <i class="bi bi-info-circle icon-md pull-up-2 me-2"></i>
+                        <span class="text-capitalize">About</span>
                     </a>
                 </li>
                 <!-- /.Side-menu-item -->
-
             </ul>
             <!-- /.Menu list -->
         </nav>
