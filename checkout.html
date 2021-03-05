@@ -53,32 +53,13 @@
         <!-- Floating Action Buttons -->
         <div class="fabs d-flex align-items-center flex-column justify-content-around">
             <!-- Mobile Action Buttons -->
-            <div class="d-md-none">
-                <div class="floating-action box-shadow-sm action-btn bg-purple to-top" onclick="scrollToTop()" title="Scroll to top">
-                    <div class="m-auto d-flex flex-column justify-content-center lh-100">
-                        <i class="material-icons text-white my-0">arrow_upward</i>
-                        <small class="text-white font-600 my-0">Top</small>
-                    </div>
-                </div>
-                <div class="floating-action box-shadow-sm action-btn bg-brick-red" title="Theme mode" onclick="userTheme()">
-                    <i class="material-icons text-white m-auto">brightness_medium</i>
-                </div>
-                <div class="floating-action box-shadow-sm action-btn bg-success" id="toggle-whatsapp" title="WhatsApp">
-                    <i class="fa fa-whatsapp fa-2x text-white m-auto"></i>
-                </div>
-                <div class="floating-action box-shadow-sm toggle-actions bg-primary" title="Click to toggle actions">
-                    <i class="material-icons m-auto text-white">add</i>
+            <div class="floating-action box-shadow-sm action-btn bg-switch to-top" onclick="scrollToTop()" title="Scroll to top">
+                <div class="m-auto d-flex flex-column justify-content-center lh-100">
+                    <i class="material-icons text-white my-0">arrow_upward</i>
+                    <small class="text-white font-600 my-0">Top</small>
                 </div>
             </div>
             <!-- /.Mobile Action Buttons -->
-
-            <!-- Cart Suggestions -->
-            <div class="d-none d-md-block">
-                <div class="floating-action box-shadow-sm bg-switch" title="Click to toggle actions">
-                    <i class="material-icons m-auto text-white">lightbulb_outline</i>
-                </div>
-            </div>
-            <!-- /.Cart Suggestions -->
         </div>
         <!-- /.Floating Action Buttons -->
 
@@ -774,24 +755,26 @@
                                 <i class="bi bi-chevron-left mobile-nav-icon"></i>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="index.html" class="navbar-brand font-700">
-                                <img src="dist/images/app/gifteros.png" height="35" class="gifteros-logo" width="35" alt="">
-                                <span class="mobile-brand brandname">Gifteros</span>
-                            </a>
+                        <li class="nav-item ms-2">
+                            <div class="d-flex align-items-center">
+                                <i class="material-icons text-color-switch me-1">account_balance_wallet</i>
+                                <p class="text-color-switch text-sm font-600 my-0 py-0">US$12.99</p>
+                            </div>
                         </li>
                     </ul>
                     <ul class="d-flex align-items-center ms-auto my-0 p-0">
                         <li class="nav-item me-3">
-                            <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center p-0 m-0" onclick="toggleSearchBar()">
-                                <i class="bi bi-search mobile-nav-icon"></i>
-                            </button>
-                        </li>
-                        <li class="nav-item">
-                            <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center toggle-side-menu p-0 m-0">
+                            <li class="nav-item me-3">
+                                <a role="button" href="cart.html" class="btn btn-default circled-button-sm d-grid justify-content-center text-center position-relative p-0 m-0">
+                                    <i class="bi bi-cart4 mobile-nav-icon"></i>
+                                    <span class="badge nav-badge position-absolute gift-count">4</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center toggle-side-menu p-0 m-0">
                                 <i class="bi bi-list mobile-nav-icon"></i>
                             </button>
-                        </li>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -799,29 +782,9 @@
         <!-- /.Fixed-Top Mobile Navbar -->
 
         <!-- Fixed-Bottom Mobile Navbar -->
-        <nav class="navbar navbar-light bg-whitesmoke fixed-bottom box-shadow-sm m-0 py-0 d-md-none" id="mobile-bottom-nav">
-            <div class="container-fluid">
-                <a href="index.html" class="nav-menu-item d-block text-center lh-100">
-                    <i class="bi bi-shop icon-md"></i>
-                    <i class="fa fa-circle position-absolute new-gifts"></i>
-                    <p class="text-sm my-0 py-1">Home</p>
-                </a>
-                <a href="#" class="nav-menu-item d-block text-center lh-100">
-                    <i class="bi bi-card-list icon-md"></i>
-                    <p class="text-sm my-0 py-1">Categories</p>
-                </a>
-                <a href="#" class="nav-menu-item d-block text-center position-relative active lh-100" aria-current="page">
-                    <i class="bi bi-cart4 icon-md"></i>
-                    <span class="badge nav-badge position-absolute gift-count">4</span>
-                    <p class="text-sm my-0 py-1">Cart</p>
-                </a>
-                <a href="#" class="nav-menu-item d-block text-center position-relative lh-100" id="app-notifications">
-                    <i class="bi bi-bell icon-md"></i>
-                    <span class="badge nav-badge position-absolute notifications-counter">9+</span>
-                    <p class="text-sm my-0 py-1">Notifications</p>
-                </a>
-            </div>
-        </nav>
+        <button type="submit" class="btn bg-switch btn-block btn-lg fixed-bottom text-white d-flex align-items-center justify-content-center rounded-0 d-md-none font-600">
+            <i class="material-icons me-1">touch_app</i> Place your order
+        </button>
         <!-- /.Fixed-Bottom Mobile Navbar -->
 
         <!-- Mobile Search -->
@@ -952,12 +915,12 @@
         </nav>
         <!-- /.Mobile Search -->
 
-        <div class="page-content" id="cart-page">
+        <div class="page-content breadcrumbed" id="cart-page">
             <div class="container">
                 <!-- Breadcrumbs -->
                 <nav class="d-flex align-items-center justify-content-md-between my-2" aria-label="breadcrumb">
-                    <h4 class="text-app-color font-600 my-0">Checkout</h4>
-                    <ol class="breadcrumb my-0 py-0">
+                    <h4 class="text-app-color font-600 my-0">Checkout Page</h4>
+                    <ol class="breadcrumb d-none d-md-inline-flex my-0 py-0">
                         <li class="breadcrumb-item"><a href="index.html">Store</a></li>
                         <li class="breadcrumb-item">Payments</li>
                         <li class="breadcrumb-item active text-capitalize" aria-current="page">Place Order</li>
@@ -969,44 +932,73 @@
                     <div class="col-12 col-xl-9 d-flex align-items-start zoom-out-section">
                         <div class="row">
                             <div class="col-12 col-xl-4">
-                                <!-- Options -->
-                                <ul class="list-group box-shadow-sm rounded-2 px-0 mx-0 mb-2" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <!-- Large Devices Options -->
+                                <ul class="list-group box-shadow-sm rounded-2 d-none d-xl-block px-0 mx-0 mb-2" id="delivery-information" role="tablist" aria-orientation="vertical">
                                     <li class="list-group-item dropdown-item w-100">
-                                        <a role="tab" href="javascript:void()" class="d-flex align-items-center text-app-color active" id="v-pills-recipients-tab" data-bs-toggle="pill" data-bs-target="#v-pills-recipients" aria-controls="v-pills-recipients" aria-selected="true">
+                                        <a role="tab" href="javascript:void()" class="d-flex align-items-center text-app-color active" id="recipients-tab" data-bs-toggle="pill" data-bs-target="#recipients" aria-controls="recipients" aria-selected="true">
                                             <i class="material-icons notifications">person_outline</i>
                                             <h6 class="text-app-color font-600 ms-2 my-0">Select Recipient</h6>
                                             <i class="material-icons ms-auto">chevron_right</i>
                                         </a>
                                     </li>
                                     <li class="list-group-item dropdown-item w-100">
-                                        <a role="tab" href="javascript:void()" class="d-flex align-items-center text-app-color" id="v-pills-delivery-details-tab" data-bs-toggle="pill" data-bs-target="#v-pills-delivery-details" aria-controls="v-pills-delivery-details" aria-selected="false">
+                                        <a role="tab" href="javascript:void()" class="d-flex align-items-center text-app-color" id="delivery-address-tab" data-bs-toggle="pill" data-bs-target="#delivery-address" aria-controls="delivery-address" aria-selected="false">
                                             <i class="material-icons notifications">person_pin_circle</i>
                                             <h6 class="text-app-color font-600 ms-2 my-0">Billing Info</h6>
                                             <i class="material-icons ms-auto">chevron_right</i>
                                         </a>
                                     </li>
                                     <li class="list-group-item dropdown-item w-100">
-                                        <a role="tab" href="javascript:void()" class="d-flex align-items-center text-app-color" id="v-pills-payment-method-tab" data-bs-toggle="pill" data-bs-target="#v-pills-payment-method" aria-controls="v-pills-payment-method" aria-selected="false">
+                                        <a role="tab" href="javascript:void()" class="d-flex align-items-center text-app-color" id="payment-method-tab" data-bs-toggle="pill" data-bs-target="#payment-method" aria-controls="payment-method" aria-selected="false">
                                             <i class="material-icons notifications">credit_card</i>
                                             <h6 class="text-app-color font-600 ms-2 my-0">Payment Details</h6>
                                             <i class="material-icons ms-auto">chevron_right</i>
                                         </a>
                                     </li>
                                     <li class="list-group-item dropdown-item w-100">
-                                        <a role="tab" href="javascript:void()" class="d-flex align-items-center text-app-color" id="v-pills-order-preview-tab" data-bs-toggle="pill" data-bs-target="#v-pills-order-preview" aria-controls="v-pills-order-preview" aria-selected="false">
+                                        <a role="tab" href="javascript:void()" class="d-flex align-items-center text-app-color" id="order-preview-tab" data-bs-toggle="pill" data-bs-target="#order-preview" aria-controls="order-preview" aria-selected="false">
                                             <i class="material-icons notifications">assignment</i>
                                             <h6 class="text-app-color font-600 ms-2 my-0">Order Preview</h6>
                                             <i class="material-icons ms-auto">chevron_right</i>
                                         </a>
                                     </li>
                                 </ul>
-                                <!-- /.Options -->
+                                <!-- /.Large Devices Options -->
+
+                                <!-- Mobile Devies Options -->
+                                <ul class="nav nav-tabs w-100 mb-2 d-xl-none" id="delivery-information" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a href="#" class="nav-link d-block text-center active" id="recipients-tab" data-bs-toggle="tab" data-bs-target="#recipients" role="button" role="tab" aria-controls="recipients" aria-selected="true">
+                                            <i class="bi bi-people icon-md"></i>
+                                            <p class="text-xs my-0 py-0">Recipients</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a href="#" class="nav-link d-block text-center" id="delivery-address-tab" data-bs-toggle="tab" data-bs-target="#delivery-address" role="button" role="tab" aria-controls="delivery-address" aria-selected="false">
+                                            <i class="bi bi-house icon-md"></i>
+                                            <p class="text-xs my-0 py-0">Address</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a href="#" class="nav-link d-block text-center" id="payment-method-tab" data-bs-toggle="tab" data-bs-target="#payment-method" role="button" role="tab" aria-controls="payment-method" aria-selected="false">
+                                            <i class="bi bi-credit-card icon-md"></i>
+                                            <p class="text-xs my-0 py-0">Payment</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a href="#" class="nav-link d-block text-center" id="order-preview-tab" data-bs-toggle="tab" data-bs-target="#order-preview" role="button" role="tab" aria-controls="order-preview" aria-selected="false">
+                                            <i class="bi bi-bag-check icon-md"></i>
+                                            <p class="text-xs my-0 py-0">Order</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- /.Mobile Devices Options -->
                             </div>
                             <div class="col-12 col-xl-8 mb-2">
                                 <!-- Tab Content -->
-                                <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-content" id="delivery-information">
                                     <!-- Recipient List -->
-                                    <div class="tab-pane fade bg-whitesmoke border rounded-2 box-shadow-sm p-3 show active" id="v-pills-recipients" role="tabpanel" aria-labelledby="v-pills-recipients-tab">
+                                    <div class="tab-pane fade bg-whitesmoke border rounded-2 box-shadow-sm p-3 show active" id="recipients" role="tabpanel" aria-labelledby="recipients-tab">
                                         <div class="d-block">
                                             <h5 class="font-600">Select your order recipient</h5>
                                             <p class="text-justify text-sm">
@@ -1128,7 +1120,7 @@
                                     <!-- /.Recipient List -->
 
                                     <!-- Delivery Details -->
-                                    <div class="tab-pane fade bg-whitesmoke border rounded-2 box-shadow-sm p-3" id="v-pills-delivery-details" role="tabpanel" aria-labelledby="v-pills-delivery-details-tab">
+                                    <div class="tab-pane fade bg-whitesmoke border rounded-2 box-shadow-sm p-3" id="delivery-address" role="tabpanel" aria-labelledby="delivery-address-tab">
                                         <div class="d-block">
                                             <h5 class="font-600">Delivery Info</h5>
                                             <p class="text-justify">
@@ -1138,14 +1130,14 @@
                                         <form method="post" class="row g-3 needs-validation" id="delivery-info-form" novalidate>
                                             <!-- Full name -->
                                             <div class="col col-md-6">
-                                                <label for="first-name" class="form-label">First name</label>
+                                                <label for="first-name" class="form-label mb-0">First name</label>
                                                 <input type="text" class="form-control" id="first-name" placeholder="John" required>
                                                 <div class="invalid-feedback">
                                                     Enter recipient's first name.
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-6">
-                                                <label for="last-name" class="form-label">Last name</label>
+                                                <label for="last-name" class="form-label mb-0">Last name</label>
                                                 <input type="text" class="form-control" id="last-name" placeholder="Doe" required>
                                                 <div class="invalid-feedback">
                                                     Enter recipient's last name.
@@ -1155,19 +1147,19 @@
 
                                             <!-- Contact Details -->
                                             <div class="col-12 col-md-6">
-                                                <label for="phone-number" class="form-label">Phone number</label>
+                                                <label for="phone-number" class="form-label mb-0">Phone number</label>
                                                 <div class="input-group has-validation">
                                                     <span class="input-group-text d-flex align-items-center" id="inputGroupPrepend">
-                                                        <img src="dist/images/countries/flag-of-Zimbabwe.png" height="15" width="22" alt="" class="me-1"> +263
+                                                        <img src="dist/images/countries/flag-of-Zimbabwe.png" height="15" width="22" alt="" class="me-1"> 263
                                                     </span>
-                                                    <input type="text" class="form-control" id="phone-number" placeholder="776021140" aria-describedby="inputGroupPrepend" required>
+                                                    <input type="tel" class="form-control" id="phone-number" placeholder="776021140" aria-describedby="inputGroupPrepend" required>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid phone number.
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-6">
-                                                <label for="email" class="form-label">Email (Optional)</label>
+                                                <label for="email" class="form-label mb-0">Email (Optional)</label>
                                                 <input type="email" class="form-control" id="email" placeholder="example@email.com">
                                                 <div class="invalid-feedback">
                                                     Please provide a valid email address.
@@ -1177,14 +1169,14 @@
 
                                             <!-- Address -->
                                             <div class="col-12 col-md-6">
-                                                <label for="address" class="form-label">Address</label>
+                                                <label for="address" class="form-label mb-0">Address</label>
                                                 <input type="text" class="form-control" id="address" placeholder="1234 Main St." required>
                                                 <div class="invalid-feedback">
                                                     Please provide your address.
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-6">
-                                                <label for="suburb" class="form-label">Suburb</label>
+                                                <label for="suburb" class="form-label mb-0">Suburb</label>
                                                 <select class="form-select" id="suburb" required>
                                                     <option selected disabled value="">Select Suburb</option>
                                                     <option>Adbernie</option>
@@ -1205,14 +1197,14 @@
                                             <!-- Addtional Info -->
                                             <h6 class="font-600 mb-0 pb-0">Add delivery instructions (Optional)</h6>
                                             <div class="col-12 mt-0">
-                                                <label for="additional-instructions" class="form-label">Do we need additional instructions to find this address?</label>
+                                                <label for="additional-instructions" class="form-label mb-0">Do we need additional instructions to find this address?</label>
                                                 <textarea class="form-control" name="additional-instructions" id="additional-instructions" cols="30" rows="4" placeholder="Provide details such as building description, a nearby landmark, or other navigation instructions."></textarea>
                                                 <div class="invalid-feedback">
                                                     Please provide your address.
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <label for="access-code" class="form-label">Do we need a security code or call box number to access this building?</label>
+                                                <label for="access-code" class="form-label mb-0">Do we need a security code or call box number to access this building?</label>
                                                 <input type="text" class="form-control" name="access-code" id="access-code" placeholder="1234"></textarea>
                                                 <div class="invalid-feedback">
                                                     Please provide your address.
@@ -1236,7 +1228,7 @@
                                     <!-- /.Delivery Details -->
 
                                     <!-- Payment Method -->
-                                    <div class="tab-pane fade bg-whitesmoke border rounded-2 box-shadow-sm p-3" id="v-pills-payment-method" role="tabpanel" aria-labelledby="v-pills-payment-method-tab">
+                                    <div class="tab-pane fade bg-whitesmoke border rounded-2 box-shadow-sm p-3" id="payment-method" role="tabpanel" aria-labelledby="payment-method-tab">
                                         <div class="d-block">
                                             <h5 class="font-600">Payment Method</h5>
                                             <p class="text-justify">
@@ -1244,7 +1236,7 @@
                                             </p>
                                             <img src="dist/images/app/payments.PNG" alt="" class="img-fluid">
                                         </div>
-                                        <form method="post" class="row g-4 needs-validation mt-2" id="billing-info-form" novalidate>
+                                        <form method="post" class="row g-3 needs-validation mt-2" id="delivery-address-form" novalidate>
                                             <div class="pl-3">
                                                 <div class="form-check my-1">
                                                     <input class="form-check-input payment-method" type="radio" name="payment-method" id="credit-card" value="credit-card" checked>
@@ -1274,28 +1266,28 @@
                                             <!-- Credit Card Details -->
                                             <div id="card-section" class="row">
                                                 <div class="col-12">
-                                                    <label for="card-holder" class="form-label">Name on card</label>
+                                                    <label for="card-holder" class="form-label mb-0">Name on card</label>
                                                     <input type="text" class="form-control" id="card-holder" placeholder="Full name as displayed on card." required>
                                                     <div class="invalid-feedback">
                                                         Please provide your full name.
                                                     </div>
                                                 </div>
-                                                <div class="col-12">
-                                                    <label for="credit-card-no" class="form-label">Credit card number</label>
+                                                <div class="col-12 mt-1">
+                                                    <label for="credit-card-no" class="form-label mb-0">Credit card number</label>
                                                     <input type="text" class="form-control" id="credit-card-no" name="credit-card-no" required>
                                                     <div class="invalid-feedback">
                                                         Enter your credit card number.
                                                     </div>
                                                 </div>
-                                                <div class="col-12 col-md-6">
-                                                    <label for="expiration" class="form-label">Expiration</label>
+                                                <div class="col-12 col-md-6 mt-1">
+                                                    <label for="expiration" class="form-label mb-0">Expiration</label>
                                                     <input type="date" class="form-control" id="expiration" name="expiration" required>
                                                     <div class="invalid-feedback">
                                                         Enter your credit card expiration date.
                                                     </div>
                                                 </div>
-                                                <div class="col-12 col-md-6">
-                                                    <label for="cvv" class="form-label">CVV</label>
+                                                <div class="col-12 col-md-6 mt-1">
+                                                    <label for="cvv" class="form-label mb-0">CVV</label>
                                                     <input type="text" class="form-control" id="cvv" name="cvv" required>
                                                     <div class="invalid-feedback">
                                                         Enter your credit card cvv number.
@@ -1308,12 +1300,12 @@
                                             <div id="paynow-section" class="d-none">
                                                 <p>This will use your EcoCash or OneMoney wallet to pay for this transaction.</p>
                                                 <div class="col-12 col-md-6">
-                                                    <label for="mobile-number" class="form-label">Mobile number</label>
+                                                    <label for="mobile-number" class="form-label mb-0">Mobile number</label>
                                                     <div class="input-group has-validation">
                                                         <span class="input-group-text d-flex align-items-center" id="inputGroupPrepend">
-                                                            <img src="dist/images/countries/flag-of-Zimbabwe.png" height="15" width="22" alt="" class="me-1"> +263
+                                                            <img src="dist/images/countries/flag-of-Zimbabwe.png" height="15" width="22" alt="" class="me-1"> 263
                                                         </span>
-                                                        <input type="text" class="form-control" id="mobile-number" aria-describedby="inputGroupPrepend" required>
+                                                        <input type="tel" class="form-control" id="mobile-number" aria-describedby="inputGroupPrepend" required>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid phone number.
                                                         </div>
@@ -1330,9 +1322,9 @@
                                     <!-- /.Payment Method -->
 
                                     <!-- Order Previewing -->
-                                    <div class="tab-pane fade bg-whitesmoke border rounded-2 box-shadow-sm p-2 w-100" id="v-pills-order-preview" role="tabpanel" aria-labelledby="v-pills-order-preview-tab">
+                                    <div class="tab-pane fade w-100" id="order-preview" role="tabpanel" aria-labelledby="order-preview-tab">
                                         <!-- Right Navbar -->
-                                        <nav class="box-shadow-sm bg-whitesmoke sticky-top border d-none d-md-block p-2">
+                                        <nav class="box-shadow-sm bg-whitesmoke sticky-top border rounded-2 d-none d-md-block p-2">
                                             <!-- Breadcrumbs -->
                                             <div aria-label="breadcrumb">
                                                 <ol class="breadcrumb mb-0 pb-0">
@@ -1383,7 +1375,7 @@
                                                             <p class="text-sm text-muted d-none d-xl-block my-0 py-0">
                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor est beatae quo.
                                                             </p>
-                                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                            <ul class="list-inline gift-star-rating align-items-center my-0 p-0">
                                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                                 <li class="list-inline-item text-gold">&starf;</li>
@@ -1472,7 +1464,7 @@
                                                             <p class="text-sm text-muted d-none d-xl-block my-0 py-0">
                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor est beatae quo.
                                                             </p>
-                                                            <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                            <ul class="list-inline gift-star-rating align-items-center my-0 p-0">
                                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                                 <li class="list-inline-item text-gold">&starf;</li>
                                                                 <li class="list-inline-item text-gold">&starf;</li>
@@ -1600,7 +1592,7 @@
                             </li>
                             <!-- /.Detail -->
                             <!-- Detail -->
-                            <li class="list-group-item dropdown-item">
+                            <li class="list-group-item dropdown-item d-none d-md-block">
                                 <form method="post" class="needs-validation" id="place-order-form" novalidate>
                                     <!-- Hidden Billing Info Details -->
                                     <input type="hidden" name="recipients-name" name="recipients-name" required>
@@ -1621,10 +1613,12 @@
                         </ul>
                         <div class="box-shadow-sm bg-whitesmoke rounded-2 p-2">
                             <h6 class="text-sm">Do you have a coupon?</h6>
-                            <div class="input-group my-1">
-                                <input type="text" class="form-control" placeholder="Coupon code" aria-label="Coupon code" aria-describedby="coupon-addon-btn">
-                                <button class="btn bg-switch text-white font-600 text-uppercase" type="submit" id="coupon-addon-btn">Redeem</button>
-                            </div>
+                            <form action="" method="post" class="needs-validation" id="redeem-coupon-form" novalidate>
+                                <div class="input-group my-1">
+                                    <input type="text" class="form-control" placeholder="Coupon code" aria-label="Coupon code" aria-describedby="coupon-addon-btn" required>
+                                    <button class="btn bg-switch text-white font-600 text-uppercase" type="submit" id="coupon-addon-btn">Redeem</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                     <!-- /.Cart Details -->
@@ -2387,12 +2381,14 @@
                     <p class="text-sm text-white">
                         Be the first to know of all our gift offers, sales, discounts, events and many more. Subscribe to our mailing list and you'll be notified of our exclusive deals.
                     </p>
-                    <div class="input-group my-1">
-                        <input type="text" class="form-control" placeholder="Your email address" aria-label="Your email address" id="toggle-mailing-list" aria-describedby="mailing-list" data-bs-toggle="modal" data-bs-target="#mailing-list-modal">
-                        <button class="btn bg-switch text-white font-600 text-uppercase" type="button" id="mailing-list">subscribe</button>
-                    </div>
+                    <form action="" method="post" class="needs-validation" id="toggle-form" novalidate>
+                        <div class="input-group my-1">
+                            <input type="text" class="form-control" placeholder="Email" aria-label="Email" id="toggle-mailing-list" aria-describedby="mailing-list" data-bs-toggle="modal" data-bs-target="#mailing-list-modal" required>
+                            <button class="btn bg-switch text-white font-600 text-uppercase" type="submit" id="mailing-list">subscribe</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-12 col-md-4 d-md-flex justify-content-md-center border-md-left border-white">
+                <div class="col-12 col-md-4 d-none d-md-flex justify-content-md-center border-md-left border-white">
                     <div class="d-flex">
                         <i class="fa fa-map-marker fa-2x align-self-center text-white me-2"></i>
                         <div class="d-block text-left">
@@ -2401,7 +2397,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 d-md-flex justify-content-md-center border-md-left border-white">
+                <div class="col-12 col-md-4 d-none d-md-flex justify-content-md-center border-md-left border-white">
                     <div class="d-flex">
                         <i class="material-icons fa-2x align-self-center text-white me-2">record_voice_over</i>
                         <div class="d-block text-left">
@@ -2486,27 +2482,28 @@
                 </div>
             </div>
             <hr>
-            <div class="row justify-content-md-between">
-                <div class="col-12 col-xl-6">
-                    <div class="d-flex align-items-center">
-                        <a href="#">
+            <div class="row align-items-md-center justify-content-sm-center justify-content-md-between gx-1">
+                <div class="col-12 col-xl-6 text-sm-center text-md-start">
+                    <div class="d-flex align-items-center justify-content-sm-center justify-content-md-start">
+                        <a href="#" class="socaial-account-link">
                             <i class="fa icon-md text-white fa-facebook-official " aria-hidden="true"></i>
                         </a>
-                        <a href="#">
+                        <a href="#" class="socaial-account-link">
                             <i class="fa icon-md text-white fa-twitter ms-2 " aria-hidden="true"></i>
                         </a>
-                        <a href="#">
+                        <a href="#" class="socaial-account-link">
                             <i class="fa icon-md text-white fa-instagram ms-2 " aria-hidden="true"></i>
                         </a>
-                        <a href="#">
+                        <a href="#" class="socaial-account-link">
                             <i class="fa icon-md text-white fa-whatsapp mx-2 " aria-hidden="true"></i>
                         </a>
-                        <h6 class="text-white text-sm font-600 my-0">&copy; 2021 Gifteros Inc. All Rights Reserved.</h6>
+                        <h6 class="d-none d-md-inline-flex text-white text-sm font-600 my-0">&copy; 2021 Gifteros Inc. All Rights Reserved.</h6>
                     </div>
+                    <h6 class="d-md-none text-center text-white text-sm font-600 my-0">&copy; 2021 Gifteros Inc. All Rights Reserved.</h6>
                 </div>
-                <div class="col-12 col-xl-6 text-md-end">
-                    <a href="/developer/tinashe.chaterera " class="text-sm">
-                        <h6 class="font-600 text-warning">Designed & Developed by TinaKing</h6>
+                <div class="col-12 col-xl-6 text-sm-center text-md-start text-xl-end developer">
+                    <a href="http://twitter.com/tinaking92">
+                        <h6 class="font-600 text-warning text-sm">Designed & Developed by TinaKing</h6>
                     </a>
                 </div>
             </div>
