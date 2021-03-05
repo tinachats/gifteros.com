@@ -2065,21 +2065,6 @@ footer.footer {
     color: hsl(208, 56%, 31%) !important;
 }
 
-.recipient-card {
-    max-height: 350px;
-}
-
-.recipient-card>.picture-frame {
-    position: relative;
-    height: 100px;
-}
-
-.recipient-card>.picture-frame>.user-thumbnail {
-    position: absolute;
-    top: 60px;
-    left: 10px;
-}
-
 
 /* Policy Banner */
 
@@ -3669,6 +3654,34 @@ a.text-underline:hover,
 
 /* /.iPad's Search display */
 
+#cart-page .nav-pills .show>.nav-link,
+#account-page .nav-pills .show>.nav-link {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 0 !important;
+}
+
+#cart-page .nav-pills .nav-link.active,
+#account-page .nav-pills .nav-link.active {
+    background-color: rgba(0, 0, 0, .125);
+    border-radius: 0 !important;
+}
+
+.img-bordered-sm {
+    border: 5px solid var(--border-color);
+}
+
+.recipient-card {
+    margin-top: 3rem;
+    height: auto;
+}
+
+.recipient-card>img.img-bordered-sm {
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 /*** /.Utility Classes ***/
 
@@ -3794,7 +3807,8 @@ a.text-underline:hover,
         grid-template-columns: repeat(2, 1fr);
     }
     .products-shelf.list-view,
-    .category-shelf.list-view {
+    .category-shelf.list-view,
+    .customer-recipients {
         grid-template-columns: 1fr;
     }
     .overlay {
@@ -3972,6 +3986,9 @@ a.text-underline:hover,
         top: 0;
         right: 0;
         left: 0;
+    }
+    .border-md-left {
+        border-left: 1px solid #fff;
     }
     .popover {
         min-width: 20%;
@@ -4374,11 +4391,17 @@ a.text-underline:hover,
     #cart-page .section-header {
         height: 68px;
     }
+    #cart-page .wishlist-shelf.cart-preview.grid-view {
+        grid-template-columns: repeat(2, 1fr);
+    }
     .filter-page .products-shelf.grid-view {
         grid-template-columns: repeat(4, 1fr);
     }
     .products-shelf.grid-view {
         grid-template-columns: repeat(6, 1fr);
+    }
+    #cart-page .wishlist-shelf.cart-preview.grid-view>.wishlist-item {
+        height: 370px;
     }
     #index-page.page-content {
         margin-top: 3rem;

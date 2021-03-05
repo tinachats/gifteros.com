@@ -144,11 +144,10 @@
         <!-- /.Side Action Panel -->
 
         <!-- Main Navbar -->
-        <header class="header box-shadow-sm  d-none d-md-block">
+        <header class="header fixed-md-top box-shadow-sm d-none d-md-block">
             <div class="container">
                 <!-- Main Navbar -->
                 <nav class="nav navbar-expand-md main-nav">
-                    <span role="button" class="material-icons menu-btn d-sm-inline-block d-md-none" title="Toggle Sidebar">menu</span>
                     <!-- Navbrand -->
                     <a href="index.html" class="navbar-brand font-700">
                         <img src="dist/images/app/gifteros.png" height="35" class="gifteros-logo" width="35" alt="">
@@ -157,7 +156,7 @@
                     <!-- /.Navbrand -->
 
                     <!-- Left Navbar Links -->
-                    <ul class="navbar-nav me-auto d-none d-md-flex">
+                    <ul class="navbar-nav left-navbar-links me-auto d-none d-md-flex">
                         <li class="nav-item dropdown">
                             <a class="nav-link text-sm font-600 mega-item" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Occasions</a>
                             <div class="dropdown-menu mega-menu box-shadow-sm rounded-2">
@@ -412,6 +411,11 @@
                         <li class="nav-item">
                             <a class="nav-link text-sm font-600" href="occasion.html">Hot Deals</a>
                         </li>
+                        <li class="nav-item d-none d-md-block d-lg-none ms-4 ipad-search-icon">
+                            <button type="button" class="btn btn-default circled-button-sm d-flex justify-content-center" onclick="ipadSearchBar()">
+                                <i class="material-icons text-color-switch pull-up-1">search</i>
+                            </button>
+                        </li>
                     </ul>
                     <!-- /.Left Navbar Links -->
 
@@ -443,355 +447,11 @@
                         <!-- /.App Currencies -->
 
                         <!-- Shopping Cart -->
-                        <li class="nav-item dropdown ms-3">
-                            <a href="#" class="nav-link icon-link" id="shopping-cart" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <li class="nav-item ms-3">
+                            <a href="cart.html" class="nav-link icon-link position-relative">
                                 <i class="bi bi-cart4 icon-md pull-up"></i>
-                                <span class="badge nav-badge gift-count">4</span>
+                                <span class="badge nav-badge gift-count pasition-absolute">4</span>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end app-menu rounded-2 box-shadow-sm cart-menu mt-0 p-0">
-                                <div class="shopping-bag rounded-2">
-                                    <div class="list-group-item box-shadow-sm rounded-top-2 lh-100 px-1 py-2 fixed-top">
-                                        <h6 class="lead font-600 ms-2 my-0">4 cart items</h6>
-                                    </div>
-                                    <!-- Cart Item -->
-                                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
-                                        <div class="d-flex justify-content-between align-items-start">
-                                            <div class="d-flex w-100">
-                                                <!-- Product Item -->
-                                                <div class="d-flex align-items-center">
-                                                    <div class="cart-menu-img-wrapper">
-                                                        <div class="d-sm-flex d-xl-none flex-column justify-content-center text-center cart-actions-sm">
-                                                            <i role="button" class="fa fa-chevron-circle-up text-success-warning subtract-product"></i>
-                                                            <span class="font-600 text-success-warning item-count">0</span>
-                                                            <i role="button" class="fa fa-chevron-circle-down text-success-warning increase-qty"></i>
-                                                        </div>
-                                                        <a href="">
-                                                            <img src="dist/images/gifts/15f45885de939d.jpg" height="55" width="55" alt="" class="rounded-2 align-self-center menu-item-img me-2">
-                                                        </a>
-                                                    </div>
-
-                                                    <!-- Product Item Details -->
-                                                    <div class="cart-item-details" id="cart-item-details">
-                                                        <p class="text-sm font-600 text-capitalize my-0 py-0">
-                                                            Awesome gift
-                                                        </p>
-                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
-                                                            <li class="list-inline-item text-gold">&starf;</li>
-                                                            <li class="list-inline-item text-gold">&starf;</li>
-                                                            <li class="list-inline-item text-gold">&starf;</li>
-                                                            <li class="list-inline-item text-gold">&starf;</li>
-                                                            <li class="list-inline-item text-muted">&star;</li>
-                                                            <span class="text-sm text-faded font-600">(35)</span>
-                                                        </ul>
-                                                        <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
-                                                            <span class="pr-2">2 in cart</span>
-                                                        </p>
-                                                    </div>
-                                                    <!-- Product Item Details -->
-                                                    <!-- Cart Actions -->
-                                                    <div class="hidden-product-actions w-100">
-                                                        <div class="d-flex align-items-center justify-content-center m-0 p-0 cursor">
-                                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Subtract quantity">remove_circle</span>
-                                                            <span role="button" class="product-actions text-faded mx-4">2</span>
-                                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Add more items">add_circle</span>
-                                                        </div>
-                                                    </div>
-                                                    <!-- /.Cart Actions -->
-                                                </div>
-                                                <!-- /.Product Item -->
-                                            </div>
-                                            <div class="d-block text-center">
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
-                                                <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!-- /.Cart Item -->
-                                    <!-- Cart Item -->
-                                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
-                                        <div class="d-flex justify-content-between align-items-start">
-                                            <div class="d-flex w-100">
-                                                <!-- Product Item -->
-                                                <div class="d-flex align-items-center">
-                                                    <div class="cart-menu-img-wrapper">
-                                                        <div class="d-sm-flex d-xl-none flex-column justify-content-center text-center cart-actions-sm">
-                                                            <i role="button" class="fa fa-chevron-circle-up text-success-warning subtract-product"></i>
-                                                            <span class="font-600 text-success-warning item-count">0</span>
-                                                            <i role="button" class="fa fa-chevron-circle-down text-success-warning increase-qty"></i>
-                                                        </div>
-                                                        <a href="">
-                                                            <img src="dist/images/gifts/15f45885de939d.jpg" height="55" width="55" alt="" class="rounded-2 align-self-center menu-item-img me-2">
-                                                        </a>
-                                                    </div>
-
-                                                    <!-- Product Item Details -->
-                                                    <div class="cart-item-details" id="cart-item-details">
-                                                        <p class="text-sm font-600 text-capitalize my-0 py-0">
-                                                            Awesome gift
-                                                        </p>
-                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
-                                                            <li class="list-inline-item text-gold">&starf;</li>
-                                                            <li class="list-inline-item text-gold">&starf;</li>
-                                                            <li class="list-inline-item text-gold">&starf;</li>
-                                                            <li class="list-inline-item text-gold">&starf;</li>
-                                                            <li class="list-inline-item text-muted">&star;</li>
-                                                            <span class="text-sm text-faded font-600">(35)</span>
-                                                        </ul>
-                                                        <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
-                                                            <span class="pr-2">2 in cart</span>
-                                                        </p>
-                                                    </div>
-                                                    <!-- Product Item Details -->
-                                                    <!-- Cart Actions -->
-                                                    <div class="hidden-product-actions w-100">
-                                                        <div class="d-flex align-items-center justify-content-center m-0 p-0 cursor">
-                                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Subtract quantity">remove_circle</span>
-                                                            <span role="button" class="product-actions text-faded mx-4">2</span>
-                                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Add more items">add_circle</span>
-                                                        </div>
-                                                    </div>
-                                                    <!-- /.Cart Actions -->
-                                                </div>
-                                                <!-- /.Product Item -->
-                                            </div>
-                                            <div class="d-block text-center">
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
-                                                <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!-- /.Cart Item -->
-                                    <!-- Cart Item -->
-                                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
-                                        <div class="d-flex justify-content-between align-items-start">
-                                            <div class="d-flex w-100">
-                                                <!-- Product Item -->
-                                                <div class="d-flex align-items-center">
-                                                    <div class="cart-menu-img-wrapper">
-                                                        <div class="d-sm-flex d-xl-none flex-column justify-content-center text-center cart-actions-sm">
-                                                            <i role="button" class="fa fa-chevron-circle-up text-success-warning subtract-product"></i>
-                                                            <span class="font-600 text-success-warning item-count">0</span>
-                                                            <i role="button" class="fa fa-chevron-circle-down text-success-warning increase-qty"></i>
-                                                        </div>
-                                                        <a href="">
-                                                            <img src="dist/images/gifts/15f45885de939d.jpg" height="55" width="55" alt="" class="rounded-2 align-self-center menu-item-img me-2">
-                                                        </a>
-                                                    </div>
-
-                                                    <!-- Product Item Details -->
-                                                    <div class="cart-item-details" id="cart-item-details">
-                                                        <p class="text-sm font-600 text-capitalize my-0 py-0">
-                                                            Awesome gift
-                                                        </p>
-                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
-                                                            <li class="list-inline-item text-gold">&starf;</li>
-                                                            <li class="list-inline-item text-gold">&starf;</li>
-                                                            <li class="list-inline-item text-gold">&starf;</li>
-                                                            <li class="list-inline-item text-gold">&starf;</li>
-                                                            <li class="list-inline-item text-muted">&star;</li>
-                                                            <span class="text-sm text-faded font-600">(35)</span>
-                                                        </ul>
-                                                        <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
-                                                            <span class="pr-2">2 in cart</span>
-                                                        </p>
-                                                    </div>
-                                                    <!-- Product Item Details -->
-                                                    <!-- Cart Actions -->
-                                                    <div class="hidden-product-actions w-100">
-                                                        <div class="d-flex align-items-center justify-content-center m-0 p-0 cursor">
-                                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Subtract quantity">remove_circle</span>
-                                                            <span role="button" class="product-actions text-faded mx-4">2</span>
-                                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Add more items">add_circle</span>
-                                                        </div>
-                                                    </div>
-                                                    <!-- /.Cart Actions -->
-                                                </div>
-                                                <!-- /.Product Item -->
-                                            </div>
-                                            <div class="d-block text-center">
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
-                                                <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!-- /.Cart Item -->
-                                    <!-- Cart Item -->
-                                    <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
-                                        <div class="d-flex justify-content-between align-items-start">
-                                            <div class="d-flex w-100">
-                                                <!-- Product Item -->
-                                                <div class="d-flex align-items-center">
-                                                    <div class="cart-menu-img-wrapper">
-                                                        <div class="d-sm-flex d-xl-none flex-column justify-content-center text-center cart-actions-sm">
-                                                            <i role="button" class="fa fa-chevron-circle-up text-success-warning subtract-product"></i>
-                                                            <span class="font-600 text-success-warning item-count">0</span>
-                                                            <i role="button" class="fa fa-chevron-circle-down text-success-warning increase-qty"></i>
-                                                        </div>
-                                                        <a href="">
-                                                            <img src="dist/images/gifts/15f45885de939d.jpg" height="55" width="55" alt="" class="rounded-2 align-self-center menu-item-img me-2">
-                                                        </a>
-                                                    </div>
-
-                                                    <!-- Product Item Details -->
-                                                    <div class="cart-item-details" id="cart-item-details">
-                                                        <p class="text-sm font-600 text-capitalize my-0 py-0">
-                                                            Awesome gift
-                                                        </p>
-                                                        <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
-                                                            <li class="list-inline-item text-gold">&starf;</li>
-                                                            <li class="list-inline-item text-gold">&starf;</li>
-                                                            <li class="list-inline-item text-gold">&starf;</li>
-                                                            <li class="list-inline-item text-gold">&starf;</li>
-                                                            <li class="list-inline-item text-muted">&star;</li>
-                                                            <span class="text-sm text-faded font-600">(35)</span>
-                                                        </ul>
-                                                        <p class="text-sm font-500 text-lowercase text-faded my-0 py-0 d-flex">
-                                                            <span class="pr-2">2 in cart</span>
-                                                        </p>
-                                                    </div>
-                                                    <!-- Product Item Details -->
-                                                    <!-- Cart Actions -->
-                                                    <div class="hidden-product-actions w-100">
-                                                        <div class="d-flex align-items-center justify-content-center m-0 p-0 cursor">
-                                                            <span role="button" class="product-actions material-icons text-success subtract-product" data-id="" title="Subtract quantity">remove_circle</span>
-                                                            <span role="button" class="product-actions text-faded mx-4">2</span>
-                                                            <span role="button" class="product-actions material-icons text-success increase-qty" data-id="" title="Add more items">add_circle</span>
-                                                        </div>
-                                                    </div>
-                                                    <!-- /.Cart Actions -->
-                                                </div>
-                                                <!-- /.Product Item -->
-                                            </div>
-                                            <div class="d-block text-center">
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm usd-price">US$36.29</p>
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zar-price d-none">R273.29</p>
-                                                <p class="font-600 my-0 pt-0 pb-1 text-sm zwl-price d-none">ZW$2948.38</p>
-                                                <span role="button" class="fa fa-trash-o fa-2x text-danger remove-item" data-id="" onclick="removeItem()" title="Remove Item" data-action="remove-product"></span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!-- /.Cart Item -->
-                                </div>
-                                <!-- Cart Details -->
-                                <li class="list-group-item w-100 lh-100 font-600 text-sm rounded-bottom-2" id="cart-action-btns">
-                                    <!-- Cart Subtotal -->
-                                    <div class="usd-price">
-                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
-                                            <span class="text-capitalize">Subtotal Amount:</span>
-                                            <span class="usd-subtotal">US$0.00</span>
-                                        </h6>
-                                    </div>
-                                    <div class="zar-price d-none">
-                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
-                                            <span class="text-capitalize">Subtotal Amount:</span>
-                                            <span class="zar-subtotal">R0.00</span>
-                                        </h6>
-                                    </div>
-                                    <div class="zwl-price d-none">
-                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
-                                            <span class="text-capitalize">Subtotal Amount:</span>
-                                            <span class="zwl-subtotal">ZW$0.00</span>
-                                        </h6>
-                                    </div>
-                                    <!-- /.Cart Subtotal -->
-
-                                    <!-- Delivery charges -->
-                                    <div class="usd-price">
-                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
-                                            <span class="text-capitalize">Delivery Costs:</span>
-                                            <span class="usd-delivery-cost">US$3.39</span>
-                                        </h6>
-                                    </div>
-                                    <div class="zar-price d-none">
-                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
-                                            <span class="text-capitalize">Delivery Costs:</span>
-                                            <span class="zar-delivery-cost">R283.48</span>
-                                        </h6>
-                                    </div>
-                                    <div class="zwl-price d-none">
-                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
-                                            <span class="text-capitalize">Delivery Costs:</span>
-                                            <span class="zwl-delivery-cost">ZW$384.48</span>
-                                        </h6>
-                                    </div>
-                                    <!-- /.Delivery Charges -->
-                                    <!-- /.Delivery Charges -->
-
-                                    <!-- Taxes & Discounts -->
-                                    <div class="usd-price">
-                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
-                                            <span class="text-capitalize">Discount:</span>
-                                            <span class="usd-discount">US$3.48</span>
-                                        </h6>
-                                    </div>
-                                    <div class="zar-price d-none">
-                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
-                                            <span class="text-capitalize">Discount:</span>
-                                            <span class="zar-discount">R49.39</span>
-                                        </h6>
-                                    </div>
-                                    <div class="zwl-price d-none">
-                                        <h6 class="font-500 d-flex justify-content-between align-items-center my-0 py-0">
-                                            <span class="text-capitalize">Discount:</span>
-                                            <span class="zwl-discount">ZW$393.39</span>
-                                        </h6>
-                                    </div>
-                                    <hr class="my-1">
-                                    <!-- /.Taxes & Discounts -->
-
-                                    <!-- Cart Total -->
-                                    <div class="usd-price">
-                                        <h6 class="font-600 d-flex justify-content-between align-items-center my-0 py-0">
-                                            <span class="text-capitalize">Cart Total:</span>
-                                            <span class="usd-total">US$0.00</span>
-                                        </h6>
-                                    </div>
-                                    <div class="zar-price d-none">
-                                        <h6 class="font-600 d-flex justify-content-between align-items-center my-0 py-0">
-                                            <span class="text-capitalize">Cart Total:</span>
-                                            <span class="zar-total">R0.00</span>
-                                        </h6>
-                                    </div>
-                                    <div class="zwl-price d-none">
-                                        <h6 class="font-600 d-flex justify-content-between align-items-center my-0 py-0">
-                                            <span class="text-capitalize">Cart Total:</span>
-                                            <span class="zwl-total">ZW$0.00</span>
-                                        </h6>
-                                    </div>
-                                    <!-- /.Cart Total -->
-
-                                    <!-- Hidden Inputs -->
-                                    <input type="hidden" name="cart-usd-subtotal" id="cart-usd-subtotal">
-                                    <input type="hidden" name="cart-zar-subtotal" id="cart-zar-subtotal">
-                                    <input type="hidden" name="cart-zwl-subtotal" id="cart-zwl-subtotal">
-                                    <input type="hidden" name="cart-usd-total" id="cart-usd-total">
-                                    <input type="hidden" name="cart-zar-total" id="cart-zar-total">
-                                    <input type="hidden" name="cart-zwl-total" id="cart-zwl-total">
-                                    <!-- /.Hidden Inputs -->
-
-                                    <!-- Action Buttons -->
-                                    <div class="cart-action-btns">
-                                        <div class="d-flex align-items-center justify-content-center mt-2">
-                                            <button class="btn btn-warning btn-sm btn-block font-600 d-flex align-items-center justify-content-center clear-cart me-1">
-                                                <i class="material-icons me-1">delete_sweep</i>
-                                                Clear Cart
-                                            </button>
-                                            <a role="button" href="cart.html" class="btn btn-primary btn-sm btn-block font-600 d-flex align-items-center justify-content-center checkout-btn m-0">
-                                                Go to Cart
-                                                <i class="material-icons ms-1">arrow_forward</i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- /.Action Buttons -->
-                                </li>
-                                <!-- /.Cart Details -->
-                            </ul>
                         </li>
                         <!-- /.Shopping Cart -->
 
@@ -835,34 +495,33 @@
                                             <a href="" class="text-sm font-600">Forgot password?</a>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-sm btn-primary rounded-pill lead font-600 btn-block mt-2">
+                                    <button type="submit" class="btn btn-sm bg-switch text-white lead font-600 btn-block btn-lg mt-2">
                                         <span class="text-white">Sign in</span>
                                     </button>
                                 </form>
 
                                 <div class="flex-column justify-content-center">
                                     <div class="division-block">
-                                        <hr class="divider bg-border-color d-flex justify-content-center">
-                                        <strong class="divider-title text-uppercase text-muted">or</strong>
+                                        <hr class="divider bg-border-color d-flex justify-content-center position-relative">
+                                        <strong class="divider-title bg-whitesmoke text-uppercase text-muted">or</strong>
                                     </div>
-                                    <div class="d-flex justify-content-center align-items-center mt-0">
-                                        <a role="button" href="" class="btn btn-outline-primary btn-sm social-login-btn" title="Sign-in with Facebook">
-                                            <i class="fa fa-facebook text-app-color-inverse"></i>
+                                    <div class="d-flex justify-content-center align-items-center mb-3 mt-0">
+                                        <a role="button" href="" class="btn btn-outline-switch btn-sm social-login-btn" title="Sign-in with Facebook">
+                                            <i class="fa fa-facebook"></i>
                                         </a>
-                                        <a role="button" href="" class="btn btn-outline-primary btn-sm mx-3 social-login-btn" title="Sign-in with Google">
-                                            <i class="fa fa-google text-app-color-inverse"></i>
+                                        <a role="button" href="" class="btn btn-outline-switch btn-sm mx-3 social-login-btn" title="Sign-in with Google">
+                                            <i class="fa fa-google"></i>
                                         </a>
-                                        <a role="button" href="" class="btn btn-outline-primary btn-sm social-login-btn me-3" title="Sign-in with Twitter">
-                                            <i class="fa fa-twitter text-app-color-inverse"></i>
+                                        <a role="button" href="" class="btn btn-outline-switch btn-sm social-login-btn me-3" title="Sign-in with Twitter">
+                                            <i class="fa fa-twitter"></i>
                                         </a>
-                                        <a role="button" href="" class="btn btn-outline-primary btn-sm social-login-btn" title="Sign-in with Instagram">
-                                            <i class="fa fa-instagram text-app-color-inverse"></i>
+                                        <a role="button" href="" class="btn btn-outline-switch btn-sm social-login-btn" title="Sign-in with Instagram">
+                                            <i class="fa fa-instagram"></i>
                                         </a>
                                     </div>
                                 </div>
-                                <hr class="mb-0 pb-0">
-                                <div class="d-flex align-items-center w-100 mb-2">
-                                    Don't have an account? <a href="/register" class="ms-1 d-flex align-items-center">Sign-Up <i class="fa fa-caret-right ms-1"></i></a>
+                                <div class="d-flex align-items-center justify-content-center text-sm w-100 my-2">
+                                    New to Gifteros? <a href="sign-up.html" class="ms-1 d-flex align-items-center">Create an account.</a>
                                 </div>
                             </div>
                         </li>
@@ -876,7 +535,7 @@
                 <form method="get" action="/search" id="search-form" class="bg-whitesmoke">
                     <div class="form-group icon-form-group" id="search-bar">
                         <i class="material-icons icon text-faded">search</i>
-                        <input type="search" name="search" id="search" class="form-control" placeholder="Search...">
+                        <input type="search" name="search" id="search" class="form-control" placeholder="Search">
                         <ul class="list-group bg-whitesmoke search-list rounded-bottom-2 d-none px-0">
                             <!-- Search Result -->
                             <li class="list-group-item rounded-0 lh-100 px-1 py-2 cart-menu-item">
@@ -1330,11 +989,9 @@
                                                 <div class="border-right mx-3"></div>
                                                 <div class="zw-prices text-center w-50">
                                                     <p class="font-600 text-sm text-uppercase zar-price text-faded my-0 py-0">price in zar</p>
-                                                    <p class="font-600 text-sm text-uppercase zwl-price d-none text-faded my-0 py-0">price in zwl</p>
-                                                    <p class="font-600 text-sm text-uppercase usd-price d-none text-faded my-0 py-0">price in zar</p>
-                                                    <h5 class="lead text-app-color font-600 my-0 zar-price py-0">R364.49</h5>
-                                                    <h5 class="lead text-app-color font-600 my-0 zwl-price d-none py-0">$2646.48</h5>
-                                                    <h5 class="lead text-app-color font-600 my-0 usd-price d-none py-0">R364.49</h5>
+                                                    <h5 class="lead text-app-color d-flex align-items-center justify-content-center font-600 my-0 py-0">
+                                                        R<span id="gift-price1">364.49</span>
+                                                    </h5>
                                                 </div>
                                             </div>
 
@@ -1347,11 +1004,11 @@
                                             <!-- /.Hidden custom inputs -->
 
                                             <div class="d-flex align-items-center justify-content-center">
-                                                <button type="button" class="btn btn-success circled-button d-grid text-center justify-content-center">
+                                                <button type="button" class="btn btn-success circled-button d-grid text-center justify-content-center decrease-qty" data-id="1">
                                                     <i class="material-icons m-auto text-white">remove</i>
                                                 </button>
-                                                <input type="text" name="qty" id="item-count" class="form-control border-0 font-600 display-4 text-success text-center" value="0">
-                                                <button type="submit" class="btn btn-success circled-button d-grid text-center justify-content-center">
+                                                <input type="text" name="qty" id="item-count" class="form-control border-0 font-600 display-4 text-success text-center quantity-input" data-id="1" value="0">
+                                                <button type="submit" class="btn btn-success circled-button d-grid text-center justify-content-center increase-qty" data-id="1">
                                                     <i class="material-icons m-auto text-white">add</i>
                                                 </button>
                                             </div>
@@ -1367,7 +1024,7 @@
                                             <p class="text-faded my-0 py-0">
                                                 <span class="text-sm text-faded">Estimated delivery:</span>
                                                 <span class="text-primary text-sm" id="delivery-dates">3 - 7</span> <span class="text-faded">days</span>
-                                                <i class="fa fa-question-circle ms-1" data-bs-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="If you finish the payment today, your order will arrive within the estimated delivery time."></i>
+                                                <i class="fa fa-question-circle ms-1" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="If you finish the payment today, your order will arrive within the estimated delivery time."></i>
                                             </p>
                                         </div>
                                         <!-- /.Delivery Details -->
@@ -1377,13 +1034,13 @@
 
                                 <!-- Hidden Inputs -->
                                 <input type="hidden" name="hidden-gift-id1" id="hidden-gift-id1" value="1">
-                                <input type="hidden" name="hidden-gift-name1" id="hidden-gift-name1" value="White D&G Handbag">
+                                <input type="hidden" name="hidden-gift-name1" id="hidden-gift-name1" value="Queen-Sized Quilted Comforter">
                                 <input type="hidden" name="hidden-gift-category1" id="hidden-gift-category1" value="Bags">
-                                <input type="hidden" name="hidden-gift-image1" id="hidden-gift-image1" value="15f4607d0b3c65.jpg">
-                                <input type="hidden" name="hidden-gift-price1" id="hidden-gift-price1" value="36.28">
+                                <input type="hidden" name="hidden-gift-image1" id="hidden-gift-image1" value="15f4598bf99479.2.jpg">
+                                <input type="hidden" name="hidden-gift-price1" id="hidden-gift-price1" value="12.38">
                                 <input type="hidden" name="hidden-gift-qty1" id="hidden-gift-qty1" value="1">
                                 <input type="hidden" name="hidden-gift-units1" id="hidden-gift-units1" value="100">
-                                <input type="hidden" name="hidden-gift-description1" id="hidden-gift-description1" value="36.28">
+                                <input type="hidden" name="hidden-gift-description1" id="hidden-gift-description1" value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor est beatae quo.">
                                 <!-- /.Hidden Inputs -->
                             </div>
                             <!-- /.Product Details -->
@@ -3372,139 +3029,231 @@
     </div>
     <!-- /.Report Review Modal -->
 
-    <!-- Sticky Bottom Footer -->
-    <footer class=" footer bg-meshgrid mt-5 ">
-        <div class="container my-2 ">
-            <div class="row align-items-md-center ">
-                <div class="col-12 col-md-4 ">
-                    <h5 class="font-600 text-white ">Be the first to know</h5>
-                    <p class="text-sm text-white ">
-                        Be the first to know of all our gift offers, sales, discounts, events and many more. Subscribe to our mailing list and you'll be notified of our exclusive deals.
+    <!-- Mailing List Modal -->
+    <div class="modal fade rounded-0" id="mailing-list-modal" tabindex="-1" role="dialog" aria-labelledby="mailing-list-modal" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header pt-0 pb-1 shadow-sm">
+                    <div class="modal-title d-block" id="mailing-modalLabel">
+                        <h6 class="mb-0 p-3 font-600">Join the mailing list</h6>
+                        <small class="mt-0 review-modal-title text-capitalize">
+                        </small>
+                    </div>
+                    <button type="button" data-bs-dismiss="modal" class="btn-close" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-justify" id="mailing-modal-text">
+                        Our emails are filled with the latest news, offers and product launches from Gifteros. We may target communications based on your location, interests, other information you provide and the types of products you purchase from us. You can unsubscribe at
+                        any time by clicking the link in the email we send to you or by visiting the preference settings once you've an account setup with us.
                     </p>
-                    <form method="post " class="needs-validation " novalidate>
-                        <div class="input-group ">
-                            <input type="text " class="form-control " placeholder="Your email address " aria-label="Your email address " id="toggle-mailing-list ">
-                            <div class="input-group-append ">
-                                <span class="input-group-text text-white text-uppercase bg-primary " id="subscribe ">subscribe</span>
+                    <hr class="my py-0">
+                    <form class="row g-3 needs-validation" method="post" id="subscription-form" novalidate>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group subscription-fg">
+                                <label class="text-sm font-600 mb-0 text-faded" for="full-name">Full name</label>
+                                <i class="material-icons text-faded">person</i>
+                                <input type="text" class="form-control subscription-input text-capitalize" id="full-name" name="full-name" placeholder="John Doe" required spellcheck="false">
+                                <span class="invalid-feedback">Please provide your name.</span>
                             </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group subscription-fg">
+                                <label class="text-sm font-600 mb-0 text-faded" for="email-address">Email address</label>
+                                <i class="material-icons text-faded">email</i>
+                                <input type="email" class="form-control subscription-input" id="email-address" name="email-address" placeholder="name@example.com" required spellcheck="false">
+                                <span class="invalid-feedback">Please provide your email.</span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group subscription-fg w-100">
+                                <label class="text-sm font-600 mb-0 text-faded" for="mobile-number">Mobile No.</label>
+                                <div class="input-group mb-3">
+                                    <button class="btn btn-secondary d-flex align-items-center justify-content-center" type="button" id="country-code">
+                                        <img data-src="dist/images/countries/flag-of-Zimbabwe.png" src="dist/images/preloaders/gear.svg" height="15" width="22" loading="lazy" class="me-1 lazy"> 263
+                                    </button>
+                                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="country-code" required>
+                                </div>
+                                <span class="invalid-feedback">9 digit mobile no. required</span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group subscription-fg">
+                                <label class="text-sm font-600 mb-0 text-faded" for="customer-location">Location</label>
+                                <i class="material-icons text-faded">person_pin_circle</i>
+                                <input type="text" class="form-control text-capitalize subscription-input" id="customer-location" name="customer-location" placeholder="123 First St, Warren Hills, Harare" required>
+                                <span class="invalid-feedback">Please provide your location.</span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="birthday" class="mb-0 text-sm font-600 text-faded">Birthday</label>
+                            <!-- Birthday Picker -->
+                            <input type="date" name="birthday" id="birthday" class="form-control" required>
+                            <!-- Birthday Picker -->
+                            <span class="invalid-feedback text-sm">Birthday required!</span>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label class="text-sm font-600 mb-0 text-faded" for="gender">Gender</label>
+                            <br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+                                <label class="form-check-label" for="male">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
+                                <label class="form-check-label" for="female">Female</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="other" value="other" required>
+                                <label class="form-check-label" for="other">Other</label>
+                            </div>
+                            <span class="invalid-feedback">Please provide your gender.</span>
+                        </div>
+                        <p class="text-sm agreement" data-value="strongly-disagree">
+                            By subscribing to receive emails you agree to our <a href="terms.php">terms and policy.</a>
+                        </p>
+                        <input type="hidden" name="action" value="subscribe">
+                        <div class="d-flex align-items-center justify-content-center my-1">
+                            <a role="button" href="#" class="btn btn-outline-light text-dark rounded-pill px-3 font-600 me-3" data-bs-dismiss="modal">Cancel</a>
+                            <button type="submit" class="btn btn-primary rounded-pill px-3 font-600" id="subscribe-btn">
+                                Subscribe newsletter
+                            </button>
                         </div>
                     </form>
                 </div>
-                <div class="col-12 col-md-4 d-md-flex justify-content-md-center border-left border-white ">
-                    <div class="d-flex ">
-                        <i class="fa fa-map-marker fa-2x align-self-center text-white me-2 "></i>
-                        <div class="d-block text-left ">
-                            <h5 class="font-600 text-white ">Gifts Finder</h5>
-                            <p class="text-sm text-white ">Find gifts trending nearby</p>
+            </div>
+        </div>
+    </div>
+    <!-- /.Mailing List Modal -->
+
+    <!-- Sticky Bottom Footer -->
+    <footer class="footer bg-meshgrid mt-5">
+        <div class="container my-2">
+            <div class="row align-items-md-center">
+                <div class="col-12 col-md-4">
+                    <h5 class="font-600 text-white">Be the first to know</h5>
+                    <p class="text-sm text-white">
+                        Be the first to know of all our gift offers, sales, discounts, events and many more. Subscribe to our mailing list and you'll be notified of our exclusive deals.
+                    </p>
+                    <div class="input-group my-1">
+                        <input type="text" class="form-control" placeholder="Your email address" aria-label="Your email address" id="toggle-mailing-list" aria-describedby="mailing-list" data-bs-toggle="modal" data-bs-target="#mailing-list-modal">
+                        <button class="btn bg-switch text-white font-600 text-uppercase" type="button" id="mailing-list">subscribe</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 d-md-flex justify-content-md-center border-md-left border-white">
+                    <div class="d-flex">
+                        <i class="fa fa-map-marker fa-2x align-self-center text-white me-2"></i>
+                        <div class="d-block text-left">
+                            <h5 class="font-600 text-white">Gifts Finder</h5>
+                            <p class="text-sm text-white">Find gifts trending nearby</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 d-md-flex justify-content-md-center border-left border-white ">
-                    <div class="d-flex ">
-                        <i class="material-icons fa-2x align-self-center text-white me-2 ">record_voice_over</i>
-                        <div class="d-block text-left ">
-                            <h5 class="font-600 text-white ">Customer Services</h5>
-                            <p class="text-sm text-white ">Contact us here</p>
+                <div class="col-12 col-md-4 d-md-flex justify-content-md-center border-md-left border-white">
+                    <div class="d-flex">
+                        <i class="material-icons fa-2x align-self-center text-white me-2">record_voice_over</i>
+                        <div class="d-block text-left">
+                            <h5 class="font-600 text-white">Customer Services</h5>
+                            <p class="text-sm text-white">Contact us here</p>
                         </div>
                     </div>
                 </div>
             </div>
             <hr>
-            <div class="row justify-content-between ">
-                <div class="col-6 col-md-3 ">
-                    <h6 class="font-600 text-white ">Discover Gifteros</h6>
-                    <ul class="px-0 ">
+            <div class="row justify-content-between">
+                <div class="col-6 col-md-3">
+                    <h6 class="font-600 text-white">Discover Gifteros</h6>
+                    <ul class="px-0">
                         <li>
-                            <a href="/about-us ">About us</a>
+                            <a href="/about-us">About us</a>
                         </li>
                         <li>
-                            <a href="/blog ">Blog</a>
+                            <a href="/blog">Blog</a>
                         </li>
                         <li>
-                            <a href="/careers ">Careers</a>
+                            <a href="/careers">Careers</a>
                         </li>
                         <li>
-                            <a href="/partner ">Become a Partner</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md-3 ">
-                    <h6 class="font-600 text-white ">Shopping with us</h6>
-                    <ul class="px-0 ">
-                        <li>
-                            <a href="# ">Gift Customizations</a>
-                        </li>
-                        <li>
-                            <a href="# ">Making Payments</a>
-                        </li>
-                        <li>
-                            <a href="# ">Delivery Options</a>
-                        </li>
-                        <li>
-                            <a href="/return-and-exchanges ">Return & Exchanges</a>
-                        </li>
-                        <li>
-                            <a href="/order-tracking ">Order Tracking</a>
-                        </li>
-                        <li>
-                            <a href="/refunds ">Refunds</a>
+                            <a href="/partner">Become a Partner</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-6 col-md-3 ">
-                    <h6 class="font-600 text-white ">Legal</h6>
-                    <ul class="px-0 ">
+                <div class="col-6 col-md-3">
+                    <h6 class="font-600 text-white">Shopping with us</h6>
+                    <ul class="px-0">
                         <li>
-                            <a href="/terms-and-conditions ">Terms & Conditions</a>
+                            <a href="#">Gift Customizations</a>
                         </li>
                         <li>
-                            <a href="/cookie-policy ">Cookies</a>
+                            <a href="#">Making Payments</a>
                         </li>
                         <li>
-                            <a href="/privacy ">Privacy</a>
+                            <a href="#">Delivery Options</a>
+                        </li>
+                        <li>
+                            <a href="/return-and-exchanges">Return & Exchanges</a>
+                        </li>
+                        <li>
+                            <a href="/order-tracking">Order Tracking</a>
+                        </li>
+                        <li>
+                            <a href="/refunds">Refunds</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-6 col-md-3 ">
-                    <h6 class="font-600 text-white ">Help</h6>
-                    <ul class="px-0 ">
+                <div class="col-6 col-md-3">
+                    <h6 class="font-600 text-white">Legal</h6>
+                    <ul class="px-0">
                         <li>
-                            <a href="/contact-us ">Contact Us</a>
+                            <a href="terms.html-and-conditions">Terms & Conditions</a>
                         </li>
                         <li>
-                            <a href="/faq ">FAQ</a>
+                            <a href="/cookie-policy">Cookies</a>
                         </li>
                         <li>
-                            <a href="/brands ">Brands</a>
+                            <a href="/privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="font-600 text-white">Help</h6>
+                    <ul class="px-0">
+                        <li>
+                            <a href="/contact-us">Contact Us</a>
                         </li>
                         <li>
-                            <a href="/site-map ">Site map</a>
+                            <a href="/faq">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="/brands">Brands</a>
+                        </li>
+                        <li>
+                            <a href="/site-map">Site map</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <hr>
-            <div class="row justify-content-md-between ">
-                <div class="col-12 col-xl-6 ">
-                    <div class="d-flex align-items-center ">
-                        <a href="# ">
-                            <i class="fa icon-md text-white fa-facebook-official " aria-hidden="true "></i>
+            <div class="row justify-content-md-between">
+                <div class="col-12 col-xl-6">
+                    <div class="d-flex align-items-center">
+                        <a href="#">
+                            <i class="fa icon-md text-white fa-facebook-official " aria-hidden="true"></i>
                         </a>
-                        <a href="# ">
-                            <i class="fa icon-md text-white fa-twitter ms-2 " aria-hidden="true "></i>
+                        <a href="#">
+                            <i class="fa icon-md text-white fa-twitter ms-2 " aria-hidden="true"></i>
                         </a>
-                        <a href="# ">
-                            <i class="fa icon-md text-white fa-instagram ms-2 " aria-hidden="true "></i>
+                        <a href="#">
+                            <i class="fa icon-md text-white fa-instagram ms-2 " aria-hidden="true"></i>
                         </a>
-                        <a href="# ">
-                            <i class="fa icon-md text-white fa-whatsapp mx-2 " aria-hidden="true "></i>
+                        <a href="#">
+                            <i class="fa icon-md text-white fa-whatsapp mx-2 " aria-hidden="true"></i>
                         </a>
-                        <h6 class="text-muted text-sm font-600 my-0 ">&copy; 2021 Gifteros Inc. All Rights Reserved.</h6>
+                        <h6 class="text-white text-sm font-600 my-0">&copy; 2021 Gifteros Inc. All Rights Reserved.</h6>
                     </div>
                 </div>
-                <div class="col-12 col-xl-6 text-md-end ">
-                    <a href="/developer/tinashe.chaterera " class="text-sm ">
-                        <h6 class="font-600 text-faded ">Designed & Developed by TinaKing</h6>
+                <div class="col-12 col-xl-6 text-md-end">
+                    <a href="/developer/tinashe.chaterera " class="text-sm">
+                        <h6 class="font-600 text-warning">Designed & Developed by TinaKing</h6>
                     </a>
                 </div>
             </div>

@@ -1516,139 +1516,231 @@
     </div>
     <!-- /.Settings -->
 
-    <!-- Sticky Bottom Footer -->
-    <footer class=" footer bg-meshgrid mt-5 ">
-        <div class="container my-2 ">
-            <div class="row align-items-md-center ">
-                <div class="col-12 col-md-4 ">
-                    <h5 class="font-600 text-white ">Be the first to know</h5>
-                    <p class="text-sm text-white ">
-                        Be the first to know of all our gift offers, sales, discounts, events and many more. Subscribe to our mailing list and you'll be notified of our exclusive deals.
+    <!-- Mailing List Modal -->
+    <div class="modal fade rounded-0" id="mailing-list-modal" tabindex="-1" role="dialog" aria-labelledby="mailing-list-modal" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header pt-0 pb-1 shadow-sm">
+                    <div class="modal-title d-block" id="mailing-modalLabel">
+                        <h6 class="mb-0 p-3 font-600">Join the mailing list</h6>
+                        <small class="mt-0 review-modal-title text-capitalize">
+                        </small>
+                    </div>
+                    <button type="button" data-bs-dismiss="modal" class="btn-close" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-justify" id="mailing-modal-text">
+                        Our emails are filled with the latest news, offers and product launches from Gifteros. We may target communications based on your location, interests, other information you provide and the types of products you purchase from us. You can unsubscribe at
+                        any time by clicking the link in the email we send to you or by visiting the preference settings once you've an account setup with us.
                     </p>
-                    <form method="post " class="needs-validation " novalidate>
-                        <div class="input-group ">
-                            <input type="text " class="form-control " placeholder="Your email address " aria-label="Your email address " id="toggle-mailing-list ">
-                            <div class="input-group-append ">
-                                <span class="input-group-text text-white text-uppercase bg-primary " id="subscribe ">subscribe</span>
+                    <hr class="my py-0">
+                    <form class="row g-3 needs-validation" method="post" id="subscription-form" novalidate>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group subscription-fg">
+                                <label class="text-sm font-600 mb-0 text-faded" for="full-name">Full name</label>
+                                <i class="material-icons text-faded">person</i>
+                                <input type="text" class="form-control subscription-input text-capitalize" id="full-name" name="full-name" placeholder="John Doe" required spellcheck="false">
+                                <span class="invalid-feedback">Please provide your name.</span>
                             </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group subscription-fg">
+                                <label class="text-sm font-600 mb-0 text-faded" for="email-address">Email address</label>
+                                <i class="material-icons text-faded">email</i>
+                                <input type="email" class="form-control subscription-input" id="email-address" name="email-address" placeholder="name@example.com" required spellcheck="false">
+                                <span class="invalid-feedback">Please provide your email.</span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group subscription-fg w-100">
+                                <label class="text-sm font-600 mb-0 text-faded" for="mobile-number">Mobile No.</label>
+                                <div class="input-group mb-3">
+                                    <button class="btn btn-secondary d-flex align-items-center justify-content-center" type="button" id="country-code">
+                                        <img data-src="dist/images/countries/flag-of-Zimbabwe.png" src="dist/images/preloaders/gear.svg" height="15" width="22" loading="lazy" class="me-1 lazy"> 263
+                                    </button>
+                                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="country-code" required>
+                                </div>
+                                <span class="invalid-feedback">9 digit mobile no. required</span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group subscription-fg">
+                                <label class="text-sm font-600 mb-0 text-faded" for="customer-location">Location</label>
+                                <i class="material-icons text-faded">person_pin_circle</i>
+                                <input type="text" class="form-control text-capitalize subscription-input" id="customer-location" name="customer-location" placeholder="123 First St, Warren Hills, Harare" required>
+                                <span class="invalid-feedback">Please provide your location.</span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="birthday" class="mb-0 text-sm font-600 text-faded">Birthday</label>
+                            <!-- Birthday Picker -->
+                            <input type="date" name="birthday" id="birthday" class="form-control" required>
+                            <!-- Birthday Picker -->
+                            <span class="invalid-feedback text-sm">Birthday required!</span>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label class="text-sm font-600 mb-0 text-faded" for="gender">Gender</label>
+                            <br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+                                <label class="form-check-label" for="male">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
+                                <label class="form-check-label" for="female">Female</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="other" value="other" required>
+                                <label class="form-check-label" for="other">Other</label>
+                            </div>
+                            <span class="invalid-feedback">Please provide your gender.</span>
+                        </div>
+                        <p class="text-sm agreement" data-value="strongly-disagree">
+                            By subscribing to receive emails you agree to our <a href="terms.php">terms and policy.</a>
+                        </p>
+                        <input type="hidden" name="action" value="subscribe">
+                        <div class="d-flex align-items-center justify-content-center my-1">
+                            <a role="button" href="#" class="btn btn-outline-light text-dark rounded-pill px-3 font-600 me-3" data-bs-dismiss="modal">Cancel</a>
+                            <button type="submit" class="btn btn-primary rounded-pill px-3 font-600" id="subscribe-btn">
+                                Subscribe newsletter
+                            </button>
                         </div>
                     </form>
                 </div>
-                <div class="col-12 col-md-4 d-md-flex justify-content-md-center border-left border-white ">
-                    <div class="d-flex ">
-                        <i class="fa fa-map-marker fa-2x align-self-center text-white me-2 "></i>
-                        <div class="d-block text-left ">
-                            <h5 class="font-600 text-white ">Gifts Finder</h5>
-                            <p class="text-sm text-white ">Find gifts trending nearby</p>
+            </div>
+        </div>
+    </div>
+    <!-- /.Mailing List Modal -->
+
+    <!-- Sticky Bottom Footer -->
+    <footer class="footer bg-meshgrid mt-5">
+        <div class="container my-2">
+            <div class="row align-items-md-center">
+                <div class="col-12 col-md-4">
+                    <h5 class="font-600 text-white">Be the first to know</h5>
+                    <p class="text-sm text-white">
+                        Be the first to know of all our gift offers, sales, discounts, events and many more. Subscribe to our mailing list and you'll be notified of our exclusive deals.
+                    </p>
+                    <div class="input-group my-1">
+                        <input type="text" class="form-control" placeholder="Your email address" aria-label="Your email address" id="toggle-mailing-list" aria-describedby="mailing-list" data-bs-toggle="modal" data-bs-target="#mailing-list-modal">
+                        <button class="btn bg-switch text-white font-600 text-uppercase" type="button" id="mailing-list">subscribe</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 d-md-flex justify-content-md-center border-md-left border-white">
+                    <div class="d-flex">
+                        <i class="fa fa-map-marker fa-2x align-self-center text-white me-2"></i>
+                        <div class="d-block text-left">
+                            <h5 class="font-600 text-white">Gifts Finder</h5>
+                            <p class="text-sm text-white">Find gifts trending nearby</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 d-md-flex justify-content-md-center border-left border-white ">
-                    <div class="d-flex ">
-                        <i class="material-icons fa-2x align-self-center text-white me-2 ">record_voice_over</i>
-                        <div class="d-block text-left ">
-                            <h5 class="font-600 text-white ">Customer Services</h5>
-                            <p class="text-sm text-white ">Contact us here</p>
+                <div class="col-12 col-md-4 d-md-flex justify-content-md-center border-md-left border-white">
+                    <div class="d-flex">
+                        <i class="material-icons fa-2x align-self-center text-white me-2">record_voice_over</i>
+                        <div class="d-block text-left">
+                            <h5 class="font-600 text-white">Customer Services</h5>
+                            <p class="text-sm text-white">Contact us here</p>
                         </div>
                     </div>
                 </div>
             </div>
             <hr>
-            <div class="row justify-content-between ">
-                <div class="col-6 col-md-3 ">
-                    <h6 class="font-600 text-white ">Discover Gifteros</h6>
-                    <ul class="px-0 ">
+            <div class="row justify-content-between">
+                <div class="col-6 col-md-3">
+                    <h6 class="font-600 text-white">Discover Gifteros</h6>
+                    <ul class="px-0">
                         <li>
-                            <a href="/about-us ">About us</a>
+                            <a href="/about-us">About us</a>
                         </li>
                         <li>
-                            <a href="/blog ">Blog</a>
+                            <a href="/blog">Blog</a>
                         </li>
                         <li>
-                            <a href="/careers ">Careers</a>
+                            <a href="/careers">Careers</a>
                         </li>
                         <li>
-                            <a href="/partner ">Become a Partner</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md-3 ">
-                    <h6 class="font-600 text-white ">Shopping with us</h6>
-                    <ul class="px-0 ">
-                        <li>
-                            <a href="# ">Gift Customizations</a>
-                        </li>
-                        <li>
-                            <a href="# ">Making Payments</a>
-                        </li>
-                        <li>
-                            <a href="# ">Delivery Options</a>
-                        </li>
-                        <li>
-                            <a href="/return-and-exchanges ">Return & Exchanges</a>
-                        </li>
-                        <li>
-                            <a href="/order-tracking ">Order Tracking</a>
-                        </li>
-                        <li>
-                            <a href="/refunds ">Refunds</a>
+                            <a href="/partner">Become a Partner</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-6 col-md-3 ">
-                    <h6 class="font-600 text-white ">Legal</h6>
-                    <ul class="px-0 ">
+                <div class="col-6 col-md-3">
+                    <h6 class="font-600 text-white">Shopping with us</h6>
+                    <ul class="px-0">
                         <li>
-                            <a href="terms.html-and-conditions ">Terms & Conditions</a>
+                            <a href="#">Gift Customizations</a>
                         </li>
                         <li>
-                            <a href="/cookie-policy ">Cookies</a>
+                            <a href="#">Making Payments</a>
                         </li>
                         <li>
-                            <a href="/privacy ">Privacy</a>
+                            <a href="#">Delivery Options</a>
+                        </li>
+                        <li>
+                            <a href="/return-and-exchanges">Return & Exchanges</a>
+                        </li>
+                        <li>
+                            <a href="/order-tracking">Order Tracking</a>
+                        </li>
+                        <li>
+                            <a href="/refunds">Refunds</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-6 col-md-3 ">
-                    <h6 class="font-600 text-white ">Help</h6>
-                    <ul class="px-0 ">
+                <div class="col-6 col-md-3">
+                    <h6 class="font-600 text-white">Legal</h6>
+                    <ul class="px-0">
                         <li>
-                            <a href="/contact-us ">Contact Us</a>
+                            <a href="terms.html-and-conditions">Terms & Conditions</a>
                         </li>
                         <li>
-                            <a href="/faq ">FAQ</a>
+                            <a href="/cookie-policy">Cookies</a>
                         </li>
                         <li>
-                            <a href="/brands ">Brands</a>
+                            <a href="/privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="font-600 text-white">Help</h6>
+                    <ul class="px-0">
+                        <li>
+                            <a href="/contact-us">Contact Us</a>
                         </li>
                         <li>
-                            <a href="/site-map ">Site map</a>
+                            <a href="/faq">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="/brands">Brands</a>
+                        </li>
+                        <li>
+                            <a href="/site-map">Site map</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <hr>
-            <div class="row justify-content-md-between ">
-                <div class="col-12 col-xl-6 ">
-                    <div class="d-flex align-items-center ">
-                        <a href="# ">
-                            <i class="fa icon-md text-white fa-facebook-official " aria-hidden="true "></i>
+            <div class="row justify-content-md-between">
+                <div class="col-12 col-xl-6">
+                    <div class="d-flex align-items-center">
+                        <a href="#">
+                            <i class="fa icon-md text-white fa-facebook-official " aria-hidden="true"></i>
                         </a>
-                        <a href="# ">
-                            <i class="fa icon-md text-white fa-twitter ms-2 " aria-hidden="true "></i>
+                        <a href="#">
+                            <i class="fa icon-md text-white fa-twitter ms-2 " aria-hidden="true"></i>
                         </a>
-                        <a href="# ">
-                            <i class="fa icon-md text-white fa-instagram ms-2 " aria-hidden="true "></i>
+                        <a href="#">
+                            <i class="fa icon-md text-white fa-instagram ms-2 " aria-hidden="true"></i>
                         </a>
-                        <a href="# ">
-                            <i class="fa icon-md text-white fa-whatsapp mx-2 " aria-hidden="true "></i>
+                        <a href="#">
+                            <i class="fa icon-md text-white fa-whatsapp mx-2 " aria-hidden="true"></i>
                         </a>
-                        <h6 class="text-muted text-sm font-600 my-0 ">&copy; 2021 Gifteros Inc. All Rights Reserved.</h6>
+                        <h6 class="text-white text-sm font-600 my-0">&copy; 2021 Gifteros Inc. All Rights Reserved.</h6>
                     </div>
                 </div>
-                <div class="col-12 col-xl-6 text-md-end ">
-                    <a href="/developer/tinashe.chaterera " class="text-sm ">
-                        <h6 class="font-600 text-faded ">Designed & Developed by TinaKing</h6>
+                <div class="col-12 col-xl-6 text-md-end">
+                    <a href="/developer/tinashe.chaterera " class="text-sm">
+                        <h6 class="font-600 text-warning">Designed & Developed by TinaKing</h6>
                     </a>
                 </div>
             </div>
