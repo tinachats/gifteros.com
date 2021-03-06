@@ -998,7 +998,7 @@
                                                     <a href="#" class="nav-link d-block text-center py-0 my-0" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" role="button" role="tab" aria-controls="settings" aria-selected="false">
                                                         <p class="text-sm font-600 my-0 py-0">Settings</p>
                                                         <h5 class="font-600 my-0 py-0">
-                                                            <i class="bi bi-gear"></i>
+                                                            <i class="bi bi-sliders"></i>
                                                         </h5>
                                                     </a>
                                                 </li>
@@ -1039,6 +1039,12 @@
                                                     <li class="d-flex align-items-center">
                                                         <i class="bi bi-phone text-muted me-1"></i>
                                                         <p class="text-capitalize text-muted text-sm my-0 py-0">263776021140</p>
+                                                    </li>
+                                                    <li class="d-flex align-items-center">
+                                                        <i class="bi bi-bag-check text-muted me-1"></i>
+                                                        <p class="text-capitalize text-muted text-sm my-0 py-0">
+                                                            Items bought: <span class="text-muted">23</span>
+                                                        </p>
                                                     </li>
                                                     <li class="d-flex align-items-center">
                                                         <i class="bi bi-person-circle text-muted me-1"></i>
@@ -1853,7 +1859,7 @@
                                                                 <span class="input-group-text d-flex align-items-center" id="inputGroupPrepend">
                                                                     <img src="dist/images/countries/flag-of-Zimbabwe.png" height="15" width="22" alt="" class="me-1"> 263
                                                                 </span>
-                                                                <input type="text" class="form-control" id="phone-number" placeholder="776021140" aria-describedby="inputGroupPrepend" required>
+                                                                <input type="text" class="form-control" id="phone-number" placeholder="776021140" aria-describedby="inputGroupPrepend" onkeyup="forceNumeric(this)" required>
                                                                 <div class="invalid-feedback">
                                                                     Please provide a valid phone number.
                                                                 </div>
@@ -1930,7 +1936,7 @@
                                                             </div>
                                                         </div>
                                                         <p class="text-sm text-muted mb-0 pb-0">
-                                                            Image should be 75x75 pixels and should not exceed 2mb long.
+                                                            Image should be 75x75 pixels and should not exceed 2MB long.
                                                         </p>
                                                     </form>
                                                 </div>
@@ -2063,7 +2069,50 @@
                         </div>
                     </div>
                     <!-- /.Main Content -->
-                    <div class="col-12 col-xl-3"></div>
+
+                    <!-- Ad Space -->
+                    <div class="col-12 col-xl-3 zoom-out-section">
+                        <div class="ad-content">
+                            <div class="box-shadow-sm bg-whitesmoke border d-grid h-100 w-100 p-3">
+                                <div class="m-auto">
+                                    <h6 class="font-600">What's your impresion of Gifteros?</h6>
+                                    <p class="text-sm mt-0 pt-0 text-muted">
+                                        Help us to improve to build the one-stop, easy-to-find gift shop you want.
+                                    </p>
+                                    <div class="text-center">
+                                        <button class="btn btn-sm bg-switch text-white" onclick="ratingBox()">
+                                            Okay, cool!
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-shadow-sm border bg-whitesmoke square-img-ad">
+                                <img src="dist/images/banners/banner-3.png" alt="">
+                                <a href="details.html" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <div class="d-none d-xl-block text-center mt-3">
+                            <ul class="list-inline m-0 p-0">
+                                <li class="list-inline-item">
+                                    <a href="terms.html" class="text-xs">Terms</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="privacy.html" class="text-xs">Privacy</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="security.html" class="text-xs">Security</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="contact-us.html" class="text-xs text-muted">Contact Gifteros</a>
+                                </li>
+                            </ul>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img data-src="dist/images/app/gifteros.png" src="dist/images/app/bg-placeholder.PNG" height="20" width="20" class="me-1 lazy">
+                                <h6 class="text-sm text-muted my-0">Gifteros Inc. &copy;2021.</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.Ad Space -->
                 </div>
             </div>
         </div>

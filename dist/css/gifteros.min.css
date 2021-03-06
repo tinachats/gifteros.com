@@ -931,8 +931,8 @@ h6 {
 }
 
 .floating-action {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     display: grid;
     box-shadow: var(--shadow-sm);
@@ -3836,6 +3836,22 @@ a.text-underline:hover,
     color: var(--primary);
 }
 
+.square-img-ad {
+    position: relative;
+    height: 200px;
+    width: 100%;
+}
+
+.square-img-ad>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
 
 /*** /.Utility Classes ***/
 
@@ -4217,6 +4233,13 @@ a.text-underline:hover,
     #account-tabs {
         height: 45px;
     }
+    .ad-content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .ad-content:first-child() {
+        margin-bottom: .5rem;
+    }
 }
 
 
@@ -4578,6 +4601,11 @@ a.text-underline:hover,
         left: 0%;
         transform: translate(50%, -50%);
     }
+    .ad-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: .5em;
+    }
 }
 
 
@@ -4720,6 +4748,13 @@ a.text-underline:hover,
     }
     #cart-page .wishlist-shelf.grid-view>.wishlist-item {
         height: 400px;
+    }
+    .ad-content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .ad-content:first-child() {
+        margin-bottom: .5rem;
     }
 }
 
