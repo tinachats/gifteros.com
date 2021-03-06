@@ -788,9 +788,9 @@
                             </button>
                         </li>
                         <li class="nav-item">
-                            <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center toggle-side-menu p-0 m-0">
-                                <i class="bi bi-list mobile-nav-icon"></i>
-                            </button>
+                            <a href="#" class="nav-link icon-link">
+                                <img data-src="dist/images/users/15f9eb408be859.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle lazy toggle-side-menu prof-pic">
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -952,459 +952,1253 @@
         </nav>
         <!-- /.Mobile Search -->
 
-        <div class="page-content" id="account-page">
-            <div class="container">
-                <!-- Breadcrumbs -->
-                <nav class="d-flex align-items-center justify-content-md-between my-2" aria-label="breadcrumb">
-                    <h4 class="text-app-color font-600 my-0">Account Page</h4>
-                    <ol class="breadcrumb my-0 py-0">
-                        <li class="breadcrumb-item"><a href="index.html">Store</a></li>
-                        <li class="breadcrumb-item">Customer</li>
-                        <li class="breadcrumb-item active text-capitalize" aria-current="page">Account</li>
-                    </ol>
-                </nav>
-                <!-- /.Breadcrumbs -->
+        <div class="page-content">
+            <div class="container content-box mt-md-1">
                 <div class="row g-1">
-                    <!-- Profile Card -->
-                    <div class="col-12 col-md-3">
-                        <div class="bg-whitesmoke border rounded-2">
-                            <div class="d-block text-center pt-2">
-                                <form action="/profile_pic" method="post">
-                                    <a href="#">
-                                        <label class="mb-4 position-relative" for="profile-pic" onclick="triggerClick()">
-                                            <input class="d-none" type="file" name="profile-pic" id="profile-pic" onchange="displayImg(this)" accept="image/*">
-                                            <img src="dist/images/users/15f9eb408be859.jpg" id="profile-image" class="rounded-circle mt-2 prof-pic" height="120" width="120" alt="tinashe chaterera">
-                                            <span role="button" class="fa fa-camera card circled-icon"></span>
-                                        </label>
-                                    </a>
-                                </form>
-                                <div class="d-block lh-100 rounded-0 mb-1" style="margin-top: -1rem">
-                                    <h6 class="font-600 text-app-color text-capitalize mb-0">tinashe chaterera</h6>
-                                    <h6 class="text-muted text-sm text-lowercase">marshallchaterera@gmail.com</h6>
-                                    <p class="text-muted text-sm my-0 py-0">
-                                        Joined on January 12, 2021
-                                    </p>
+                    <!-- Main Content -->
+                    <div class="col-12 col-xl-9 zoom-out-section">
+                        <div class="d-block">
+                            <!-- Cover-Image -->
+                            <div class="cover-img-wrapper position-relative">
+                                <button type="button" class="btn btn-light circled-button d-flex justify-content-center" id="edit-cover-img" data-bs-toggle="modal" data-bs-target="#cover-img-modal">
+                                    <i class="material-icons text-color-switch">edit</i>
+                                </button>
+                                <img src="dist/images/cover-images/default-cover-img.jpg" alt="" class="img-responsive cover-img">
+                            </div>
+                            <!-- /.Cover-Image -->
+                            <!-- Metrics -->
+                            <div class="box-shadow-sm bg-whitesmoke metrics-nav position-relative">
+                                <img src="dist/images/users/15f9eb408be859.jpg" height="120" width="120" alt="" class="prof-pic user-img rounded-circle img-bordered-sm border-white position-absolute">
+                                <div class="container-fluid">
+                                    <div class="row gx-1">
+                                        <div class="col-12 col-md-4"></div>
+                                        <div class="col-12 col-md-8">
+                                            <ul class="nav nav-tabs clear w-100 m-0 p-0" id="account-tabs" role="tablist">
+                                                <li class="nav-item my-0 py-0" role="presentation">
+                                                    <a href="#" class="nav-link d-block text-center active my-0 py-0" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" role="button" role="tab" aria-controls="reviews" aria-selected="true">
+                                                        <p class="text-sm font-600 my-0 py-0">Reviews</p>
+                                                        <h5 class="font-600 my-0 py-0">1234</h5>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <a href="#" class="nav-link d-block text-center my-0 py-0" id="recipients-tab" data-bs-toggle="tab" data-bs-target="#recipients" role="button" role="tab" aria-controls="recipients" aria-selected="false">
+                                                        <p class="text-sm font-600 my-0 py-0">Recipients</p>
+                                                        <h5 class="font-600 my-0 py-0">36</h5>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <a href="#" class="nav-link d-block text-center my-0 py-0" id="account-tab" data-bs-toggle="tab" data-bs-target="#account" role="button" role="tab" aria-controls="account" aria-selected="false">
+                                                        <p class="text-sm font-600 my-0 py-0">Account</p>
+                                                        <h5 class="font-600 my-0 py-0">
+                                                            <i class="bi bi-person-lines-fill"></i>
+                                                        </h5>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <a href="#" class="nav-link d-block text-center py-0 my-0" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" role="button" role="tab" aria-controls="settings" aria-selected="false">
+                                                        <p class="text-sm font-600 my-0 py-0">Settings</p>
+                                                        <h5 class="font-600 my-0 py-0">
+                                                            <i class="bi bi-gear"></i>
+                                                        </h5>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item align-middle mt-1 ms-md-auto">
+                                                    <button class="btn btn-outline-switch btn-sm rounded-pill add-recipient-btn d-flex align-items-center justify-content-center px-3">
+                                                        <i class="bi bi-person-plus bi-2x me-1"></i> Recipient
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <ul class="list-group nav-pills rounded-bottom-2 mt-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                <li class="nav-link desktop-pills active w-100" role="tab" id="v-pills-account-details-tab" data-bs-toggle="pill" data-bs-target="#v-pills-account-details" aria-controls="v-pills-account-details" aria-selected="true">
-                                    <a href="#" class="d-flex align-items-center">
-                                        <i class="material-icons text-app-color">person_outline</i>
-                                        <h6 class="font-600 text-app-color ms-2 my-0">Account details</h6>
-                                        <i class="material-icons text-app-color ms-auto">chevron_right</i>
-                                    </a>
-                                </li>
-                                <li class="nav-link desktop-pills w-100" role="tab" id="v-pills-timeline-tab" data-bs-toggle="pill" data-bs-target="#v-pills-timeline" aria-controls="v-pills-timeline" aria-selected="false">
-                                    <a href="#" class="d-flex align-items-center">
-                                        <i class="material-icons text-app-color">timeline</i>
-                                        <h6 class="font-600 text-app-color ms-2 my-0">My Timeline</h6>
-                                        <i class="material-icons text-app-color ms-auto">chevron_right</i>
-                                    </a>
-                                </li>
-                                <li class="dropdown-item nav-link desktop-pills w-100" role="tab" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" aria-controls="v-pills-settings" aria-selected="false">
-                                    <a href="#" class="d-flex align-items-center">
-                                        <i class="material-icons text-app-color">tune</i>
-                                        <h6 class="font-600 text-app-color ms-2 my-0">Account settings</h6>
-                                        <i class="material-icons text-app-color ms-auto">chevron_right</i>
-                                    </a>
-                                </li>
-                                <li class="list-group-item my-0 py-0">
-                                    <div class="d-flex justify-content-around">
-                                        <div class="d-block text-center">
-                                            <i class="bi bi-bag-check-fill icon-md text-app-color"></i>
-                                            <p class="my-0 py-0 text-muted text-sm">
-                                                12 items bought
-                                            </p>
-                                        </div>
-                                        <div class="border-right"></div>
-                                        <div class="d-block text-center">
-                                            <i class="bi bi-people-fill icon-md text-app-color"></i>
-                                            <p class="my-0 py-0 text-muted text-sm">
-                                                12 recipients
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /.Profile Card -->
+                            <!-- /.Metrics -->
 
-                    <!-- Tab Content -->
-                    <div class="col-12 col-md-6">
-                        <div class="tab-content" id="v-pills-tabContent">
-                            <!-- Account Details Form -->
-                            <div class="tab-pane fade show active bg-whitesmoke box-shadow-sm border rounded-2 p-2 mb-2" id="v-pills-account-details" role="tabpanel" aria-labelledby="v-pills-account-details-tab">
-                                <h4 class="font-600">Edit your Account Details</h4>
-                                <form method="post" id="user-info-form" class="row g-3 needs-validation" novalidate>
-                                    <!-- Full name -->
-                                    <div class="col col-md-6">
-                                        <label for="first-name" class="form-label mb-0">First name</label>
-                                        <input type="text" class="form-control box-shadow-sm" id="first-name" value="John" required>
-                                        <div class="invalid-feedback">
-                                            Please add your first name.
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <label for="last-name" class="form-label mb-0">Last name</label>
-                                        <input type="text" class="form-control box-shadow-sm" id="last-name" value="Doe" required>
-                                        <div class="invalid-feedback">
-                                            Please add your last name.
-                                        </div>
-                                    </div>
-                                    <!-- /.Full name -->
-
-                                    <!-- Contact Details -->
-                                    <div class="col-12 col-md-6">
-                                        <label for="email" class="form-label mb-0">Email</label>
-                                        <input type="email" class="form-control box-shadow-sm" id="email" value="example@email.com" required>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid email address.
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <label for="phone-number" class="form-label mb-0">Phone number</label>
-                                        <div class="input-group has-validation">
-                                            <span class="input-group-text d-flex align-items-center" id="inputGroupPrepend">
-                                                <img src="dist/images/countries/flag-of-Zimbabwe.png" height="15" width="22" alt="" class="me-1"> +263
-                                            </span>
-                                            <input type="text" class="form-control box-shadow-sm" id="phone-number" placeholder="776021140" aria-describedby="inputGroupPrepend" required>
-                                            <div class="invalid-feedback">
-                                                Please provide a valid phone number.
+                            <!-- Content -->
+                            <div class="w-100">
+                                <div class="row gx-0">
+                                    <!-- Profile Details -->
+                                    <div class="col-12 col-md-4 bg-transparent text-center">
+                                        <div class="d-none d-md-block mt-md-4">
+                                            <h6 class="font-600 text-capitalize mb-0">tinashe chaterera</h6>
+                                            <h6 class="text-sm text-muted mt-0">marshallchaterera@gmail.com</h6>
+                                            <div class="d-flex justify-content-center w-100">
+                                                <ul class="px-0">
+                                                    <li class="d-flex align-items-center">
+                                                        <i class="bi bi-geo-alt text-muted me-1"></i>
+                                                        <p class="text-capitalize text-muted text-sm my-0 py-0">waterfalls, harare</p>
+                                                    </li>
+                                                    <li class="d-flex align-items-center">
+                                                        <i class="bi bi-calendar-month text-muted me-1"></i>
+                                                        <p class="text-capitalize text-muted text-sm my-0 py-0">Joined March 12, 2021</p>
+                                                    </li>
+                                                    <li class="d-flex align-items-center">
+                                                        <i class="bi bi-calendar-date text-muted me-1"></i>
+                                                        <p class="text-capitalize text-muted text-sm my-0 py-0">Born March 12, 2021</p>
+                                                    </li>
+                                                    <li class="d-flex align-items-center">
+                                                        <i class="bi bi-phone text-muted me-1"></i>
+                                                        <p class="text-capitalize text-muted text-sm my-0 py-0">263776021140</p>
+                                                    </li>
+                                                    <li class="d-flex align-items-center">
+                                                        <i class="bi bi-person-circle text-muted me-1"></i>
+                                                        <p class="text-capitalize text-muted text-sm my-0 py-0">Male</p>
+                                                    </li>
+                                                </ul>
                                             </div>
+                                            <!-- Uploaded files -->
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <i class="bi bi-file-earmark-image text-muted me-1"></i>
+                                                <p class="text-capitalize text-muted text-sm my-0 py-0">234 Photos and Videos</p>
+                                            </div>
+                                            <div class="d-flex justify-content-center w-100">
+                                                <div class="d-grid grid-3 gap-1">
+                                                    <img data-src="dist/images/gifts/15f458254a0dac.1.6.jpg" src="dist/images/app/bg-placeholder.PNG" height="50" loading="lazy" class="rounded-2 lazy">
+                                                    <img data-src="dist/images/gifts/15f458254a0dac.2.webp" src="dist/images/app/bg-placeholder.PNG" height="50" loading="lazy" class="rounded-2 lazy">
+                                                    <img data-src="dist/images/gifts/15f45876d2ff63.jpg" src="dist/images/app/bg-placeholder.PNG" height="50" loading="lazy" class="rounded-2 lazy">
+                                                    <img data-src="dist/images/gifts/15f458a82563b7.jpg" src="dist/images/app/bg-placeholder.PNG" height="50" loading="lazy" class="rounded-2 lazy">
+                                                    <img data-src="dist/images/gifts/15f4598bf99479.3.jpg" src="dist/images/app/bg-placeholder.PNG" height="50" loading="lazy" class="rounded-2 lazy">
+                                                    <img data-src="dist/images/gifts/15f4607d0b3c65.jpg" src="dist/images/app/bg-placeholder.PNG" height="50" loading="lazy" class="rounded-2 lazy">
+                                                </div>
+                                            </div>
+                                            <!-- /.Uploaded files -->
                                         </div>
                                     </div>
-                                    <!-- /.Contact Details -->
+                                    <!-- /.Profile Details -->
 
-                                    <!-- Personal Details -->
-                                    <div class="col col-md-6">
-                                        <label for="birthday" class="form-label mb-0">Date of Birth</label>
-                                        <input type="date" class="form-control box-shadow-sm" id="birthday">
-                                        <div class="invalid-feedback">
-                                            Please add your D.O.B.
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <label for="gender" class="form-label mb-0">Gender</label>
-                                        <select class="form-select box-shadow-sm" id="gender" required>
-                                            <option selected disabled value="">Select Gender</option>
-                                            <option>Male</option>
-                                            <option>Female</option>
-                                            <option>Other</option>
-                                        </select>
-                                        <div class="invalid-feedback">
-                                            Please choose a gender.
-                                        </div>
-                                    </div>
-                                    <!-- /.Personal  Details -->
+                                    <!-- Tab Content -->
+                                    <div class="col-12 col-md-8">
+                                        <!-- Tab Content -->
+                                        <div class="tab-content my-sm-1 mt-md-2" id="account-information">
+                                            <!-- Customer Reviews -->
+                                            <div class="tab-pane fade show bg-whitesmoke border box-shadow-sm active" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                                                <!-- Reviews -->
+                                                <ul id="reviews" class="list-group list-group-flush my-md-2">
+                                                    <!-- Customer Review -->
+                                                    <li class="list-group-item mx-md-3">
+                                                        <div class="d-flex align-items-start">
+                                                            <img data-src="dist/images/users/15f9eb408be859.jpg" src="dist/images/users/user.png" alt="" height="30" width="30" loading="lazy" class="rounded-circle lazy me-2">
+                                                            <div class="d-block">
+                                                                <h6 class="font-600 text-capitalize text-app-color py-0 my-0">tinashe chaterera</h6>
+                                                                <div class="d-flex align-items-center">
+                                                                    <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                                        <li class="list-inline-item text-gold">&starf;</li>
+                                                                        <li class="list-inline-item text-gold">&starf;</li>
+                                                                        <li class="list-inline-item text-gold">&starf;</li>
+                                                                        <li class="list-inline-item text-gold">&starf;</li>
+                                                                        <li class="list-inline-item text-muted">&star;</li>
+                                                                        <p class="my-0 py-0 text-sm text-faded font-600 text-capitalize">january 23, 2021</p>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="review-content">
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="d-flex align-items-center">
+                                                                    <i class="bi bi-shield-fill-check text-success me-1"></i>
+                                                                    <p class="my-0 py-0 text-sm text-muted border-right pe-1">Verified Purchase</p>
+                                                                </div>
+                                                                <p class="my-0 py-0 ps-1 text-sm text-muted">Reviewed in Mutare</p>
+                                                            </div>
+                                                            <p class="text-justify text-sm text-faded mt-1">
+                                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, neque explicabo, alias repellat eius distinctio similique facere at modi ex molestias necessitatibus veritatis dolor sint vitae debitis a hic voluptatum deleniti iure odio veniam repellendus
+                                                                placeat. Voluptas eveniet repellendus ad cumque aperiam, expedita ducimus, molestias sit explicabo voluptatem sequi. Magnam.
+                                                            </p>
+                                                            <div class="d-flex align-items-center">
+                                                                <img data-src="dist/images/users/15f9f8d1dee2ba.jpg" src="dist/images/users/user.png" alt="" loading="lazy" height="20" width="20" class="rounded-circle me-1 lazy">
+                                                                <p class="text-muted text-sm my-0 py-0">You found this helpful</p>
+                                                            </div>
+                                                            <div class="d-flex align-items-center justify-content-around py-1 mt-2 border-top border-bottom">
+                                                                <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid helpful-btn">
+                                                                    <i class="bi bi-hand-thumbs-up p-0 m-auto"></i>
+                                                                </button>
+                                                                <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid unhelpful-btn">
+                                                                    <i class="bi bi-hand-thumbs-down p-0 m-auto"></i>
+                                                                </button>
+                                                                <div class="d-flex align-items-center d-cursor" data-bs-toggle="collapse" data-bs-target="#social-apps-section" aria-expanded="false" aria-controls="social-apps-section">
+                                                                    <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid unhelpful-btn">
+                                                                        <i class="bi bi-share p-0 m-auto"></i>
+                                                                    </button>
+                                                                    <p class="text-sm ms-1 my-0 py-0">124</p>
+                                                                </div>
+                                                                <div class="d-flex align-items-center d-cursor" data-bs-toggle="collapse" data-bs-target="#comments1" aria-expanded="false" aria-controls="comments1">
+                                                                    <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid helpful-btn">
+                                                                        <i class="fa fa-comments-o p-0 m-auto"></i>
+                                                                    </button>
+                                                                    <p class="text-sm ms-1 my-0 py-0">124</p>
+                                                                </div>
+                                                                <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid unhelpful-btn" data-bs-toggle="modal" data-bs-target="#report-review">
+                                                                    <i class="bi bi-three-dots-vertical p-0 m-auto"></i>
+                                                                </button>
+                                                            </div>
+                                                            <!-- Sharing to Social Apps -->
+                                                            <div class="collapse" id="social-apps-section">
+                                                                <div class="bg-whitesmoke pt-3 border-bottom bg-light">
+                                                                    <div class="d-flex align-items-center justify-content-center">
+                                                                        <a href="#" class="d-block text-center">
+                                                                            <i class="fa fa-facebook text-primary fa-2x"></i>
+                                                                            <p class="text-sm text-primary">Facebook</p>
+                                                                        </a>
+                                                                        <a href="#" class="d-block text-center mx-5">
+                                                                            <i class="fa fa-linkedin text-primary fa-2x"></i>
+                                                                            <p class="text-sm text-primary">LinkedIn</p>
+                                                                        </a>
+                                                                        <a href="#" class="d-block text-center">
+                                                                            <i class="fa fa-twitter text-primary fa-2x"></i>
+                                                                            <p class="text-sm text-primary">Twitter</p>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /.Sharing to Social Apps -->
 
-                                    <!-- Address -->
-                                    <div class="col-12 col-md-6">
-                                        <label for="address" class="form-label mb-0">Address</label>
-                                        <input type="text" class="form-control box-shadow-sm" id="address" placeholder="1234 Main St." required>
-                                        <div class="invalid-feedback">
-                                            Please provide your address.
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <label for="suburb" class="form-label mb-0">Suburb</label>
-                                        <select class="form-select box-shadow-sm" id="suburb" required>
-                                            <option selected disabled value="">Select Suburb</option>
-                                            <option>Adbernie</option>
-                                            <option>Arlington Estate</option>
-                                            <option>Borrowdale</option>
-                                            <option>Chisipiti</option>
-                                            <option>Dzivarasekwa</option>
-                                            <option>Epworth</option>
-                                            <option>Highfield</option>
-                                            <option>Waterfalls</option>
-                                        </select>
-                                        <div class="invalid-feedback">
-                                            Please select a valid suburb.
-                                        </div>
-                                    </div>
-                                    <!-- /.Address -->
+                                                            <!-- Comment Section -->
+                                                            <div class="collapse" id="comments1">
+                                                                <div class="d-flex align-items-center my-2">
+                                                                    <ul class="p-0 m-0">
+                                                                        <li class="list-inline-item p-0 m-0">
+                                                                            <img data-src="dist/images/users/15f94791be9c51.jpg" src="dist/images/users/user.png" height="23" width="23" alt="" loading="lazy" class="rounded-circle lazy">
+                                                                        </li>
+                                                                        <li class="list-inline-item p-0 m-0 overlapping-image">
+                                                                            <img data-src="dist/images/users/15f947a8ab289c.jpg" src="dist/images/users/user.png" height="23" width="23" alt="" loading="lazy" class="rounded-circle lazy">
+                                                                        </li>
+                                                                        <li class="list-inline-item p-0 m-0 overlapping-image">
+                                                                            <img data-src="dist/images/users/15f957febc6cdf.jpg" src="dist/images/users/user.png" height="23" width="23" alt="" loading="lazy" class="rounded-circle lazy">
+                                                                        </li>
+                                                                    </ul>
+                                                                    <p class="text-sm text-faded ms-2 my-0 py-0">You, Takudzwa and 123 others</p>
+                                                                </div>
+                                                                <ul class="list-group list-group-flush bg-whitesmoke py-2 px-0 m-0 border-bottom comment-section bg-light">
+                                                                    <!-- Review Comment -->
+                                                                    <li class="list-group-item bg-transparent review-comment">
+                                                                        <div class="d-flex align-items-start">
+                                                                            <img data-src="dist/images/users/15f94791be9c51.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle lazy me-2">
+                                                                            <div class="d-block">
+                                                                                <h6 class="font-600 text-sm text-app-color my-0 text-capitalize">
+                                                                                    tatiana hemsworth
+                                                                                </h6>
+                                                                                <p class="text-sm text-muted my-0 py-0">2h ago</p>
+                                                                                <p class="text-muted text-sm text-justify mb-0 pb-0">
+                                                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ad dolor fugiat vitae doloremque. Harum eos officia rerum quo corrupti architecto repellat. Dolorem enim earum quia atque, natus quod officia?
+                                                                                </p>
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <div class="d-flex align-items-center">
+                                                                                        <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid helpful-btn">
+                                                                                            <i class="bi bi-hand-thumbs-up p-0 m-auto"></i>
+                                                                                        </button>
+                                                                                        <p class="text-sm ms-1 my-0 py-0">124</p>
+                                                                                    </div>
+                                                                                    <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid unhelpful-btn ms-4">
+                                                                                        <i class="bi bi-three-dots-vertical p-0 m-auto"></i>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <!-- /.Review Comment -->
 
-                                    <div class="col-12 text-end">
-                                        <button type="submit" class="btn btn-primary px-3">
-                                            Save changes
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- Account Details Form -->
+                                                                    <!-- Review Comment -->
+                                                                    <li class="list-group-item bg-transparent review-comment">
+                                                                        <div class="d-flex align-items-start">
+                                                                            <img data-src="dist/images/users/15f94791be9c51.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle lazy me-2">
+                                                                            <div class="d-block">
+                                                                                <h6 class="font-600 text-sm text-app-color my-0 text-capitalize">
+                                                                                    tatiana hemsworth
+                                                                                </h6>
+                                                                                <p class="text-sm text-muted my-0 py-0">2h ago</p>
+                                                                                <p class="text-muted text-sm text-justify mb-0 pb-0">
+                                                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ad dolor fugiat vitae doloremque. Harum eos officia rerum quo corrupti architecto repellat. Dolorem enim earum quia atque, natus quod officia?
+                                                                                </p>
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <div class="d-flex align-items-center">
+                                                                                        <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid helpful-btn">
+                                                                                            <i class="bi bi-hand-thumbs-up p-0 m-auto"></i>
+                                                                                        </button>
+                                                                                        <p class="text-sm ms-1 my-0 py-0">124</p>
+                                                                                    </div>
+                                                                                    <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid unhelpful-btn ms-4">
+                                                                                        <i class="bi bi-three-dots-vertical p-0 m-auto"></i>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <!-- /.Review Comment -->
 
-                            <!-- Timeline -->
-                            <div class="tab-pane fade bg-whitesmoke box-shadow-sm border rounded-2 p-2 mb-2" id="v-pills-timeline" role="tabpanel" aria-labelledby="v-pills-timeline-tab">
-                                <h4 class="font-600">My Timeline</h4>
-                            </div>
-                            <!-- /.Timeline -->
+                                                                    <!-- Review Comment -->
+                                                                    <li class="list-group-item bg-transparent review-comment">
+                                                                        <div class="d-flex align-items-start">
+                                                                            <img data-src="dist/images/users/15f94791be9c51.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle lazy me-2">
+                                                                            <div class="d-block">
+                                                                                <h6 class="font-600 text-sm text-app-color my-0 text-capitalize">
+                                                                                    tatiana hemsworth
+                                                                                </h6>
+                                                                                <p class="text-sm text-muted my-0 py-0">2h ago</p>
+                                                                                <p class="text-muted text-sm text-justify mb-0 pb-0">
+                                                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ad dolor fugiat vitae doloremque. Harum eos officia rerum quo corrupti architecto repellat. Dolorem enim earum quia atque, natus quod officia?
+                                                                                </p>
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <div class="d-flex align-items-center">
+                                                                                        <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid helpful-btn">
+                                                                                            <i class="bi bi-hand-thumbs-up p-0 m-auto"></i>
+                                                                                        </button>
+                                                                                        <p class="text-sm ms-1 my-0 py-0">124</p>
+                                                                                    </div>
+                                                                                    <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid unhelpful-btn ms-4">
+                                                                                        <i class="bi bi-three-dots-vertical p-0 m-auto"></i>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <!-- /.Review Comment -->
+                                                                </ul>
+                                                                <!-- User Comment Form -->
+                                                                <form method="post" class="d-flex align-items-center bg-whitesmoke needs-validation border-bottom w-100 py-2" novalidate>
+                                                                    <img data-src="dist/images/users/15f9eb408be859.jpg" src="dist/images/users/user.png" height="30" width="30" alt="" loading="lazy" class="rounded-circle lazy">
+                                                                    <input type="text" name="comment-input" id="comment-input" class="form-control form-control-sm rounded-pill mx-2" placeholder="Press enter to post comment" required>
+                                                                    <button type="submit" class="btn btn btn-sm btn-primary circled-button-sm d-md-none d-grid">
+                                                                        <i class="material-icons m-auto text-md p-0">send</i>
+                                                                    </button>
+                                                                </form>
+                                                                <!-- /.User Comment Form -->
+                                                            </div>
+                                                            <!-- /.Comment Section -->
+                                                        </div>
+                                                    </li>
+                                                    <!-- /.Customer Review -->
 
-                            <!-- Settings -->
-                            <div class="tab-pane fade bg-whitesmoke box-shadow-sm border rounded-2 p-2 mb-2" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-                                <h4 class="font-600">Account Settings</h4>
-                                <div class="container-fluid px-3 mt-2">
-                                    <p class="mb-0 font-500 d-none" id="day-mode">
-                                        <i class="fa fa-sun-o"></i> Toggle Day Mode
-                                    </p>
-                                    <p class="mb-0 font-500" id="night-mode">
-                                        <i class="fa fa-moon-o"></i> Toggle Night Mode
-                                    </p>
-                                    <div class="d-flex align-items-center mt-2">
-                                        <div class="form-check toggle-switch">
-                                            <input type="checkbox" class="form-check-input switch-btn theme-switch" id="darkmode" onchange="themeMode(this);">
+                                                    <!-- Customer Review -->
+                                                    <li class="list-group-item mx-md-3">
+                                                        <div class="d-flex align-items-start">
+                                                            <img data-src="dist/images/users/15f9eb408be859.jpg" src="dist/images/users/user.png" alt="" height="30" width="30" loading="lazy" class="rounded-circle lazy me-2">
+                                                            <div class="d-block">
+                                                                <h6 class="font-600 text-capitalize text-app-color py-0 my-0">tinashe chaterera</h6>
+                                                                <div class="d-flex align-items-center">
+                                                                    <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                                        <li class="list-inline-item text-gold">&starf;</li>
+                                                                        <li class="list-inline-item text-gold">&starf;</li>
+                                                                        <li class="list-inline-item text-gold">&starf;</li>
+                                                                        <li class="list-inline-item text-gold">&starf;</li>
+                                                                        <li class="list-inline-item text-muted">&star;</li>
+                                                                        <p class="my-0 py-0 text-sm text-faded font-600 text-capitalize">january 23, 2021</p>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="review-content">
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="d-flex align-items-center">
+                                                                    <i class="bi bi-shield-fill-check text-success me-1"></i>
+                                                                    <p class="my-0 py-0 text-sm text-muted border-right pe-1">Verified Purchase</p>
+                                                                </div>
+                                                                <p class="my-0 py-0 ps-1 text-sm text-muted">Reviewed in Mutare</p>
+                                                            </div>
+                                                            <p class="text-justify text-sm text-faded mt-1">
+                                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, neque explicabo, alias repellat eius distinctio similique facere at modi ex molestias necessitatibus veritatis dolor sint vitae debitis a hic voluptatum deleniti iure odio veniam repellendus
+                                                                placeat. Voluptas eveniet repellendus ad cumque aperiam, expedita ducimus, molestias sit explicabo voluptatem sequi. Magnam.
+                                                            </p>
+                                                            <div class="d-flex align-items-center">
+                                                                <img data-src="dist/images/users/15f9f8d1dee2ba.jpg" src="dist/images/users/user.png" alt="" loading="lazy" height="20" width="20" class="rounded-circle me-1 lazy">
+                                                                <p class="text-muted text-sm my-0 py-0">You found this helpful</p>
+                                                            </div>
+                                                            <div class="d-flex align-items-center justify-content-around py-1 mt-2 border-top border-bottom">
+                                                                <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid helpful-btn">
+                                                                    <i class="bi bi-hand-thumbs-up p-0 m-auto"></i>
+                                                                </button>
+                                                                <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid unhelpful-btn">
+                                                                    <i class="bi bi-hand-thumbs-down p-0 m-auto"></i>
+                                                                </button>
+                                                                <div class="d-flex align-items-center d-cursor" data-bs-toggle="collapse" data-bs-target="#social-apps-section" aria-expanded="false" aria-controls="social-apps-section">
+                                                                    <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid unhelpful-btn">
+                                                                        <i class="bi bi-share p-0 m-auto"></i>
+                                                                    </button>
+                                                                    <p class="text-sm ms-1 my-0 py-0">124</p>
+                                                                </div>
+                                                                <div class="d-flex align-items-center d-cursor" data-bs-toggle="collapse" data-bs-target="#comments1" aria-expanded="false" aria-controls="comments1">
+                                                                    <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid helpful-btn">
+                                                                        <i class="fa fa-comments-o p-0 m-auto"></i>
+                                                                    </button>
+                                                                    <p class="text-sm ms-1 my-0 py-0">124</p>
+                                                                </div>
+                                                                <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid unhelpful-btn" data-bs-toggle="modal" data-bs-target="#report-review">
+                                                                    <i class="bi bi-three-dots-vertical p-0 m-auto"></i>
+                                                                </button>
+                                                            </div>
+                                                            <!-- Sharing to Social Apps -->
+                                                            <div class="collapse" id="social-apps-section">
+                                                                <div class="bg-whitesmoke pt-3 border-bottom bg-light">
+                                                                    <div class="d-flex align-items-center justify-content-center">
+                                                                        <a href="#" class="d-block text-center">
+                                                                            <i class="fa fa-facebook text-primary fa-2x"></i>
+                                                                            <p class="text-sm text-primary">Facebook</p>
+                                                                        </a>
+                                                                        <a href="#" class="d-block text-center mx-5">
+                                                                            <i class="fa fa-linkedin text-primary fa-2x"></i>
+                                                                            <p class="text-sm text-primary">LinkedIn</p>
+                                                                        </a>
+                                                                        <a href="#" class="d-block text-center">
+                                                                            <i class="fa fa-twitter text-primary fa-2x"></i>
+                                                                            <p class="text-sm text-primary">Twitter</p>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /.Sharing to Social Apps -->
+
+                                                            <!-- Comment Section -->
+                                                            <div class="collapse" id="comments1">
+                                                                <div class="d-flex align-items-center my-2">
+                                                                    <ul class="p-0 m-0">
+                                                                        <li class="list-inline-item p-0 m-0">
+                                                                            <img data-src="dist/images/users/15f94791be9c51.jpg" src="dist/images/users/user.png" height="23" width="23" alt="" loading="lazy" class="rounded-circle lazy">
+                                                                        </li>
+                                                                        <li class="list-inline-item p-0 m-0 overlapping-image">
+                                                                            <img data-src="dist/images/users/15f947a8ab289c.jpg" src="dist/images/users/user.png" height="23" width="23" alt="" loading="lazy" class="rounded-circle lazy">
+                                                                        </li>
+                                                                        <li class="list-inline-item p-0 m-0 overlapping-image">
+                                                                            <img data-src="dist/images/users/15f957febc6cdf.jpg" src="dist/images/users/user.png" height="23" width="23" alt="" loading="lazy" class="rounded-circle lazy">
+                                                                        </li>
+                                                                    </ul>
+                                                                    <p class="text-sm text-faded ms-2 my-0 py-0">You, Takudzwa and 123 others</p>
+                                                                </div>
+                                                                <ul class="list-group list-group-flush bg-whitesmoke py-2 px-0 m-0 border-bottom comment-section bg-light">
+                                                                    <!-- Review Comment -->
+                                                                    <li class="list-group-item bg-transparent review-comment">
+                                                                        <div class="d-flex align-items-start">
+                                                                            <img data-src="dist/images/users/15f94791be9c51.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle lazy me-2">
+                                                                            <div class="d-block">
+                                                                                <h6 class="font-600 text-sm text-app-color my-0 text-capitalize">
+                                                                                    tatiana hemsworth
+                                                                                </h6>
+                                                                                <p class="text-sm text-muted my-0 py-0">2h ago</p>
+                                                                                <p class="text-muted text-sm text-justify mb-0 pb-0">
+                                                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ad dolor fugiat vitae doloremque. Harum eos officia rerum quo corrupti architecto repellat. Dolorem enim earum quia atque, natus quod officia?
+                                                                                </p>
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <div class="d-flex align-items-center">
+                                                                                        <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid helpful-btn">
+                                                                                            <i class="bi bi-hand-thumbs-up p-0 m-auto"></i>
+                                                                                        </button>
+                                                                                        <p class="text-sm ms-1 my-0 py-0">124</p>
+                                                                                    </div>
+                                                                                    <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid unhelpful-btn ms-4">
+                                                                                        <i class="bi bi-three-dots-vertical p-0 m-auto"></i>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <!-- /.Review Comment -->
+
+                                                                    <!-- Review Comment -->
+                                                                    <li class="list-group-item bg-transparent review-comment">
+                                                                        <div class="d-flex align-items-start">
+                                                                            <img data-src="dist/images/users/15f94791be9c51.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle lazy me-2">
+                                                                            <div class="d-block">
+                                                                                <h6 class="font-600 text-sm text-app-color my-0 text-capitalize">
+                                                                                    tatiana hemsworth
+                                                                                </h6>
+                                                                                <p class="text-sm text-muted my-0 py-0">2h ago</p>
+                                                                                <p class="text-muted text-sm text-justify mb-0 pb-0">
+                                                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ad dolor fugiat vitae doloremque. Harum eos officia rerum quo corrupti architecto repellat. Dolorem enim earum quia atque, natus quod officia?
+                                                                                </p>
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <div class="d-flex align-items-center">
+                                                                                        <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid helpful-btn">
+                                                                                            <i class="bi bi-hand-thumbs-up p-0 m-auto"></i>
+                                                                                        </button>
+                                                                                        <p class="text-sm ms-1 my-0 py-0">124</p>
+                                                                                    </div>
+                                                                                    <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid unhelpful-btn ms-4">
+                                                                                        <i class="bi bi-three-dots-vertical p-0 m-auto"></i>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <!-- /.Review Comment -->
+
+                                                                    <!-- Review Comment -->
+                                                                    <li class="list-group-item bg-transparent review-comment">
+                                                                        <div class="d-flex align-items-start">
+                                                                            <img data-src="dist/images/users/15f94791be9c51.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle lazy me-2">
+                                                                            <div class="d-block">
+                                                                                <h6 class="font-600 text-sm text-app-color my-0 text-capitalize">
+                                                                                    tatiana hemsworth
+                                                                                </h6>
+                                                                                <p class="text-sm text-muted my-0 py-0">2h ago</p>
+                                                                                <p class="text-muted text-sm text-justify mb-0 pb-0">
+                                                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ad dolor fugiat vitae doloremque. Harum eos officia rerum quo corrupti architecto repellat. Dolorem enim earum quia atque, natus quod officia?
+                                                                                </p>
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <div class="d-flex align-items-center">
+                                                                                        <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid helpful-btn">
+                                                                                            <i class="bi bi-hand-thumbs-up p-0 m-auto"></i>
+                                                                                        </button>
+                                                                                        <p class="text-sm ms-1 my-0 py-0">124</p>
+                                                                                    </div>
+                                                                                    <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid unhelpful-btn ms-4">
+                                                                                        <i class="bi bi-three-dots-vertical p-0 m-auto"></i>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <!-- /.Review Comment -->
+                                                                </ul>
+                                                                <!-- User Comment Form -->
+                                                                <form method="post" class="d-flex align-items-center bg-whitesmoke needs-validation border-bottom w-100 py-2" novalidate>
+                                                                    <img data-src="dist/images/users/15f9eb408be859.jpg" src="dist/images/users/user.png" height="30" width="30" alt="" loading="lazy" class="rounded-circle lazy">
+                                                                    <input type="text" name="comment-input" id="comment-input" class="form-control form-control-sm rounded-pill mx-2" placeholder="Press enter to post comment" required>
+                                                                    <button type="submit" class="btn btn btn-sm btn-primary circled-button-sm d-md-none d-grid">
+                                                                        <i class="material-icons m-auto text-md p-0">send</i>
+                                                                    </button>
+                                                                </form>
+                                                                <!-- /.User Comment Form -->
+                                                            </div>
+                                                            <!-- /.Comment Section -->
+                                                        </div>
+                                                    </li>
+                                                    <!-- /.Customer Review -->
+
+                                                    <!-- Customer Review -->
+                                                    <li class="list-group-item mx-md-3">
+                                                        <div class="d-flex align-items-start">
+                                                            <img data-src="dist/images/users/15f9eb408be859.jpg" src="dist/images/users/user.png" alt="" height="30" width="30" loading="lazy" class="rounded-circle lazy me-2">
+                                                            <div class="d-block">
+                                                                <h6 class="font-600 text-capitalize text-app-color py-0 my-0">tinashe chaterera</h6>
+                                                                <div class="d-flex align-items-center">
+                                                                    <ul class="list-inline gift-star-rating align-items-center gift-star-rating my-0 p-0">
+                                                                        <li class="list-inline-item text-gold">&starf;</li>
+                                                                        <li class="list-inline-item text-gold">&starf;</li>
+                                                                        <li class="list-inline-item text-gold">&starf;</li>
+                                                                        <li class="list-inline-item text-gold">&starf;</li>
+                                                                        <li class="list-inline-item text-muted">&star;</li>
+                                                                        <p class="my-0 py-0 text-sm text-faded font-600 text-capitalize">january 23, 2021</p>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="review-content">
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="d-flex align-items-center">
+                                                                    <i class="bi bi-shield-fill-check text-success me-1"></i>
+                                                                    <p class="my-0 py-0 text-sm text-muted border-right pe-1">Verified Purchase</p>
+                                                                </div>
+                                                                <p class="my-0 py-0 ps-1 text-sm text-muted">Reviewed in Mutare</p>
+                                                            </div>
+                                                            <p class="text-justify text-sm text-faded mt-1">
+                                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, neque explicabo, alias repellat eius distinctio similique facere at modi ex molestias necessitatibus veritatis dolor sint vitae debitis a hic voluptatum deleniti iure odio veniam repellendus
+                                                                placeat. Voluptas eveniet repellendus ad cumque aperiam, expedita ducimus, molestias sit explicabo voluptatem sequi. Magnam.
+                                                            </p>
+                                                            <div class="d-flex align-items-center">
+                                                                <img data-src="dist/images/users/15f9f8d1dee2ba.jpg" src="dist/images/users/user.png" alt="" loading="lazy" height="20" width="20" class="rounded-circle me-1 lazy">
+                                                                <p class="text-muted text-sm my-0 py-0">You found this helpful</p>
+                                                            </div>
+                                                            <div class="d-flex align-items-center justify-content-around py-1 mt-2 border-top border-bottom">
+                                                                <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid helpful-btn">
+                                                                    <i class="bi bi-hand-thumbs-up p-0 m-auto"></i>
+                                                                </button>
+                                                                <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid unhelpful-btn">
+                                                                    <i class="bi bi-hand-thumbs-down p-0 m-auto"></i>
+                                                                </button>
+                                                                <div class="d-flex align-items-center d-cursor" data-bs-toggle="collapse" data-bs-target="#social-apps-section" aria-expanded="false" aria-controls="social-apps-section">
+                                                                    <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid unhelpful-btn">
+                                                                        <i class="bi bi-share p-0 m-auto"></i>
+                                                                    </button>
+                                                                    <p class="text-sm ms-1 my-0 py-0">124</p>
+                                                                </div>
+                                                                <div class="d-flex align-items-center d-cursor" data-bs-toggle="collapse" data-bs-target="#comments1" aria-expanded="false" aria-controls="comments1">
+                                                                    <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid helpful-btn">
+                                                                        <i class="fa fa-comments-o p-0 m-auto"></i>
+                                                                    </button>
+                                                                    <p class="text-sm ms-1 my-0 py-0">124</p>
+                                                                </div>
+                                                                <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid unhelpful-btn" data-bs-toggle="modal" data-bs-target="#report-review">
+                                                                    <i class="bi bi-three-dots-vertical p-0 m-auto"></i>
+                                                                </button>
+                                                            </div>
+                                                            <!-- Sharing to Social Apps -->
+                                                            <div class="collapse" id="social-apps-section">
+                                                                <div class="bg-whitesmoke pt-3 border-bottom bg-light">
+                                                                    <div class="d-flex align-items-center justify-content-center">
+                                                                        <a href="#" class="d-block text-center">
+                                                                            <i class="fa fa-facebook text-primary fa-2x"></i>
+                                                                            <p class="text-sm text-primary">Facebook</p>
+                                                                        </a>
+                                                                        <a href="#" class="d-block text-center mx-5">
+                                                                            <i class="fa fa-linkedin text-primary fa-2x"></i>
+                                                                            <p class="text-sm text-primary">LinkedIn</p>
+                                                                        </a>
+                                                                        <a href="#" class="d-block text-center">
+                                                                            <i class="fa fa-twitter text-primary fa-2x"></i>
+                                                                            <p class="text-sm text-primary">Twitter</p>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /.Sharing to Social Apps -->
+
+                                                            <!-- Comment Section -->
+                                                            <div class="collapse" id="comments1">
+                                                                <div class="d-flex align-items-center my-2">
+                                                                    <ul class="p-0 m-0">
+                                                                        <li class="list-inline-item p-0 m-0">
+                                                                            <img data-src="dist/images/users/15f94791be9c51.jpg" src="dist/images/users/user.png" height="23" width="23" alt="" loading="lazy" class="rounded-circle lazy">
+                                                                        </li>
+                                                                        <li class="list-inline-item p-0 m-0 overlapping-image">
+                                                                            <img data-src="dist/images/users/15f947a8ab289c.jpg" src="dist/images/users/user.png" height="23" width="23" alt="" loading="lazy" class="rounded-circle lazy">
+                                                                        </li>
+                                                                        <li class="list-inline-item p-0 m-0 overlapping-image">
+                                                                            <img data-src="dist/images/users/15f957febc6cdf.jpg" src="dist/images/users/user.png" height="23" width="23" alt="" loading="lazy" class="rounded-circle lazy">
+                                                                        </li>
+                                                                    </ul>
+                                                                    <p class="text-sm text-faded ms-2 my-0 py-0">You, Takudzwa and 123 others</p>
+                                                                </div>
+                                                                <ul class="list-group list-group-flush bg-whitesmoke py-2 px-0 m-0 border-bottom comment-section bg-light">
+                                                                    <!-- Review Comment -->
+                                                                    <li class="list-group-item bg-transparent review-comment">
+                                                                        <div class="d-flex align-items-start">
+                                                                            <img data-src="dist/images/users/15f94791be9c51.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle lazy me-2">
+                                                                            <div class="d-block">
+                                                                                <h6 class="font-600 text-sm text-app-color my-0 text-capitalize">
+                                                                                    tatiana hemsworth
+                                                                                </h6>
+                                                                                <p class="text-sm text-muted my-0 py-0">2h ago</p>
+                                                                                <p class="text-muted text-sm text-justify mb-0 pb-0">
+                                                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ad dolor fugiat vitae doloremque. Harum eos officia rerum quo corrupti architecto repellat. Dolorem enim earum quia atque, natus quod officia?
+                                                                                </p>
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <div class="d-flex align-items-center">
+                                                                                        <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid helpful-btn">
+                                                                                            <i class="bi bi-hand-thumbs-up p-0 m-auto"></i>
+                                                                                        </button>
+                                                                                        <p class="text-sm ms-1 my-0 py-0">124</p>
+                                                                                    </div>
+                                                                                    <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid unhelpful-btn ms-4">
+                                                                                        <i class="bi bi-three-dots-vertical p-0 m-auto"></i>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <!-- /.Review Comment -->
+
+                                                                    <!-- Review Comment -->
+                                                                    <li class="list-group-item bg-transparent review-comment">
+                                                                        <div class="d-flex align-items-start">
+                                                                            <img data-src="dist/images/users/15f94791be9c51.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle lazy me-2">
+                                                                            <div class="d-block">
+                                                                                <h6 class="font-600 text-sm text-app-color my-0 text-capitalize">
+                                                                                    tatiana hemsworth
+                                                                                </h6>
+                                                                                <p class="text-sm text-muted my-0 py-0">2h ago</p>
+                                                                                <p class="text-muted text-sm text-justify mb-0 pb-0">
+                                                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ad dolor fugiat vitae doloremque. Harum eos officia rerum quo corrupti architecto repellat. Dolorem enim earum quia atque, natus quod officia?
+                                                                                </p>
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <div class="d-flex align-items-center">
+                                                                                        <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid helpful-btn">
+                                                                                            <i class="bi bi-hand-thumbs-up p-0 m-auto"></i>
+                                                                                        </button>
+                                                                                        <p class="text-sm ms-1 my-0 py-0">124</p>
+                                                                                    </div>
+                                                                                    <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid unhelpful-btn ms-4">
+                                                                                        <i class="bi bi-three-dots-vertical p-0 m-auto"></i>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <!-- /.Review Comment -->
+
+                                                                    <!-- Review Comment -->
+                                                                    <li class="list-group-item bg-transparent review-comment">
+                                                                        <div class="d-flex align-items-start">
+                                                                            <img data-src="dist/images/users/15f94791be9c51.jpg" src="dist/images/users/user.png" height="30" width="30" loading="lazy" class="rounded-circle lazy me-2">
+                                                                            <div class="d-block">
+                                                                                <h6 class="font-600 text-sm text-app-color my-0 text-capitalize">
+                                                                                    tatiana hemsworth
+                                                                                </h6>
+                                                                                <p class="text-sm text-muted my-0 py-0">2h ago</p>
+                                                                                <p class="text-muted text-sm text-justify mb-0 pb-0">
+                                                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ad dolor fugiat vitae doloremque. Harum eos officia rerum quo corrupti architecto repellat. Dolorem enim earum quia atque, natus quod officia?
+                                                                                </p>
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <div class="d-flex align-items-center">
+                                                                                        <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid helpful-btn">
+                                                                                            <i class="bi bi-hand-thumbs-up p-0 m-auto"></i>
+                                                                                        </button>
+                                                                                        <p class="text-sm ms-1 my-0 py-0">124</p>
+                                                                                    </div>
+                                                                                    <button type="button" class="btn btn-default btn-sm circled-button-sm d-grid unhelpful-btn ms-4">
+                                                                                        <i class="bi bi-three-dots-vertical p-0 m-auto"></i>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <!-- /.Review Comment -->
+                                                                </ul>
+                                                                <!-- User Comment Form -->
+                                                                <form method="post" class="d-flex align-items-center bg-whitesmoke needs-validation border-bottom w-100 py-2" novalidate>
+                                                                    <img data-src="dist/images/users/15f9eb408be859.jpg" src="dist/images/users/user.png" height="30" width="30" alt="" loading="lazy" class="rounded-circle lazy">
+                                                                    <input type="text" name="comment-input" id="comment-input" class="form-control form-control-sm rounded-pill mx-2" placeholder="Press enter to post comment" required>
+                                                                    <button type="submit" class="btn btn btn-sm btn-primary circled-button-sm d-md-none d-grid">
+                                                                        <i class="material-icons m-auto text-md p-0">send</i>
+                                                                    </button>
+                                                                </form>
+                                                                <!-- /.User Comment Form -->
+                                                            </div>
+                                                            <!-- /.Comment Section -->
+                                                        </div>
+                                                    </li>
+                                                    <!-- /.Customer Review -->
+                                                </ul>
+                                                <!-- /.Reviews -->
+                                            </div>
+                                            <!-- /.Customer Reviews -->
+
+                                            <!-- Recipients -->
+                                            <div class="tab-pane fade bg-whitesmoke border box-shadow-sm" id="recipients" role="tabpanel" aria-labelledby="recipients-tab">
+                                                <!-- Header Section -->
+                                                <div class="d-flex align-items-center justify-content-between border-bottom p-3 w-100">
+                                                    <select class="form-select form-select-sm bg-transparent border-0 outline-0 w-50" id="filter-recipients" aria-label="filter-recipients">
+                                                        <option selected>Sort Recipients by:</option>
+                                                        <option value="name-asc">Name (Ascending)</option>
+                                                        <option value="name-desc">Name (Descending)</option>
+                                                        <option value="latest">Recently addded</option>
+                                                        <option value="sent-orders">Sent Orders</option>
+                                                        <option value="received-orders">Received Orders</option>
+                                                    </select>
+                                                    <div class="form-group icon-form-group w-50">
+                                                        <i class="material-icons icon text-faded">search</i>
+                                                        <input type="text" class="form-control subscription-input text-capitalize text-sm rounded-pill" id="recipients-name" name="recipients-name" placeholder="Search name" required spellcheck="false">
+                                                    </div>
+                                                </div>
+                                                <!-- /.Header Section -->
+                                                <!-- Recipients List -->
+                                                <ul class="list-group list-group-flush">
+                                                    <!-- Recipient -->
+                                                    <li class="list-group-item">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <!-- Recipient's Details -->
+                                                            <div class="d-flex align-items-center">
+                                                                <img data-src="dist/images/users/15f947a8ab289c.jpg" src="dist/images/users/user.png" height="70" width="70" class="rounded-circle lazy me-2">
+                                                                <div class="d-block lh-100">
+                                                                    <h6 class="text-capitalize text-app-color font-600 my-0">tinashe chaterera</h6>
+                                                                    <address>
+                                                                        <p class="text-capitalize text-muted text-sm my-0 py-0">8069 new canaan, 230th st. highfield</p>
+                                                                        <p class="text-capitalize text-muted text-sm my-0 py-0">harare, zimbabwe</p>
+                                                                        <p class="text-capitalize text-muted text-sm my-0 py-0">263776021140</p>
+                                                                    </address>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /.Recipient's Details -->
+                                                            <!-- Action Buttons -->
+                                                            <div class="d-flex align-items-center">
+                                                                <button type="button" class="d-none d-inline-flex btn btn-outline-switch btn-sm me-3">
+                                                                    Sent gift
+                                                                </button>
+                                                                <div class="dropdown">
+                                                                    <button type="button" class="btn btn-default circled-button d-flex justify-content-center" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <i class="material-icons text-color-switch">more_horiz</i>
+                                                                    </button>
+                                                                    <div class="dropdown-menu dropdown-menu-end my-0 py-0">
+                                                                        <div class="dropdown-item d-cursor">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <i class="bi bi-gift me-1"></i> Send gift
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="dropdown-item d-cursor">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <i class="bi bi-trash me-1"></i> Remove recipient
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /.Action Buttons -->
+                                                        </div>
+                                                    </li>
+                                                    <!-- /.Recipient -->
+
+                                                    <!-- Recipient -->
+                                                    <li class="list-group-item">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <!-- Recipient's Details -->
+                                                            <div class="d-flex align-items-center">
+                                                                <img data-src="dist/images/users/15f9f8d1dee2ba.jpg" src="dist/images/users/user.png" height="70" width="70" class="rounded-circle lazy me-2">
+                                                                <div class="d-block lh-100">
+                                                                    <h6 class="text-capitalize text-app-color font-600 my-0">tinashe chaterera</h6>
+                                                                    <address>
+                                                                        <p class="text-capitalize text-muted text-sm my-0 py-0">8069 new canaan, 230th st. highfield</p>
+                                                                        <p class="text-capitalize text-muted text-sm my-0 py-0">harare, zimbabwe</p>
+                                                                        <p class="text-capitalize text-muted text-sm my-0 py-0">263776021140</p>
+                                                                    </address>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /.Recipient's Details -->
+                                                            <!-- Action Buttons -->
+                                                            <div class="d-flex align-items-center">
+                                                                <button type="button" class="d-none d-inline-flex btn btn-outline-switch btn-sm me-3">
+                                                                    Sent gift
+                                                                </button>
+                                                                <div class="dropdown">
+                                                                    <button type="button" class="btn btn-default circled-button d-flex justify-content-center" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <i class="material-icons text-color-switch">more_horiz</i>
+                                                                    </button>
+                                                                    <div class="dropdown-menu dropdown-menu-end my-0 py-0">
+                                                                        <div class="dropdown-item d-cursor">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <i class="bi bi-gift me-1"></i> Send gift
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="dropdown-item d-cursor">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <i class="bi bi-trash me-1"></i> Remove recipient
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /.Action Buttons -->
+                                                        </div>
+                                                    </li>
+                                                    <!-- /.Recipient -->
+
+                                                    <!-- Recipient -->
+                                                    <li class="list-group-item">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <!-- Recipient's Details -->
+                                                            <div class="d-flex align-items-center">
+                                                                <img data-src="dist/images/users/15f957febc6cdf.jpg" src="dist/images/users/user.png" height="70" width="70" class="rounded-circle lazy me-2">
+                                                                <div class="d-block lh-100">
+                                                                    <h6 class="text-capitalize text-app-color font-600 my-0">tinashe chaterera</h6>
+                                                                    <address>
+                                                                        <p class="text-capitalize text-muted text-sm my-0 py-0">8069 new canaan, 230th st. highfield</p>
+                                                                        <p class="text-capitalize text-muted text-sm my-0 py-0">harare, zimbabwe</p>
+                                                                        <p class="text-capitalize text-muted text-sm my-0 py-0">263776021140</p>
+                                                                    </address>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /.Recipient's Details -->
+                                                            <!-- Action Buttons -->
+                                                            <div class="d-flex align-items-center">
+                                                                <button type="button" class="d-none d-inline-flex btn btn-outline-switch btn-sm me-3">
+                                                                    Sent gift
+                                                                </button>
+                                                                <div class="dropdown">
+                                                                    <button type="button" class="btn btn-default circled-button d-flex justify-content-center" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <i class="material-icons text-color-switch">more_horiz</i>
+                                                                    </button>
+                                                                    <div class="dropdown-menu dropdown-menu-end my-0 py-0">
+                                                                        <div class="dropdown-item d-cursor">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <i class="bi bi-gift me-1"></i> Send gift
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="dropdown-item d-cursor">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <i class="bi bi-trash me-1"></i> Remove recipient
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /.Action Buttons -->
+                                                        </div>
+                                                    </li>
+                                                    <!-- /.Recipient -->
+                                                </ul>
+                                                <!-- /.Recipients List -->
+                                            </div>
+                                            <!-- /.Recipients -->
+
+                                            <!-- Account Settings -->
+                                            <div class="tab-pane fade bg-whitesmoke border box-shadow-sm p-3" id="account" role="tabpanel" aria-labelledby="account-tab">
+                                                <h5 class="text-app-color font-600">Edit your Account Info</h5>
+                                                <!-- Personal Info -->
+                                                <div class="box-shadow-sm border p-3 my-2">
+                                                    <form method="post" id="user-info-form" class="row g-3 needs-validation" novalidate>
+                                                        <!-- Full name -->
+                                                        <div class="col col-md-6">
+                                                            <label for="first-name" class="form-label mb-0">First name</label>
+                                                            <input type="text" class="form-control" id="first-name" value="John" required>
+                                                            <div class="invalid-feedback">
+                                                                Please add your first name.
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <label for="last-name" class="form-label mb-0">Last name</label>
+                                                            <input type="text" class="form-control" id="last-name" value="Doe" required>
+                                                            <div class="invalid-feedback">
+                                                                Please add your last name.
+                                                            </div>
+                                                        </div>
+                                                        <!-- /.Full name -->
+
+                                                        <!-- Contact Details -->
+                                                        <div class="col-12 col-md-6">
+                                                            <label for="email" class="form-label mb-0">Email</label>
+                                                            <input type="email" class="form-control" id="email" value="example@email.com" required>
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid email address.
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <label for="phone-number" class="form-label mb-0">Phone number</label>
+                                                            <div class="input-group has-validation">
+                                                                <span class="input-group-text d-flex align-items-center" id="inputGroupPrepend">
+                                                                    <img src="dist/images/countries/flag-of-Zimbabwe.png" height="15" width="22" alt="" class="me-1"> 263
+                                                                </span>
+                                                                <input type="text" class="form-control" id="phone-number" placeholder="776021140" aria-describedby="inputGroupPrepend" required>
+                                                                <div class="invalid-feedback">
+                                                                    Please provide a valid phone number.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /.Contact Details -->
+
+                                                        <!-- Personal Details -->
+                                                        <div class="col col-md-6">
+                                                            <label for="birthday" class="form-label mb-0">Date of Birth</label>
+                                                            <input type="date" class="form-control" id="birthday">
+                                                            <div class="invalid-feedback">
+                                                                Please add your D.O.B.
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <label for="gender" class="form-label mb-0">Gender</label>
+                                                            <select class="form-select box-shadow-sm" id="gender" required>
+                                                                <option selected disabled value="">Select Gender</option>
+                                                                <option>Male</option>
+                                                                <option>Female</option>
+                                                                <option>Other</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">
+                                                                Please choose a gender.
+                                                            </div>
+                                                        </div>
+                                                        <!-- /.Personal  Details -->
+
+                                                        <!-- Address -->
+                                                        <div class="col-12 col-md-6">
+                                                            <label for="address" class="form-label mb-0">Address</label>
+                                                            <input type="text" class="form-control" id="address" placeholder="1234 Main St." required>
+                                                            <div class="invalid-feedback">
+                                                                Please provide your address.
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <label for="suburb" class="form-label mb-0">Suburb</label>
+                                                            <select class="form-select box-shadow-sm" id="suburb" required>
+                                                                <option selected disabled value="">Select Suburb</option>
+                                                                <option>Adbernie</option>
+                                                                <option>Arlington Estate</option>
+                                                                <option>Borrowdale</option>
+                                                                <option>Chisipiti</option>
+                                                                <option>Dzivarasekwa</option>
+                                                                <option>Epworth</option>
+                                                                <option>Highfield</option>
+                                                                <option>Waterfalls</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">
+                                                                Please select a valid suburb.
+                                                            </div>
+                                                        </div>
+                                                        <!-- /.Address -->
+
+                                                        <div class="col-12 text-end">
+                                                            <button type="submit" class="btn btn-primary px-3">
+                                                                Update profile
+                                                            </button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <!-- /.Personal Info -->
+
+                                                <!-- Profile Picture -->
+                                                <div class="box-shadow-sm border p-3 my-2">
+                                                    <label for="profile-pic" class="form-label mb-0">Profile picture</label>
+                                                    <form action="" method="post" enctype="multipart/form-data">
+                                                        <div class="d-flex align-items-center">
+                                                            <img data-src="dist/images/users/15f9f8d1dee2ba.jpg" src="dist/images/users/user.png" height="80" width="80" loading="lazy" class="rounded-circle prof-pic lazy">
+                                                            <div class="ms-2">
+                                                                <input class="form-control" id="profile-pic" name="profile-pic" type="file" onchange="displayImg(this)" accept="image/*">
+                                                            </div>
+                                                        </div>
+                                                        <p class="text-sm text-muted mb-0 pb-0">
+                                                            Image should be 75x75 pixels and should not exceed 2mb long.
+                                                        </p>
+                                                    </form>
+                                                </div>
+                                                <!-- /.Profile Picture -->
+
+                                                <!-- Update Password -->
+                                                <div class="box-shadow-sm border p-3 my-2">
+                                                    <form action="" class="row g-3 needs-validation" method="post" id="update-password-form" novalidate>
+                                                        <!-- Current Password -->
+                                                        <div class="col col-md-6">
+                                                            <label for="current-password" class="form-label mb-0">Current password</label>
+                                                            <input type="password" class="form-control" name="current-password" id="current-password" placeholder="Current password" required>
+                                                            <div class="invalid-feedback">
+                                                                Current password required.
+                                                            </div>
+                                                        </div>
+                                                        <!-- /.Current Password -->
+                                                        <!-- New Password -->
+                                                        <div class="col-12 col-md-6">
+                                                            <label for="new-password" class="form-label mb-0">New password</label>
+                                                            <input type="password" class="form-control" name="new-password" id="new-password" placeholder="New password" required>
+                                                            <div class="invalid-feedback">
+                                                                New password required.
+                                                            </div>
+                                                        </div>
+                                                        <!-- /.New Password -->
+                                                        <div class="col-12 text-end">
+                                                            <button type="submit" class="btn btn-primary px-3">
+                                                                Change password
+                                                            </button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <!-- /.Update Password -->
+                                            </div>
+                                            <!-- /.Account Settings -->
+
+                                            <!-- Settings -->
+                                            <div class="tab-pane fade bg-whitesmoke border box-shadow-sm p-3" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                                                <h5 class="text-app-color font-600">Customizing Settings</h5>
+                                                <div class="container-fluid px-3 mt-2">
+                                                    <p class="mb-0 font-500 d-none" id="day-mode">
+                                                        <i class="fa fa-sun-o"></i> Toggle Day Mode
+                                                    </p>
+                                                    <p class="mb-0 font-500" id="night-mode">
+                                                        <i class="fa fa-moon-o"></i> Toggle Night Mode
+                                                    </p>
+                                                    <div class="d-flex align-items-center mt-2">
+                                                        <div class="form-check toggle-switch">
+                                                            <input type="checkbox" class="form-check-input switch-btn theme-switch" id="darkmode" onchange="themeMode(this);">
+                                                        </div>
+                                                    </div>
+                                                    <hr class="w-100">
+                                                    <p class="mb-0 font-500">
+                                                        <i class="fa fa-exchange"></i> Change Currency
+                                                    </p>
+                                                    <div class="d-flex align-items-center mt-2">
+                                                        <div class="form-check toggle-switch">
+                                                            <input type="checkbox" class="form-check-input switch-btn usd-currency" id="usd-currency" onchange="usdCurrency(this);" checked>
+                                                            <label class="form-check-label ms-2" for="usd">USD</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center mt-2">
+                                                        <div class="form-check toggle-switch">
+                                                            <input type="checkbox" class="form-check-input switch-btn zar-currency" id="zar-currency" onchange="zarCurrency(this);">
+                                                            <label class="form-check-label ms-2" for="zar-currency">ZAR</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center mt-2">
+                                                        <div class="form-check toggle-switch">
+                                                            <input type="checkbox" class="form-check-input switch-btn zwl-currency" id="zwl-currency" onchange="zwlCurrency(this);">
+                                                            <label class="form-check-label ms-2" for="zwl-currency">ZWL</label>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="w-100">
+                                                    <p class="mb-0 font-500">
+                                                        <i class="fa fa-sort-alpha-asc"></i> Sort by Name
+                                                    </p>
+                                                    <div class="d-flex align-items-center mt-2">
+                                                        <div class="form-check toggle-switch">
+                                                            <input type="checkbox" class="form-check-input switch-btn" id="name-asc" onchange="orderByName(this)" checked>
+                                                            <label class="form-check-label ms-2" for="name-asc" id="name-sorting-order">Ascending</label>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="w-100">
+                                                    <p class="mb-0 font-500">
+                                                        <i class="fa fa-sort-amount-asc"></i> Sort by Price
+                                                    </p>
+                                                    <div class="d-flex align-items-center mt-2">
+                                                        <div class="form-check toggle-switch">
+                                                            <input type="checkbox" class="form-check-input switch-btn" id="price-ordering" onchange="orderByPrice(this)" checked>
+                                                            <label class="form-check-label ms-2" for="price-ordering" id="price-ordering-label">Ascending</label>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="w-100">
+                                                    <p class="mb-0 font-500">
+                                                        <i class="fa fa-sort"></i> Sort by Orders
+                                                    </p>
+                                                    <div class="d-flex align-items-center mt-2">
+                                                        <div class="form-check toggle-switch">
+                                                            <input type="checkbox" class="form-check-input switch-btn" id="trending" checked>
+                                                            <label class="form-check-label ms-2" for="trending">Trending</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center mt-2">
+                                                        <div class="form-check toggle-switch">
+                                                            <input type="checkbox" class="form-check-input switch-btn" id="recent">
+                                                            <label class="form-check-label ms-2" for="recent">Recent</label>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="w-100">
+                                                    <p class="mb-0 font-500">
+                                                        <i class="fa fa-bell-o"></i> Email Notifications
+                                                    </p>
+                                                    <div class="d-flex align-items-center mt-2">
+                                                        <div class="form-check toggle-switch">
+                                                            <input type="checkbox" class="form-check-input switch-btn" id="notifications" checked>
+                                                            <label class="form-check-label ms-2" for="notifications">Notifications</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.Settings -->
                                         </div>
                                     </div>
-                                    <hr class="w-100">
-                                    <p class="mb-0 font-500">
-                                        <i class="fa fa-exchange"></i> Change Currency
-                                    </p>
-                                    <div class="d-flex align-items-center mt-2">
-                                        <div class="form-check toggle-switch">
-                                            <input type="checkbox" class="form-check-input switch-btn usd-currency" id="usd-currency" onchange="usdCurrency(this);" checked>
-                                            <label class="form-check-label ms-2" for="usd">USD</label>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center mt-2">
-                                        <div class="form-check toggle-switch">
-                                            <input type="checkbox" class="form-check-input switch-btn zar-currency" id="zar-currency" onchange="zarCurrency(this);">
-                                            <label class="form-check-label ms-2" for="zar-currency">ZAR</label>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center mt-2">
-                                        <div class="form-check toggle-switch">
-                                            <input type="checkbox" class="form-check-input switch-btn zwl-currency" id="zwl-currency" onchange="zwlCurrency(this);">
-                                            <label class="form-check-label ms-2" for="zwl-currency">ZWL</label>
-                                        </div>
-                                    </div>
-                                    <hr class="w-100">
-                                    <p class="mb-0 font-500">
-                                        <i class="fa fa-sort-alpha-asc"></i> Sort by Name
-                                    </p>
-                                    <div class="d-flex align-items-center mt-2">
-                                        <div class="form-check toggle-switch">
-                                            <input type="checkbox" class="form-check-input switch-btn" id="name-asc" onchange="orderByName(this)" checked>
-                                            <label class="form-check-label ms-2" for="name-asc" id="name-sorting-order">Ascending</label>
-                                        </div>
-                                    </div>
-                                    <hr class="w-100">
-                                    <p class="mb-0 font-500">
-                                        <i class="fa fa-sort-amount-asc"></i> Sort by Price
-                                    </p>
-                                    <div class="d-flex align-items-center mt-2">
-                                        <div class="form-check toggle-switch">
-                                            <input type="checkbox" class="form-check-input switch-btn" id="price-ordering" onchange="orderByPrice(this)" checked>
-                                            <label class="form-check-label ms-2" for="price-ordering" id="price-ordering-label">Ascending</label>
-                                        </div>
-                                    </div>
-                                    <hr class="w-100">
-                                    <p class="mb-0 font-500">
-                                        <i class="fa fa-sort"></i> Sort by Orders
-                                    </p>
-                                    <div class="d-flex align-items-center mt-2">
-                                        <div class="form-check toggle-switch">
-                                            <input type="checkbox" class="form-check-input switch-btn" id="trending" checked>
-                                            <label class="form-check-label ms-2" for="trending">Trending</label>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center mt-2">
-                                        <div class="form-check toggle-switch">
-                                            <input type="checkbox" class="form-check-input switch-btn" id="recent">
-                                            <label class="form-check-label ms-2" for="recent">Recent</label>
-                                        </div>
-                                    </div>
-                                    <hr class="w-100">
-                                    <p class="mb-0 font-500">
-                                        <i class="fa fa-bell-o"></i> Email Notifications
-                                    </p>
-                                    <div class="d-flex align-items-center mt-2">
-                                        <div class="form-check toggle-switch">
-                                            <input type="checkbox" class="form-check-input switch-btn" id="notifications" checked>
-                                            <label class="form-check-label ms-2" for="notifications">Notifications</label>
-                                        </div>
-                                    </div>
+                                    <!-- /.Tab Content -->
                                 </div>
                             </div>
-                            <!-- /.Settings -->
+                            <!-- /.Content -->
                         </div>
                     </div>
-                    <!-- /.Tab Content -->
-
-                    <!-- Recipiemts & Review Ratings -->
-                    <div class="col-12 col-md-3">
-                        <!-- Recipients List -->
-                        <ul class="list-group box-shadow-sm rounded-2 px-0 mx-0 mb-2">
-                            <li class="list-group-item">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h6 class="text-app-color font-600 my-0">
-                                        Recipients (3)
-                                    </h6>
-                                    <a href="#" class="d-flex align-items-center">
-                                        <span class="text-underline text-inherit">Show all</span>
-                                        <i class="material-icons">chevron_right</i>
-                                    </a>
-                                </div>
-                            </li>
-                            <!-- Recipient -->
-                            <li class="list-group-item dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img src="dist/images/users/15f957febc6cdf.jpg" height="30" width="30" alt="" class="rounded-circle me-2">
-                                    <div class="d-block w-100">
-                                        <h6 class="font-600 text-app-color text-sm text-capitalize my-0">
-                                            tinashe chaterera
-                                        </h6>
-                                        <p class="text-muted text-sm my-0 py-0">5 orders</p>
-                                    </div>
-                                    <a href="#" class="stretched-link"></a>
-                                </div>
-                            </li>
-                            <!-- /.Recipient -->
-                            <!-- Recipient -->
-                            <li class="list-group-item dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img src="dist/images/users/15f957febc6cdf.jpg" height="30" width="30" alt="" class="rounded-circle me-2">
-                                    <div class="d-block w-100">
-                                        <h6 class="font-600 text-app-color text-sm text-capitalize my-0">
-                                            tinashe chaterera
-                                        </h6>
-                                        <p class="text-muted text-sm my-0 py-0">5 orders</p>
-                                    </div>
-                                    <a href="#" class="stretched-link"></a>
-                                </div>
-                            </li>
-                            <!-- /.Recipient -->
-                            <!-- Recipient -->
-                            <li class="list-group-item dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img src="dist/images/users/15f957febc6cdf.jpg" height="30" width="30" alt="" class="rounded-circle me-2">
-                                    <div class="d-block w-100">
-                                        <h6 class="font-600 text-app-color text-sm text-capitalize my-0">
-                                            tinashe chaterera
-                                        </h6>
-                                        <p class="text-muted text-sm my-0 py-0">5 orders</p>
-                                    </div>
-                                    <a href="#" class="stretched-link"></a>
-                                </div>
-                            </li>
-                            <!-- /.Recipient -->
-                            <!-- Recipient -->
-                            <li class="list-group-item dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img src="dist/images/users/15f957febc6cdf.jpg" height="30" width="30" alt="" class="rounded-circle me-2">
-                                    <div class="d-block w-100">
-                                        <h6 class="font-600 text-app-color text-sm text-capitalize my-0">
-                                            tinashe chaterera
-                                        </h6>
-                                        <p class="text-muted text-sm my-0 py-0">5 orders</p>
-                                    </div>
-                                    <a href="#" class="stretched-link"></a>
-                                </div>
-                            </li>
-                            <!-- /.Recipient -->
-                        </ul>
-                        <!-- /.Recipients List -->
-
-                        <!-- Recipients List -->
-                        <ul class="list-group box-shadow-sm rounded-2 px-0 mx-0">
-                            <li class="list-group-item">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h6 class="text-app-color font-600 my-0">
-                                        Reviews (23)
-                                    </h6>
-                                    <a href="#" class="d-flex align-items-center">
-                                        <span class="text-underline text-inherit">Show all</span>
-                                        <i class="material-icons">chevron_right</i>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="list-group-item px-3 py-2 bg-salmon">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <div class="d-block text-center">
-                                        <h6 class="text-sm text-app-color font-600 my-0">
-                                            Overall Ratings
-                                        </h6>
-                                        <h6 class="font-600 text-app-color my-0 py-0">
-                                            4.3/5.0
-                                        </h6>
-                                    </div>
-                                    <div id="overall-rating"></div>
-                                </div>
-                            </li>
-                            <!-- Review -->
-                            <li class="list-group-item dropdown-item">
-                                <div class="d-flex align-items-center justify-content-between w-100">
-                                    <div class="d-flex align-items-center w-75">
-                                        <img src="dist/images/gifts/15f458254a0dac.jpg" height="35" width="35" alt="" class="rounded me-2">
-                                        <div class="d-block">
-                                            <h6 class="font-600 text-app-color text-sm text-capitalize my-0">
-                                                product item 1
-                                            </h6>
-                                            <p class="text-muted text-sm my-0 py-0">3h ago</p>
-                                        </div>
-                                        <a href="#" class="stretched-link"></a>
-                                    </div>
-                                    <div class="w-25">
-                                        <div class="d-flex align-items-center justify-content-center border p-1 rounded">
-                                            <span class="text-gold">&starf;</span>
-                                            <span class="text-muted text-sm ms-1">3</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- /.Review -->
-                            <!-- Review -->
-                            <li class="list-group-item dropdown-item">
-                                <div class="d-flex align-items-center justify-content-between w-100">
-                                    <div class="d-flex align-items-center w-75">
-                                        <img src="dist/images/gifts/15f458254a0dac.jpg" height="35" width="35" alt="" class="rounded me-2">
-                                        <div class="d-block">
-                                            <h6 class="font-600 text-app-color text-sm text-capitalize my-0">
-                                                product item 1
-                                            </h6>
-                                            <p class="text-muted text-sm my-0 py-0">3h ago</p>
-                                        </div>
-                                        <a href="#" class="stretched-link"></a>
-                                    </div>
-                                    <div class="w-25">
-                                        <div class="d-flex align-items-center justify-content-center border p-1 rounded">
-                                            <span class="text-gold">&starf;</span>
-                                            <span class="text-muted text-sm ms-1">3</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- /.Review -->
-                            <!-- Review -->
-                            <li class="list-group-item dropdown-item">
-                                <div class="d-flex align-items-center justify-content-between w-100">
-                                    <div class="d-flex align-items-center w-75">
-                                        <img src="dist/images/gifts/15f458254a0dac.jpg" height="35" width="35" alt="" class="rounded me-2">
-                                        <div class="d-block">
-                                            <h6 class="font-600 text-app-color text-sm text-capitalize my-0">
-                                                product item 1
-                                            </h6>
-                                            <p class="text-muted text-sm my-0 py-0">3h ago</p>
-                                        </div>
-                                        <a href="#" class="stretched-link"></a>
-                                    </div>
-                                    <div class="w-25">
-                                        <div class="d-flex align-items-center justify-content-center border p-1 rounded">
-                                            <span class="text-gold">&starf;</span>
-                                            <span class="text-muted text-sm ms-1">3</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- /.Review -->
-                        </ul>
-                        <!-- /.Recipients List -->
-                    </div>
-                    <!-- /.Recipiemts & Review Ratings -->
+                    <!-- /.Main Content -->
+                    <div class="col-12 col-xl-3"></div>
                 </div>
             </div>
         </div>
     </div>
     <!-- /.Page Content -->
+
+    <!-- Cover-Img Modal -->
+    <div class="modal fade rounded-0" id="cover-img-modal" tabindex="-1" role="dialog" aria-labelledby="cover-img-modal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header pt-0 pb-1 shadow-sm">
+                    <div class="modal-title d-block" id="mailing-modalLabel">
+                        <h6 class="mb-0 py-3 font-600">Edit cover image</h6>
+                    </div>
+                    <button type="button" data-bs-dismiss="modal" class="btn-close" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="font-600 mb-0">Showcase your personality, interests, or favorite products.</h6>
+                    <p class="text-sm text-muted my-0 py-0">A good cover image will enlighten your mood.</p>
+                    <div class="cover-img-wrapper">
+                        <form method="post" id="cover-img-form" enctype="multipart/form-data">
+                            <a href="#">
+                                <label class="mb-0" for="upload-cover-img" onclick="uploadCoverImg()">
+                                    <input class="d-none trigger-click" type="file" name="upload-cover-img" id="upload-cover-img" onchange="displayCoverImg(this)" accept="image/*">
+                                    <img src="dist/images/app/bg-placeholder.PNG" class="mt-2 d-cursor cover-img" onclick="uploadCoverImg()">
+                                    <div class="trigger-upload-block trigger-click d-block text-center position-absolute" onclick="uploadCoverImg()">
+                                        <i class="material-icons fa-3x">add</i>
+                                        <h6 class="lead font-600">Add cover image</h6>
+                                    </div>
+                                </label>
+                            </a>
+                        </form>
+                    </div>
+                </div>
+                <!-- Image Filter Settings -->
+                <div class="row align-items-center border-top mt-2 mx-1">
+                    <!-- Cropping -->
+                    <div class="col-12" id="cropping">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <label for="zoom-range-slider" class="form-label text-sm mb-0">Zoom</label>
+                                <input type="range" class="form-range" min="0" max="5" step="0.5" id="zoom-range-slider">
+                            </div>
+                            <div class="col-6">
+                                <label for="straighten-range-slider" class="form-label text-sm mb-0">Straighten</label>
+                                <input type="range" class="form-range" min="0" max="5" step="0.5" id="straighten-range-slider">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.Cropping -->
+                </div>
+                <!-- /.Image Filter Settings -->
+                <div class="modal-footer py-1">
+                    <div class="d-flex align-items-center w-100">
+                        <a href="#" class="d-block text-center">
+                            <i class="bi bi-crop"></i>
+                            <p class="text-sm text-inherit my-0 py-0">Crop</p>
+                        </a>
+                        <a href="#" class="d-block text-center mx-5">
+                            <i class="bi bi-intersect"></i>
+                            <p class="text-sm text-inherit my-0 py-0">Filter</p>
+                        </a>
+                        <a href="#" class="d-block text-center">
+                            <i class="bi bi-sliders"></i>
+                            <p class="text-sm text-inherit my-0 py-0">Adjust</p>
+                        </a>
+                        <a href="#" class="d-block text-center ms-auto">
+                            <i class="bi bi-eye"></i>
+                            <p class="text-sm text-inherit my-0 py-0">Visibility</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.Cover-Img Modal -->
+
+    <!-- Report Review Modal -->
+    <div class="modal text-sm p-0" id="report-review" tabindex="-1" role="dialog" aria-labelledby="report-review" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content box-shadow-sm rounded-2">
+                <div class="modal-body">
+                    <h6 class="font-600 lead my-2">Report customer review</h6>
+                    <form method="post" id="report-review-form" class="needs-validation" novalidate>
+                        <div class="form-check mb-2">
+                            <input type="radio" name="report-type" id="spam" class="form-check-input report-radio-btn" required value="spam">
+                            <label for="spam" class="form-check-label">
+                                Unwanted commercial content or spam
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input type="radio" name="report-type" id="pornography" class="form-check-input report-radio-btn" required value="pornography">
+                            <label for="pornography" class="form-check-label">
+                                Pornography or sexually explicit material
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input type="radio" name="report-type" id="child-abuse" class="form-check-input report-radio-btn" required value="child-abuse">
+                            <label for="child-abuse" class="form-check-label">
+                                Child abuse
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input type="radio" name="report-type" id="hate-speech" class="form-check-input report-radio-btn" required value="hate-speech">
+                            <label for="hate-speech" class="form-check-label">
+                                Hate speech or graphic violence
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input type="radio" name="report-type" id="harassment" class="form-check-input report-radio-btn" required value="harassment">
+                            <label for="harassment" class="form-check-label">
+                                Harassment or bullying
+                            </label>
+                        </div>
+                        <select name="harassment-type" id="harassment-type" class="custom-select form-control my-2 bg-transparent d-none">
+                            <option value="null" selected>Choose one</option>
+                            <option value="was-harassed">This is harassing me</option>
+                            <option value="someone-harassed">This is harassing someone else</option>
+                        </select>
+
+                        <!-- Hidden Inputs -->
+                        <input type="hidden" name="report-post-id" id="report-post-id">
+                        <input type="hidden" name="report-user-id" id="report-user-id">
+                        <!-- /.Hidden Inputs -->
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a role="button" href="#" data-bs-dismiss="modal" class="btn btn-link me-2">Cancel</a>
+                            <button type="submit" class="btn btn-primary btn-sm">Report</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.Report Review Modal -->
 
     <!-- Side Nav -->
     <aside class="main-sidebar box-shadow-sm">
@@ -1755,9 +2549,7 @@
             <div class="modal-content">
                 <div class="modal-header pt-0 pb-1 shadow-sm">
                     <div class="modal-title d-block" id="mailing-modalLabel">
-                        <h6 class="mb-0 p-3 font-600">Join the mailing list</h6>
-                        <small class="mt-0 review-modal-title text-capitalize">
-                        </small>
+                        <h6 class="mb-0 py-3 font-600">Join the mailing list</h6>
                     </div>
                     <button type="button" data-bs-dismiss="modal" class="btn-close" aria-label="Close"></button>
                 </div>
