@@ -811,7 +811,7 @@
                         <!-- Product Info -->
                         <div class="row position-relative border-bottom gx-1">
                             <!-- Product Images -->
-                            <div class="col-12 col-md-6 pe-xl-2">
+                            <div class="col-12 col-md-6 pe-md-2">
                                 <div class="product-images w-100">
                                     <img class="box-shadow-sm" id="display-img" src="dist/images/gifts/15f47b9066c522.jpg" data-zoom-image="dist/images/gifts/15f47b9066c522.jpg">
                                     <div class="img-zoom-result d-none" id="zoom-result"></div>
@@ -847,14 +847,14 @@
                                         <div class="gift-rateyo-rating"></div>
                                         <span class="text-muted">4.4/5.0</span>
                                     </div>
-                                    <div class="d-flex align-items-center text-sm text-muted">
+                                    <div class="d-flex align-items-center text-sm text-faded">
                                         <i class="material-icons fs-1">person</i>
-                                        <span class="text-muted">1233 reviews</span>
+                                        <span class="text-faded">1233 reviews</span>
                                     </div>
                                 </div>
-                                <button class="btn btn-light btn-sm py-0 my-1 d-flex align-items-center wishlist-btn" id="wish" data-id="1">
-                                    <i class="bi bi-heart text-muted icon-md"></i>
-                                    <span class="text-muted text-sm font-600 ms-1">Add to Wishlist</span>
+                                <button class="btn btn-sm py-0 my-1 d-flex align-items-center wishlist-btn" id="wish" data-id="1">
+                                    <i class="bi bi-heart icon-md"></i>
+                                    <span class="ext-sm font-600 ms-1">Add to Wishlist</span>
                                 </button>
                                 <!-- Stats -->
                                 <div class="d-flex align-items-center justify-content-around border-top border-bottom py-2">
@@ -1561,7 +1561,7 @@
                                 <nav class="navbar bg-whitesmoke sticky-top section-nav">
                                     <div class="container-fluid container-md bg-whitesmoke">
                                         <div class="d-block w-100">
-                                            <div class="d-flex align-items-center w-100">
+                                            <div class="d-flex align-items-center pt-2 pt-md-0 w-100">
                                                 <button type="button" class="btn btn-sm btn-outline-switch filter-reviews filter-rating active rounded-pill px-md-3" data-id="all">
                                                     All (1,236)
                                                 </button>
@@ -1571,15 +1571,15 @@
                                                         <span id="sort-reviews">Sort</span>
                                                     </a>
                                                     <div class="dropdown-menu rounded-2">
-                                                        <div class="dropdown-item d-cursor review-filter-item p-2 d-flex align-items-center" data-id="Most relevant">
+                                                        <div class="dropdown-item d-cursor text-dark review-filter-item p-2 d-flex align-items-center" data-id="Most relevant">
                                                             <i class="material-icons d-none me-1" id="most-relevant-icon">done</i> Most relevant
                                                         </div>
-                                                        <div class="dropdown-item d-cursor p-2 review-filter-item d-flex align-items-center" data-id="Newest">
+                                                        <div class="dropdown-item d-cursor text-dark p-2 review-filter-item d-flex align-items-center" data-id="Newest">
                                                             <i class="material-icons d-none me-1" id="newest-icon">done</i> Newest
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <a data-bs-toggle="modal" data-bs-target="#write-review" href="#" role="button" class="btn btn-sm btn-outline-switch d-flex align-items-center ms-auto rounded-pill px-md-3 ms-auto">
+                                                <a data-bs-toggle="modal" data-bs-target="#write-review" href="#" role="button" class="btn btn-sm btn-outline-switch d-flex align-items-center rounded-pill px-md-3 ms-auto">
                                                     <i class="bi bi-pencil-square me-1"></i> Write review
                                                 </a>
                                             </div>
@@ -2185,65 +2185,123 @@
                     <!-- Recommended Items -->
                     <div class="col-12 col-md-6 col-xl-4">
                         <div class="right-section py-md-1">
-                            <!-- Gift Combinations -->
-                            <div class="bg-whitesmoke box-shadow-sm mb-2 p-2 rounded-2 bought-together">
-                                <h6 class="font-600 text-app-color">Frequently bought together</h6>
-                                <ul class="flashed-list px-0">
-                                    <!-- Gift Combinations -->
-                                    <li class="d-flex align-items-center justify-content-around mb-2">
-                                        <img src="dist/images/gifts/15f460da949b76.1.webp" height="70" width="70" alt="" class="rounded">
-                                        <i class="material-icons mx-2">add</i>
-                                        <img src="dist/images/gifts/15f460da949b76.2.webp" height="70" width="70" alt="" class="rounded">
-                                        <div class="d-none d-md-inline">
-                                            <i class="material-icons mx-2">drag_handle</i>
-                                            <h6 class="font-600 text-danger my-0">US$34.39</h6>
-                                        </div>
-                                    </li>
-                                    <!-- /.Gift Combinations -->
-                                </ul>
-                            </div>
-
-                            <!-- Similar Product Items -->
-                            <div class="d-none d-md-block">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h6 class="lead font-600 my-0">Similar</h6>
-                                    <a href="#" class="btn btn-sm bg-switch text-white text-sm font-600 px-2">See more</a>
+                            <!-- Customizing Info -->
+                            <div class="d-grid border bg-whitesmoke rounded-2 box-shadow-sm mb-2 p-2">
+                                <div class="m-auto">
+                                    <div class="d-block text-center">
+                                        <h6 class="text-sm font-600 mb-0">
+                                            To buy, select Size
+                                        </h6>
+                                        <p class="text-sm text-faded my- py-0">
+                                            Choose from Options on the left
+                                        </p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-sm bg-switch text-white d-flex align-items-center justify-content-center">
+                                            <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                                        </button>
+                                        <button class="btn btn-sm btn-warning d-flex align-items-center justify-content-center ms-2">
+                                            <i class="bi bi-heart me-1"></i> Add to Wishlist
+                                        </button>
+                                    </div>
                                 </div>
-                                <ul class="px-0 py-2">
-                                    <!-- Horizontal Card Item -->
-                                    <li class="bg-whitesmoke border box-shadow-sm rounded-2 mb-1 p-2">
-                                        <div class="d-flex align-items-start">
-                                            <img data-src="dist/images/gifts/15f47c6c077748.jpg" src="dist/images/app/bg-placeholder.PNG" height="100" width="100" loading="lazy" alt="" class="lazy me-2">
-                                            <div class="d-block">
-                                                <h6 class="font-600 text-capitalize my-0">Neon Lamp</h6>
-                                                <p class="text-sm text-muted my-0 py-0 text-lowercase">camera accessories</p>
-                                                <p class="text-sm text-justify my-1">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, eaque.
-                                                </p>
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <!-- Gift  Star Rating -->
-                                                    <ul class="list-inline gift-star-rating m-0 p-0">
-                                                        <li class="list-inline-item text-gold">&starf;</li>
-                                                        <li class="list-inline-item text-gold">&starf;</li>
-                                                        <li class="list-inline-item text-gold">&starf;</li>
-                                                        <li class="list-inline-item text-gold">&starf;</li>
-                                                        <li class="list-inline-item text-gold">&starf;</li>
-                                                        <span class="text-sm text-faded font-600 m-0 p-0">134 ratings</span>
-                                                    </ul>
-                                                    <!-- /.Gift Star Rating -->
+                            </div>
+                            <!-- /.Customizing Info -->
 
-                                                    <!-- Price -->
-                                                    <p class="usd-price text-sm text-danger font-600 m-0 p-0">US$12.78</p>
-                                                    <!-- /.Price -->
-                                                </div>
-                                                <a href="#" class="stretched-link"></a>
+                            <!-- Gift Combinations -->
+                            <h6 class="font-600 text-app-color mt-3">Frequently bought together</h6>
+                            <ul class="list-group box-shadow-sm rounded-2 mb-2" id="combo-list">
+                                <!-- Combo Images -->
+                                <li class="list-group-item">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <img data-src="dist/images/gifts/15f45876d2ff63.jpg" src="dist/images/app/bg-placeholder.PNG" height="80" width="70" alt="" class="lazy rounded-2">
+                                        <i class="material-icons text-dar mx-3">add</i>
+                                        <img data-src="dist/images/gifts/15f47b9066c522.jpg" src="dist/images/app/bg-placeholder.PNG" height="80" width="70" alt="" class="lazy rounded-2">
+                                    </div>
+                                </li>
+                                <!-- /.Combo Images -->
+                                <!-- Combo Details -->
+                                <div class="collapse m-0 p-0 border-0 outline-0" id="combo-details">
+                                    <li class="list-group-item my-0 py-0">
+                                        <div class="d-flex align-items-center">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="remove-item-1" checked>
+                                                <label class="form-check-label" for="remove-item-1"></label>
+                                            </div>
+                                            <div class="d-block ms-3">
+                                                <h6 class="my-0">This items: might Patch some of the original Polyconolorois....</h6>
+                                                <h6 class="text-faded my-0">Size: 35</h6>
+                                                <h6 class="text-danger-warning my-0 text-sm">$12.27</h6>
                                             </div>
                                         </div>
                                     </li>
-                                    <!-- /.Horizontal Card Item -->
+                                    <li class="list-group-item">
+                                        <div class="d-flex align-items-center">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="remove-item-1" checked>
+                                                <label class="form-check-label" for="remove-item-1"></label>
+                                            </div>
+                                            <div class="d-block ms-3">
+                                                <h6 class="my-0">This items: might Patch some of the original Polyconolorois....</h6>
+                                                <h6 class="text-faded my-0">Size: 35</h6>
+                                                <h6 class="text-danger-warning my-0 text-sm">$12.27</h6>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </div>
+                                <!-- /.Combo Details -->
+                                <!-- Combo Total -->
+                                <li class="list-group-item d-cursor" data-bs-toggle="collapse" href="#combo-details" role="button" aria-expanded="false" aria-controls="combo-details">
+                                    <!-- Combo Trigger -->
+                                    <div class="d-flex align-items-center justify-content-center position-relative collapse-link" id="combo-trigger">
+                                        <i class="bi bi-chevron-down collapse-icon position-absolute"></i>
+                                        <h6 class="lead text-center">
+                                            <span class="me-1">Buy Both:</span>
+                                            <span class="text-danger-warning">$12.37</span>
+                                        </h6>
+                                    </div>
+                                    <!-- /.Combo Trigger -->
+                                    <div class="d-none d-block text-center" id="combo-total">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <h6 class="text-faded text-sm">Total price:</h6>
+                                            <h6 class="text-danger-warning text-sm ms-1">$23.37</h6>
+                                        </div>
+                                        <button class="btn bg-switch btn-block text-white">
+                                            Add both to Cart
+                                        </button>
+                                    </div>
+                                </li>
+                                <!-- /.Combo Total -->
+                            </ul>
+                            <div class="d-flex align-items-center justify-content-center mb-2">
+                                <span class="text-sm me-1">Share on:</span>
+                                <ul class="list-inline m-0 p-0">
+                                    <li class="list-inline-item">
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
-                            <!-- /.Similar Product Items -->
+                            <div class="bg-transparent square-img-ad mb-xl-0">
+                                <img src="dist/images/banners/banner-3.png" class="w-100" alt="">
+                                <a href="details.html" class="stretched-link"></a>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <h6 class="text-sm font-600 my-0 text-muted d-flex align-items-center">
+                                    Sponsored <i class="bi bi-info-circle-fill pull-up-1 ms-1"></i>
+                                </h6>
+                            </div>
                         </div>
                     </div>
                     <!-- /.Recommended Items -->
@@ -3162,7 +3220,7 @@
                         </p>
                         <input type="hidden" name="action" value="subscribe">
                         <div class="d-flex align-items-center justify-content-center my-1">
-                            <a role="button" href="#" class="btn btn-outline-light text-dark rounded-pill px-3 font-600 me-3" data-bs-dismiss="modal">Cancel</a>
+                            <a role="button" href="#" class="btn btn-outline-light rounded-pill px-3 font-600 me-3" data-bs-dismiss="modal">Cancel</a>
                             <button type="submit" class="btn btn-primary rounded-pill px-3 font-600" id="subscribe-btn">
                                 Subscribe newsletter
                             </button>
