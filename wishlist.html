@@ -561,7 +561,7 @@
                             <a class="nav-link text-sm font-600" href="occasion.html">Hot Deals</a>
                         </li>
                         <li class="nav-item d-none d-md-block d-lg-none ms-4 ipad-search-icon">
-                            <button type="button" class="btn btn-default circled-button-sm d-flex justify-content-center" onclick="ipadSearchBar()">
+                            <button type="button" class="btn btn-light circled-button-sm d-flex justify-content-center" onclick="ipadSearchBar()">
                                 <i class="material-icons text-color-switch pull-up-1">search</i>
                             </button>
                         </li>
@@ -575,7 +575,7 @@
                             <div class="text-muted nav-link font-600 navbar-text">
                                 <div class="dropdown dropdown-toggle d-cursor" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img id="currency-flag" src="dist/images/currencies/usd.png" height="15" width="22" alt="">
-                                    <span id="currency-total" class="text-muted text-color-switch">US$12.48</span>
+                                    <span id="currency-total" class="text-color-switch">US$12.48</span>
                                 </div>
                                 <div class="dropdown-menu box-shadow-sm rounded-2 currency-dropdown-menu">
                                     <div class="dropdown-menu-item d-flex align-items-center currency-option d-cursor ps-3 py-1">
@@ -2114,10 +2114,10 @@
         </div>
         <div class="container-fluid px-3 mt-2">
             <p class="mb-0 font-500 d-none" id="day-mode">
-                <i class="fa fa-sun-o"></i> Toggle Day Mode
+                <i class="bi bi-brightness-high-fill text-warning"></i> Toggle Day Mode
             </p>
             <p class="mb-0 font-500" id="night-mode">
-                <i class="fa fa-moon-o"></i> Toggle Night Mode
+                <i class="bi bi-moon text-warning"></i> Toggle Night Mode
             </p>
             <div class="d-flex align-items-center mt-2">
                 <div class="form-check toggle-switch">
@@ -2191,7 +2191,7 @@
         <!-- Sidebar Menu -->
         <nav class="sidebar-menu" id="sidebar-main-menu">
             <!-- User Panel -->
-            <div class="d-flex px-2 py-1">
+            <div class="d-flex user-panel sticky-top p-2">
                 <a href="sign-in.html">
                     <img src="dist/images/users/user.png" height="40" width="40" class="img align-self-center rounded-circle prof-pic me-2">
                 </a>
@@ -2206,7 +2206,7 @@
             </div>
             <!-- /.User Panel -->
 
-            <hr class="my-0">
+            <hr class="my-0 bg-light-switch">
             <!-- Menu list -->
             <ul class="side-menu mb-0 pb-0 px-2">
                 <!-- Side-menu-item -->

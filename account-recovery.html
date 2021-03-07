@@ -422,7 +422,7 @@
                             <div class="text-muted nav-link font-600 navbar-text">
                                 <div class="dropdown dropdown-toggle d-cursor" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img id="currency-flag" src="dist/images/currencies/usd.png" height="15" width="22" alt="">
-                                    <span id="currency-total" class="text-muted text-color-switch">US$12.48</span>
+                                    <span id="currency-total" class="text-color-switch">US$12.48</span>
                                 </div>
                                 <div class="dropdown-menu box-shadow-sm rounded-2 currency-dropdown-menu">
                                     <div class="dropdown-menu-item d-flex align-items-center currency-option d-cursor ps-3 py-1">
@@ -1522,10 +1522,10 @@
         </div>
         <div class="container-fluid px-3 mt-2">
             <p class="mb-0 font-500 d-none" id="day-mode">
-                <i class="fa fa-sun-o"></i> Toggle Day Mode
+                <i class="bi bi-brightness-high-fill text-warning"></i> Toggle Day Mode
             </p>
             <p class="mb-0 font-500" id="night-mode">
-                <i class="fa fa-moon-o"></i> Toggle Night Mode
+                <i class="bi bi-moon text-warning"></i> Toggle Night Mode
             </p>
             <div class="d-flex align-items-center mt-2">
                 <div class="form-check toggle-switch">
@@ -1538,19 +1538,31 @@
             </p>
             <div class="d-flex align-items-center mt-2">
                 <div class="form-check toggle-switch">
-                    <input type="checkbox" class="form-check-input switch-btn usd-currency" id="usd-currency" onchange="usdCurrency(this);" checked>
+                    <input type="radio" name="currency" class="form-check-input switch-btn" id="euro-currency">
+                    <label class="form-check-label ms-2" for="euro">EURO</label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="radio" name="currency" class="form-check-input switch-btn" id="gbp-currency">
+                    <label class="form-check-label ms-2" for="gbp">GBP</label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="radio" name="currency" class="form-check-input switch-btn" id="usd-currency" checked>
                     <label class="form-check-label ms-2" for="usd">USD</label>
                 </div>
             </div>
             <div class="d-flex align-items-center mt-2">
                 <div class="form-check toggle-switch">
-                    <input type="checkbox" class="form-check-input switch-btn zar-currency" id="zar-currency" onchange="zarCurrency(this);">
+                    <input type="radio" name="currency" class="form-check-input switch-btn" id="zar-currency">
                     <label class="form-check-label ms-2" for="zar-currency">ZAR</label>
                 </div>
             </div>
             <div class="d-flex align-items-center mt-2">
                 <div class="form-check toggle-switch">
-                    <input type="checkbox" class="form-check-input switch-btn zwl-currency" id="zwl-currency" onchange="zwlCurrency(this);">
+                    <input type="radio" name="currency" class="form-check-input switch-btn" id="zwl-currency">
                     <label class="form-check-label ms-2" for="zwl-currency">ZWL</label>
                 </div>
             </div>
@@ -1580,19 +1592,30 @@
             </p>
             <div class="d-flex align-items-center mt-2">
                 <div class="form-check toggle-switch">
-                    <input type="checkbox" class="form-check-input switch-btn" id="trending" checked>
+                    <input type="radio" name="gift-sorting" class="form-check-input switch-btn" id="trending" checked>
                     <label class="form-check-label ms-2" for="trending">Trending</label>
                 </div>
             </div>
             <div class="d-flex align-items-center mt-2">
                 <div class="form-check toggle-switch">
-                    <input type="checkbox" class="form-check-input switch-btn" id="recent">
+                    <input type="radio" name="gift-sorting" class="form-check-input switch-btn" id="recent">
                     <label class="form-check-label ms-2" for="recent">Recent</label>
+                </div>
+            </div>
+            <hr class="w-100">
+            <p class="mb-0 font-500">
+                <i class="fa fa-bell-o"></i> Email Notifications
+            </p>
+            <div class="d-flex align-items-center mt-2">
+                <div class="form-check toggle-switch">
+                    <input type="checkbox" class="form-check-input switch-btn" id="notifications" checked>
+                    <label class="form-check-label ms-2" for="notifications">Notifications</label>
                 </div>
             </div>
         </div>
     </div>
     <!-- /.Settings -->
+
 
     <!-- Mailing List Modal -->
     <div class="modal fade rounded-0" id="mailing-list-modal" tabindex="-1" role="dialog" aria-labelledby="mailing-list-modal" aria-hidden="true">

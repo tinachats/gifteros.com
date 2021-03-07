@@ -418,7 +418,7 @@
                             <a class="nav-link text-sm font-600" href="occasion.html">Hot Deals</a>
                         </li>
                         <li class="nav-item d-none d-md-block d-lg-none ms-4 ipad-search-icon">
-                            <button type="button" class="btn btn-default circled-button-sm d-flex justify-content-center" onclick="ipadSearchBar()">
+                            <button type="button" class="btn btn-light circled-button-sm d-flex justify-content-center" onclick="ipadSearchBar()">
                                 <i class="material-icons text-color-switch pull-up-1">search</i>
                             </button>
                         </li>
@@ -432,7 +432,7 @@
                             <div class="text-muted nav-link font-600 navbar-text">
                                 <div class="dropdown dropdown-toggle d-cursor" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img id="currency-flag" src="dist/images/currencies/usd.png" height="15" width="22" alt="">
-                                    <span id="currency-total" class="text-muted text-color-switch">US$12.48</span>
+                                    <span id="currency-total" class="text-color-switch">US$12.48</span>
                                 </div>
                                 <div class="dropdown-menu box-shadow-sm rounded-2 currency-dropdown-menu">
                                     <div class="dropdown-menu-item d-flex align-items-center currency-option d-cursor ps-3 py-1">
@@ -775,7 +775,7 @@
                 <div class="d-flex align-items-center w-100">
                     <ul class="d-flex align-items-center my-0 p-0">
                         <li class="nav-item me-1">
-                            <a href="index.html" role="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center p-0 m-0">
+                            <a href="index.html" role="button" class="btn btn-light circled-button-sm d-grid justify-content-center text-center p-0 m-0">
                                 <i class="bi bi-chevron-left mobile-nav-icon"></i>
                             </a>
                         </li>
@@ -788,12 +788,12 @@
                     </ul>
                     <ul class="d-flex align-items-center ms-auto my-0 p-0">
                         <li class="nav-item me-3">
-                            <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center p-0 m-0" onclick="toggleSearchBar()">
+                            <button type="button" class="btn btn-light circled-button-sm d-grid justify-content-center text-center p-0 m-0" onclick="toggleSearchBar()">
                                 <i class="bi bi-search mobile-nav-icon"></i>
                             </button>
                         </li>
                         <li class="nav-item">
-                            <button type="button" class="btn btn-default circled-button-sm d-grid justify-content-center text-center toggle-side-menu p-0 m-0">
+                            <button type="button" class="btn btn-light circled-button-sm d-grid justify-content-center text-center toggle-side-menu p-0 m-0">
                                 <i class="bi bi-list mobile-nav-icon"></i>
                             </button>
                         </li>
@@ -833,7 +833,7 @@
         <nav class="navbar navbar-light bg-whitesmoke fixed-top box-shadow-sm m-0 py-1 d-none" id="mobile-search-bar">
             <div class="container-fluid w-100">
                 <div class="w-10">
-                    <button type="button" class="btn btn-default circled-button d-flex justify-content-center" onclick="toggleSearchBar()">
+                    <button type="button" class="btn btn-light circled-button d-flex justify-content-center" onclick="toggleSearchBar()">
                         <i class="material-icons text-color-switch">arrow_back</i>
                     </button>
                 </div>
@@ -1093,11 +1093,11 @@
                                             Item added February 11, 2021
                                         </p>
                                         <div class="d-flex align-items-center justify-content-sm-center justify-content-md-between my-2">
-                                            <button class="btn btn-default btn-sm d-grid action-buttons decrease-qty" data-id="1">
+                                            <button class="btn btn-light btn-sm d-grid action-buttons decrease-qty" data-id="1">
                                                 <i class="material-icons m-auto">remove</i>
                                             </button>
                                             <input type="tel" class="form-control form-control-sm text-center quantity-input mx-sm-4 mx-md-2" id="quantity-input1" onkeyup="forceNumeric(this)" data-id="1" value="1">
-                                            <button class="btn btn-default btn-sm d-grid action-buttons increase-qty" data-id="1">
+                                            <button class="btn btn-light btn-sm d-grid action-buttons increase-qty" data-id="1">
                                                 <i class="material-icons m-auto">add</i>
                                             </button>
                                         </div>
@@ -1378,11 +1378,11 @@
                                             Item added February 11, 2021
                                         </p>
                                         <div class="d-flex align-items-center justify-content-sm-center justify-content-md-between my-2">
-                                            <button class="btn btn-default btn-sm d-grid action-buttons decrease-qty" data-id="2">
+                                            <button class="btn btn-light btn-sm d-grid action-buttons decrease-qty" data-id="2">
                                                 <i class="material-icons m-auto">remove</i>
                                             </button>
                                             <input type="tel" class="form-control form-control-sm text-center quantity-input mx-sm-4 mx-md-2" id="quantity-input2" onkeyup="forceNumeric(this)" data-id="2" value="1">
-                                            <button class="btn btn-default btn-sm d-grid action-buttons increase-qty" data-id="2">
+                                            <button class="btn btn-light btn-sm d-grid action-buttons increase-qty" data-id="2">
                                                 <i class="material-icons m-auto">add</i>
                                             </button>
                                         </div>
@@ -1999,7 +1999,7 @@
         <!-- Sidebar Menu -->
         <nav class="sidebar-menu" id="sidebar-main-menu">
             <!-- User Panel -->
-            <div class="d-flex px-2 py-1">
+            <div class="d-flex user-panel sticky-top p-2">
                 <a href="sign-in.html">
                     <img src="dist/images/users/user.png" height="40" width="40" class="img align-self-center rounded-circle prof-pic me-2">
                 </a>
@@ -2014,7 +2014,7 @@
             </div>
             <!-- /.User Panel -->
 
-            <hr class="my-0">
+            <hr class="my-0 bg-light-switch">
             <!-- Menu list -->
             <ul class="side-menu mb-0 pb-0 px-2">
                 <!-- Side-menu-item -->
@@ -2265,10 +2265,10 @@
         </div>
         <div class="container-fluid px-3 mt-2">
             <p class="mb-0 font-500 d-none" id="day-mode">
-                <i class="fa fa-sun-o"></i> Toggle Day Mode
+                <i class="bi bi-brightness-high-fill text-warning"></i> Toggle Day Mode
             </p>
             <p class="mb-0 font-500" id="night-mode">
-                <i class="fa fa-moon-o"></i> Toggle Night Mode
+                <i class="bi bi-moon text-warning"></i> Toggle Night Mode
             </p>
             <div class="d-flex align-items-center mt-2">
                 <div class="form-check toggle-switch">
