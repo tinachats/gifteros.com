@@ -4527,10 +4527,6 @@ a.text-underline:hover,
         overflow-y: auto;
         overflow-x: hidden
     }
-    .product-images,
-    .right-section {
-        top: 3rem;
-    }
     .product-images>#display-img {
         height: 350px;
     }
@@ -4728,7 +4724,8 @@ a.text-underline:hover,
         left: 0%;
         transform: translate(50%, -50%);
     }
-    .ad-content {
+    .ad-content,
+    #details-page .right-section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: .5em;
@@ -4879,12 +4876,18 @@ a.text-underline:hover,
     #cart-page .wishlist-shelf.grid-view>.wishlist-item {
         height: 400px;
     }
-    .ad-content {
+    .ad-content,
+    #details-page .right-section {
         display: grid;
         grid-template-columns: 1fr;
     }
     .ad-content:first-child() {
         margin-bottom: .5rem;
+    }
+    #details-page .product-images,
+    #details .right-section {
+        position: sticky;
+        top: 3rem;
     }
 }
 
