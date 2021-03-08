@@ -7,7 +7,7 @@
 }
 
 
-/*** Default Styling .square-img-ad***/
+/*** Default Styling #gallery***/
 
 :root {
     --app-color: hsl(208, 56%, 31%);
@@ -1098,9 +1098,7 @@ h6 {
 #gallery img {
     border: 2px solid #dee2e6;
     border-radius: .5rem;
-    height: 50px;
-    width: 50px;
-    margin-right: 5px;
+    margin-right: 2px;
 }
 
 #gallery img.active {
@@ -4407,6 +4405,10 @@ a.text-underline:hover,
     .ad-content:first-child() {
         margin-bottom: .5rem;
     }
+    #gallery img {
+        height: 40px;
+        width: 40px;
+    }
 }
 
 
@@ -4730,6 +4732,10 @@ a.text-underline:hover,
         grid-template-columns: repeat(2, 1fr);
         grid-gap: .5em;
     }
+    #gallery img {
+        height: 47px;
+        width: 47px;
+    }
 }
 
 
@@ -4888,6 +4894,10 @@ a.text-underline:hover,
     #details .right-section {
         position: sticky;
         top: 3rem;
+    }
+    #gallery img {
+        height: 50px;
+        width: 50px;
     }
 }
 
